@@ -1,4 +1,4 @@
-# ruff: noqa: E722
+﻿# ruff: noqa: E722
 import ctypes
 import pymem.ressources.kernel32
 import pymem.ressources.structure
@@ -59,9 +59,9 @@ def calculate_call_address(ctypes_obj):
 
 def getMap():
     try:
-        map = PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(
-                PVZ_data.PVZ_memory.read_int(0x006A9EC0) + 0x768
+        map = PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(
+                PVZ_data.PVZ_memory.read_uint(0x006A9EC0) + 0x768
             )
             + 0x554C
         )
@@ -80,6 +80,12 @@ def getMap():
             or map == 30
             or map == 31
             or map == 32
+            or map == 34
+            or map == 35
+            or map == 37
+            or map == 38
+            or map == 41
+            or map == 42
         ):
             return 5
         elif (
@@ -94,6 +100,10 @@ def getMap():
             or map == 23
             or map == 25
             or map == 26
+            or map == 33
+            or map == 36
+            or map == 39
+            or map == 40
         ):
             return 6
         else:
@@ -104,12 +114,12 @@ def getMap():
 
 def getDifficult():
     difficultAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x82C
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
         )
         + 0x428
     )
-    difficultValue = PVZ_data.PVZ_memory.read_int(difficultAddr)
+    difficultValue = PVZ_data.PVZ_memory.read_uint(difficultAddr)
     if difficultValue == -1:
         return 1
     if difficultValue == 0:
@@ -120,8 +130,8 @@ def getDifficult():
 
 def setDifficult(difficult):
     difficultAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x82C
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
         )
         + 0x428
     )
@@ -135,8 +145,8 @@ def setDifficult(difficult):
 
 def getState():
     try:
-        game_state = PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x7FC
+        game_state = PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x7FC
         )
         return game_state  # 1主菜单 2选局内  5帮助  7关卡选择
     except:
@@ -145,15 +155,85 @@ def getState():
 
 def getNowFlag():
     try:
-        nowFlag = PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(
-                PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+        nowFlag = PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(
+                PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
             )
             + 0x557C
         )
         return nowFlag
     except:
         return False
+
+
+def get_zombie_num():
+    if PVZ_data.PVZ_version == 0:
+        zombie_num = 33
+    elif PVZ_data.PVZ_version == 2.0:
+        zombie_num = 42
+    elif PVZ_data.PVZ_version == 2.1:
+        zombie_num = 45
+    elif PVZ_data.PVZ_version == 2.2:
+        zombie_num = 51
+    elif PVZ_data.PVZ_version == 2.3:
+        zombie_num = 56
+    elif (
+        PVZ_data.PVZ_version == 2.35
+        or PVZ_data.PVZ_version == 2.36
+        or PVZ_data.PVZ_version == 2.37
+    ):
+        zombie_num = 59
+    elif PVZ_data.PVZ_version == 2.4:
+        zombie_num = 64
+    elif PVZ_data.PVZ_version == 2.5:
+        zombie_num = 66
+    elif PVZ_data.PVZ_version == 2.6:
+        zombie_num = 75
+    elif PVZ_data.PVZ_version == 2.61:
+        zombie_num = 76
+    elif PVZ_data.PVZ_version == 3.0:
+        zombie_num = 83
+    elif (
+        PVZ_data.PVZ_version == 3.1
+        or PVZ_data.PVZ_version == 3.15
+        or PVZ_data.PVZ_version == 3.2
+        or PVZ_data.PVZ_version == 3.21
+    ):
+        zombie_num = 89
+    elif PVZ_data.PVZ_version == 3.3 or PVZ_data.PVZ_version == 3.4:
+        zombie_num = 95
+    elif PVZ_data.PVZ_version == 3.5:
+        zombie_num = 101
+    elif PVZ_data.PVZ_version == 3.6:
+        zombie_num = 103
+    elif PVZ_data.PVZ_version == 3.65:
+        zombie_num = 106
+    elif (
+        PVZ_data.PVZ_version == 3.7
+        or PVZ_data.PVZ_version == 3.75
+        or PVZ_data.PVZ_version == 3.76
+    ):
+        zombie_num = 109
+    elif PVZ_data.PVZ_version == 3.8:
+        zombie_num = 111
+    elif (
+        PVZ_data.PVZ_version == 3.9
+        or PVZ_data.PVZ_version == 3.99
+        or PVZ_data.PVZ_version == 3.11
+        or PVZ_data.PVZ_version == 3.12
+    ):
+        zombie_num = 114
+    elif PVZ_data.PVZ_version == 3.132:
+        zombie_num = 117
+    elif PVZ_data.PVZ_version == 3.14:
+        zombie_num = 126
+    elif PVZ_data.PVZ_version == 3.151:
+        zombie_num = 131
+    elif PVZ_data.PVZ_version == 3.16:
+        zombie_num = 132
+    elif PVZ_data.PVZ_version == 3.17:
+        zombie_num = 139
+    return zombie_num
 
 
 def getRandomZombie(hasBoss=False):
@@ -175,10 +255,58 @@ def getRandomZombie(hasBoss=False):
         zombieType = random.randint(0, 58)
     elif PVZ_data.PVZ_version == 2.4:
         zombieType = random.randint(0, 63)
+    elif PVZ_data.PVZ_version == 2.5:
+        zombieType = random.randint(0, 65)
+    elif PVZ_data.PVZ_version == 2.6:
+        zombieType = random.randint(0, 74)
+    elif PVZ_data.PVZ_version == 2.61:
+        zombieType = random.randint(0, 75)
+    elif PVZ_data.PVZ_version == 3.0:
+        zombieType = random.randint(0, 82)
+    elif (
+        PVZ_data.PVZ_version == 3.1
+        or PVZ_data.PVZ_version == 3.15
+        or PVZ_data.PVZ_version == 3.2
+        or PVZ_data.PVZ_version == 3.21
+    ):
+        zombieType = random.randint(0, 88)
+    elif PVZ_data.PVZ_version == 3.3 or PVZ_data.PVZ_version == 3.4:
+        zombieType = random.randint(0, 94)
+    elif PVZ_data.PVZ_version == 3.5:
+        zombieType = random.randint(0, 101)
+    elif PVZ_data.PVZ_version == 3.6:
+        zombieType = random.randint(0, 103)
+    elif PVZ_data.PVZ_version == 3.65:
+        zombieType = random.randint(0, 106)
+    elif (
+        PVZ_data.PVZ_version == 3.7
+        or PVZ_data.PVZ_version == 3.75
+        or PVZ_data.PVZ_version == 3.76
+    ):
+        zombieType = random.randint(0, 109)
+    elif PVZ_data.PVZ_version == 3.8:
+        zombieType = random.randint(0, 111)
+    elif (
+        PVZ_data.PVZ_version == 3.9
+        or PVZ_data.PVZ_version == 3.99
+        or PVZ_data.PVZ_version == 3.11
+        or PVZ_data.PVZ_version == 3.12
+    ):
+        zombieType = random.randint(0, 114)
+    elif PVZ_data.PVZ_version == 3.132:
+        zombieType = random.randint(0, 117)
+    elif PVZ_data.PVZ_version == 3.14:
+        zombieType = random.randint(0, 125)
+    elif PVZ_data.PVZ_version == 3.151:
+        zombieType = random.randint(0, 130)
+    elif PVZ_data.PVZ_version == 3.16:
+        zombieType = random.randint(0, 131)
+    elif PVZ_data.PVZ_version == 3.17:
+        zombieType = random.randint(0, 138)
     if hasBoss is True:
         return zombieType
     else:
-        if zombieType == 25:
+        if zombieType == 25 or zombieType == 73 or zombieType == 74:
             zombieType = getRandomZombie(False)
         return zombieType
 
@@ -202,12 +330,58 @@ def getRandomPlant(isPut=False):
         plantType = random.randint(0, 133)
     elif PVZ_data.PVZ_version == 2.4:
         plantType = random.randint(0, 139)
+    elif PVZ_data.PVZ_version == 2.5:
+        plantType = random.randint(0, 149)
+    elif PVZ_data.PVZ_version == 2.6 or PVZ_data.PVZ_version == 2.61:
+        plantType = random.randint(0, 156)
+    elif PVZ_data.PVZ_version == 3.0:
+        plantType = random.randint(0, 179)
+    elif PVZ_data.PVZ_version == 3.1 or PVZ_data.PVZ_version == 3.15:
+        plantType = random.randint(0, 195)
+    elif PVZ_data.PVZ_version == 3.2 or PVZ_data.PVZ_version == 3.21:
+        plantType = random.randint(0, 198)
+    elif PVZ_data.PVZ_version == 3.3:
+        plantType = random.randint(0, 218)
+    elif PVZ_data.PVZ_version == 3.4:
+        plantType = random.randint(0, 228)
+    elif PVZ_data.PVZ_version == 3.5:
+        plantType = random.randint(0, 241)
+    elif PVZ_data.PVZ_version == 3.6:
+        plantType = random.randint(0, 251)
+    elif PVZ_data.PVZ_version == 3.65:
+        plantType = random.randint(0, 252)
+    elif PVZ_data.PVZ_version == 3.7:
+        plantType = random.randint(0, 265)
+    elif PVZ_data.PVZ_version == 3.75 or PVZ_data.PVZ_version == 3.76:
+        plantType = random.randint(0, 268)
+    elif PVZ_data.PVZ_version == 3.8:
+        plantType = random.randint(0, 278)
+    elif PVZ_data.PVZ_version == 3.9 or PVZ_data.PVZ_version == 3.99:
+        plantType = random.randint(0, 289)
+    elif PVZ_data.PVZ_version == 3.11:
+        plantType = random.randint(0, 292)
+    elif PVZ_data.PVZ_version == 3.12:
+        plantType = random.randint(0, 294)
+    elif PVZ_data.PVZ_version == 3.132:
+        plantType = random.randint(0, 304)
+    elif PVZ_data.PVZ_version == 3.14:
+        plantType = random.randint(0, 314)
+    elif PVZ_data.PVZ_version == 3.151:
+        plantType = random.randint(0, 319)
+    elif PVZ_data.PVZ_version == 3.16:
+        plantType = random.randint(0, 325)
+    elif PVZ_data.PVZ_version == 3.17:
+        plantType = random.randint(0, 328)
+
     if plantType >= 48:
         plantType = plantType + 27
+    IllegalCards = [241, 249, 279, 291, 294, 304, 305, 309, 310, 311, 321]
+    while plantType in IllegalCards:
+        plantType = getRandomPlant(isPut)
     if isPut is False:
         return plantType
     else:
-        ExcludedCards = [105, 112, 113, 118, 133, 144, 151, 157, 163]
+        ExcludedCards = [105, 112, 113, 118, 133, 144, 151, 157, 163, 260.277]
         while plantType in ExcludedCards:
             plantType = getRandomPlant(True)
         return plantType
@@ -216,9 +390,9 @@ def getRandomPlant(isPut=False):
 def getPlantList():
     plant_list = []
     try:
-        plant_num = PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(
-                PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+        plant_num = PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(
+                PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
             )
             + 0xBC
         )
@@ -228,13 +402,13 @@ def getPlantList():
     j = 0
     while i < plant_num:
         plant_addresss = (
-            PVZ_data.PVZ_memory.read_int(
-                PVZ_data.PVZ_memory.read_int(
-                    PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+            PVZ_data.PVZ_memory.read_uint(
+                PVZ_data.PVZ_memory.read_uint(
+                    PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
                 )
                 + 0xAC
             )
-            + 0x204 * j
+            + PVZ_data.plant_size * j
         )
         plant_exist = PVZ_data.PVZ_memory.read_bytes(plant_addresss + 0x141, 1)
         if plant_exist == b"\x00":
@@ -247,9 +421,9 @@ def getPlantList():
 def getZombieList():
     zombie_list = []
     try:
-        zombie_num = PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(
-                PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+        zombie_num = PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(
+                PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
             )
             + 0xA0
         )
@@ -259,13 +433,13 @@ def getZombieList():
     j = 0
     while i < zombie_num:
         zombie_addresss = (
-            PVZ_data.PVZ_memory.read_int(
-                PVZ_data.PVZ_memory.read_int(
-                    PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+            PVZ_data.PVZ_memory.read_uint(
+                PVZ_data.PVZ_memory.read_uint(
+                    PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
                 )
                 + 0x90
             )
-            + 0x204 * j
+            + PVZ_data.zombie_size * j
         )
         zombie_exist = PVZ_data.PVZ_memory.read_bytes(zombie_addresss + 0xEC, 1)
         if zombie_exist == b"\x00":
@@ -278,9 +452,9 @@ def getZombieList():
 def getItemList():
     item_list = []
     try:
-        item_num = PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(
-                PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+        item_num = PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(
+                PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
             )
             + 0x12C
         )
@@ -290,9 +464,9 @@ def getItemList():
     j = 0
     while i < item_num:
         item_addresss = (
-            PVZ_data.PVZ_memory.read_int(
-                PVZ_data.PVZ_memory.read_int(
-                    PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+            PVZ_data.PVZ_memory.read_uint(
+                PVZ_data.PVZ_memory.read_uint(
+                    PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
                 )
                 + 0x11C
             )
@@ -315,46 +489,67 @@ def backGround(f):
 
 def getSun():
     sunAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
         )
         + 0x5560
     )
-    sunNow = PVZ_data.PVZ_memory.read_int(sunAddr)
+    sunNow = PVZ_data.PVZ_memory.read_uint(sunAddr)
     return sunNow
 
 
 def addSun(sunIncrement):
     sunAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
         )
         + 0x5560
     )
-    sunNow = PVZ_data.PVZ_memory.read_int(sunAddr)
+    sunNow = PVZ_data.PVZ_memory.read_uint(sunAddr)
     PVZ_data.PVZ_memory.write_int(sunAddr, sunNow + int(sunIncrement))
 
 
 def subSun(sunDecrement):
     sunAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
         )
         + 0x5560
     )
-    sunNow = PVZ_data.PVZ_memory.read_int(sunAddr)
+    sunNow = PVZ_data.PVZ_memory.read_uint(sunAddr)
     sun = sunNow - int(sunDecrement)
     PVZ_data.PVZ_memory.write_int(sunAddr, sun)
 
 
 def setSun(sun):
     sunAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
         )
         + 0x5560
     )
     PVZ_data.PVZ_memory.write_int(sunAddr, int(sun))
+
+
+def getShovel():
+    shovelAddr = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x1CAC
+    )
+    shovelNow = PVZ_data.PVZ_memory.read_uint(shovelAddr)
+    return shovelNow
+
+
+def setShovel(shovel):
+    shovelAddr = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x1CAC
+    )
+    PVZ_data.PVZ_memory.write_int(shovelAddr, shovel)
 
 
 def cancalSunFall(f):
@@ -366,30 +561,30 @@ def cancalSunFall(f):
 
 def getSilver():
     silverAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x82C
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
         )
         + 0x208
     )
-    silverNow = PVZ_data.PVZ_memory.read_int(silverAddr)
+    silverNow = PVZ_data.PVZ_memory.read_uint(silverAddr)
     return silverNow
 
 
 def addSilver(silverIncrement):
     silverAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x82C
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
         )
         + 0x208
     )
-    silverNow = PVZ_data.PVZ_memory.read_int(silverAddr)
+    silverNow = PVZ_data.PVZ_memory.read_uint(silverAddr)
     PVZ_data.PVZ_memory.write_int(silverAddr, silverNow + int(silverIncrement))
 
 
 def setSilver(silver):
     silverAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x82C
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
         )
         + 0x208
     )
@@ -398,30 +593,30 @@ def setSilver(silver):
 
 def getGold():
     goldAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x82C
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
         )
         + 0x20C
     )
-    goldNow = PVZ_data.PVZ_memory.read_int(goldAddr)
+    goldNow = PVZ_data.PVZ_memory.read_uint(goldAddr)
     return goldNow
 
 
 def addGold(goldIncrement):
     goldAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x82C
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
         )
         + 0x20C
     )
-    goldNow = PVZ_data.PVZ_memory.read_int(goldAddr)
+    goldNow = PVZ_data.PVZ_memory.read_uint(goldAddr)
     PVZ_data.PVZ_memory.write_int(goldAddr, goldNow + int(goldIncrement))
 
 
 def setGold(gold):
     goldAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x82C
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
         )
         + 0x20C
     )
@@ -430,30 +625,30 @@ def setGold(gold):
 
 def getDiamond():
     diamondAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x82C
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
         )
         + 0x210
     )
-    diamondNow = PVZ_data.PVZ_memory.read_int(diamondAddr)
+    diamondNow = PVZ_data.PVZ_memory.read_uint(diamondAddr)
     return diamondNow
 
 
 def addDiamond(diamondIncrement):
     diamondAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x82C
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
         )
         + 0x210
     )
-    diamondNow = PVZ_data.PVZ_memory.read_int(diamondAddr)
+    diamondNow = PVZ_data.PVZ_memory.read_uint(diamondAddr)
     PVZ_data.PVZ_memory.write_int(diamondAddr, diamondNow + int(diamondIncrement))
 
 
 def setDiamond(diamond):
     diamondAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x82C
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
         )
         + 0x210
     )
@@ -526,9 +721,9 @@ def zombieInvisible(f):
 
 
 def killAllZombies():
-    zomNum = PVZ_data.PVZ_memory.read_int(
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+    zomNum = PVZ_data.PVZ_memory.read_uint(
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
         )
         + 0xA0
     )
@@ -536,13 +731,13 @@ def killAllZombies():
     j = 0
     while i < zomNum:
         zomAddresss = (
-            PVZ_data.PVZ_memory.read_int(
-                PVZ_data.PVZ_memory.read_int(
-                    PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+            PVZ_data.PVZ_memory.read_uint(
+                PVZ_data.PVZ_memory.read_uint(
+                    PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
                 )
                 + 0x90
             )
-            + 0x204 * j
+            + PVZ_data.zombie_size * j
         )
         zomExist = PVZ_data.PVZ_memory.read_bytes(zomAddresss + 0xEC, 1)
         if zomExist == b"\x00":
@@ -560,20 +755,20 @@ def autoCollect(f):
 
 def changeSlot(n, type):
     slotAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
         )
         + 0x144
     )
     PVZ_data.PVZ_memory.write_int(
-        PVZ_data.PVZ_memory.read_int(slotAddr) + 0x5C + 0x50 * (n - 1), type
+        PVZ_data.PVZ_memory.read_uint(slotAddr) + 0x5C + 0x50 * (n - 1), type
     )
 
 
 def win():
     winAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
         )
         + 0x55FC
     )
@@ -644,7 +839,7 @@ def unlock(f):
         pymem.memory.free_memory(PVZ_data.PVZ_memory.process_handle, newmem_unlock)
         if 2.37 >= PVZ_data.PVZ_version >= 2.3:
             PVZ_data.PVZ_memory.write_bytes(0x00453B20, b"\xe9\x4b\xcf\x3e\x00", 5)
-        elif PVZ_data.PVZ_version >= 2.4:
+        elif PVZ_data.PVZ_version >= 2.4 or PVZ_data.PVZ_version == 2.5:
             PVZ_data.PVZ_memory.write_bytes(0x00453B20, b"\xe9\xdb\xc4\x4d\x00", 5)
 
 
@@ -736,8 +931,8 @@ def shovelpro(f):
 def randomSlots_operstion(randomSlots_event, haszombie):
     while not randomSlots_event.is_set():
         plant1addr = (
-            PVZ_data.PVZ_memory.read_int(
-                PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+            PVZ_data.PVZ_memory.read_uint(
+                PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
             )
             + 0x144
         )
@@ -748,16 +943,25 @@ def randomSlots_operstion(randomSlots_event, haszombie):
                 else:
                     plant = getRandomZombie(True) + 256
                 PVZ_data.PVZ_memory.write_int(
-                    PVZ_data.PVZ_memory.read_int(plant1addr) + 0x5C + 0x50 * i, plant
+                    PVZ_data.PVZ_memory.read_uint(plant1addr) + 0x5C + 0x50 * i, plant
                 )
-        else:
+        elif PVZ_data.PVZ_version < 3.4:
             for i in range(0, 16):
                 if haszombie is False:
                     plant = getRandomPlant(False)
                 else:
                     plant = getRandomZombie(True) + 256
                 PVZ_data.PVZ_memory.write_int(
-                    PVZ_data.PVZ_memory.read_int(plant1addr) + 0x5C + 0x50 * i, plant
+                    PVZ_data.PVZ_memory.read_uint(plant1addr) + 0x5C + 0x50 * i, plant
+                )
+        else:
+            for i in range(0, 16):
+                if haszombie is False:
+                    plant = getRandomPlant(False)
+                else:
+                    plant = getRandomZombie(True) + 512
+                PVZ_data.PVZ_memory.write_int(
+                    PVZ_data.PVZ_memory.read_uint(plant1addr) + 0x5C + 0x50 * i, plant
                 )
 
 
@@ -781,7 +985,7 @@ def randomSlots(f, haszombie):
 
 
 def changeGameSpeed(s):
-    FrameDurationAddr = PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x454
+    FrameDurationAddr = PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x454
     if s == 0:
         PVZ_data.PVZ_memory.write_int(FrameDurationAddr, 10)
         PVZ_data.PVZ_memory.write_bytes(0x6A9EAA, b"\x01", 1)
@@ -814,8 +1018,8 @@ def changeGameSpeed(s):
 
 def completeAdvanture(level):
     advantureAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x82C
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
         )
         + 0x42C
     )
@@ -824,8 +1028,8 @@ def completeAdvanture(level):
 
 def lockAdvanture(level):
     advantureAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x82C
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
         )
         + 0x42C
     )
@@ -834,8 +1038,8 @@ def lockAdvanture(level):
 
 def completeChallenge(level):
     challengeAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x82C
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
         )
         + 0x82C
     )
@@ -844,8 +1048,8 @@ def completeChallenge(level):
 
 def lockChallenge(level):
     challengeAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x82C
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
         )
         + 0x82C
     )
@@ -854,8 +1058,8 @@ def lockChallenge(level):
 
 def completeMiniGame(level):
     challengeAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x82C
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
         )
         + 0x202C
     )
@@ -864,8 +1068,8 @@ def completeMiniGame(level):
 
 def completePuzzle(level):
     challengeAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x82C
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
         )
         + 0x242C
     )
@@ -874,22 +1078,137 @@ def completePuzzle(level):
 
 def lockPuzzle(level):
     challengeAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x82C
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
         )
         + 0x242C
     )
     PVZ_data.PVZ_memory.write_int(challengeAddr + level * 4, 0)
 
 
+def completeHero(level):
+    challengeAddr = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x282C
+    )
+    PVZ_data.PVZ_memory.write_int(challengeAddr + level * 4, 1)
+
+
+def lockHero(level):
+    challengeAddr = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x282C
+    )
+    PVZ_data.PVZ_memory.write_int(challengeAddr + level * 4, 0)
+
+
 def lockMiniGame(level):
     challengeAddr = (
-        PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x82C
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
         )
         + 0x202C
     )
     PVZ_data.PVZ_memory.write_int(challengeAddr + level * 4, 0)
+
+
+def completeStore(level):
+    storeAddr = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0xF50
+    )
+    PVZ_data.PVZ_memory.write_int(storeAddr + level * 4, 1)
+
+
+def lockStore(level):
+    storeAddr = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0xF50
+    )
+    PVZ_data.PVZ_memory.write_int(storeAddr + level * 4, 0)
+
+
+def completePeak(level):
+    peakAddr = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x2C2C
+    )
+    PVZ_data.PVZ_memory.write_int(peakAddr + level * 4, 1)
+
+
+def lockPeak(level):
+    peakAddr = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x2C2C
+    )
+    PVZ_data.PVZ_memory.write_int(peakAddr + level * 4, 0)
+
+
+def completeSkin(level):
+    skinAddr = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x302C
+    )
+    PVZ_data.PVZ_memory.write_int(skinAddr + level * 4, 1)
+
+
+def lockSkin(level):
+    skinAddr = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x302C
+    )
+    PVZ_data.PVZ_memory.write_int(skinAddr + level * 4, 0)
+
+
+def completeTS(level):
+    tsAddr = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x34AC
+    )
+    PVZ_data.PVZ_memory.write_int(tsAddr + level * 4, 1)
+
+
+def lockTS(level):
+    tsAddr = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x34AC
+    )
+    PVZ_data.PVZ_memory.write_int(tsAddr + level * 4, 0)
+
+
+def achevement():
+    for i in range(0, 35):
+        completeAchievement(i)
+
+
+def completeAchievement(no):
+    achievementAddr = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x1CDC
+    )
+    PVZ_data.PVZ_memory.write_uchar(achievementAddr + no, 1)
 
 
 def noHole(d, t, b):
@@ -1193,15 +1512,15 @@ def conveyorBeltFull(f):
 def getEndlessRound():
     try:
         endlessRoundAddr = (
-            PVZ_data.PVZ_memory.read_int(
-                PVZ_data.PVZ_memory.read_int(
-                    PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+            PVZ_data.PVZ_memory.read_uint(
+                PVZ_data.PVZ_memory.read_uint(
+                    PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
                 )
                 + 0x160
             )
             + 0x6C
         )
-        return PVZ_data.PVZ_memory.read_int(endlessRoundAddr)
+        return PVZ_data.PVZ_memory.read_uint(endlessRoundAddr)
     except:
         return "未知"
 
@@ -1209,9 +1528,9 @@ def getEndlessRound():
 def setEndlessRound(endlessRound):
     try:
         endlessRoundAddr = (
-            PVZ_data.PVZ_memory.read_int(
-                PVZ_data.PVZ_memory.read_int(
-                    PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+            PVZ_data.PVZ_memory.read_uint(
+                PVZ_data.PVZ_memory.read_uint(
+                    PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
                 )
                 + 0x160
             )
@@ -1540,14 +1859,23 @@ def spoils(spoils_config):
                 shellcode.push_byte(0x8)
             elif spoils_config[0]["type"] == 8:
                 shellcode.push_byte(0xF)
-            elif spoils_config[0]["type"] == 9:
+            elif spoils_config[0]["type"] == 9 or spoils_config[0]["type"] == 12:
                 shellcode.push_byte(0x10)
             elif spoils_config[0]["type"] == 10:
                 shellcode.push_byte(0x12)
-            if spoils_config[0]["card"] == -1:
-                shellcode.mov_dword_ptr_dword(0x00751EC0, 0)
+            elif spoils_config[0]["type"] == 11:
+                shellcode.push_byte(0x11)
+            if spoils_config[0]["type"] == 12:
+                shellcode.pushad()
+                shellcode.mov_exx_dword_ptr(asm.EAX, 0x006510E1)
+                shellcode.call(0x005AF400)
+                shellcode.mov_dword_ptr_exx(0x00751EC0, asm.EAX)
+                shellcode.popad()
             else:
-                shellcode.mov_dword_ptr_dword(0x00751EC0, spoils_config[0]["card"])
+                if spoils_config[0]["card"] == -1:
+                    shellcode.mov_dword_ptr_dword(0x00751EC0, 0)
+                else:
+                    shellcode.mov_dword_ptr_dword(0x00751EC0, spoils_config[0]["card"])
             shellcode.push_exx(asm.ESI)
             shellcode.lea_exy_byte(0x47, 0xEC)
             shellcode.push_exx(asm.EAX)
@@ -1566,14 +1894,25 @@ def spoils(spoils_config):
                     shellcode.push_byte(0x8)
                 elif spoils_config[1]["type"] == 8:
                     shellcode.push_byte(0xF)
-                elif spoils_config[1]["type"] == 9:
+                elif spoils_config[1]["type"] == 9 or spoils_config[1]["type"] == 12:
                     shellcode.push_byte(0x10)
                 elif spoils_config[1]["type"] == 10:
                     shellcode.push_byte(0x12)
-                if spoils_config[1]["card"] == -1:
-                    shellcode.mov_dword_ptr_dword(0x00751EC0, 0)
+                elif spoils_config[1]["type"] == 11:
+                    shellcode.push_byte(0x11)
+                if spoils_config[1]["type"] == 12:
+                    shellcode.pushad()
+                    shellcode.mov_exx_dword_ptr(asm.EAX, 0x006510E1)
+                    shellcode.call(0x005AF400)
+                    shellcode.mov_dword_ptr_exx(0x00751EC0, asm.EAX)
+                    shellcode.popad()
                 else:
-                    shellcode.mov_dword_ptr_dword(0x00751EC0, spoils_config[1]["card"])
+                    if spoils_config[1]["card"] == -1:
+                        shellcode.mov_dword_ptr_dword(0x00751EC0, 0)
+                    else:
+                        shellcode.mov_dword_ptr_dword(
+                            0x00751EC0, spoils_config[1]["card"]
+                        )
                 shellcode.push_exx(asm.ESI)
                 shellcode.lea_exy_byte(0x4F, 0xE2)
                 shellcode.push_exx(asm.ECX)
@@ -1594,16 +1933,27 @@ def spoils(spoils_config):
                         shellcode.push_byte(0x8)
                     elif spoils_config[2]["type"] == 8:
                         shellcode.push_byte(0xF)
-                    elif spoils_config[2]["type"] == 9:
+                    elif (
+                        spoils_config[2]["type"] == 9 or spoils_config[2]["type"] == 12
+                    ):
                         shellcode.push_byte(0x10)
                     elif spoils_config[2]["type"] == 10:
                         shellcode.push_byte(0x12)
-                    if spoils_config[2]["card"] == -1:
-                        shellcode.mov_dword_ptr_dword(0x00751EC0, 0)
+                    elif spoils_config[2]["type"] == 11:
+                        shellcode.push_byte(0x11)
+                    if spoils_config[2]["type"] == 12:
+                        shellcode.pushad()
+                        shellcode.mov_exx_dword_ptr(asm.EAX, 0x006510E1)
+                        shellcode.call(0x005AF400)
+                        shellcode.mov_dword_ptr_exx(0x00751EC0, asm.EAX)
+                        shellcode.popad()
                     else:
-                        shellcode.mov_dword_ptr_dword(
-                            0x00751EC0, spoils_config[2]["card"]
-                        )
+                        if spoils_config[2]["card"] == -1:
+                            shellcode.mov_dword_ptr_dword(0x00751EC0, 0)
+                        else:
+                            shellcode.mov_dword_ptr_dword(
+                                0x00751EC0, spoils_config[2]["card"]
+                            )
                     shellcode.push_exx(asm.ESI)
                     shellcode.lea_exy_byte(0x57, 0xD8)
                     shellcode.push_exx(asm.EDX)
@@ -1623,16 +1973,28 @@ def spoils(spoils_config):
                             shellcode.push_byte(0x8)
                         elif spoils_config[3]["type"] == 8:
                             shellcode.push_byte(0xF)
-                        elif spoils_config[3]["type"] == 9:
+                        elif (
+                            spoils_config[3]["type"] == 9
+                            or spoils_config[3]["type"] == 12
+                        ):
                             shellcode.push_byte(0x10)
                         elif spoils_config[3]["type"] == 10:
                             shellcode.push_byte(0x12)
-                        if spoils_config[3]["card"] == -1:
-                            shellcode.mov_dword_ptr_dword(0x00751EC0, 0)
+                        elif spoils_config[3]["type"] == 11:
+                            shellcode.push_byte(0x11)
+                        if spoils_config[3]["type"] == 12:
+                            shellcode.pushad()
+                            shellcode.mov_exx_dword_ptr(asm.EAX, 0x006510E1)
+                            shellcode.call(0x005AF400)
+                            shellcode.mov_dword_ptr_exx(0x00751EC0, asm.EAX)
+                            shellcode.popad()
                         else:
-                            shellcode.mov_dword_ptr_dword(
-                                0x00751EC0, spoils_config[3]["card"]
-                            )
+                            if spoils_config[3]["card"] == -1:
+                                shellcode.mov_dword_ptr_dword(0x00751EC0, 0)
+                            else:
+                                shellcode.mov_dword_ptr_dword(
+                                    0x00751EC0, spoils_config[3]["card"]
+                                )
                         shellcode.push_exx(asm.ESI)
                         shellcode.add_exx_byte(asm.EDI, 0xCE)
                         shellcode.push_exx(asm.EDI)
@@ -2501,8 +2863,159 @@ def randomBullet(f, hasDoom, hasMine, hasPepper):
         PVZ_data.PVZ_memory.write_bytes(0x0088CE91, b"\xe8\x1a\x1e\xbe\xff", 5)
 
 
-def setAttackSpeed(multiple):
-    PVZ_data.PVZ_memory.write_uchar(0x045F8AC, 256 - 1 * multiple)
+newmem_setAttackSpeed = None
+newmem_setAttackSpeed2 = None
+
+
+def setAttackSpeed(f, multiple):
+    # PVZ_data.PVZ_memory.write_uchar(0x045F8AC, 256 - 1 * multiple)
+    global newmem_setAttackSpeed
+    global newmem_setAttackSpeed2
+    # [ENABLE]
+    # //code from here to '[DISABLE]' will be used to enable the cheat
+    # alloc(newmem,2048)
+    # label(returnhere)
+    # label(originalcode)
+    # label(exit)
+
+    # newmem: //this is allocated memory, you have read,write,execute access
+    # //place your code here
+    # push esi
+    # mov esi,0
+    # xh:
+    # pushad
+    # mov eax,edi
+    # call 464820
+    # popad
+    # inc esi
+    # cmp esi,#1000
+    # jl xh
+    # pop esi
+
+    # originalcode:
+    # cmp dword ptr [edi+00000204],00
+
+    # exit:
+    # jmp returnhere
+
+    # 9D080F:
+    # jmp newmem
+    # nop 2
+    # returnhere:
+
+    # [DISABLE]
+    # //code from here till the end of the code will be used to disable the cheat
+    # dealloc(newmem)
+    # 9D080F:
+    # db 83 BF 04 02 00 00 00
+    # //cmp dword ptr [edi+00000204],00
+
+    # [ENABLE]
+    # //code from here to '[DISABLE]' will be used to enable the cheat
+    # alloc(newmem,2048)
+    # label(returnhere)
+    # label(originalcode)
+    # label(exit)
+
+    # newmem: //this is allocated memory, you have read,write,execute access
+    # //place your code here
+    # push esi
+    # mov esi,0
+    # xh:
+    # pushad
+    # mov eax,edi
+    # call 45f8a0
+    # popad
+    # inc esi
+    # cmp esi,#1000
+    # jl xh
+    # pop esi
+
+    # originalcode:
+    # cmp dword ptr [edi+00000204],00
+
+    # exit:
+    # jmp returnhere
+
+    # 9D040F:
+    # jmp newmem
+    # nop 2
+    # returnhere:
+
+    # [DISABLE]
+    # //code from here till the end of the code will be used to disable the cheat
+    # dealloc(newmem)
+    # 9D040F:
+    # db 83 BF 04 02 00 00 00
+    # //cmp dword ptr [edi+00000204],00
+    if f:
+        newmem_setAttackSpeed = pymem.memory.allocate_memory(
+            PVZ_data.PVZ_memory.process_handle, 256
+        )
+        shellcode = asm.Asm(newmem_setAttackSpeed)
+        shellcode.push_exx(asm.ESI)
+        shellcode.mov_exx(asm.ESI, 0)
+        shellcode.create_label("xh")
+        shellcode.pushad()
+        shellcode.mov_exx_eyy(asm.EAX, asm.EDI)
+        shellcode.call(0x00464820)
+        shellcode.popad()
+        shellcode.inc_exx(asm.ESI)
+        shellcode.cmp_exx_dword(asm.ESI, multiple)
+        shellcode.jl_label("xh")
+        shellcode.pop_exx(asm.ESI)
+        shellcode.cmp_dword_ptr_exx_add_dword_dword(asm.EDI, 0x204, 0)
+        shellcode.jmp(0x009D0814)
+        PVZ_data.PVZ_memory.write_bytes(
+            newmem_setAttackSpeed,
+            bytes(shellcode.code[: shellcode.index]),
+            shellcode.index,
+        )
+        PVZ_data.PVZ_memory.write_bytes(
+            0x009D080F,
+            b"\xe9"
+            + calculate_call_address(newmem_setAttackSpeed - 0x009D0814)
+            + b"\x90\x90",
+            7,
+        )
+        newmem_setAttackSpeed2 = pymem.memory.allocate_memory(
+            PVZ_data.PVZ_memory.process_handle, 256
+        )
+        shellcode2 = asm.Asm(newmem_setAttackSpeed2)
+        shellcode2.push_exx(asm.ESI)
+        shellcode2.mov_exx(asm.ESI, 0)
+        shellcode2.create_label("xh")
+        shellcode2.pushad()
+        shellcode2.mov_exx_eyy(asm.EAX, asm.EDI)
+        shellcode2.call(0x0045F8A0)
+        shellcode2.popad()
+        shellcode2.inc_exx(asm.ESI)
+        shellcode2.cmp_exx_dword(asm.ESI, multiple)
+        shellcode2.jl_label("xh")
+        shellcode2.pop_exx(asm.ESI)
+        shellcode2.cmp_dword_ptr_exx_add_dword_dword(asm.EDI, 0x204, 0)
+        shellcode2.jmp(0x009D0414)
+        PVZ_data.PVZ_memory.write_bytes(
+            newmem_setAttackSpeed2,
+            bytes(shellcode2.code[: shellcode2.index]),
+            shellcode2.index,
+        )
+        PVZ_data.PVZ_memory.write_bytes(
+            0x009D040F,
+            b"\xe9"
+            + calculate_call_address(newmem_setAttackSpeed2 - 0x009D0414)
+            + b"\x90\x90",
+            7,
+        )
+    else:
+        PVZ_data.PVZ_memory.write_bytes(0x009D080F, b"\x83\xbf\x04\x02\x00\x00\x00", 7)
+        pymem.memory.free_memory(
+            PVZ_data.PVZ_memory.process_handle, newmem_setAttackSpeed
+        )
+        PVZ_data.PVZ_memory.write_bytes(0x009D040F, b"\x83\xbf\x04\x02\x00\x00\x00", 7)
+        pymem.memory.free_memory(
+            PVZ_data.PVZ_memory.process_handle, newmem_setAttackSpeed2
+        )
 
 
 def cancelAttackAnimation(f):
@@ -2620,9 +3133,9 @@ def setPlantBullet(f, plantType, bulletType, mode):
 def startAllCars():
     rows = getMap()
     try:
-        car_num = PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(
-                PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+        car_num = PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(
+                PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
             )
             + 0x110
         )
@@ -2633,9 +3146,9 @@ def startAllCars():
     start_car_list = [0] * rows
     while i < car_num:
         car_addresss = (
-            PVZ_data.PVZ_memory.read_int(
-                PVZ_data.PVZ_memory.read_int(
-                    PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+            PVZ_data.PVZ_memory.read_uint(
+                PVZ_data.PVZ_memory.read_uint(
+                    PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
                 )
                 + 0x100
             )
@@ -2922,9 +3435,9 @@ def morph_all_plant():
     print(1)
     plant_list = []
     try:
-        plant_num = PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(
-                PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+        plant_num = PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(
+                PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
             )
             + 0xBC
         )
@@ -2934,13 +3447,13 @@ def morph_all_plant():
     j = 0
     while i < plant_num:
         plant_addresss = (
-            PVZ_data.PVZ_memory.read_int(
-                PVZ_data.PVZ_memory.read_int(
-                    PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+            PVZ_data.PVZ_memory.read_uint(
+                PVZ_data.PVZ_memory.read_uint(
+                    PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
                 )
                 + 0xAC
             )
-            + 0x204 * j
+            + PVZ_data.plant_size * j
         )
         plant_exist = PVZ_data.PVZ_memory.read_bytes(plant_addresss + 0x141, 1)
         if plant_exist == b"\x00":
@@ -3319,9 +3832,9 @@ def spawisModified():
 
 def clearPlants():
     try:
-        plant_num = PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(
-                PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+        plant_num = PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(
+                PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
             )
             + 0xBC
         )
@@ -3331,13 +3844,13 @@ def clearPlants():
     j = 0
     while i < plant_num:
         plant_addresss = (
-            PVZ_data.PVZ_memory.read_int(
-                PVZ_data.PVZ_memory.read_int(
-                    PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+            PVZ_data.PVZ_memory.read_uint(
+                PVZ_data.PVZ_memory.read_uint(
+                    PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
                 )
                 + 0xAC
             )
-            + 0x204 * j
+            + PVZ_data.plant_size * j
         )
         plant_exist = PVZ_data.PVZ_memory.read_bytes(plant_addresss + 0x141, 1)
         if plant_exist == b"\x00":
@@ -3621,13 +4134,643 @@ def globalSpawModify(f, zombieTypes):
             pymem.memory.free_memory(
                 PVZ_data.PVZ_memory.process_handle, newmem_globalSpawModify
             )
+    elif PVZ_data.PVZ_version == 2.5:
+        if f:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\xeb", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\x90\x90\x90\x90\x90", 5)
+            newmem_globalSpawModify = pymem.memory.allocate_memory(
+                PVZ_data.PVZ_memory.process_handle, 256
+            )
+            shellcode = asm.Asm(newmem_globalSpawModify)
+            for i in range(0, 66):
+                if str(i) in zombieTypes:
+                    print(i)
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 1)
+                else:
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 0)
+
+            shellcode.jmp(0x00425D1D)
+            PVZ_data.PVZ_memory.write_bytes(
+                newmem_globalSpawModify,
+                bytes(shellcode.code[: shellcode.index]),
+                shellcode.index,
+            )
+            PVZ_data.PVZ_memory.write_bytes(
+                0x0082401F,
+                b"\xe9"
+                + calculate_call_address(newmem_globalSpawModify - 0x00824024)
+                + b"\x90",
+                6,
+            )
+            spawisModified()
+        else:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\x7f", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\xe9\xad\xaa\x48\x00", 5)
+            PVZ_data.PVZ_memory.write_bytes(0x0082401F, b"\x0f\x85\x21\x00\x00\x00", 6)
+            pymem.memory.free_memory(
+                PVZ_data.PVZ_memory.process_handle, newmem_globalSpawModify
+            )
+    elif PVZ_data.PVZ_version == 2.6:
+        if f:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\xeb", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\x90\x90\x90\x90\x90", 5)
+            newmem_globalSpawModify = pymem.memory.allocate_memory(
+                PVZ_data.PVZ_memory.process_handle, 256
+            )
+            shellcode = asm.Asm(newmem_globalSpawModify)
+            for i in range(0, 75):
+                if str(i) in zombieTypes:
+                    print(i)
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 1)
+                else:
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 0)
+
+            shellcode.jmp(0x00425D1D)
+            PVZ_data.PVZ_memory.write_bytes(
+                newmem_globalSpawModify,
+                bytes(shellcode.code[: shellcode.index]),
+                shellcode.index,
+            )
+            PVZ_data.PVZ_memory.write_bytes(
+                0x0082401F,
+                b"\xe9"
+                + calculate_call_address(newmem_globalSpawModify - 0x00824024)
+                + b"\x90",
+                6,
+            )
+            spawisModified()
+        else:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\x7f", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\xe9\xad\xaa\x48\x00", 5)
+            PVZ_data.PVZ_memory.write_bytes(0x0082401F, b"\x0f\x85\x21\x00\x00\x00", 6)
+            pymem.memory.free_memory(
+                PVZ_data.PVZ_memory.process_handle, newmem_globalSpawModify
+            )
+    elif PVZ_data.PVZ_version == 2.61:
+        if f:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\xeb", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\x90\x90\x90\x90\x90", 5)
+            newmem_globalSpawModify = pymem.memory.allocate_memory(
+                PVZ_data.PVZ_memory.process_handle, 256
+            )
+            shellcode = asm.Asm(newmem_globalSpawModify)
+            for i in range(0, 76):
+                if str(i) in zombieTypes:
+                    print(i)
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 1)
+                else:
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 0)
+
+            shellcode.jmp(0x00425D1D)
+            PVZ_data.PVZ_memory.write_bytes(
+                newmem_globalSpawModify,
+                bytes(shellcode.code[: shellcode.index]),
+                shellcode.index,
+            )
+            PVZ_data.PVZ_memory.write_bytes(
+                0x0082401F,
+                b"\xe9"
+                + calculate_call_address(newmem_globalSpawModify - 0x00824024)
+                + b"\x90",
+                6,
+            )
+            spawisModified()
+        else:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\x7f", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\xe9\xad\xaa\x48\x00", 5)
+            PVZ_data.PVZ_memory.write_bytes(0x0082401F, b"\x0f\x85\x21\x00\x00\x00", 6)
+            pymem.memory.free_memory(
+                PVZ_data.PVZ_memory.process_handle, newmem_globalSpawModify
+            )
+    elif PVZ_data.PVZ_version == 3.0:
+        if f:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\xeb", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\x90\x90\x90\x90\x90", 5)
+            newmem_globalSpawModify = pymem.memory.allocate_memory(
+                PVZ_data.PVZ_memory.process_handle, 256
+            )
+            shellcode = asm.Asm(newmem_globalSpawModify)
+            for i in range(0, 83):
+                if str(i) in zombieTypes:
+                    print(i)
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 1)
+                else:
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 0)
+
+            shellcode.jmp(0x00425D1D)
+            PVZ_data.PVZ_memory.write_bytes(
+                newmem_globalSpawModify,
+                bytes(shellcode.code[: shellcode.index]),
+                shellcode.index,
+            )
+            PVZ_data.PVZ_memory.write_bytes(
+                0x0082405A,
+                b"\xe9"
+                + calculate_call_address(newmem_globalSpawModify - 0x0082405F)
+                + b"\x90",
+                6,
+            )
+            spawisModified()
+        else:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\x7f", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\xe9\xad\xaa\x48\x00", 5)
+            PVZ_data.PVZ_memory.write_bytes(0x0082405A, b"\x0f\x85\xc0\x00\x00\x00", 6)
+            pymem.memory.free_memory(
+                PVZ_data.PVZ_memory.process_handle, newmem_globalSpawModify
+            )
+    elif (
+        PVZ_data.PVZ_version == 3.1
+        or PVZ_data.PVZ_version == 3.15
+        or PVZ_data.PVZ_version == 3.2
+        or PVZ_data.PVZ_version == 3.21
+    ):
+        if f:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\xeb", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\x90\x90\x90\x90\x90", 5)
+            newmem_globalSpawModify = pymem.memory.allocate_memory(
+                PVZ_data.PVZ_memory.process_handle, 256
+            )
+            shellcode = asm.Asm(newmem_globalSpawModify)
+            for i in range(0, 89):
+                if str(i) in zombieTypes:
+                    print(i)
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 1)
+                else:
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 0)
+
+            shellcode.jmp(0x00425D1D)
+            PVZ_data.PVZ_memory.write_bytes(
+                newmem_globalSpawModify,
+                bytes(shellcode.code[: shellcode.index]),
+                shellcode.index,
+            )
+            PVZ_data.PVZ_memory.write_bytes(
+                0x0082405A,
+                b"\xe9"
+                + calculate_call_address(newmem_globalSpawModify - 0x0082405F)
+                + b"\x90",
+                6,
+            )
+            spawisModified()
+    elif PVZ_data.PVZ_version == 3.3 or PVZ_data.PVZ_version == 3.4:
+        if f:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\xeb", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\x90\x90\x90\x90\x90", 5)
+            newmem_globalSpawModify = pymem.memory.allocate_memory(
+                PVZ_data.PVZ_memory.process_handle, 256
+            )
+            shellcode = asm.Asm(newmem_globalSpawModify)
+            for i in range(0, 95):
+                if str(i) in zombieTypes:
+                    print(i)
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 1)
+                else:
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 0)
+
+            shellcode.jmp(0x00425D1D)
+            PVZ_data.PVZ_memory.write_bytes(
+                newmem_globalSpawModify,
+                bytes(shellcode.code[: shellcode.index]),
+                shellcode.index,
+            )
+            PVZ_data.PVZ_memory.write_bytes(
+                0x0082405A,
+                b"\xe9"
+                + calculate_call_address(newmem_globalSpawModify - 0x0082405F)
+                + b"\x90",
+                6,
+            )
+            spawisModified()
+    elif PVZ_data.PVZ_version == 3.5:
+        if f:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\xeb", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\x90\x90\x90\x90\x90", 5)
+            newmem_globalSpawModify = pymem.memory.allocate_memory(
+                PVZ_data.PVZ_memory.process_handle, 256
+            )
+            shellcode = asm.Asm(newmem_globalSpawModify)
+            for i in range(0, 101):
+                if str(i) in zombieTypes:
+                    print(i)
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 1)
+                else:
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 0)
+
+            shellcode.jmp(0x00425D1D)
+            PVZ_data.PVZ_memory.write_bytes(
+                newmem_globalSpawModify,
+                bytes(shellcode.code[: shellcode.index]),
+                shellcode.index,
+            )
+            PVZ_data.PVZ_memory.write_bytes(
+                0x0082405A,
+                b"\xe9"
+                + calculate_call_address(newmem_globalSpawModify - 0x0082405F)
+                + b"\x90",
+                6,
+            )
+            spawisModified()
+        else:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\x7f", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\xe9\xad\xaa\x48\x00", 5)
+            PVZ_data.PVZ_memory.write_bytes(0x0082405A, b"\x0f\x85\xc0\x00\x00\x00", 6)
+            pymem.memory.free_memory(
+                PVZ_data.PVZ_memory.process_handle, newmem_globalSpawModify
+            )
+
+    elif PVZ_data.PVZ_version == 3.6:
+        if f:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\xeb", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\x90\x90\x90\x90\x90", 5)
+            newmem_globalSpawModify = pymem.memory.allocate_memory(
+                PVZ_data.PVZ_memory.process_handle, 256
+            )
+            shellcode = asm.Asm(newmem_globalSpawModify)
+            for i in range(0, 104):
+                if str(i) in zombieTypes:
+                    print(i)
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 1)
+                else:
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 0)
+            shellcode.jmp(0x00425D1D)
+            PVZ_data.PVZ_memory.write_bytes(
+                newmem_globalSpawModify,
+                bytes(shellcode.code[: shellcode.index]),
+                shellcode.index,
+            )
+            PVZ_data.PVZ_memory.write_bytes(
+                0x0082405A,
+                b"\xe9"
+                + calculate_call_address(newmem_globalSpawModify - 0x0082405F)
+                + b"\x90",
+                6,
+            )
+            spawisModified()
+        else:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\x7f", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\xe9\xad\xaa\x48\x00", 5)
+            PVZ_data.PVZ_memory.write_bytes(0x0082405A, b"\x0f\x85\xc0\x00\x00\x00", 6)
+            pymem.memory.free_memory(
+                PVZ_data.PVZ_memory.process_handle, newmem_globalSpawModify
+            )
+
+    elif PVZ_data.PVZ_version == 3.65:
+        if f:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\xeb", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\x90\x90\x90\x90\x90", 5)
+            newmem_globalSpawModify = pymem.memory.allocate_memory(
+                PVZ_data.PVZ_memory.process_handle, 256
+            )
+            shellcode = asm.Asm(newmem_globalSpawModify)
+            for i in range(0, 107):
+                if str(i) in zombieTypes:
+                    print(i)
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 1)
+                else:
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 0)
+            shellcode.jmp(0x00425D1D)
+            PVZ_data.PVZ_memory.write_bytes(
+                newmem_globalSpawModify,
+                bytes(shellcode.code[: shellcode.index]),
+                shellcode.index,
+            )
+            PVZ_data.PVZ_memory.write_bytes(
+                0x0082405A,
+                b"\xe9"
+                + calculate_call_address(newmem_globalSpawModify - 0x0082405F)
+                + b"\x90",
+                6,
+            )
+            spawisModified()
+        else:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\x7f", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\xe9\xad\xaa\x48\x00", 5)
+            PVZ_data.PVZ_memory.write_bytes(0x0082405A, b"\x0f\x85\xc0\x00\x00\x00", 6)
+            pymem.memory.free_memory(
+                PVZ_data.PVZ_memory.process_handle, newmem_globalSpawModify
+            )
+    elif (
+        PVZ_data.PVZ_version == 3.7
+        or PVZ_data.PVZ_version == 3.75
+        or PVZ_data.PVZ_version == 3.76
+    ):
+        if f:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\xeb", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\x90\x90\x90\x90\x90", 5)
+            newmem_globalSpawModify = pymem.memory.allocate_memory(
+                PVZ_data.PVZ_memory.process_handle, 256
+            )
+            shellcode = asm.Asm(newmem_globalSpawModify)
+            for i in range(0, 110):
+                if str(i) in zombieTypes:
+                    print(i)
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 1)
+                else:
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 0)
+            shellcode.jmp(0x00425D1D)
+            PVZ_data.PVZ_memory.write_bytes(
+                newmem_globalSpawModify,
+                bytes(shellcode.code[: shellcode.index]),
+                shellcode.index,
+            )
+            PVZ_data.PVZ_memory.write_bytes(
+                0x0082405A,
+                b"\xe9"
+                + calculate_call_address(newmem_globalSpawModify - 0x0082405F)
+                + b"\x90",
+                6,
+            )
+            spawisModified()
+    elif PVZ_data.PVZ_version == 3.8:
+        if f:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\xeb", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\x90\x90\x90\x90\x90", 5)
+            newmem_globalSpawModify = pymem.memory.allocate_memory(
+                PVZ_data.PVZ_memory.process_handle, 256
+            )
+            shellcode = asm.Asm(newmem_globalSpawModify)
+            for i in range(0, 112):
+                if str(i) in zombieTypes:
+                    print(i)
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 1)
+                else:
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 0)
+            shellcode.jmp(0x00425D1D)
+            PVZ_data.PVZ_memory.write_bytes(
+                newmem_globalSpawModify,
+                bytes(shellcode.code[: shellcode.index]),
+                shellcode.index,
+            )
+            PVZ_data.PVZ_memory.write_bytes(
+                0x0082405A,
+                b"\xe9"
+                + calculate_call_address(newmem_globalSpawModify - 0x0082405F)
+                + b"\x90",
+                6,
+            )
+            spawisModified()
+    elif (
+        PVZ_data.PVZ_version == 3.9
+        or PVZ_data.PVZ_version == 3.99
+        or PVZ_data.PVZ_version == 3.11
+        or PVZ_data.PVZ_version == 3.12
+    ):
+        if f:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\xeb", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\x90\x90\x90\x90\x90", 5)
+            newmem_globalSpawModify = pymem.memory.allocate_memory(
+                PVZ_data.PVZ_memory.process_handle, 256
+            )
+            shellcode = asm.Asm(newmem_globalSpawModify)
+            for i in range(0, 115):
+                if str(i) in zombieTypes:
+                    print(i)
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 1)
+                else:
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 0)
+            shellcode.jmp(0x00425D1D)
+            PVZ_data.PVZ_memory.write_bytes(
+                newmem_globalSpawModify,
+                bytes(shellcode.code[: shellcode.index]),
+                shellcode.index,
+            )
+            PVZ_data.PVZ_memory.write_bytes(
+                0x0082405A,
+                b"\xe9"
+                + calculate_call_address(newmem_globalSpawModify - 0x0082405F)
+                + b"\x90",
+                6,
+            )
+            spawisModified()
+    elif PVZ_data.PVZ_version == 3.132:
+        if f:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\xeb", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\x90\x90\x90\x90\x90", 5)
+            newmem_globalSpawModify = pymem.memory.allocate_memory(
+                PVZ_data.PVZ_memory.process_handle, 256
+            )
+            shellcode = asm.Asm(newmem_globalSpawModify)
+            for i in range(0, 117):
+                if str(i) in zombieTypes:
+                    print(i)
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 1)
+                else:
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 0)
+            shellcode.jmp(0x00425D1D)
+            PVZ_data.PVZ_memory.write_bytes(
+                newmem_globalSpawModify,
+                bytes(shellcode.code[: shellcode.index]),
+                shellcode.index,
+            )
+            PVZ_data.PVZ_memory.write_bytes(
+                0x008240BB,
+                b"\xe9"
+                + calculate_call_address(newmem_globalSpawModify - 0x008240C0)
+                + b"\x90",
+                6,
+            )
+            spawisModified()
+        else:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\x7f", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\xe9\xad\xaa\x48\x00", 5)
+            PVZ_data.PVZ_memory.write_bytes(0x008240BB, b"\x0f\x85\x0c\x00\x00\x00", 6)
+            pymem.memory.free_memory(
+                PVZ_data.PVZ_memory.process_handle, newmem_globalSpawModify
+            )
+
+    elif PVZ_data.PVZ_version == 3.14:
+        if f:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\xeb", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\x90\x90\x90\x90\x90", 5)
+            newmem_globalSpawModify = pymem.memory.allocate_memory(
+                PVZ_data.PVZ_memory.process_handle, 256
+            )
+            shellcode = asm.Asm(newmem_globalSpawModify)
+            for i in range(0, 126):
+                if str(i) in zombieTypes:
+                    print(i)
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 1)
+                else:
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 0)
+            shellcode.jmp(0x00425D1D)
+            PVZ_data.PVZ_memory.write_bytes(
+                newmem_globalSpawModify,
+                bytes(shellcode.code[: shellcode.index]),
+                shellcode.index,
+            )
+            PVZ_data.PVZ_memory.write_bytes(
+                0x008230C1,
+                b"\xe9"
+                + calculate_call_address(newmem_globalSpawModify - 0x008230C6)
+                + b"\x90",
+                6,
+            )
+            spawisModified()
+        else:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\x7f", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\xe9\xad\xaa\x48\x00", 5)
+            PVZ_data.PVZ_memory.write_bytes(0x008240BB, b"\x0f\x85\x0c\x00\x00\x00", 6)
+            pymem.memory.free_memory(
+                PVZ_data.PVZ_memory.process_handle, newmem_globalSpawModify
+            )
+
+    elif PVZ_data.PVZ_version == 3.151:
+        if f:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\xeb", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\x90\x90\x90\x90\x90", 5)
+            newmem_globalSpawModify = pymem.memory.allocate_memory(
+                PVZ_data.PVZ_memory.process_handle, 256
+            )
+            shellcode = asm.Asm(newmem_globalSpawModify)
+            for i in range(0, 131):
+                if str(i) in zombieTypes:
+                    print(i)
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 1)
+                else:
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 0)
+            shellcode.jmp(0x00425D1D)
+            PVZ_data.PVZ_memory.write_bytes(
+                newmem_globalSpawModify,
+                bytes(shellcode.code[: shellcode.index]),
+                shellcode.index,
+            )
+            PVZ_data.PVZ_memory.write_bytes(
+                0x008230C1,
+                b"\xe9"
+                + calculate_call_address(newmem_globalSpawModify - 0x008230C6)
+                + b"\x90",
+                6,
+            )
+            spawisModified()
+    elif PVZ_data.PVZ_version == 3.16:
+        if f:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\xeb", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\x90\x90\x90\x90\x90", 5)
+            newmem_globalSpawModify = pymem.memory.allocate_memory(
+                PVZ_data.PVZ_memory.process_handle, 256
+            )
+            shellcode = asm.Asm(newmem_globalSpawModify)
+            for i in range(0, 132):
+                if str(i) in zombieTypes:
+                    print(i)
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 1)
+                else:
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 0)
+            shellcode.jmp(0x00425D1D)
+            PVZ_data.PVZ_memory.write_bytes(
+                newmem_globalSpawModify,
+                bytes(shellcode.code[: shellcode.index]),
+                shellcode.index,
+            )
+            PVZ_data.PVZ_memory.write_bytes(
+                0x008230C1,
+                b"\xe9"
+                + calculate_call_address(newmem_globalSpawModify - 0x008230C6)
+                + b"\x90",
+                6,
+            )
+            spawisModified()
+        else:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\x7f", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\xe9\xad\xaa\x48\x00", 5)
+            PVZ_data.PVZ_memory.write_bytes(0x008240BB, b"\x0f\x85\x0c\x00\x00\x00", 6)
+            pymem.memory.free_memory(
+                PVZ_data.PVZ_memory.process_handle, newmem_globalSpawModify
+            )
+    elif PVZ_data.PVZ_version == 3.17:
+        if f:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\xeb", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\x90\x90\x90\x90\x90", 5)
+            newmem_globalSpawModify = pymem.memory.allocate_memory(
+                PVZ_data.PVZ_memory.process_handle, 256
+            )
+            shellcode = asm.Asm(newmem_globalSpawModify)
+            for i in range(0, 139):
+                if str(i) in zombieTypes:
+                    print(i)
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 1)
+                else:
+                    shellcode.mov_byte_ptr_exx_add_dword_byte(asm.EDX, 0x57D4 + i, 0)
+            shellcode.jmp(0x00425D1D)
+            PVZ_data.PVZ_memory.write_bytes(
+                newmem_globalSpawModify,
+                bytes(shellcode.code[: shellcode.index]),
+                shellcode.index,
+            )
+            PVZ_data.PVZ_memory.write_bytes(
+                0x008230C1,
+                b"\xe9"
+                + calculate_call_address(newmem_globalSpawModify - 0x008230C6)
+                + b"\x90",
+                6,
+            )
+            spawisModified()
+        else:
+            PVZ_data.PVZ_memory.write_bytes(0x00425855, b"\x7f", 1)
+            PVZ_data.PVZ_memory.write_bytes(0x0042584E, b"\xe9\xad\xaa\x48\x00", 5)
+            PVZ_data.PVZ_memory.write_bytes(0x008240BB, b"\x0f\x85\x0c\x00\x00\x00", 6)
+            pymem.memory.free_memory(
+                PVZ_data.PVZ_memory.process_handle, newmem_globalSpawModify
+            )
 
 
 def changeZombieHead(f, zombieType):
-    print("changehead" + str(f))
+    # print("changehead" + str(f))
     global newmem_changeZombieHead
     global newmem_changeZombieDeadHead
-    if PVZ_data.PVZ_version == 2.0:
+    if PVZ_data.PVZ_version == 0:
+        if f:
+            newmem_changeZombieHead = pymem.memory.allocate_memory(
+                PVZ_data.PVZ_memory.process_handle, 256
+            )
+            shellcode = asm.Asm(newmem_changeZombieHead)
+            shellcode.cmp_dword_ptr_exx_add_byte_byte(asm.ESI, 0x24, zombieType)
+            shellcode.jne_long_offset(0x4E)
+            shellcode.pushad()
+            shellcode.mov_exx_eyy(asm.EAX, asm.ESI)
+            shellcode.push_byte(0xFF)
+            shellcode.push_dword(0x0065851C)
+            shellcode.call(0x005331C0)
+            shellcode.mov_exx_eyy(asm.EAX, asm.ESI)
+            shellcode.push_byte(0xFF)
+            shellcode.push_dword(0x00658110)
+            shellcode.call(0x005331C0)
+            shellcode.mov_exx_dword_ptr_eyy(asm.EAX, asm.ESI)
+            shellcode.mov_exx_dword_ptr_eyy_add_dword(asm.ECX, asm.EAX, 0x820)
+            shellcode.mov_exx_dword_ptr_eyy_add_byte(asm.EDX, asm.ECX, 0x8)
+            shellcode.mov_exx_dword_ptr_eyy_add_dword(asm.EAX, asm.ESI, 0x118)
+            shellcode.and_eax_dword(0xFFFF)
+            shellcode.lea_exx_eyy_ezz_times(asm.EBX, asm.EAX, asm.EAX, 4)
+            shellcode.shl_exx_byte(asm.EBX, 5)
+            shellcode.add_exx_ptr_eyy(asm.EBX, asm.EDX)
+            shellcode.push_dword_ptr(0x006A7A08)
+            shellcode.mov_exx(asm.EAX, 0x00658500)
+            shellcode.mov_exx_eyy(asm.ECX, asm.EBX)
+            shellcode.call(0x00473490)
+            shellcode.popad()
+            shellcode.mov_exx_dword_ptr_eyy_add_byte(asm.EAX, asm.ESI, 0x58)
+            shellcode.add_dword_ptr_exx_add_byte_byte(asm.ESI, 0x54, 0xFF)
+            shellcode.jmp(0x0052AF92)
+            PVZ_data.PVZ_memory.write_bytes(
+                newmem_changeZombieHead,
+                bytes(shellcode.code[: shellcode.index]),
+                shellcode.index,
+            )
+            PVZ_data.PVZ_memory.write_bytes(
+                0x0052AF8B,
+                b"\xe9"
+                + calculate_call_address(newmem_changeZombieHead - 0x0052AF90)
+                + b"\x90\x90",
+                7,
+            )
+        else:
+            PVZ_data.PVZ_memory.write_bytes(
+                0x0052AF8B, b"\x8b\x46\x58\x83\x46\x54\xff", 7
+            )
+            pymem.memory.free_memory(
+                PVZ_data.PVZ_memory.process_handle, newmem_changeZombieHead
+            )
+    elif PVZ_data.PVZ_version == 2.0:
         if f:
             newmem_changeZombieHead = pymem.memory.allocate_memory(
                 PVZ_data.PVZ_memory.process_handle, 256
@@ -3708,7 +4851,7 @@ def changeZombieHead(f, zombieType):
             pymem.memory.free_memory(
                 PVZ_data.PVZ_memory.process_handle, newmem_changeZombieDeadHead
             )
-    elif PVZ_data.PVZ_version == 2.1 or PVZ_data.PVZ_version >= 2.2:
+    elif 2.5 > PVZ_data.PVZ_version >= 2.1:
         if f:
             newmem_changeZombieHead = pymem.memory.allocate_memory(
                 PVZ_data.PVZ_memory.process_handle, 256
@@ -3785,6 +4928,115 @@ def changeZombieHead(f, zombieType):
             )
             PVZ_data.PVZ_memory.write_bytes(
                 0x008A9200, b"\x83\xf8\x23\x0f\x85\x0b\x00\x00\x00", 9
+            )
+            pymem.memory.free_memory(
+                PVZ_data.PVZ_memory.process_handle, newmem_changeZombieDeadHead
+            )
+    elif (
+        PVZ_data.PVZ_version == 2.5
+        or PVZ_data.PVZ_version == 2.51
+        or PVZ_data.PVZ_version == 2.6
+        or PVZ_data.PVZ_version == 2.61
+        or PVZ_data.PVZ_version == 3.0
+        or PVZ_data.PVZ_version == 3.1
+        or PVZ_data.PVZ_version == 3.15
+        or PVZ_data.PVZ_version == 3.2
+        or PVZ_data.PVZ_version == 3.21
+        or PVZ_data.PVZ_version == 3.3
+        or PVZ_data.PVZ_version == 3.4
+        or PVZ_data.PVZ_version == 3.5
+        or PVZ_data.PVZ_version == 3.6
+        or PVZ_data.PVZ_version == 3.65
+        or PVZ_data.PVZ_version == 3.7
+        or PVZ_data.PVZ_version == 3.75
+        or PVZ_data.PVZ_version == 3.76
+        or PVZ_data.PVZ_version == 3.8
+        or PVZ_data.PVZ_version == 3.9
+        or PVZ_data.PVZ_version == 3.99
+        or PVZ_data.PVZ_version == 3.11
+        or PVZ_data.PVZ_version == 3.12
+        or PVZ_data.PVZ_version == 3.132
+        or PVZ_data.PVZ_version == 3.14
+        or PVZ_data.PVZ_version == 3.151
+        or PVZ_data.PVZ_version == 3.16
+        or PVZ_data.PVZ_version == 3.17
+    ):
+        if f:
+            newmem_changeZombieHead = pymem.memory.allocate_memory(
+                PVZ_data.PVZ_memory.process_handle, 256
+            )
+            shellcode = asm.Asm(newmem_changeZombieHead)
+            shellcode.cmp_dword_ptr_exx_add_byte_byte(asm.ESI, 0x24, zombieType)
+            shellcode.jne_long_offset(0x4E)
+            shellcode.pushad()
+            shellcode.mov_exx_eyy(asm.EAX, asm.ESI)
+            shellcode.push_byte(0xFF)
+            shellcode.push_dword(0x0065851C)
+            shellcode.call(0x005331C0)
+            shellcode.mov_exx_eyy(asm.EAX, asm.ESI)
+            shellcode.push_byte(0xFF)
+            shellcode.push_dword(0x00658110)
+            shellcode.call(0x005331C0)
+            shellcode.mov_exx_dword_ptr_eyy(asm.EAX, asm.ESI)
+            shellcode.mov_exx_dword_ptr_eyy_add_dword(asm.ECX, asm.EAX, 0x820)
+            shellcode.mov_exx_dword_ptr_eyy_add_byte(asm.EDX, asm.ECX, 0x8)
+            shellcode.mov_exx_dword_ptr_eyy_add_dword(asm.EAX, asm.ESI, 0x118)
+            shellcode.and_eax_dword(0xFFFF)
+            shellcode.lea_exx_eyy_ezz_times(asm.EBX, asm.EAX, asm.EAX, 4)
+            shellcode.shl_exx_byte(asm.EBX, 5)
+            shellcode.add_exx_ptr_eyy(asm.EBX, asm.EDX)
+            shellcode.push_dword_ptr(0x006A7A08)
+            shellcode.mov_exx(asm.EAX, 0x00658500)
+            shellcode.mov_exx_eyy(asm.ECX, asm.EBX)
+            shellcode.call(0x00473490)
+            shellcode.popad()
+            shellcode.mov_exx_dword_ptr_eyy_add_byte(asm.EAX, asm.ESI, 0x58)
+            shellcode.add_dword_ptr_exx_add_byte_byte(asm.ESI, 0x54, 0xFF)
+            shellcode.jmp(0x0052AF92)
+            PVZ_data.PVZ_memory.write_bytes(
+                newmem_changeZombieHead,
+                bytes(shellcode.code[: shellcode.index]),
+                shellcode.index,
+            )
+            PVZ_data.PVZ_memory.write_bytes(
+                0x0052AF8B,
+                b"\xe9"
+                + calculate_call_address(newmem_changeZombieHead - 0x0052AF90)
+                + b"\x90\x90",
+                7,
+            )
+            newmem_changeZombieDeadHead = pymem.memory.allocate_memory(
+                PVZ_data.PVZ_memory.process_handle, 256
+            )
+            shellcode2 = asm.Asm(newmem_changeZombieDeadHead)
+            shellcode2.cmp_exx_byte(asm.EAX, zombieType)
+            shellcode2.jne_long_offset(0xB)
+            shellcode2.mov_exx_dword_ptr(asm.ESI, 0x006A7A08)
+            shellcode2.jmp(0x00529D07)
+            shellcode2.cmp_exx_byte(asm.EAX, 0x41)
+            shellcode2.je(0x00529CB3)
+            shellcode2.jmp(0x008A9209)
+            PVZ_data.PVZ_memory.write_bytes(
+                newmem_changeZombieDeadHead,
+                bytes(shellcode2.code[: shellcode2.index]),
+                shellcode2.index,
+            )
+            PVZ_data.PVZ_memory.write_bytes(
+                0x008A9200,
+                b"\xe9"
+                + calculate_call_address(newmem_changeZombieDeadHead - 0x008A9205)
+                + b"\x90\x90\x90\x90",
+                9,
+            )
+        else:
+            PVZ_data.PVZ_memory.write_bytes(
+                0x0052AF8B, b"\x8b\x46\x58\x83\x46\x54\xff", 7
+            )
+            pymem.memory.free_memory(
+                PVZ_data.PVZ_memory.process_handle, newmem_changeZombieHead
+            )
+            PVZ_data.PVZ_memory.write_bytes(
+                0x008A9200, b"\x83\xf8\x41\x0f\x84\xaa\x0a\xc8\xff", 9
             )
             pymem.memory.free_memory(
                 PVZ_data.PVZ_memory.process_handle, newmem_changeZombieDeadHead
@@ -4001,14 +5253,7 @@ def zombieDeadZombie(f, deadZombieType, bossWeight, bosshp):
         shellcode.cmp_exx_dword(asm.EAX, bossWeight)
         shellcode.mov_exx(asm.EAX, 25)
         shellcode.jl_label("CZ")
-        if PVZ_data.PVZ_version == 2.0:
-            shellcode.mov_exx(asm.EAX, 41)
-        elif PVZ_data.PVZ_version == 2.1:
-            shellcode.mov_exx(asm.EAX, 44)
-        elif PVZ_data.PVZ_version == 2.2:
-            shellcode.mov_exx(asm.EAX, 51)
-        else:
-            shellcode.mov_exx(asm.EAX, 56)
+        shellcode.mov_exx(asm.EAX, get_zombie_num())
         shellcode.call(0x005AF400)
         shellcode.cmp_exx_byte(asm.EAX, 25)
         shellcode.je_label("RZ")
@@ -4155,9 +5400,9 @@ def creatBullet(bullets_list):
 
 def clearCards(type):
     try:
-        card_num = PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(
-                PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+        card_num = PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(
+                PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
             )
             + 0xF4
         )
@@ -4168,9 +5413,9 @@ def clearCards(type):
     j = 0
     while i < card_num:
         card_addresss = (
-            PVZ_data.PVZ_memory.read_int(
-                PVZ_data.PVZ_memory.read_int(
-                    PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+            PVZ_data.PVZ_memory.read_uint(
+                PVZ_data.PVZ_memory.read_uint(
+                    PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
                 )
                 + 0xE4
             )
@@ -4178,7 +5423,7 @@ def clearCards(type):
         )
         card_exist = PVZ_data.PVZ_memory.read_bytes(card_addresss + 0x38, 1)
         if card_exist == b"\x00":
-            card_plant_type = PVZ_data.PVZ_memory.read_int(card_addresss + 0x68)
+            card_plant_type = PVZ_data.PVZ_memory.read_uint(card_addresss + 0x68)
             if type == 0:
                 if card_plant_type < 255:
                     PVZ_data.PVZ_memory.write_bytes(card_addresss + 0x38, b"\x01", 1)
@@ -4317,18 +5562,12 @@ def bungeeFix(f):
         )
 
 
-def setZombieRedLine(row):
-    print(row)
-    PVZ_data.PVZ_memory.write_int(0x004255DD, row)
-    PVZ_data.PVZ_memory.write_int(0x004253F7, 20 + row * 80)
-
-
 def findBoss():
     bossList = []
     try:
-        zombie_num = PVZ_data.PVZ_memory.read_int(
-            PVZ_data.PVZ_memory.read_int(
-                PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+        zombie_num = PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(
+                PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
             )
             + 0xA0
         )
@@ -4338,13 +5577,13 @@ def findBoss():
     j = 0
     while i < zombie_num:
         zombie_addresss = (
-            PVZ_data.PVZ_memory.read_int(
-                PVZ_data.PVZ_memory.read_int(
-                    PVZ_data.PVZ_memory.read_int(PVZ_data.baseAddress) + 0x768
+            PVZ_data.PVZ_memory.read_uint(
+                PVZ_data.PVZ_memory.read_uint(
+                    PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
                 )
                 + 0x90
             )
-            + 0x204 * j
+            + PVZ_data.zombie_size * j
         )
         zombie_exist = PVZ_data.PVZ_memory.read_bytes(zombie_addresss + 0xEC, 1)
         if zombie_exist == b"\x00":
@@ -6052,7 +7291,17 @@ def overPlant(f):
         # data.PVZ_memory.write_bytes(0x0084A3EB, b"\xe9\x6a\x3f\xbc\xff\x90", 6)
         PVZ_data.PVZ_memory.write_bytes(0x00410BA2, b"\xeb\x06", 2)
         PVZ_data.PVZ_memory.write_bytes(0x00410967, b"\xeb\x39", 2)
-        PVZ_data.PVZ_memory.write_bytes(0x004109A5, b"\xeb\x2d", 2)
+        if (
+            PVZ_data.PVZ_version < 3.4
+            and PVZ_data.PVZ_version != 3.11
+            and PVZ_data.PVZ_version != 3.12
+            and PVZ_data.PVZ_version != 3.132
+            and PVZ_data.PVZ_version != 3.14
+            and PVZ_data.PVZ_version != 3.151
+            and PVZ_data.PVZ_version != 3.16
+            and PVZ_data.PVZ_version != 3.17
+        ):
+            PVZ_data.PVZ_memory.write_bytes(0x004109A5, b"\xeb\x2d", 2)
     else:
         PVZ_data.PVZ_memory.write_bytes(0x00425634, b"\x83\xf8\xff\x74\x18", 5)
         PVZ_data.PVZ_memory.write_bytes(0x0040FE2D, b"\x85\xc0\x0f\x84\x1f\x09\x00", 7)
@@ -6086,7 +7335,17 @@ def overPlant(f):
         # data.PVZ_memory.write_bytes(0x0084A3EB, b"\x0f\x85\x69\x3f\xbc\xff", 6)
         PVZ_data.PVZ_memory.write_bytes(0x00410BA2, b"\x75\x06", 2)
         PVZ_data.PVZ_memory.write_bytes(0x00410967, b"\x75\x39", 2)
-        PVZ_data.PVZ_memory.write_bytes(0x004109A5, b"\x75\x2d", 2)
+        if (
+            PVZ_data.PVZ_version < 3.4
+            and PVZ_data.PVZ_version != 3.11
+            and PVZ_data.PVZ_version != 3.12
+            and PVZ_data.PVZ_version != 3.132
+            and PVZ_data.PVZ_version != 3.14
+            and PVZ_data.PVZ_version != 3.151
+            and PVZ_data.PVZ_version != 3.16
+            and PVZ_data.PVZ_version != 3.17
+        ):
+            PVZ_data.PVZ_memory.write_bytes(0x004109A5, b"\x75\x2d", 2)
 
 
 def column(f):
@@ -6784,3 +8043,683 @@ def put_vase(skin, type, plant_type, zombie_type, sun, row, column):
             return vase_put_asm
 
     asm.runThread(VasePut(skin, type, plant_type, zombie_type, sun, row, column))
+
+
+def vase_perspect(f):
+    if f:
+        PVZ_data.PVZ_memory.write_bytes(
+            0x0044E5CC, b"\xc7\x47\x4c\x64\x00\x00\x00\x5e\x59\xc3", 10
+        )
+    else:
+        PVZ_data.PVZ_memory.write_bytes(
+            0x0044E5CC, b"\x85\xc0\x7e\x06\x83\xc0\xff\x89\x47\x4c", 10
+        )
+
+
+def setZombieRedLine(row):
+    print(row)
+    PVZ_data.PVZ_memory.write_int(0x004255DD, row)
+    PVZ_data.PVZ_memory.write_int(0x004253F7, 20 + row * 80)
+    for i in range(0, 10):
+        PVZ_data.PVZ_memory.write_uchar(0x008E4C7F + i, row)
+        PVZ_data.PVZ_memory.write_int(0x008E4A76 + i * 4, 32 + row * 80)
+
+
+def iz_random_formation():
+    def is_plant_type_in_list(plant_type, plant_list):
+        return PVZ_data.plantsType[plant_type] in plant_list
+
+    clearPlants()
+    red_line_value = PVZ_data.PVZ_memory.read_uint(0x004255DD)
+    rows = getMap()
+    pausePro(1)
+    for r in range(0, rows):
+        for c in range(0, red_line_value):
+            while True:
+                plantType = getRandomPlant(True)
+                if is_plant_type_in_list(
+                    plantType, PVZ_data.ExcludedPutCards
+                ) or is_plant_type_in_list(plantType, PVZ_data.AshPlantCards):
+                    continue
+                elif is_plant_type_in_list(plantType, PVZ_data.DownPlantCards):
+                    print(r, c, PVZ_data.plantsType[plantType])
+                    putPlant(r, c, plantType)
+                    time.sleep(0.03)
+                    while True:
+                        plantType = getRandomPlant(True)
+                        if (
+                            is_plant_type_in_list(plantType, PVZ_data.ExcludedPutCards)
+                            or is_plant_type_in_list(plantType, PVZ_data.AshPlantCards)
+                            or is_plant_type_in_list(plantType, PVZ_data.DownPlantCards)
+                        ):
+                            continue
+                        elif is_plant_type_in_list(
+                            plantType, PVZ_data.PumpkinPlantCards
+                        ):
+                            print(r, c, PVZ_data.plantsType[plantType])
+                            putPlant(r, c, plantType)
+                            time.sleep(0.03)
+                            while True:
+                                plantType = getRandomPlant(True)
+                                if (
+                                    is_plant_type_in_list(
+                                        plantType, PVZ_data.ExcludedPutCards
+                                    )
+                                    or is_plant_type_in_list(
+                                        plantType, PVZ_data.AshPlantCards
+                                    )
+                                    or is_plant_type_in_list(
+                                        plantType, PVZ_data.DownPlantCards
+                                    )
+                                    or is_plant_type_in_list(
+                                        plantType, PVZ_data.PumpkinPlantCards
+                                    )
+                                ):
+                                    continue
+                                else:
+                                    break
+                            break
+                    break
+                elif is_plant_type_in_list(plantType, PVZ_data.PumpkinPlantCards):
+                    print(r, c, PVZ_data.plantsType[plantType])
+                    putPlant(r, c, plantType)
+                    time.sleep(0.03)
+                    while True:
+                        plantType = getRandomPlant(True)
+                        if (
+                            is_plant_type_in_list(plantType, PVZ_data.ExcludedPutCards)
+                            or is_plant_type_in_list(plantType, PVZ_data.AshPlantCards)
+                            or is_plant_type_in_list(
+                                plantType, PVZ_data.PumpkinPlantCards
+                            )
+                        ):
+                            continue
+                        elif is_plant_type_in_list(plantType, PVZ_data.DownPlantCards):
+                            print(r, c, PVZ_data.plantsType[plantType])
+                            putPlant(r, c, plantType)
+                            time.sleep(0.03)
+                            while True:
+                                plantType = getRandomPlant(True)
+                                if (
+                                    is_plant_type_in_list(
+                                        plantType, PVZ_data.ExcludedPutCards
+                                    )
+                                    or is_plant_type_in_list(
+                                        plantType, PVZ_data.AshPlantCards
+                                    )
+                                    or is_plant_type_in_list(
+                                        plantType, PVZ_data.DownPlantCards
+                                    )
+                                    or is_plant_type_in_list(
+                                        plantType, PVZ_data.PumpkinPlantCards
+                                    )
+                                ):
+                                    continue
+                                else:
+                                    break
+                            break
+                    break
+                else:
+                    break
+            print(r, c, PVZ_data.plantsType[plantType])
+            putPlant(r, c, plantType)
+            time.sleep(0.03)
+    pausePro(0)
+
+
+def randomZombieSlots_operstion(
+    randomSlots_event,
+    start_slot,
+    end_slot,
+):
+    while not randomSlots_event.is_set():
+        plant1addr = (
+            PVZ_data.PVZ_memory.read_uint(
+                PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x768
+            )
+            + 0x144
+        )
+        for i in range(start_slot - 1, end_slot):
+            slot = getRandomZombie(False)
+            if PVZ_data.PVZ_version < 3.4:
+                slot = slot + 256
+            else:
+                slot = slot + 512
+            PVZ_data.PVZ_memory.write_int(
+                PVZ_data.PVZ_memory.read_uint(plant1addr) + 0x5C + 0x50 * i, slot
+            )
+
+
+randomZombieSlots_event = Event()
+randomZombieSlots_thread = None
+
+
+def randomZombieSlots(f, start_slot, end_slot):
+    global randomZombieSlots_thread
+    if f:
+        if not randomZombieSlots_thread or not randomZombieSlots_thread.is_alive():
+            randomZombieSlots_event.clear()
+            randomZombieSlots_thread = Thread(
+                target=randomZombieSlots_operstion,
+                args=(randomZombieSlots_event, start_slot, end_slot),
+            )
+            randomZombieSlots_thread.start()
+    else:
+        # 设置事件标志，通知线程停止
+        randomZombieSlots_event.set()
+        randomZombieSlots_thread.join()  # 等待线程结束
+
+
+def setBossHP(no, hp):
+    if PVZ_data.PVZ_version == 2.61:
+        if no == 1:
+            PVZ_data.PVZ_memory.write_int(0x008D0F0B, hp)
+        elif no == 2:
+            PVZ_data.PVZ_memory.write_int(0x008D2987, hp)
+        elif no == 3:
+            PVZ_data.PVZ_memory.write_int(0x008D29A5, hp)
+
+    elif PVZ_data.PVZ_version == 3.0:
+        if no == 1:
+            PVZ_data.PVZ_memory.write_int(0x008D0F0E, hp)
+        elif no == 2:
+            PVZ_data.PVZ_memory.write_int(0x008D298A, hp)
+        elif no == 3:
+            PVZ_data.PVZ_memory.write_int(0x008D29A8, hp)
+    elif (
+        PVZ_data.PVZ_version == 3.1
+        or PVZ_data.PVZ_version == 3.15
+        or PVZ_data.PVZ_version == 3.2
+        or PVZ_data.PVZ_version == 3.21
+        or PVZ_data.PVZ_version == 3.3
+        or PVZ_data.PVZ_version == 3.4
+        or PVZ_data.PVZ_version == 3.5
+        or PVZ_data.PVZ_version == 3.6
+    ):
+        if no == 1:
+            PVZ_data.PVZ_memory.write_int(0x008D0F75, hp)
+        elif no == 2:
+            PVZ_data.PVZ_memory.write_int(0x008D29F1, hp)
+        elif no == 3:
+            PVZ_data.PVZ_memory.write_int(0x008D2A0F, hp)
+    elif (
+        PVZ_data.PVZ_version == 3.65
+        or PVZ_data.PVZ_version == 3.7
+        or PVZ_data.PVZ_version == 3.75
+        or PVZ_data.PVZ_version == 3.76
+        or PVZ_data.PVZ_version == 3.8
+        or PVZ_data.PVZ_version == 3.9
+        or PVZ_data.PVZ_version == 3.99
+        or PVZ_data.PVZ_version == 3.11
+        or PVZ_data.PVZ_version == 3.12
+    ):
+        if no == 1:
+            PVZ_data.PVZ_memory.write_int(0x008D0F7F, hp)
+        elif no == 2:
+            PVZ_data.PVZ_memory.write_int(0x008D29FB, hp)
+        elif no == 3:
+            PVZ_data.PVZ_memory.write_int(0x008D2A19, hp)
+    elif (
+        PVZ_data.PVZ_version == 3.132
+        or PVZ_data.PVZ_version == 3.14
+        or PVZ_data.PVZ_version == 3.151
+        or PVZ_data.PVZ_version == 3.16
+        or PVZ_data.PVZ_version == 3.17
+    ):
+        if no == 1:
+            PVZ_data.PVZ_memory.write_int(0x008D0F7F, hp)
+        elif no == 2:
+            PVZ_data.PVZ_memory.write_int(0x008D2A25, hp)
+        elif no == 3:
+            PVZ_data.PVZ_memory.write_int(0x008D2A43, hp)
+
+
+newmem_more_hero = None
+
+
+def more_hero(f):
+    global newmem_more_hero
+    if PVZ_data.PVZ_version < 3.7:
+        if f:
+            newmem_more_hero = pymem.memory.allocate_memory(
+                PVZ_data.PVZ_memory.process_handle, 2048
+            )
+            shellcode = asm.Asm(newmem_more_hero)
+            shellcode.mov_byte_ptr_exx_add_byte_byte(asm.EDI, 0x48, 1)
+            shellcode.jmp(0x009F108E)
+            PVZ_data.PVZ_memory.write_bytes(
+                newmem_more_hero,
+                bytes(shellcode.code[: shellcode.index]),
+                shellcode.index,
+            )
+            PVZ_data.PVZ_memory.write_bytes(
+                0x009F1057,
+                b"\xe9"
+                + calculate_call_address(newmem_more_hero - 0x009F105C)
+                + b"\x90",
+                6,
+            )
+        else:
+            PVZ_data.PVZ_memory.write_bytes(0x009F1057, b"\x56\x50\x51\x52\x6a\x00", 6)
+            pymem.memory.free_memory(
+                PVZ_data.PVZ_memory.process_handle, newmem_more_hero
+            )
+    elif (
+        PVZ_data.PVZ_version == 3.7
+        or PVZ_data.PVZ_version == 3.75
+        or PVZ_data.PVZ_version == 3.76
+        or PVZ_data.PVZ_version == 3.8
+        or PVZ_data.PVZ_version == 3.9
+        or PVZ_data.PVZ_version == 3.99
+        or PVZ_data.PVZ_version == 3.11
+        or PVZ_data.PVZ_version == 3.12
+        or PVZ_data.PVZ_version == 3.132
+        or PVZ_data.PVZ_version == 3.14
+        or PVZ_data.PVZ_version == 3.151
+        or PVZ_data.PVZ_version == 3.16
+        or PVZ_data.PVZ_version == 3.17
+    ):
+        if f:
+            newmem_more_hero = pymem.memory.allocate_memory(
+                PVZ_data.PVZ_memory.process_handle, 2048
+            )
+            shellcode = asm.Asm(newmem_more_hero)
+            shellcode.mov_byte_ptr_exx_add_byte_byte(asm.EDI, 0x48, 1)
+            shellcode.jmp(0x9F10DB)
+            PVZ_data.PVZ_memory.write_bytes(
+                newmem_more_hero,
+                bytes(shellcode.code[: shellcode.index]),
+                shellcode.index,
+            )
+            PVZ_data.PVZ_memory.write_bytes(
+                0x009F10A4,
+                b"\xe9"
+                + calculate_call_address(newmem_more_hero - 0x009F10A9)
+                + b"\x90",
+                6,
+            )
+
+
+def readTreeHeight():
+    tree_hight_address = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0xF4
+    )
+    return PVZ_data.PVZ_memory.read_uint(tree_hight_address)
+
+
+def setTreeHeight(height):
+    tree_hight_address = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0xF4
+    )
+    PVZ_data.PVZ_memory.write_int(tree_hight_address, height)
+
+
+def readTreeFertilizer():
+    tree_fertilizer_address = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x230
+    )
+    return PVZ_data.PVZ_memory.read_uint(tree_fertilizer_address) - 1000
+
+
+def setTreeFertilizer(fertilizer):
+    tree_fertilizer_address = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x230
+    )
+    PVZ_data.PVZ_memory.write_int(tree_fertilizer_address, fertilizer + 1000)
+
+
+def readGardenItemFertilizer():
+    garden_item_fertilizer_address = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x1F8
+    )
+    return PVZ_data.PVZ_memory.read_uint(garden_item_fertilizer_address) - 1000
+
+
+def setGardenItemFertilizer(fertilizer):
+    garden_item_fertilizer_address = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x1F8
+    )
+    PVZ_data.PVZ_memory.write_int(garden_item_fertilizer_address, fertilizer + 1000)
+
+
+def readGardenItemPesticide():
+    garden_item_pesticide_address = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x1FC
+    )
+    return PVZ_data.PVZ_memory.read_uint(garden_item_pesticide_address) - 1000
+
+
+def setGardenItemPesticide(pesticide):
+    garden_item_pesticide_address = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x1FC
+    )
+    PVZ_data.PVZ_memory.write_int(garden_item_pesticide_address, pesticide + 1000)
+
+
+def readGardenItemChocolate():
+    garden_item_chocolate_address = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x228
+    )
+    return PVZ_data.PVZ_memory.read_uint(garden_item_chocolate_address) - 1000
+
+
+def setGardenItemChocolate(chocolate):
+    garden_item_chocolate_address = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x228
+    )
+    PVZ_data.PVZ_memory.write_int(garden_item_chocolate_address, chocolate + 1000)
+
+
+def getTotalPottedNum():
+    total_potted_num_address = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x36C
+    )
+    return PVZ_data.PVZ_memory.read_uint(total_potted_num_address)
+
+
+def setTotalPottedNum(num):
+    total_potted_num_address = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x36C
+    )
+    PVZ_data.PVZ_memory.write_int(total_potted_num_address, num)
+
+
+def waterAll():
+    class WaterAll:
+        def __init__(self):
+            self.startAddress = None
+
+        def creat_asm(self, startAddress):
+            water_all_asm = asm.Asm(startAddress)
+            water_all_asm.sub_exx_byte(asm.ESP, 4)
+            water_all_asm.lea_exx_ptr_eyy(asm.ESI, asm.ESP)
+            water_all_asm.mov_ptr_exx_dword(asm.ESI, 0)
+            water_all_asm.mov_exx_dword_ptr(asm.EDX, 0x006A9EC0)
+            water_all_asm.mov_exx_dword_ptr_eyy_add_dword(asm.EDX, asm.EDX, 0x768)
+            water_all_asm.create_label("xunhuan")
+            water_all_asm.call(0x0041C950)
+            water_all_asm.test_8(asm.AL, asm.AL)
+            water_all_asm.je_label("end")
+            water_all_asm.mov_exx_dword_ptr_eyy(asm.EBX, asm.ESI)
+            water_all_asm.pushad()
+            water_all_asm.cmp_dword_ptr_exx_add_byte_dword(asm.EBX, 0x24, 0x21)
+            water_all_asm.je_label("next")
+            water_all_asm.mov_exx_dword_ptr_eyy_add_dword(asm.EAX, asm.EBX, 0x13C)
+            water_all_asm.mov_exx_dword_ptr_eyy(asm.ECX, asm.EBX)
+            water_all_asm.imul_exx_eyy_dword(asm.EAX, asm.EAX, 0x58)
+            water_all_asm.mov_exx_dword_ptr_eyy_add_dword(asm.EDX, asm.ECX, 0x82C)
+            water_all_asm.lea_exx_ptr_eyy_add_ezz_add_dword(
+                asm.ESI, asm.EAX, asm.EDX, 0x30000
+            )
+            water_all_asm.call(0x0051EA30)
+            water_all_asm.cmp_exx_dword(asm.EAX, 1)
+            water_all_asm.jne_label("next")
+            water_all_asm.push_exx(asm.EBX)
+            water_all_asm.mov_exx_dword_ptr(asm.EDI, 0x006A9EC0)
+            water_all_asm.mov_exx_dword_ptr_eyy_add_dword(asm.EDI, asm.EDI, 0x81C)
+            water_all_asm.mov_exx_eyy(asm.ECX, asm.EDI)
+            water_all_asm.call(0x0051E3D0)
+            water_all_asm.create_label("next")
+            water_all_asm.popad()
+            water_all_asm.jmp_label("xunhuan")
+            water_all_asm.create_label("end")
+            water_all_asm.add_exx_byte(asm.ESP, 4)
+            return water_all_asm
+
+    asm.runThread(WaterAll())
+
+
+def fertilizeAll():
+    class FertilizeAll:
+        def __init__(self):
+            self.startAddress = None
+
+        def creat_asm(self, startAddress):
+            fertilize_all_asm = asm.Asm(startAddress)
+            fertilize_all_asm.sub_exx_byte(asm.ESP, 4)
+            fertilize_all_asm.lea_exx_ptr_eyy(asm.ESI, asm.ESP)
+            fertilize_all_asm.mov_ptr_exx_dword(asm.ESI, 0)
+            fertilize_all_asm.mov_exx_dword_ptr(asm.EDX, 0x006A9EC0)
+            fertilize_all_asm.mov_exx_dword_ptr_eyy_add_dword(asm.EDX, asm.EDX, 0x768)
+            fertilize_all_asm.create_label("xunhuan")
+            fertilize_all_asm.call(0x0041C950)
+            fertilize_all_asm.test_8(asm.AL, asm.AL)
+            fertilize_all_asm.je_label("end")
+            fertilize_all_asm.mov_exx_dword_ptr_eyy(asm.EBX, asm.ESI)
+            fertilize_all_asm.pushad()
+            fertilize_all_asm.cmp_dword_ptr_exx_add_byte_dword(asm.EBX, 0x24, 0x21)
+            fertilize_all_asm.je_label("next")
+            fertilize_all_asm.mov_exx_dword_ptr_eyy_add_dword(asm.EAX, asm.EBX, 0x13C)
+            fertilize_all_asm.mov_exx_dword_ptr_eyy(asm.ECX, asm.EBX)
+            fertilize_all_asm.imul_exx_eyy_dword(asm.EAX, asm.EAX, 0x58)
+            fertilize_all_asm.mov_exx_dword_ptr_eyy_add_dword(asm.EDX, asm.ECX, 0x82C)
+            fertilize_all_asm.lea_exx_ptr_eyy_add_ezz_add_dword(
+                asm.ESI, asm.EAX, asm.EDX, 0x30000
+            )
+            fertilize_all_asm.call(0x0051EA30)
+            fertilize_all_asm.cmp_exx_dword(asm.EAX, 2)
+            fertilize_all_asm.jne_label("next")
+            fertilize_all_asm.mov_exx_eyy(asm.ESI, asm.EBX)
+            fertilize_all_asm.mov_exx_dword_ptr(asm.EDI, 0x006A9EC0)
+            fertilize_all_asm.mov_exx_dword_ptr_eyy_add_dword(asm.EDI, asm.EDI, 0x81C)
+            fertilize_all_asm.push_exx(asm.EDI)
+            fertilize_all_asm.call(0x0051DF40)
+            fertilize_all_asm.create_label("next")
+            fertilize_all_asm.popad()
+            fertilize_all_asm.jmp_label("xunhuan")
+            fertilize_all_asm.create_label("end")
+            fertilize_all_asm.add_exx_byte(asm.ESP, 4)
+            return fertilize_all_asm
+
+    asm.runThread(FertilizeAll())
+
+
+def pesticideAll():
+    class PesticideAll:
+        def __init__(self):
+            self.startAddress = None
+
+        def creat_asm(self, startAddress):
+            pesticide_all_asm = asm.Asm(startAddress)
+            pesticide_all_asm.sub_exx_byte(asm.ESP, 4)
+            pesticide_all_asm.lea_exx_ptr_eyy(asm.ESI, asm.ESP)
+            pesticide_all_asm.mov_ptr_exx_dword(asm.ESI, 0)
+            pesticide_all_asm.mov_exx_dword_ptr(asm.EDX, 0x006A9EC0)
+            pesticide_all_asm.mov_exx_dword_ptr_eyy_add_dword(asm.EDX, asm.EDX, 0x768)
+            pesticide_all_asm.create_label("xunhuan")
+            pesticide_all_asm.call(0x0041C950)
+            pesticide_all_asm.test_8(asm.AL, asm.AL)
+            pesticide_all_asm.je_label("end")
+            pesticide_all_asm.mov_exx_dword_ptr_eyy(asm.EBX, asm.ESI)
+            pesticide_all_asm.pushad()
+            pesticide_all_asm.cmp_dword_ptr_exx_add_byte_dword(asm.EBX, 0x24, 0x21)
+            pesticide_all_asm.je_label("next")
+            pesticide_all_asm.mov_exx_dword_ptr_eyy_add_dword(asm.EAX, asm.EBX, 0x13C)
+            pesticide_all_asm.mov_exx_dword_ptr_eyy(asm.ECX, asm.EBX)
+            pesticide_all_asm.imul_exx_eyy_dword(asm.EAX, asm.EAX, 0x58)
+            pesticide_all_asm.mov_exx_dword_ptr_eyy_add_dword(asm.EDX, asm.ECX, 0x82C)
+            pesticide_all_asm.lea_exx_ptr_eyy_add_ezz_add_dword(
+                asm.ESI, asm.EAX, asm.EDX, 0x30000
+            )
+            pesticide_all_asm.call(0x0051EA30)
+            pesticide_all_asm.cmp_exx_dword(asm.EAX, 3)
+            pesticide_all_asm.je_label("pesticide")
+            pesticide_all_asm.cmp_exx_dword(asm.EAX, 4)
+            pesticide_all_asm.jne_label("next")
+            pesticide_all_asm.create_label("pesticide")
+            pesticide_all_asm.mov_exx_eyy(asm.ESI, asm.EBX)
+            pesticide_all_asm.mov_exx_dword_ptr(asm.EDI, 0x006A9EC0)
+            pesticide_all_asm.mov_exx_dword_ptr_eyy_add_dword(asm.EDI, asm.EDI, 0x81C)
+            pesticide_all_asm.push_exx(asm.EDI)
+            pesticide_all_asm.call(0x0051E110)
+            pesticide_all_asm.create_label("next")
+            pesticide_all_asm.popad()
+            pesticide_all_asm.jmp_label("xunhuan")
+            pesticide_all_asm.create_label("end")
+            pesticide_all_asm.add_exx_byte(asm.ESP, 4)
+            return pesticide_all_asm
+
+    asm.runThread(PesticideAll())
+
+
+def doAllAll():
+    waterAll()
+    fertilizeAll()
+    pesticideAll()
+
+
+def easyAddPotted(type, color):
+    class EasyAddPotted:
+        def __init__(self, type, color):
+            self.type = type
+            self.color = color
+
+        def creat_asm(self, startAddress):
+            print(f"EasyAddPotted: {self.type} {self.color}")
+            easy_add_potted_asm = asm.Asm(startAddress)
+            easy_add_potted_asm.mov_exx(asm.EDX, startAddress + 10)
+            easy_add_potted_asm.jmp_label("put")
+            easy_add_potted_asm.add_dword(self.type)
+            easy_add_potted_asm.add_dword(0)
+            easy_add_potted_asm.add_dword(0)
+            easy_add_potted_asm.add_dword(0)
+            easy_add_potted_asm.add_dword(0)
+            easy_add_potted_asm.add_dword(0)
+            easy_add_potted_asm.add_dword(0)
+            easy_add_potted_asm.add_dword(0)
+            easy_add_potted_asm.add_dword(0)
+            easy_add_potted_asm.add_dword(0)
+            easy_add_potted_asm.add_dword(0)
+            easy_add_potted_asm.add_dword(color)
+            easy_add_potted_asm.add_dword(0)
+            easy_add_potted_asm.add_dword(0)
+            easy_add_potted_asm.add_dword(0)
+            easy_add_potted_asm.add_dword(0)
+            easy_add_potted_asm.add_dword(0)
+            easy_add_potted_asm.add_dword(0)
+            easy_add_potted_asm.add_dword(0)
+            easy_add_potted_asm.add_dword(0)
+            easy_add_potted_asm.add_dword(0)
+            easy_add_potted_asm.add_dword(0)
+            easy_add_potted_asm.create_label("put")
+            easy_add_potted_asm.mov_exx_dword_ptr(asm.EDI, 0x006A9EC0)
+            easy_add_potted_asm.mov_exx_dword_ptr_eyy_add_dword(asm.EDI, asm.EDI, 0x81C)
+            easy_add_potted_asm.push_exx(asm.EDI)
+            easy_add_potted_asm.call(0x0051D8C0)
+            return easy_add_potted_asm
+
+    asm.runThread(EasyAddPotted(type, color))
+
+
+def addPotted(type, state, garden, row, col, direct, color, water, water_max):
+    potted_num = PVZ_data.PVZ_memory.read_uint(
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x350
+    )
+    PVZ_data.PVZ_memory.write_int(
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x350,
+        potted_num + 1,
+    )
+    potted_addr = (
+        PVZ_data.PVZ_memory.read_uint(
+            PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x82C
+        )
+        + 0x30000
+        + PVZ_data.potted_size * potted_num
+    )
+    new_potted = PVZ_data.potted(potted_addr)
+    new_potted.setType(type)
+    new_potted.setState(state)
+    new_potted.setGarden(garden)
+    new_potted.setRow(row)
+    new_potted.setCol(col)
+    new_potted.setDirection(direct)
+    new_potted.setColor(color)
+    new_potted.setWater(water)
+    new_potted.setWaterMax(water_max)
+
+
+newmem_plantnosleep = None
+
+
+def plantNoSleep(f):
+    if f:
+        newmem_plantnosleep = pymem.memory.allocate_memory(
+            PVZ_data.PVZ_memory.process_handle, 2048
+        )
+        shellcode = asm.Asm(newmem_plantnosleep)
+        shellcode.mov_ptr_exx_add_byte_dword(asm.ESP, 4, 0)
+        shellcode.sub_exx_byte(asm.ESP, 0xC)
+        shellcode.push_exx(asm.EBX)
+        shellcode.add_bytes(b"\x8a\x5c\x24\x14")
+        shellcode.jmp(0x0045E865)
+        PVZ_data.PVZ_memory.write_bytes(
+            newmem_plantnosleep,
+            bytes(shellcode.code[: shellcode.index]),
+            shellcode.index,
+        )
+        PVZ_data.PVZ_memory.write_bytes(
+            0x0045E860,
+            b"\xe9"
+            + calculate_call_address(newmem_plantnosleep - 0x0045E865)
+            + b"\x90\x90\x90",
+            8,
+        )
+    else:
+        PVZ_data.PVZ_memory.write_bytes(
+            0x0045E860, b"\x83\xec\x0c\x53\x8a\x5c\x24\x14", 4
+        )
+        pymem.memory.free_memory(
+            PVZ_data.PVZ_memory.process_handle, newmem_plantnosleep
+        )
+
+
+def find_target_fix(f):
+    if f:
+        if PVZ_data.PVZ_version == 3.16:
+            PVZ_data.PVZ_memory.write_bytes(0x00A6415A, b"\x0f\x84\x25\x00\x00\x00", 6)
+
+    else:
+        if PVZ_data.PVZ_version == 3.16:
+            PVZ_data.PVZ_memory.write_bytes(0x00A6415A, b"\x0f\x84\x23\x00\x00\x00", 6)

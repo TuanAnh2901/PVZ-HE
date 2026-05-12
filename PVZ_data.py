@@ -1,14 +1,22 @@
-from pymem import Pymem
+﻿from pymem import Pymem
 
 PVZ_memory = Pymem()
 PVZ_pid = 0
 PVZ_version = "未找到游戏"
 zombies_HP_addresses = None
+plant_size = 304
+zombie_size = 304
 
 
 def update_PVZ_memory(memory):
-    global PVZ_memory
+    global PVZ_memory, plant_size, zombie_size
     PVZ_memory = memory
+    try:
+        plant_size = PVZ_memory.read_uint(0x41C965)
+        zombie_size = PVZ_memory.read_uint(0x41C905)
+    except:  # noqa: E722
+        plant_size = 304
+        zombie_size = 304
 
 
 def update_PVZ_pid(pid):
@@ -91,6 +99,81 @@ zombiesType = [
     "园丁僵尸",  # 61
     "红眼舞王",  # 62
     "巨人伴舞",  # 63
+    "影子僵尸",  # 64
+    "矿工地刺小鬼",  # 65
+    "冲锋黑橄榄红眼巨人僵尸",  # 66
+    "冲锋黑橄榄红眼小鬼僵尸",  # 67
+    "红眼冰车僵尸",  # 68
+    "双发仙人掌僵尸",  # 69
+    "套盒坚果僵尸",  # 70
+    "至尊VIP坚果僵尸",  # 71
+    "三线玉米投手僵尸",  # 72
+    "冰霜巨人僵尸",  # 73
+    "埃德加二世",  # 74
+    "机枪冰车僵尸",  # 75
+    "干扰车僵尸",  # 76
+    "向日葵僵尸",  # 77
+    "农夫僵尸",  # 78
+    "财主僵尸",  # 79
+    "跳跳舞王僵尸",  # 80
+    "跳跳舞伴僵尸",  # 81
+    "投冰车僵尸",  # 82
+    "幽灵僵尸",  # 83
+    "模仿者僵尸",  # 84
+    "树人僵尸",  # 85
+    "僵尸虫子",  # 86
+    "橄榄撑杆僵尸",  # 87
+    "矿工巨人僵尸",  # 88
+    "矿工小鬼僵尸",  # 89
+    "海盗船长僵尸",  # 90
+    "海盗船员僵尸",  # 91
+    "磁场僵尸",  # 92
+    "蜗牛小鬼僵尸",  # 93
+    "猫战士僵尸",  # 94
+    "气球车僵尸",  # 95
+    "橄榄球雪人僵尸",  # 96
+    "重生法师僵尸",  # 97
+    "雪人雪橇僵尸小队",  # 98
+    "武装雪橇僵尸队员",  # 99
+    "吸血鬼僵尸",  # 100
+    "跳棋僵尸",  # 101
+    "猴子僵尸",  # 102
+    "市场僵尸",  # 103
+    "天使僵尸",  # 104
+    "读报迪斯科僵尸",  # 105
+    "愤怒的舞者僵尸",  # 106
+    "潜水海豚僵尸",  # 107
+    "舞王海豚僵尸",  # 108
+    "伴舞海豚僵尸",  # 109
+    "玩偶匣撑杆僵尸",  # 110
+    "烟雾机僵尸",  # 111
+    "小鬼投石车僵尸",  # 112
+    "圣诞礼盒僵尸",  # 113
+    "气球扶梯僵尸",  # 114
+    "礼盒伽刚特尔",  # 115
+    "礼盒小鬼僵尸",  # 116
+    "抽奖盒子僵尸",  # 117
+    "骷髅伽刚特尔",  # 118
+    "骷髅小鬼僵尸",  # 119
+    "园艺车僵尸",  # 120
+    "巨人号飞艇",  # 121
+    "气球小鬼僵尸",  # 122
+    "狂野冰车巨人僵尸",  # 123
+    "狂野伽刚特尔",  # 124
+    "高冰果小鬼僵尸",  # 125
+    "圣诞树人僵尸",  # 126
+    "钻石伽刚特尔",  # 127
+    "钻石小鬼僵尸",  # 128
+    "白天鹅僵尸",  # 129
+    "礼盒机僵尸",  # 130
+    "超级机枪射手僵尸",  # 131
+    "至尊VIP坚果伽刚特尔",  # 132
+    "至尊VIP坚果小鬼僵尸",  # 133
+    "磁场干扰车僵尸",  # 134
+    "幽灵玩偶匣僵尸",  # 135
+    "天使伽刚特尔",  # 136
+    "向日葵女王僵尸",  # 137
+    "火焰向日葵舞者僵尸",  # 138
 ]
 zombieSpaw = zombiesType + [
     "绿帽概率",
@@ -116,41 +199,59 @@ itemType = [
     "未知14",
     "小黄鸭",
 ]
+shovelType = [
+    "普通铲子",  # 0
+    "银铲子",  # 1
+    "金铲子",  # 2
+    "钻石铲子",  # 3
+    "星星铲子",  # 4
+    "寒冰铲子",  # 5
+    "辣椒铲子",  # 6
+    "骷髅铲子",  # 7
+    "旋风铲子",  # 8
+    "南瓜铲子",  # 9
+    "礼盒铲子",  # 10
+    "魅惑铲子",  # 11
+    "汉堡铲子",  # 12
+    "豪华铲子",  # 13
+    "卡牌铲",  # 14
+    "智慧铲",  # 15
+]
 plantsType = [
-    "豌豆向日葵",
-    "阳光豆",
-    "阳光炸弹",
-    "火炬坚果",
-    "阳光土豆雷",
-    "寒冰香蒲",
-    "大蒜花",
-    "双发仙人掌",
-    "小盆菇",
-    "阳光向日葵",
-    "冰瓜大喷菇",
-    "墓碑埋雷者",
-    "红眼菇",
-    "阳光胆小菇",
-    "雪花寒冰菇",
-    "魅惑毁灭菇",
-    "豌豆睡莲",
-    "冰菇窝瓜",
-    "豌豆许愿池",
-    "毁灭海草",
-    "樱桃辣椒",
-    "黄油地刺",
-    "冰炬树桩",
-    "高冰果",
-    "海坚果",
-    "6号路灯花",
-    "豌豆大炮",
-    "仙人三叶草",
-    "玉米卷香蒲",
-    "地刺杨桃",
-    "忧郁南瓜头",
-    "磁力坚果",
-    "机枪卷心菜投手",
-    "阳光花盆",
+    "豌豆向日葵",  # 0
+    "阳光豆",  # 1
+    "阳光炸弹",  # 2
+    "火炬坚果",  # 3
+    "阳光土豆雷",  # 4
+    "寒冰香蒲",  # 5
+    "大蒜花",  # 6
+    "双发仙人掌",  # 7
+    "小盆菇",  # 8
+    "阳光向日葵",  # 9
+    "冰瓜大喷菇",  # 10
+    "墓碑埋雷者",  # 11
+    "红眼菇",  # 12
+    "阳光胆小菇",  # 13
+    "雪花寒冰菇",  # 14
+    "魅惑毁灭菇",  # 15
+    "豌豆睡莲",  # 16
+    "冰菇窝瓜",  # 17
+    "豌豆许愿池",  # 18
+    "毁灭海草",  # 19
+    "樱桃辣椒",  # 20
+    "黄油地刺",  # 21
+    "冰炬树桩",  # 22
+    "高冰果",  # 23
+    "海坚果",  # 24
+    "6号路灯花",  # 25
+    "豌豆大炮",  # 26
+    "仙人三叶草",  # 27
+    "玉米卷香蒲",  # 28
+    "地刺杨桃",  # 29
+    "忧郁南瓜头",  # 30
+    "磁力坚果",  # 31
+    "机枪卷心菜投手",  # 32
+    "阳光花盆",  # 33
     "三线玉米投手",
     "随机植物盒子",
     "魅惑大蒜",
@@ -171,27 +272,27 @@ plantsType = [
     "芽",
     "(反向)双发仙人掌",
     "<null>",
-    "拖拽植物 (僵尸迷阵)",
-    "填补土坑",
-    "<阳光>",
-    "<钻石>",
-    "购买潜水僵尸 (僵尸水族馆)",
-    "购买奖杯 (僵尸水族馆)",
-    "空",
-    "空",
-    "空",
-    "空",
-    "空",
-    "空",
-    "空",
-    "空",
-    "空",
-    "空",
-    "空",
-    "空",
-    "空",
-    "空",
-    "空",
+    "火焰",  # 54
+    "伟伟迷",  # 55
+    "呼叫网管",  # 56
+    "我方铁门僵尸",  # 57
+    "忧郁菇投手子弹",  # 58
+    "6号路灯花亡语",  # 59
+    "终极射手",  # 60
+    "向日葵公主",  # 61
+    "汉堡王",  # 62
+    "可乐(攻速翻倍)",  # 63
+    "薯条(血量翻倍)",  # 64
+    "南瓜炮子弹",  # 65
+    "花盆",  # 66
+    "荷叶",  # 67
+    "七色花",  # 68
+    "腾腾游记四叶草",  # 69
+    "地刺子弹",  # 70
+    "瓜子",  # 71
+    "防爆门僵尸(我方)",  # 72
+    "杨桃",  # 73
+    "红包",  # 74
     "火爆地雷",
     "火爆坚果墙",
     "豌豆香蒲",
@@ -284,9 +385,204 @@ plantsType = [
     "逆时闹钟",  # 164
     "阳光加农炮",  # 165
     "禁忌寒冰菇",  # 166
+    "冰火裂荚射手",  # 167
+    "豌豆炸弹",  # 168
+    "辣椒阳光菇",  # 169
+    "豆荚壳",  # 170
+    "忧郁咖啡豆",  # 171
+    "荷包蛋",  # 172
+    "冰冰凉凉大喷菇",  # 173
+    "冰焰南瓜头",  # 174
+    "至尊VIP树桩",  # 175
+    "灵魂豆",  # 176
+    "星星盒子",  # 177
+    "猫窝",  # 178
+    "黄金锤子",  # 179
+    "车轮重塑者",  # 180
+    "迷幻投手",  # 181
+    "玉米旋转机",  # 182
+    "雷果子",  # 183
+    "保龄球彩蛋",  # 184
+    "叶子高坚果",  # 185
+    "西瓜大喷菇",  # 186
+    "南瓜加农炮",  # 187
+    "小喷菇投手",  # 188
+    "玉米卷迫击炮",  # 189
+    "火炬辣椒",  # 190
+    "僵尸向日葵 ",  # 191
+    "大嘴阳光菇",  # 192
+    "花盆睡莲",  # 193
+    "机枪花盆",  # 194
+    "大海菇",  # 195
+    "咖啡三叶草",  # 196
+    "僵尸加农炮",  # 197
+    "阳光魅惑菇",  # 198
+    "墓碑爆破者",  # 199
+    "火炬保护伞",  # 200
+    "地刺伞",  # 201
+    "磁力土豆雷",  # 202
+    "地刺西瓜投手",  # 203
+    "磁力地刺王",  # 204
+    "南瓜灯",  # 205
+    "卡牌模仿者",  # 206
+    "烈焰毁灭菇",  # 207
+    "丛林散装豌豆",  # 208
+    "火炬辣椒豆",  # 209
+    "禁忌咖啡豆",  # 210
+    "南瓜投手",  # 211
+    "南瓜盒子",  # 212
+    "坚果向日葵",  # 213
+    "寒冰炸弹",  # 214
+    "杨桃三线射手",  # 215
+    "缠绕灯草",  # 216
+    "冰炬魅惑菇",  # 217
+    "土豆窝瓜雷",  # 218
+    "樱桃豆",  # 219
+    "杨桃树桩",  # 220
+    "鬼影魅惑菇",  # 221
+    "迷你汉堡射手",  # 222
+    "浴火三线射手",  # 223
+    "猫猫星机枪",  # 224
+    "潜艇烟花",  # 225
+    "升值豆",  # 226
+    "向日葵",  # 227
+    "豌豆射手",  # 228
+    "坚果墙",  # 229
+    "樱桃炸弹",  # 230
+    "咖啡猫",  # 231
+    "大嘴机枪射手",  # 232
+    "钻石坚果",  # 233
+    "金盏花",  # 234
+    "僵尸火炬树桩",  # 235
+    "魅灯花",  # 236
+    "杨桃磁力菇",  # 237
+    "樱桃玉米投手",  # 238
+    "魅惑海草",  # 239
+    "僵尸地刺",  # 240
+    "刺球子弹",  # 241
+    "大蒜三线射手",  # 242
+    "樱桃大喷菇",  # 243
+    "肥料高坚果",  # 244
+    "蜗牛大嘴花",  # 245
+    "巧克力坚果",  # 246
+    "搬运车花盆",  # 247
+    "巧克力",  # 248
+    "卷心菜重炮连",  # 249
+    "财运树桩",  # 250
+    "杀虫剂大喷菇",  # 251
+    "金色向日葵",  # 252
+    "手套豆",  # 253
+    "聚宝盆",  # 254
+    "唱片机胆小菇",  # 255
+    "水壶投手",  # 256
+    "樱桃土豆雷",  # 257
+    "大蒜高坚果",  # 258
+    "辣椒杀虫剂",  # 259
+    "重塑牌肥料",  # 260
+    "钥匙咖啡豆",  # 261
+    "窝瓜忧郁菇",  # 262
+    "杨桃保护伞",  # 263
+    "治愈花盆",  # 264
+    "樱桃吸金磁",  # 265
+    "受伤的高坚果",  # 266
+    "绷带坚果炮",  # 267
+    "三叶大嘴花",  # 268
+    "魔术盒子",  # 269
+    "火爆双发射手",  # 270
+    "迷你寒冰菇",  # 271
+    "缠绕水雷",  # 272
+    "南瓜垃圾桶",  # 273
+    "扫把咖啡豆",  # 274
+    "坚果南瓜头",  # 275
+    "刚刺南瓜头",  # 276
+    "旗帜僵尸豆",  # 277
+    "大蒜炸弹",  # 278
+    "大蒜毒气",  # 279
+    "骄阳仙人掌",  # 280
+    "天秤咖啡豆",  # 281
+    "银河星星果",  # 282
+    "僵尸机枪射手",  # 283
+    "寒冰磁力菇",  # 284
+    "寒冰豆",  # 285
+    "极寒冰瓜投手",  # 286
+    "地刺花盆",  # 287
+    "南瓜保护伞",  # 288
+    "忧郁魅惑菇",  # 289
+    "磁力玉米投手",  # 290
+    "充能磁铁",  # 291
+    "坚果保护伞",  # 292
+    "魅惑盒子",  # 293
+    "友望云霄洗地机",  # 294
+    "极寒冰菇",  # 295
+    "大蒜花盆",  # 296
+    "胆小阳光菇",  # 297
+    "缠绕睡莲",  # 298
+    "三叶大喷菇",  # 299
+    "雪莲",  # 300
+    "猫尾伞",  # 301
+    "三叶土豆雷",  # 302
+    "玩偶匣磁力菇",  # 303
+    "玩偶匣",  # 304
+    "随机模仿者",  # 305
+    "猫尾三叶草",  # 306
+    "玩偶匣南瓜头",  # 307
+    "土豆胆小菇",  # 308
+    "磁力樱桃炸弹",  # 309
+    "缠绕海草坚果",  # 310
+    "缠绕海草球",  # 311
+    "吸星磁",  # 312
+    "磁力三叶草",  # 313
+    "裂荚树桩",  # 314
+    "巨大坚果保龄球",  # 315
+    "爆炸坚果",  # 316
+    "拿铁游戏",  # 317
+    "大嘴玉米蟹",  # 318
+    "寒冰大嘴花",  # 319
+    "寒冰菇射手",  # 320
+    "钉耙",  # 321
+    "赛博狂潮皮肤",  # 322
+    "偶像歌手皮肤",  # 323
+    "西部警长皮肤",  # 324
+    "盛夏特饮皮肤",  # 325
+    "假日清凉皮肤",  # 326
+    "阳光路灯花",  # 327
+    "寒冰向日葵",  # 328
+    "胆小毁灭菇",  # 329
+    "禁忌花盆",  # 330
+    "毁灭地雷",  # 331
+    "魅惑地刺",  # 332
+    "土豆三线射手",  # 333
+    "三叶向日葵",  # 334
+    "西瓜棚",  # 335
+    "爱心守护皮肤",  # 336
+    "糖果拼盘皮肤",  # 337
+    "水盆",  # 338
+    "阳光火炬树桩",  # 339
+    "窝瓜壳",  # 340
+    "路灯毁灭菇",  # 341
+    "路灯毁灭菇照明",  # 342
+    "路灯毁灭菇光环",  # 343
+    "阳光毁灭菇",  # 344
+    "狂野小喷菇",  # 345
+    "促销汉堡射手",  # 346
+    "泡泡树桩",  # 347
+    "毁灭向日葵",  # 348
+    "超级机枪射手",  # 349
+    "超级汉堡机枪射手",  # 350
+    "超级僵尸机枪射手",  # 351
+    "超级狂野机枪射手",  # 352
+    "仙人掌近防炮",  # 353
+    "超级寒冰仙人掌机枪射手",  # 354
+    "狂野狙击射手",  # 355
+    "超级向日葵机枪射手",  # 356
+    "坚果仙人",  # 357
 ]
-for _ in range(len(plantsType), 256):
-    plantsType.append("占位")
+if isinstance(PVZ_version, (int, float)) and PVZ_version < 3.4:
+    for _ in range(len(plantsType), 256):
+        plantsType.append("占位")
+else:
+    for _ in range(len(plantsType), 512):
+        plantsType.append("占位")
 plantsType = plantsType + [
     "普僵",
     "旗帜",
@@ -352,6 +648,171 @@ plantsType = plantsType + [
     "园丁僵尸",  # 317
     "红眼舞王",  # 318
     "巨人伴舞",  # 319
+    "影子僵尸",  # 320
+    "矿工地刺小鬼",  # 321
+    "冲锋黑橄榄红眼巨人僵尸",  # 322
+    "冲锋黑橄榄红眼小鬼僵尸",  # 323
+    "红眼冰车僵尸",  # 324
+    "双发仙人掌僵尸",  # 325
+    "套盒坚果僵尸",  # 326
+    "至尊VIP坚果僵尸",  # 327
+    "三线玉米投手僵尸",  # 328
+    "冰霜巨人僵尸",  # 329
+    "埃德加二世",  # 330
+    "机枪冰车僵尸",  # 331
+    "干扰车僵尸",  # 332
+    "向日葵僵尸",  # 333
+    "农夫僵尸",  # 334
+    "财主僵尸",  # 335
+    "跳跳舞王僵尸",  # 336
+    "跳跳舞伴僵尸",  # 337
+    "投冰车僵尸",  # 338
+    "幽灵僵尸",  # 339
+    "模仿者僵尸",  # 340
+    "树人僵尸",  # 341
+    "僵尸虫子",  # 342
+    "橄榄撑杆僵尸",  # 343
+    "矿工巨人僵尸",  # 344
+    "矿工小鬼僵尸",  # 345
+    "海盗船长僵尸",  # 346
+    "海盗船员僵尸",  # 347
+    "磁场僵尸",  # 348
+    "蜗牛小鬼僵尸",  # 349
+    "猫战士僵尸",  # 350
+    "气球车僵尸",  # 351
+    "橄榄球雪人僵尸",  # 608
+    "重生法师僵尸",  # 609
+    "雪人雪橇僵尸小队",  # 610
+    "武装雪橇僵尸队员",  # 611
+    "吸血鬼僵尸",  # 612
+    "跳棋僵尸",  # 613
+    "猴子僵尸",  # 614
+    "市场僵尸",  # 615
+    "天使僵尸",  # 616
+    "读报迪斯科僵尸",  # 617
+    "愤怒的舞者僵尸",  # 618
+    "潜水海豚僵尸",  # 619
+    "舞王海豚僵尸",  # 620
+    "伴舞海豚僵尸",  # 621
+    "玩偶匣撑杆僵尸",  # 622
+    "烟雾机僵尸",  # 623
+    "小鬼投石车僵尸",  # 624
+    "圣诞礼盒僵尸",  # 625
+    "气球扶梯僵尸",  # 626
+    "礼盒伽刚特尔",  # 627
+    "礼盒小鬼僵尸",  # 628
+    "抽奖盒子僵尸",  # 629
+    "骷髅伽刚特尔",  # 630
+    "骷髅小鬼僵尸",  # 631
+    "园艺车僵尸",  # 632
+    "巨人号飞艇",  # 633
+    "气球小鬼僵尸",  # 634
+    "狂野冰车巨人僵尸",  # 635
+    "狂野伽刚特尔",  # 636
+    "高冰果小鬼僵尸",  # 637
+    "圣诞树人僵尸",  # 638
+    "钻石伽刚特尔",  # 639
+    "钻石小鬼僵尸",  # 640
+    "白天鹅僵尸",  # 641
+    "礼盒机僵尸",  # 642
+    "超级机枪射手僵尸",  # 643
+    "至尊VIP坚果伽刚特尔",  # 644
+    "至尊VIP坚果小鬼僵尸",  # 645
+    "磁场干扰车僵尸",  # 646
+    "幽灵玩偶匣僵尸",  # 647
+    "天使伽刚特尔",  # 648
+    "向日葵女王僵尸",  # 649
+    "火焰向日葵舞者僵尸",  # 650
+]
+
+ExcludedPutCards = [
+    "阳光豆",
+    "墓碑埋雷者",
+    "豌豆睡莲",
+    "毁灭海草",
+    "随机植物盒子",
+    "毁灭加农炮",
+    "宝藏吞噬者",
+    "全息卡牌投影",
+    "成长咖啡豆",
+    "荧光木槌",
+    "生命重塑者",
+    "幸运四叶草",
+    "黄金向日葵",
+    "土豆加农炮",
+    "备用物资",
+    "僵尸豆",
+    "莲叶壳",
+    "抽奖盒子豪华版",
+    "坚果保龄球",
+    "进化豆",
+    "医用咖啡豆",
+    "寒冰加农炮",
+    "黄金西瓜投手",
+    "自费盒子",
+    "制冰豆",
+    "促销豆",
+    "阳光豆",
+    "咖啡伞",
+    "豌豆许愿池",
+    "天使向日葵",
+    "阳光加农炮",
+    "生命重塑者",
+    "黄金锤子",  # 179
+    "火炬辣椒豆",  # 209
+    "禁忌咖啡豆",  # 210
+    "升值豆",  # 226
+]
+DownPlantCards = [
+    "小盆菇",
+    "阳光花盆",
+    "猫砂盆",
+    "花盆睡莲",
+    "促销花盆",
+    "荷包蛋",  # 172
+    "忧郁咖啡豆",  # 171
+    "猫窝",  # 178
+    "花盆睡莲",  # 193
+    "机枪花盆",  # 194
+]
+PumpkinPlantCards = [
+    "忧郁南瓜头",
+    "阳光南瓜掌",
+    "烈火南瓜头",
+    "冰焰南瓜头",  # 174
+    "南瓜灯",  # 205
+]
+AshPlantCards = [
+    "阳光炸弹",
+    "雪花寒冰菇",
+    "魅惑毁灭菇",
+    "樱桃辣椒",
+    "仙人三叶草",
+    "寒冰三叶草",
+    "黄油JOKER",
+    "大蒜辣椒",
+    "魅惑菇射手",
+    "头脑风暴",
+    "寒光菇",
+    "双生樱桃",
+    "惩戒牢笼",
+    "禁忌毁灭菇",
+    "消消乐糖果",
+    "流星",
+    "苹果闹钟",
+    "寒冰菇王",
+    "辣椒重塑者",
+    "彩虹糖果",
+    "逆时闹钟",
+    "禁忌寒冰菇",
+    "豌豆炸弹",  # 168
+    "灵魂豆",  # 176
+    "车轮重塑者",  # 180
+    "火炬辣椒",  # 190
+    "咖啡三叶草",  # 196
+    "墓碑爆破者",  # 199
+    "寒冰炸弹",  # 214
+    "樱桃豆",  # 219
 ]
 
 
@@ -445,8 +906,6 @@ def get_zombies_HP_addresses(PVZ_version):
             "雪橇车": 0x00523139,
             "雪橇小队": 0x008D0B94,
             "雪橇小队上限": 0x008D0B9E,
-            "海豚": 0x00522D64,
-            "海豚的路障": 0x008D06FD,
             "小丑": 0x00522FC7,
             "小丑的路障": 0x008D00EA,
             "气球": 0x005234BF,
@@ -636,7 +1095,7 @@ def get_zombies_HP_addresses(PVZ_version):
             "小摔哥的睡帽": 0x008D0EA8,
             "小黄鸭的路障": 0x008D0E44,
             "小黄鸭的铁桶": 0x008D0E11,
-            "僵王": 0x008D0EDA,
+            "僵王": 0x008D0F0B,
             "橄榄巨人": 0x008D0F01,
             "橄榄巨人头盔": 0x008D0F15,
             "橄榄小鬼": 0x005227BB,
@@ -872,6 +1331,90 @@ bulletType = [
     "冰大炮",
     "黄金瓜",
     "火玉米",
+    "阳光玉米炮",  # 44
+    "赤焰豌豆",  # 45
+    "紫焰豌豆",  # 46
+    "烈焰豌豆",  # 47
+    "大型赤焰豌豆",  # 48
+    "大型紫焰豌豆",  # 49
+    "大型烈焰豌豆",  # 50
+    "魅惑菇(伤害)",  # 51
+    "魅惑菇(短暂魅惑)",  # 52
+    "魅惑菇(自残)",  # 53
+    "油炸玉米粒",  # 54
+    "爆米花",  # 55
+    "南瓜炮",  # 56
+    "炸游戏(卷心菜迫击炮)",  # 57
+    "炸游戏(玉米迫击炮)",  # 58
+    "罐子",  # 59
+    "地刺",  # 60
+    "雪球",  # 61
+    "炸游戏(火焰卷心菜迫击炮)",  # 62
+    "炸游戏(火焰玉米迫击炮)",  # 63
+    "炸游戏(火焰玉米迫击炮)",  # 64
+    "玉米粒",  # 65
+    "蛋糕",  # 66
+    "分裂星星",  # 67
+    "火焰星星",  # 68
+    "火焰分裂星星",  # 69
+    "红温豌豆",  # 70
+    "烈火红温豌豆",  # 71
+    "金豌豆",  # 72
+    "火焰爆炸星星",  # 73
+    "爆炸星星",  # 74
+    "大嘴花",  # 75
+    "大大嘴花",  # 76
+    "绿火豌豆",  # 77
+    "钢星星",  # 78
+    "粉星星",  # 79
+    "玉米粒",  # 80
+    "樱桃子弹",  # 81
+    "大蒜子弹",  # 82
+    "黑蒜子弹",  # 83
+    "炸游戏(卷心菜重炮)",  # 84
+    "炸游戏(火焰卷心菜重炮)",  # 85
+    "金钱阳光",  # 86
+    "音符",  # 87
+    "重音符",  # 88
+    "水弹",  # 89
+    "大水弹",  # 90
+    "星星(无伤害)",  # 91
+    "彩星星(无伤害)",  # 92
+    "铁樱桃子弹",  # 93
+    "金樱桃子弹",  # 94
+    "钻樱桃子弹",  # 95
+    "绷带坚果(无伤害)",  # 96
+    "火焰辣椒豌豆",  # 97
+    "香蕉皮(无伤害)",  # 98
+    "骄阳仙人刺",  # 99
+    "银河星星",  # 100
+    "大银河星星",  # 101
+    "冰爆弹",  # 102
+    "极寒冰瓜",  # 103
+    "投掷磁铁",  # 104
+    "充能磁铁",  # 105
+    "刺伞",  # 106
+    "尖刺",  # 107
+    "土豆孢子",  # 108
+    "冰锥",  # 109
+    "水泡",  # 110
+    "赛博豌豆",  # 111
+    "赛博火豌豆",  # 112
+    "赛博蓝火豌豆",  # 113
+    "赛博烈火豌豆",  # 114
+    "赛博紫火豌豆",  # 115
+    "赛博烈焰豌豆",  # 116
+    "偶像音符",  # 117
+    "冰偶像音符",  # 118
+    "烈火偶像音符",  # 119
+    "紫火偶像音符",  # 120
+    "烈焰偶像音符",  # 121
+    "黄金豌豆3",  # 122
+    "火焰黄金豌豆",  # 123
+    "冰焰黄金豌豆",  # 124
+    "阳光火球",  # 125
+    "仙人刺近防炮",  # 126
+    "阳光射手子弹",  # 127
 ]
 keyTpye = [
     "无",
@@ -1009,36 +1552,308 @@ keyCode = [
     0xC0,
 ]
 
+TREE_OF_WISDOM_REWARD = [
+    (10, "智慧树为你赠送10包花肥"),
+    (20, "智慧树为你赠送20块巧克力"),
+    (30, "智慧树为你赠送花洒泳池清洁车"),
+    (50, "智慧树为你赠送肥料小推车"),
+    (100, "智慧树为你赠送卡片铲"),
+    (150, "智慧树为你赠送黄金花洒泳池清洁车"),
+    (200, "智慧树为你赠送音乐屋顶清理车"),
+    (300, "智慧树为你赠送【梦幻彩卡】手套豆"),
+    (400, "智慧树为你赠送花园新场景【温馨花园】"),
+    (500, "智慧树为你赠送【梦幻彩卡】聚宝盆"),
+    (600, "智慧树为你赠送花园新场景【魅惑蘑菇园】"),
+    (700, "智慧树为你赠送【梦幻彩卡】水壶投手"),
+    (800, "智慧树为你赠送花园新场景【竞技花园】"),
+    (900, "智慧树为你开启手套功能，按”GGG“使用手套，一次扣除10金币"),
+    (1000, "智慧树为你赠送智慧铲"),
+    (1100, "智慧树为你赠送100包花肥"),
+    (1200, "智慧树为你赠送200块巧克力"),
+    (1300, "智慧树为你赠送300个杀虫剂"),
+    (1500, "智慧树为你赠送金牌蜗牛【能为植物施肥+浇水+捡货币】"),
+    (2025, "智慧树为你赠送2025留声机【满足全部植物的音乐需求】"),
+]
+TREE_OF_WISDOM = [
+    (1, "感谢你培育我！只要不断给我肥料，我就会给你有价值的信息和道具！"),
+    (
+        2,
+        "当你的坚果受伤了，你可以选择直接在它们身上覆盖同种类的坚果，这叫“坚果包扎术”。",
+    ),
+    (3, "如果你需要换掉植物下方的花盆只要直接把新的花盆种上去就好了。"),
+    (4, "就像莲叶壳是南瓜壳，花盆睡莲本质上是睡莲——所以它不响应花盆替换术。"),
+    (
+        5,
+        "园丁僵尸的搬运车很神奇，它有时候会把那些爆炸的植物重新变回卡片。什么bug？这是特性！",
+    ),
+    (6, "你也许注意到了，僵尸有时会掉落一本画册。它们都被收藏在第一章画册的左边哦。"),
+    (
+        7,
+        "花园里的臭臭蜗牛能帮你浇水，但他的眼神似乎不太好…又或许是他还不太适应这份工作吧，我猜。",
+    ),
+    (
+        8,
+        "有些蘑菇类杂交植物在白天仍然会睡觉，我想这可能是蘑菇基因更多的缘故。在图鉴可以查询谁是这种懒虫。",
+    ),
+    (9, "嘿，我10米高了！请收下这10包肥料吧，就当是我表示感谢的一点薄礼！"),
+    (10, "据说成就界面的深坑直通地球另一端。想要快速返回顶部？试试按下Esc吧。"),
+    (11, "睁大眼，仔细看你的选卡界面旁边…那本小小的“简介”可以让你随时查看植物的特点。"),
+    (12, "我听说在关卡中按“6”能够跳转到商店。但“6”是什么？你有头绪吗？"),
+    (13, "财主僵尸有扔不完的钱币，但金钱属性的植物可不怕它，特别是坚果存钱罐。"),
+    (
+        14,
+        "高冰果僵尸的脑袋血量有8000，非常耐揍。但它不会告诉你，那其实是个头套，它的身体没那么强壮。",
+    ),
+    (
+        15,
+        "冰冻和减速效果很“酷”，但落在植物身上就不酷了…好在冰属性和火属性的植物都不会被影响。",
+    ),
+    (
+        16,
+        "苹果闹钟是时间暂停器，但它也有普通闹钟的功能。你可以用它唤醒睡觉的家伙，包括植物…和某些僵尸？",
+    ),
+    (17, "冰霜巨人的冰球没那么坚固。足够的火力，或者一个炸弹，都能将它击碎。"),
+    (
+        18,
+        "火炬辣椒的烈焰，能够保护范围内的植物免受寒冰影响。也许用在下周六的烤棉花糖派对也不错？",
+    ),
+    (19, "喔！我20米高了！拿着这些巧克力吧，一起吃点甜食庆祝一下！"),
+    (
+        20,
+        "舞王僵尸很强，但当他试图靠气球飞过防线时，会被三叶草或炸弹轻松解决…这世上哪有那么多捷径呢。",
+    ),
+    (
+        21,
+        "防爆门僵尸的盾牌有难以想象的防爆能力。但正如再完美的事物也有它的不足，这扇门是拦不住气泡的。",
+    ),
+    (
+        22,
+        "埃德加二世的火焰弹看上去势不可挡，但别担心！大部分健康的坚果能够挡下一颗火焰弹，它们很可靠。",
+    ),
+    (
+        23,
+        "听说地底的僵尸虫子身上隐藏着什么秘密。你要去捉一只试试看吗？有新发现的话回来分享给我吧。",
+    ),
+    (
+        24,
+        "仙人三叶花的风没有其他三叶草那么强劲，但他还是能一下吹跑迷雾。毕竟雾比僵尸轻多了，不是吗？",
+    ),
+    (
+        25,
+        "坑洞坚果号称他头顶有一块四维碎片，一不小心没站稳就可能变成一个黑洞…你相信这种说法吗？",
+    ),
+    (
+        26,
+        "当你打败一名BOSS僵尸后，它可能会掉落一块很大的钻石晶簇，那是个价值100钻石的宝贝哦！",
+    ),
+    (
+        27,
+        "雷果子似乎是由两株这个世界以外的植物杂交而成的，他说他的诞生离不开一些年代久远的奇思妙想。",
+    ),
+    (
+        28,
+        "冰瓜大喷菇告诉我，他最近很郁闷：时至今日还有人以为西瓜大喷菇把他替代了，他要怎么解释自己还在呢…",
+    ),
+    (29, "哇，我已经30米高了！这辆花洒泳池清洁车是我的谢礼，希望它能帮上你的忙！"),
+    (
+        30,
+        "磁场僵尸的磁力源其实是它背后那颗发光的核心，这就是为什么它无需头盔也能吸引火力。",
+    ),
+    (
+        31,
+        "魅惑菇射手和迷幻投手看起来像孪生姐妹，但她们其实只是远房亲戚……喔，不过她们曾经是室友。",
+    ),
+    (32, "卡牌模仿者和模仿者不是同一株植物哦。至于模仿者在哪？你在老地方能找到他的。"),
+    (
+        33,
+        "你听说了吗？浴火三线射手来自另一个世界，汉堡射手说他曾到那里旅行了一阵子，见到了不少新奇的东西。",
+    ),
+    (
+        34,
+        "最近是不是有一首歌很流行？卡牌模仿者经常戴着耳机循环，我只能隐约听见一句什么“木屋买买买”…",
+    ),
+    (
+        35,
+        "据说杂交植物的历史远比戴夫的实验悠久，某些植物早在豌豆向日葵之前便诞生了…这是一段秘闻。",
+    ),
+    (
+        36,
+        "棱镜向日葵跟我说，她小时候分不清玻璃和钻石…所以她那时候一直以为自己是钻石向日葵呢。",
+    ),
+    (
+        37,
+        "传说这个世界，在英雄降临之后进行了一次翻天覆地的变化……关于这个传说的真实性，或许你比我更清楚？",
+    ),
+    (38, "猫猫星机枪前阵子来这找我聊天，向我打听这里的一些机枪为什么都喜欢披个斗篷……"),
+    (
+        39,
+        "那些蓝色的冰火球，我记得它们以前的颜色似乎更深一些。后来可能是冰炬树桩补充了什么微量元素吧。",
+    ),
+    (
+        40,
+        "你觉得气球车僵尸车头的装饰眼熟吗？那家伙真的很喜欢自己玩偶匣里的小丑装饰，所以定制了一个大号的。",
+    ),
+    (
+        41,
+        "据说高冰果在一场随机植物战役中一战成名，所有看过那条视频的人都开始称他为“战神”了。",
+    ),
+    (42, "你问QQ弹弹大喷菇的“总有一天”是什么意思？…相信我，你不会想知道的。"),
+    (
+        43,
+        "你知道吗？看起来懒散的猫窝其实每天都会锻炼减脂哦，它以前的样子比现在肥多了。",
+    ),
+    (
+        44,
+        "回收高坚果说他每天都要花时间改变头顶的铲子装饰布局，但最后觉得还是猫耳样式最合适。",
+    ),
+    (
+        45,
+        "据说向日葵公主经历过整容，但我知道那是绯闻。其实她那段时间只是机票不小心订到非洲…然后晒黑了。",
+    ),
+    (
+        46,
+        "黄金西瓜投手、黄金向日葵、进化豆、金色向日葵，这四株植物是远房亲戚…他们的原型都是奖杯来着。",
+    ),
+    (
+        47,
+        "有传言称香蒲类的植物拥有“魔法”……我不知道这种说法从哪来的，但它们的追踪能力确实像魔法一样呢。",
+    ),
+    (
+        48,
+        "偷偷告诉你：汉堡射手有时会跟我抱怨自己头发太浓密遮住了眼睛。但我从来没见他真正理过发",
+    ),
+    (
+        49,
+        "哇，我已经长到50米了！你需要更多的功能道具吗？这辆肥料小推车或许会合你心意！",
+    ),
+    (100, "呀，我都100米高了！感谢你的培养，请收下这把卡片铲子吧！"),
+    (150, "啊哈！我已经有150米了！是时候将你的花洒泳池清洁车升级成镀金版本了！"),
+    (
+        200,
+        "喔，我居然长到200米了！这辆音乐屋顶清理车是我的谢礼，你可以用它防御屋顶哦！",
+    ),
+    (
+        300,
+        "感谢你将我培养到300米！这株手套豆以后就跟你混了，我相信它能对你起到帮助的！",
+    ),
+    (400, "天，我居然都400米高了！作为回报，这座温馨花园以后将会为你开放了！"),
+    (500, "难以置信，我已经达到500米了！这个聚宝盆可以为你生产钱币我想你会需要它的！"),
+    (
+        600,
+        "太棒了，我已经600米高了！这是魅惑蘑菇园的钥匙，你现在有更多位置培养蘑菇了！",
+    ),
+    (
+        700,
+        "我从没想过我能长到700米！我为你带来了新植物，希望这株水壶投手能成为你的助力！",
+    ),
+    (
+        800,
+        "哟，我已经有800米高了！这座竞技花园是我为你准备的，你的更多盆栽有位置放了！",
+    ),
+    (
+        900,
+        "哇噢，我已经900米高了！在关卡中连按三次“G”键，可以花10金币购买一次手套的使用权限！",
+    ),
+    (1000, "终于！我达到了1000米的里程碑！就让这把智慧铲子代表我对你的感谢吧！"),
+    (
+        1100,
+        "哈，我现在长到了1100米！是时候请客了！用这100包肥料好好喂养你花园里的植物吧！",
+    ),
+    (
+        1200,
+        "我已经长到了1200米！或许200块巧克力还不足以完全表达我的感谢，之后我会带来更好的礼物！",
+    ),
+    (1300, "1300米的高空风景真棒！这300瓶杀虫剂是我近期的库存，请随意取用吧！"),
+    (
+        1400,
+        "不可思议！我居然都有1500米高了！这只金牌蜗牛是花园管理的专家，它可以帮助你给植物施肥哦！",
+    ),
+    (
+        2025,
+        "呀吼！2025米，这是一个有纪念意义的高度！用这个响彻全场的2025留声机，让你的花园一起随音乐嗨起来吧！",
+    ),
+    (2026, "谢谢你的照料！我已经把全部智慧都给你了，但是你仍然可以让我长的更高！"),
+    (
+        40000,
+        "谢谢你给我施肥！我现在有点缺乏新的智慧了。但是如果你把我种的更高，我会为你准备更多礼物的！",
+    ),
+    (40001, "当你活得和我一样长时，你会睡得更少而更易产生幻觉。"),
+    (
+        40002,
+        "如果你弄不明白，什么是森林什么是树，只要记住：森林是树木个体的集合，反过来则不是。",
+    ),
+    (40003, "历史不停重复着自己，但是某些细节总有所不同。"),
+    (
+        40004,
+        "如果说过去，现在和未来同时存在，它们三位一体，成为一个“轮回”那么经验上的“现在”，也许不过是一个精致的幻觉？",
+    ),
+    (40005, "勇气易得，奉献难求。"),
+    (40006, "我有一些久经考验的智慧……"),
+    (40007, "请给我点肥料吧！"),
+    (40008, "对于你为我在肥料上的花销，我真的真的很感激！"),
+    (40009, "那朵云看起来好像一个大水滴哦！"),
+    (40010, "你见过我的堂兄宇宙树了吗？很大！住在瑞典，有好多粉丝呢。"),
+    (40011, "我正在一所网上大学学习社会学，我真的学到了很多。"),
+    (
+        40012,
+        "经过我仔细的观察后，我推断出是地球围着太阳转，而不是我们看到的那样：太阳绕着地球转。",
+    ),
+    (40013, "嗯嗯…… 阳光真是美味啊！"),
+    (40014, "哦，不好意思……我刚刚释放了点氧气。"),
+    (40015, "天啊，我长叶子了！"),
+    (40016, "我感觉我要爆发了！"),
+    (40017, "眼下我缺少一些关于世界观的知识！"),
+    (40018, "嗯，我确信我享用了些美味的肥料！"),
+    (40019, "我觉得我以前看到过云。"),
+    (40020, "我会在这里慢慢长高。"),
+    (40021, "我正在新陈代谢！"),
+    (40022, "我不太明白，你们这些动物怎么整天都在到处走来走去呢……"),
+    (40023, "时间对我来说是非常缓慢的！"),
+    (40024, "我想我是多年生的！"),
+    (40025, "我的木质部发麻了！"),
+    (40026, "你只要站在我身边，就能得到很多很多的智慧。"),
+    (40027, "我听说过“冬天”。但我可不会期待那种日子。"),
+    (
+        40028,
+        "嘿，我都100英尺高了！庆祝一下吧！输入“daisies”，让僵尸们死的时候留下一朵小菊花。",
+    ),
+    (40029, "啊哈！我500英尺高了！来点舞蹈吧！输入“dance”，让僵尸们都摇摆起来吧！"),
+    (
+        40030,
+        "喔！我已经1000英尺高了！和我一起输入“pinata”，让僵尸们死的时候吐出糖果，来庆祝吧！",
+    ),
+]
+
 
 class plant:
     def __init__(self, addr):
         self.addr = addr
         self.no = PVZ_memory.read_ushort(self.addr + 0x148)
         self.exist = PVZ_memory.read_bool(self.addr + 0x141)
-        self.x = PVZ_memory.read_int(self.addr + 0x8)
-        self.y = PVZ_memory.read_int(self.addr + 0xC)
-        self.row = PVZ_memory.read_int(self.addr + 0x1C)
-        self.col = PVZ_memory.read_int(self.addr + 0x28)
-        self.type = PVZ_memory.read_int(self.addr + 0x24)
+        self.x = PVZ_memory.read_uint(self.addr + 0x8)
+        self.y = PVZ_memory.read_uint(self.addr + 0xC)
+        self.row = PVZ_memory.read_uint(self.addr + 0x1C)
+        self.col = PVZ_memory.read_uint(self.addr + 0x28)
+        self.type = PVZ_memory.read_uint(self.addr + 0x24)
         # 2c 抖动倒计时
         # 30 抖动动画索引
-        self.state = PVZ_memory.read_int(self.addr + 0x3C)
-        self.hp = PVZ_memory.read_int(self.addr + 0x40)  # 血量
-        self.maxhp = PVZ_memory.read_int(self.addr + 0x44)
-        self.dieTime = PVZ_memory.read_int(self.addr + 0x4C)
-        self.cinderTime = PVZ_memory.read_int(self.addr + 0x50)
-        self.effectTime = PVZ_memory.read_int(self.addr + 0x54)  # 阳光豆长大
-        self.productTime = PVZ_memory.read_int(self.addr + 0x58)  # 常规攻击
-        self.productInterval = PVZ_memory.read_int(self.addr + 0x5C)  # 常规攻击间隔
-        self.attackTime = PVZ_memory.read_int(self.addr + 0x90)
-        self.sunTime = PVZ_memory.read_int(self.addr + 0xDC)
-        self.humTime = PVZ_memory.read_int(self.addr + 0x128)  # 阳光生产
-        self.mushroomTime = PVZ_memory.read_int(self.addr + 0x130)
+        self.state = PVZ_memory.read_uint(self.addr + 0x3C)
+        self.hp = PVZ_memory.read_uint(self.addr + 0x40)  # 血量
+        self.maxhp = PVZ_memory.read_uint(self.addr + 0x44)
+        self.dieTime = PVZ_memory.read_uint(self.addr + 0x4C)
+        self.cinderTime = PVZ_memory.read_uint(self.addr + 0x50)
+        self.effectTime = PVZ_memory.read_uint(self.addr + 0x54)  # 阳光豆长大
+        self.productTime = PVZ_memory.read_uint(self.addr + 0x58)  # 常规攻击
+        self.productInterval = PVZ_memory.read_uint(self.addr + 0x5C)  # 常规攻击间隔
+        self.attackTime = PVZ_memory.read_uint(self.addr + 0x90)
+        self.sunTime = PVZ_memory.read_uint(self.addr + 0xDC)
+        self.humTime = PVZ_memory.read_uint(self.addr + 0x128)  # 阳光生产
+        self.mushroomTime = PVZ_memory.read_uint(self.addr + 0x130)
         self.isVisible = PVZ_memory.read_bool(self.addr + 0x18)
         self.isSquash = PVZ_memory.read_bool(self.addr + 0x142)
         self.isSleep = PVZ_memory.read_bool(self.addr + 0x143)
         self.isLight = PVZ_memory.read_bool(self.addr + 0x145)
-        self.isAttack = PVZ_memory.read_int(self.addr + 0x48)
+        self.isAttack = PVZ_memory.read_uint(self.addr + 0x48)
 
     def setExist(self, exist):
         PVZ_memory.write_bool(self.addr + 0x141, exist)
@@ -1112,24 +1927,24 @@ class zombie:
     def __init__(self, addr):
         self.addr = addr
         self.no = PVZ_memory.read_ushort(self.addr + 0x158)
-        self.exist = PVZ_memory.read_int(self.addr + 0xEC)
-        self.row = PVZ_memory.read_int(self.addr + 0x1C) + 1
-        self.type = PVZ_memory.read_int(self.addr + 0x24)
+        self.exist = PVZ_memory.read_uint(self.addr + 0xEC)
+        self.row = PVZ_memory.read_uint(self.addr + 0x1C) + 1
+        self.type = PVZ_memory.read_uint(self.addr + 0x24)
         self.x = PVZ_memory.read_float(self.addr + 0x2C)
         self.y = PVZ_memory.read_float(self.addr + 0x30)
         self.size = PVZ_memory.read_float(self.addr + 0x11C)
-        self.state = PVZ_memory.read_int(self.addr + 0x28)
-        self.hp = PVZ_memory.read_int(self.addr + 0xC8)
-        self.maxHP = PVZ_memory.read_int(self.addr + 0xCC)
-        self.hatType = PVZ_memory.read_int(self.addr + 0xC4)
-        self.hatHP = PVZ_memory.read_int(self.addr + 0xD0)
-        self.maxHatHP = PVZ_memory.read_int(self.addr + 0xD4)
-        self.doorType = PVZ_memory.read_int(self.addr + 0xD8)
-        self.doorHP = PVZ_memory.read_int(self.addr + 0xDC)
-        self.maxDoorHP = PVZ_memory.read_int(self.addr + 0xE0)
-        self.slow = PVZ_memory.read_int(self.addr + 0xAC)
-        self.butter = PVZ_memory.read_int(self.addr + 0xB0)
-        self.frozen = PVZ_memory.read_int(self.addr + 0xB4)
+        self.state = PVZ_memory.read_uint(self.addr + 0x28)
+        self.hp = PVZ_memory.read_uint(self.addr + 0xC8)
+        self.maxHP = PVZ_memory.read_uint(self.addr + 0xCC)
+        self.hatType = PVZ_memory.read_uint(self.addr + 0xC4)
+        self.hatHP = PVZ_memory.read_uint(self.addr + 0xD0)
+        self.maxHatHP = PVZ_memory.read_uint(self.addr + 0xD4)
+        self.doorType = PVZ_memory.read_uint(self.addr + 0xD8)
+        self.doorHP = PVZ_memory.read_uint(self.addr + 0xDC)
+        self.maxDoorHP = PVZ_memory.read_uint(self.addr + 0xE0)
+        self.slow = PVZ_memory.read_uint(self.addr + 0xAC)
+        self.butter = PVZ_memory.read_uint(self.addr + 0xB0)
+        self.frozen = PVZ_memory.read_uint(self.addr + 0xB4)
         self.isVisible = PVZ_memory.read_bool(self.addr + 0x18)
         self.isEating = PVZ_memory.read_bool(self.addr + 0x51)
         self.isHpynotized = PVZ_memory.read_bool(self.addr + 0xB8)
@@ -1204,16 +2019,16 @@ class item:
         self.addr = addr
         self.no = PVZ_memory.read_ushort(self.addr + 0xE8)
         self.exist = PVZ_memory.read_bool(self.addr + 0x20)
-        self.row = PVZ_memory.read_int(self.addr + 0x14) + 1
-        self.col = PVZ_memory.read_int(self.addr + 0x10) + 1
-        self.type = PVZ_memory.read_int(self.addr + 0x8)
-        self.time = PVZ_memory.read_int(self.addr + 0x18)
-        self.vase_skin = PVZ_memory.read_int(self.addr + 0xC)
-        self.vase_zombie = PVZ_memory.read_int(self.addr + 0x3C)
-        self.vase_plant = PVZ_memory.read_int(self.addr + 0x40)
-        self.vase_type = PVZ_memory.read_int(self.addr + 0x44)
-        self.vase_sun = PVZ_memory.read_int(self.addr + 0x50)
-        self.vase_see_time = PVZ_memory.read_int(self.addr + 0x4C)
+        self.row = PVZ_memory.read_uint(self.addr + 0x14) + 1
+        self.col = PVZ_memory.read_uint(self.addr + 0x10) + 1
+        self.type = PVZ_memory.read_uint(self.addr + 0x8)
+        self.time = PVZ_memory.read_uint(self.addr + 0x18)
+        self.vase_skin = PVZ_memory.read_uint(self.addr + 0xC)
+        self.vase_zombie = PVZ_memory.read_uint(self.addr + 0x3C)
+        self.vase_plant = PVZ_memory.read_uint(self.addr + 0x40)
+        self.vase_type = PVZ_memory.read_uint(self.addr + 0x44)
+        self.vase_sun = PVZ_memory.read_uint(self.addr + 0x50)
+        self.vase_see_time = PVZ_memory.read_uint(self.addr + 0x4C)
 
     def setExist(self, exist):
         PVZ_memory.write_bool(self.addr + 0x20, exist)
@@ -1251,7 +2066,7 @@ class car:
         self.addr = addr
         self.exist = PVZ_memory.read_bool(self.addr + 0x30)
         self.no = PVZ_memory.read_ushort(self.addr + 0x44)
-        self.row = PVZ_memory.read_int(self.addr + 0x14)
+        self.row = PVZ_memory.read_uint(self.addr + 0x14)
 
     def setExist(self, exist):
         PVZ_memory.write_bool(self.addr + 0x30, exist)
@@ -1262,12 +2077,12 @@ class slot:
         self.addr = addr
         self.no = PVZ_memory.read_ushort(self.addr + 0x2C)
         self.canUse = PVZ_memory.read_bool(self.addr + 0x48)
-        self.type = PVZ_memory.read_int(self.addr + 0x34)
-        self.imitaterType = PVZ_memory.read_int(self.addr + 0x34)
-        self.cooldown = PVZ_memory.read_int(self.addr + 0x28)
-        self.elapsed = PVZ_memory.read_int(self.addr + 0x24)
+        self.type = PVZ_memory.read_uint(self.addr + 0x34)
+        self.imitaterType = PVZ_memory.read_uint(self.addr + 0x34)
+        self.cooldown = PVZ_memory.read_uint(self.addr + 0x28)
+        self.elapsed = PVZ_memory.read_uint(self.addr + 0x24)
         self.isVisible = PVZ_memory.read_bool(self.addr + 0x18)
-        self.count = PVZ_memory.read_int(self.addr + 0x4C)
+        self.count = PVZ_memory.read_uint(self.addr + 0x4C)
 
     def setCanUse(self, canUse):
         PVZ_memory.write_bool(self.addr + 0x48, canUse)
@@ -1294,43 +2109,146 @@ class slot:
 class plantCharacteristic:
     def __init__(self, type):
         self.type = type
-        if type < 256:
-            self.addr = 0x007A2010 + type * 0x24
-            self.sun = PVZ_memory.read_int(self.addr)
-            self.cd = PVZ_memory.read_int(self.addr + 0x4)
-            self.canAttack = PVZ_memory.read_bool(self.addr + 0x8)
-            self.attackInterval = PVZ_memory.read_int(self.addr + 0xC)
+        if PVZ_version == 3.16 or PVZ_version == 3.17:
+            if type < 512:
+                self.addr = 0x00EF4010 + type * 0x24
+                self.sun = PVZ_memory.read_uint(self.addr)
+                self.cd = PVZ_memory.read_uint(self.addr + 0x4)
+                self.canAttack = PVZ_memory.read_bool(self.addr + 0x8)
+                self.attackInterval = PVZ_memory.read_uint(self.addr + 0xC)
+            else:
+                self.addr = 0x0088B1A9 + (type - 512) * 0x4
+                self.sun = PVZ_memory.read_uint(self.addr)
+                self.cd = 0
+                self.canAttack = True
+                self.attackInterval = 0
+
+        elif (
+            isinstance(PVZ_version, (int, float))
+            and PVZ_version < 3.4
+            and PVZ_version != 3.11
+            and PVZ_version != 3.12
+            and PVZ_version != 3.132
+            and PVZ_version != 3.14
+            and PVZ_version != 3.151
+        ):
+            if type < 256:
+                self.addr = 0x007A2010 + type * 0x24
+                self.sun = PVZ_memory.read_uint(self.addr)
+                self.cd = PVZ_memory.read_uint(self.addr + 0x4)
+                self.canAttack = PVZ_memory.read_bool(self.addr + 0x8)
+                self.attackInterval = PVZ_memory.read_uint(self.addr + 0xC)
+            else:
+                if PVZ_version == 2.0:
+                    self.addr = 0x008452C8 + type - 256
+                    self.sun = PVZ_memory.read_uint(self.addr)
+                    self.cd = 0
+                    self.canAttack = True
+                    self.attackInterval = 0
+                elif PVZ_version == 2.1 or PVZ_version == 2.2:
+                    self.addr = 0x0088B018 + type - 256
+                    self.sun = PVZ_memory.read_uchar(self.addr)
+                    self.cd = 0
+                    self.canAttack = True
+                    self.attackInterval = 0
+                elif PVZ_version == 2.3:
+                    self.addr = 0x00088B04D + (type - 256) * 0x4
+                    self.sun = PVZ_memory.read_uint(self.addr)
+                    self.cd = 0
+                    self.canAttack = True
+                    self.attackInterval = 0
+                elif PVZ_version == 2.35 or PVZ_version == 2.36 or PVZ_version == 2.37:
+                    self.addr = 0x0088B05D + (type - 256) * 0x4
+                    self.sun = PVZ_memory.read_uint(self.addr)
+                    self.cd = 0
+                    self.canAttack = True
+                    self.attackInterval = 0
+                elif PVZ_version == 2.4 or PVZ_version == 2.5 or PVZ_version == 2.51:
+                    self.addr = 0x0088B072 + (type - 256) * 0x4
+                    self.sun = PVZ_memory.read_uint(self.addr)
+                    self.cd = 0
+                    self.canAttack = True
+                    self.attackInterval = 0
+                elif PVZ_version == 2.6 or PVZ_version == 2.61:
+                    self.addr = 0x0088B072 + (type - 256) * 0x4
+                    self.sun = PVZ_memory.read_uint(self.addr)
+                    self.cd = 0
+                    self.canAttack = True
+                    self.attackInterval = 0
+                elif PVZ_version == 3.0:
+                    self.addr = 0x0088B0F9 + (type - 256) * 0x4
+                    self.sun = PVZ_memory.read_uint(self.addr)
+                    self.cd = 0
+                    self.canAttack = True
+                    self.attackInterval = 0
+                elif PVZ_version == 3.1 or PVZ_version == 3.15:
+                    self.addr = 0x0088B0F9 + (type - 256) * 0x4
+                    self.sun = PVZ_memory.read_uint(self.addr)
+                    self.cd = 0
+                    self.canAttack = True
+                    self.attackInterval = 0
+                elif PVZ_version == 3.2 or PVZ_version == 3.21 or PVZ_version == 3.3:
+                    self.addr = 0x0088B119 + (type - 256) * 0x4
+                    self.sun = PVZ_memory.read_uint(self.addr)
+                    self.cd = 0
+                    self.canAttack = True
+                    self.attackInterval = 0
         else:
-            if PVZ_version == 2.0:
-                self.addr = 0x008452C8 + type - 256
-                self.sun = PVZ_memory.read_int(self.addr)
-                self.cd = 0
-                self.canAttack = True
-                self.attackInterval = 0
-            elif PVZ_version == 2.1 or PVZ_version >= 2.2:
-                self.addr = 0x0088B018 + type - 256
-                self.sun = PVZ_memory.read_uchar(self.addr)
-                self.cd = 0
-                self.canAttack = True
-                self.attackInterval = 0
-            elif PVZ_version == 2.3:
-                self.addr = 0x00088B04D + (type - 256) * 0x4
-                self.sun = PVZ_memory.read_int(self.addr)
-                self.cd = 0
-                self.canAttack = True
-                self.attackInterval = 0
-            elif PVZ_version == 2.35 or PVZ_version == 2.36 or PVZ_version == 2.37:
-                self.addr = 0x0088B05D + (type - 256) * 0x4
-                self.sun = PVZ_memory.read_int(self.addr)
-                self.cd = 0
-                self.canAttack = True
-                self.attackInterval = 0
-            elif PVZ_version == 2.4:
-                self.addr = 0x0088B072 + (type - 256) * 0x4
-                self.sun = PVZ_memory.read_int(self.addr)
-                self.cd = 0
-                self.canAttack = True
-                self.attackInterval = 0
+            if type < 512:
+                self.addr = 0x007A2010 + type * 0x24
+                self.sun = PVZ_memory.read_uint(self.addr)
+                self.cd = PVZ_memory.read_uint(self.addr + 0x4)
+                self.canAttack = PVZ_memory.read_bool(self.addr + 0x8)
+                self.attackInterval = PVZ_memory.read_uint(self.addr + 0xC)
+            else:
+                if PVZ_version == 3.4:
+                    self.addr = 0x0088B119 + (type - 512) * 0x4
+                    self.sun = PVZ_memory.read_uint(self.addr)
+                    self.cd = 0
+                    self.canAttack = True
+                    self.attackInterval = 0
+                if PVZ_version == 3.5 or PVZ_version == 3.6:
+                    self.addr = 0x0088B129 + (type - 512) * 0x4
+                    self.sun = PVZ_memory.read_uint(self.addr)
+                    self.cd = 0
+                    self.canAttack = True
+                    self.attackInterval = 0
+                if PVZ_version == 3.65:
+                    self.addr = 0x0088B14A + (type - 512) * 0x4
+                    self.sun = PVZ_memory.read_uint(self.addr)
+                    self.cd = 0
+                    self.canAttack = True
+                    self.attackInterval = 0
+                if PVZ_version == 3.7 or PVZ_version == 3.75 or PVZ_version == 3.76:
+                    self.addr = 0x0088B16B + (type - 512) * 0x4
+                    self.sun = PVZ_memory.read_uint(self.addr)
+                    self.cd = 0
+                    self.canAttack = True
+                    self.attackInterval = 0
+                if PVZ_version == 3.8 or PVZ_version == 3.9:
+                    self.addr = 0x0088B16B + (type - 512) * 0x4
+                    self.sun = PVZ_memory.read_uint(self.addr)
+                    self.cd = 0
+                    self.canAttack = True
+                    self.attackInterval = 0
+                elif PVZ_version == 3.99:
+                    self.addr = 0x0088B184 + (type - 512) * 0x4
+                    self.sun = PVZ_memory.read_uint(self.addr)
+                    self.cd = 0
+                    self.canAttack = True
+                    self.attackInterval = 0
+                elif (
+                    PVZ_version == 3.11
+                    or PVZ_version == 3.12
+                    or PVZ_version == 3.132
+                    or PVZ_version == 3.14
+                    and PVZ_version == 3.151
+                ):
+                    self.addr = 0x0088B1A9 + (type - 512) * 0x4
+                    self.sun = PVZ_memory.read_uint(self.addr)
+                    self.cd = 0
+                    self.canAttack = True
+                    self.attackInterval = 0
 
     def setSun(self, sun):
         PVZ_memory.write_int(self.addr, sun)
@@ -1351,9 +2269,9 @@ class zombieType:
         if PVZ_version < 2.3:
             if type <= 54:
                 self.addr = 0x007A6000 + type * 0x1C
-                self.anime = PVZ_memory.read_int(self.addr + 0x4)
-                self.level = PVZ_memory.read_int(self.addr + 0x8)
-                self.weight = PVZ_memory.read_int(self.addr + 0x14)
+                self.anime = PVZ_memory.read_uint(self.addr + 0x4)
+                self.level = PVZ_memory.read_uint(self.addr + 0x8)
+                self.weight = PVZ_memory.read_uint(self.addr + 0x14)
             elif type == 51:
                 if PVZ_version == 2.0:
                     self.weight = PVZ_memory.read_uchar(0x0085A887)
@@ -1377,9 +2295,9 @@ class zombieType:
         elif PVZ_version == 2.3:
             if type <= 55:
                 self.addr = 0x007A6000 + type * 0x1C
-                self.anime = PVZ_memory.read_int(self.addr + 0x4)
-                self.level = PVZ_memory.read_int(self.addr + 0x8)
-                self.weight = PVZ_memory.read_int(self.addr + 0x14)
+                self.anime = PVZ_memory.read_uint(self.addr + 0x4)
+                self.level = PVZ_memory.read_uint(self.addr + 0x8)
+                self.weight = PVZ_memory.read_uint(self.addr + 0x14)
             elif type == 56:
                 self.weight = PVZ_memory.read_uchar(0x008D0882)
             elif type == 57:
@@ -1391,9 +2309,9 @@ class zombieType:
         elif PVZ_version == 2.35 or PVZ_version == 2.36 or PVZ_version == 2.37:
             if type <= 58:
                 self.addr = 0x007A6000 + type * 0x1C
-                self.anime = PVZ_memory.read_int(self.addr + 0x4)
-                self.level = PVZ_memory.read_int(self.addr + 0x8)
-                self.weight = PVZ_memory.read_int(self.addr + 0x14)
+                self.anime = PVZ_memory.read_uint(self.addr + 0x4)
+                self.level = PVZ_memory.read_uint(self.addr + 0x8)
+                self.weight = PVZ_memory.read_uint(self.addr + 0x14)
             elif type == 59:
                 self.weight = PVZ_memory.read_uchar(0x008D0896)
             elif type == 60:
@@ -1405,9 +2323,9 @@ class zombieType:
         elif PVZ_version == 2.4:
             if type <= 63:
                 self.addr = 0x007A6000 + type * 0x1C
-                self.anime = PVZ_memory.read_int(self.addr + 0x4)
-                self.level = PVZ_memory.read_int(self.addr + 0x8)
-                self.weight = PVZ_memory.read_int(self.addr + 0x14)
+                self.anime = PVZ_memory.read_uint(self.addr + 0x4)
+                self.level = PVZ_memory.read_uint(self.addr + 0x8)
+                self.weight = PVZ_memory.read_uint(self.addr + 0x14)
             elif type == 64:
                 self.weight = PVZ_memory.read_uchar(0x008D0896)
             elif type == 65:
@@ -1416,6 +2334,264 @@ class zombieType:
                 self.weight = PVZ_memory.read_uchar(0x008D051C)
             elif type == 67:
                 self.weight = PVZ_memory.read_uchar(0x008D05F7)
+        elif PVZ_version == 2.5 or PVZ_version == 2.51:
+            if type <= 65:
+                self.addr = 0x007A6000 + type * 0x1C
+                self.anime = PVZ_memory.read_uint(self.addr + 0x4)
+                self.level = PVZ_memory.read_uint(self.addr + 0x8)
+                self.weight = PVZ_memory.read_uint(self.addr + 0x14)
+            elif type == 66:
+                self.weight = PVZ_memory.read_uchar(0x008D0896)
+            elif type == 67:
+                self.weight = PVZ_memory.read_uchar(0x008D0743)
+            elif type == 68:
+                self.weight = PVZ_memory.read_uchar(0x008D051C)
+            elif type == 69:
+                self.weight = PVZ_memory.read_uchar(0x008D05F7)
+        elif PVZ_version == 2.6:
+            if type <= 74:
+                self.addr = 0x007A6000 + type * 0x1C
+                self.anime = PVZ_memory.read_uint(self.addr + 0x4)
+                self.level = PVZ_memory.read_uint(self.addr + 0x8)
+                self.weight = PVZ_memory.read_uint(self.addr + 0x14)
+            elif type == 75:
+                self.weight = PVZ_memory.read_uchar(0x008D08C7)
+            elif type == 76:
+                self.weight = PVZ_memory.read_uchar(0x008D0774)
+            elif type == 77:
+                self.weight = PVZ_memory.read_uchar(0x008D0528)
+            elif type == 78:
+                self.weight = PVZ_memory.read_uchar(0x008D061B)
+        elif PVZ_version == 2.61:
+            if type <= 75:
+                self.addr = 0x007A6000 + type * 0x1C
+                self.anime = PVZ_memory.read_uint(self.addr + 0x4)
+                self.level = PVZ_memory.read_uint(self.addr + 0x8)
+                self.weight = PVZ_memory.read_uint(self.addr + 0x14)
+            elif type == 76:
+                self.weight = PVZ_memory.read_uchar(0x008D08C7)
+            elif type == 77:
+                self.weight = PVZ_memory.read_uchar(0x008D0774)
+            elif type == 78:
+                self.weight = PVZ_memory.read_uchar(0x008D0528)
+            elif type == 79:
+                self.weight = PVZ_memory.read_uchar(0x008D061B)
+        elif PVZ_version == 3.0:
+            if type <= 83:
+                self.addr = 0x007A6000 + type * 0x1C
+                self.anime = PVZ_memory.read_uint(self.addr + 0x4)
+                self.level = PVZ_memory.read_uint(self.addr + 0x8)
+                self.weight = PVZ_memory.read_uint(self.addr + 0x14)
+            elif type == 84:
+                self.weight = PVZ_memory.read_uchar(0x008D08C7)
+            elif type == 85:
+                self.weight = PVZ_memory.read_uchar(0x008D0774)
+            elif type == 86:
+                self.weight = PVZ_memory.read_uchar(0x008D0528)
+            elif type == 87:
+                self.weight = PVZ_memory.read_uchar(0x008D061B)
+        elif (
+            PVZ_version == 3.1
+            or PVZ_version == 3.15
+            or PVZ_version == 3.2
+            or PVZ_version == 3.21
+        ):
+            if type <= 89:
+                self.addr = 0x007A6000 + type * 0x1C
+                self.anime = PVZ_memory.read_uint(self.addr + 0x4)
+                self.level = PVZ_memory.read_uint(self.addr + 0x8)
+                self.weight = PVZ_memory.read_uint(self.addr + 0x14)
+            elif type == 90:
+                self.weight = PVZ_memory.read_uchar(0x008D0927)
+            elif type == 91:
+                self.weight = PVZ_memory.read_uchar(0x008D07C4)
+            elif type == 92:
+                self.weight = PVZ_memory.read_uchar(0x008D0529)
+            elif type == 93:
+                self.weight = PVZ_memory.read_uchar(0x008D066B)
+
+        elif PVZ_version == 3.3 or PVZ_version == 3.4:
+            if type <= 95:
+                self.addr = 0x007A6000 + type * 0x1C
+                self.anime = PVZ_memory.read_uint(self.addr + 0x4)
+                self.level = PVZ_memory.read_uint(self.addr + 0x8)
+                self.weight = PVZ_memory.read_uint(self.addr + 0x14)
+            elif type == 96:
+                self.weight = PVZ_memory.read_uchar(0x008D0928)
+            elif type == 97:
+                self.weight = PVZ_memory.read_uchar(0x008D07C4)
+            elif type == 98:
+                self.weight = PVZ_memory.read_uchar(0x008D0529)
+            elif type == 99:
+                self.weight = PVZ_memory.read_uchar(0x008D066B)
+        elif PVZ_version == 3.5:
+            if type <= 101:
+                self.addr = 0x007A6000 + type * 0x1C
+                self.anime = PVZ_memory.read_uint(self.addr + 0x4)
+                self.level = PVZ_memory.read_uint(self.addr + 0x8)
+                self.weight = PVZ_memory.read_uint(self.addr + 0x14)
+            elif type == 102:
+                self.weight = PVZ_memory.read_uchar(0x008D0928)
+            elif type == 103:
+                self.weight = PVZ_memory.read_uchar(0x008D07C4)
+            elif type == 104:
+                self.weight = PVZ_memory.read_uchar(0x008D0529)
+            elif type == 105:
+                self.weight = PVZ_memory.read_uchar(0x008D066B)
+        elif PVZ_version == 3.6:
+            if type <= 103:
+                self.addr = 0x007A6000 + type * 0x1C
+                self.anime = PVZ_memory.read_uint(self.addr + 0x4)
+                self.level = PVZ_memory.read_uint(self.addr + 0x8)
+                self.weight = PVZ_memory.read_uint(self.addr + 0x14)
+            elif type == 104:
+                self.weight = PVZ_memory.read_uchar(0x008D0928)
+            elif type == 105:
+                self.weight = PVZ_memory.read_uchar(0x008D07C4)
+            elif type == 106:
+                self.weight = PVZ_memory.read_uchar(0x008D0529)
+            elif type == 107:
+                self.weight = PVZ_memory.read_uchar(0x008D066B)
+        elif PVZ_version == 3.65:
+            if type <= 106:
+                self.addr = 0x007A6000 + type * 0x1C
+                self.anime = PVZ_memory.read_uint(self.addr + 0x4)
+                self.level = PVZ_memory.read_uint(self.addr + 0x8)
+                self.weight = PVZ_memory.read_uint(self.addr + 0x14)
+            elif type == 107:
+                self.weight = PVZ_memory.read_uchar(0x008D0928)
+            elif type == 108:
+                self.weight = PVZ_memory.read_uchar(0x008D07C4)
+            elif type == 109:
+                self.weight = PVZ_memory.read_uchar(0x008D0529)
+            elif type == 110:
+                self.weight = PVZ_memory.read_uchar(0x008D066B)
+        elif PVZ_version == 3.7 or PVZ_version == 3.75 or PVZ_version == 3.76:
+            if type <= 109:
+                self.addr = 0x007A6000 + type * 0x1C
+                self.anime = PVZ_memory.read_uint(self.addr + 0x4)
+                self.level = PVZ_memory.read_uint(self.addr + 0x8)
+                self.weight = PVZ_memory.read_uint(self.addr + 0x14)
+            elif type == 110:
+                self.weight = PVZ_memory.read_uchar(0x008D0928)
+            elif type == 111:
+                self.weight = PVZ_memory.read_uchar(0x008D07C4)
+            elif type == 112:
+                self.weight = PVZ_memory.read_uchar(0x008D0529)
+            elif type == 113:
+                self.weight = PVZ_memory.read_uchar(0x008D066B)
+        elif PVZ_version == 3.8:
+            if type <= 111:
+                self.addr = 0x007A6000 + type * 0x1C
+                self.anime = PVZ_memory.read_uint(self.addr + 0x4)
+                self.level = PVZ_memory.read_uint(self.addr + 0x8)
+                self.weight = PVZ_memory.read_uint(self.addr + 0x14)
+            elif type == 112:
+                self.weight = PVZ_memory.read_uchar(0x008D0928)
+            elif type == 113:
+                self.weight = PVZ_memory.read_uchar(0x008D07C4)
+            elif type == 114:
+                self.weight = PVZ_memory.read_uchar(0x008D0529)
+            elif type == 115:
+                self.weight = PVZ_memory.read_uchar(0x008D066B)
+        elif PVZ_version == 3.9:
+            if type <= 114:
+                self.addr = 0x007A6000 + type * 0x1C
+                self.anime = PVZ_memory.read_uint(self.addr + 0x4)
+                self.level = PVZ_memory.read_uint(self.addr + 0x8)
+                self.weight = PVZ_memory.read_uint(self.addr + 0x14)
+            elif type == 115:
+                self.weight = PVZ_memory.read_uchar(0x008D0928)
+            elif type == 116:
+                self.weight = PVZ_memory.read_uchar(0x008D07C4)
+            elif type == 117:
+                self.weight = PVZ_memory.read_uchar(0x008D0529)
+            elif type == 118:
+                self.weight = PVZ_memory.read_uchar(0x008D066B)
+        elif PVZ_version == 3.99 or PVZ_version == 3.11 or PVZ_version == 3.12:
+            if type <= 114:
+                self.addr = 0x007A6000 + type * 0x1C
+                self.anime = PVZ_memory.read_uint(self.addr + 0x4)
+                self.level = PVZ_memory.read_uint(self.addr + 0x8)
+                self.weight = PVZ_memory.read_uint(self.addr + 0x14)
+            elif type == 115:
+                self.weight = PVZ_memory.read_uchar(0x008D0928)
+            elif type == 116:
+                self.weight = PVZ_memory.read_uchar(0x008D07C4)
+            elif type == 117:
+                self.weight = PVZ_memory.read_uchar(0x008D0529)
+            elif type == 118:
+                self.weight = PVZ_memory.read_uchar(0x008D066B)
+        elif PVZ_version == 3.132:
+            if type <= 117:
+                self.addr = 0x007A6000 + type * 0x1C
+                self.anime = PVZ_memory.read_uint(self.addr + 0x4)
+                self.level = PVZ_memory.read_uint(self.addr + 0x8)
+                self.weight = PVZ_memory.read_uint(self.addr + 0x14)
+            elif type == 118:
+                self.weight = PVZ_memory.read_uchar(0x008D0928)
+            elif type == 119:
+                self.weight = PVZ_memory.read_uchar(0x008D07C4)
+            elif type == 120:
+                self.weight = PVZ_memory.read_uchar(0x008D0529)
+            elif type == 121:
+                self.weight = PVZ_memory.read_uchar(0x008D066B)
+        elif PVZ_version == 3.14:
+            if type <= 125:
+                self.addr = 0x007A6000 + type * 0x1C
+                self.anime = PVZ_memory.read_uint(self.addr + 0x4)
+                self.level = PVZ_memory.read_uint(self.addr + 0x8)
+                self.weight = PVZ_memory.read_uint(self.addr + 0x14)
+            elif type == 126:
+                self.weight = PVZ_memory.read_uchar(0x008D0928)
+            elif type == 127:
+                self.weight = PVZ_memory.read_uchar(0x008D07C4)
+            elif type == 128:
+                self.weight = PVZ_memory.read_uchar(0x008D0529)
+            elif type == 129:
+                self.weight = PVZ_memory.read_uchar(0x008D066B)
+        elif PVZ_version == 3.151:
+            if type <= 130:
+                self.addr = 0x007A6000 + type * 0x1C
+                self.anime = PVZ_memory.read_uint(self.addr + 0x4)
+                self.level = PVZ_memory.read_uint(self.addr + 0x8)
+                self.weight = PVZ_memory.read_uint(self.addr + 0x14)
+            elif type == 131:
+                self.weight = PVZ_memory.read_uchar(0x008D0928)
+            elif type == 132:
+                self.weight = PVZ_memory.read_uchar(0x008D07C4)
+            elif type == 133:
+                self.weight = PVZ_memory.read_uchar(0x008D0529)
+            elif type == 134:
+                self.weight = PVZ_memory.read_uchar(0x008D066B)
+        elif PVZ_version == 3.16:
+            if type <= 131:
+                self.addr = 0x007A8000 + type * 0x1C
+                self.anime = PVZ_memory.read_uint(self.addr + 0x4)
+                self.level = PVZ_memory.read_uint(self.addr + 0x8)
+                self.weight = PVZ_memory.read_uint(self.addr + 0x14)
+            elif type == 132:
+                self.weight = PVZ_memory.read_uchar(0x008D0928)
+            elif type == 133:
+                self.weight = PVZ_memory.read_uchar(0x008D07C4)
+            elif type == 134:
+                self.weight = PVZ_memory.read_uchar(0x008D0529)
+            elif type == 135:
+                self.weight = PVZ_memory.read_uchar(0x008D066B)
+        elif PVZ_version == 3.17:
+            if type <= 138:
+                self.addr = 0x007A8000 + type * 0x1C
+                self.anime = PVZ_memory.read_uint(self.addr + 0x4)
+                self.level = PVZ_memory.read_uint(self.addr + 0x8)
+                self.weight = PVZ_memory.read_uint(self.addr + 0x14)
+            elif type == 139:
+                self.weight = PVZ_memory.read_uchar(0x008D0928)
+            elif type == 140:
+                self.weight = PVZ_memory.read_uchar(0x008D07C4)
+            elif type == 141:
+                self.weight = PVZ_memory.read_uchar(0x008D0529)
+            elif type == 142:
+                self.weight = PVZ_memory.read_uchar(0x008D066B)
 
     def setAnime(self, anime):
         PVZ_memory.write_int(self.addr + 0x4, anime)
@@ -1480,3 +2656,66 @@ class zombieType:
                 PVZ_memory.write_uchar(0x008D051C, weight)
             elif self.type == 67:
                 PVZ_memory.write_uchar(0x008D05F7, weight)
+        elif PVZ_version == 2.4:
+            if self.type <= 65:
+                PVZ_memory.write_int(self.addr + 0x14, weight)
+            elif self.type == 66:
+                PVZ_memory.write_uchar(0x008D0896, weight)
+            elif self.type == 67:
+                PVZ_memory.write_uchar(0x008D0743, weight)
+            elif self.type == 68:
+                PVZ_memory.write_uchar(0x008D051C, weight)
+            elif self.type == 69:
+                PVZ_memory.write_uchar(0x008D05F7, weight)
+
+
+potted_size = 0x58
+
+
+class potted:
+    def __init__(self, addr):
+        self.addr = addr
+        self.no = (int)(
+            (
+                addr
+                - 0x30000
+                - PVZ_memory.read_uint(PVZ_memory.read_uint(0x6A9EC0) + 0x82C)
+            )
+            / 0x58
+        )
+        self.type = PVZ_memory.read_uint(self.addr)
+        self.garden = PVZ_memory.read_uint(self.addr + 0x4)
+        self.col = PVZ_memory.read_uint(self.addr + 0x8)
+        self.row = PVZ_memory.read_uint(self.addr + 0xC)
+        self.direction = PVZ_memory.read_uint(self.addr + 0x10)
+        self.color = PVZ_memory.read_uint(self.addr + 0x20)
+        self.state = PVZ_memory.read_uint(self.addr + 0x24)
+        self.water = PVZ_memory.read_uint(self.addr + 0x28)
+        self.waterMax = PVZ_memory.read_uint(self.addr + 0x2C)
+
+    def setType(self, type):
+        PVZ_memory.write_int(self.addr, type)
+
+    def setGarden(self, garden):
+        PVZ_memory.write_int(self.addr + 0x4, garden)
+
+    def setCol(self, col):
+        PVZ_memory.write_int(self.addr + 0x8, col)
+
+    def setRow(self, row):
+        PVZ_memory.write_int(self.addr + 0xC, row)
+
+    def setDirection(self, direction):
+        PVZ_memory.write_int(self.addr + 0x10, direction)
+
+    def setColor(self, color):
+        PVZ_memory.write_int(self.addr + 0x20, color)
+
+    def setState(self, state):
+        PVZ_memory.write_int(self.addr + 0x24, state)
+
+    def setWater(self, water):
+        PVZ_memory.write_int(self.addr + 0x28, water)
+
+    def setWaterMax(self, waterMax):
+        PVZ_memory.write_int(self.addr + 0x2C, waterMax)
