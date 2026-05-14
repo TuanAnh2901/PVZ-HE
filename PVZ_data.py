@@ -1,8 +1,8 @@
-﻿from pymem import Pymem
+from pymem import Pymem
 
 PVZ_memory = Pymem()
 PVZ_pid = 0
-PVZ_version = "未找到游戏"
+PVZ_version = "Game not found"
 zombies_HP_addresses = None
 plant_size = 304
 zombie_size = 304
@@ -35,784 +35,784 @@ def update_PVZ_version(version):
 baseAddress = 0x006A9EC0
 
 zombiesType = [
-    "普僵",
-    "旗帜",
-    "路障",
-    "撑杆",
-    "铁桶",
-    "冰车二爷",
-    "铁门",
-    "黑橄榄",
-    "武装舞王",
-    "舞伴",
-    "泳圈普僵",
-    "潜水",
-    "冰车巨人",
-    "雪橇",
-    "海豚机枪",
-    "小丑",
-    "气球舞王",
-    "矿工",
-    "跳跳",
-    "冰车雪人",
-    "飞贼",
-    "扶梯",
-    "篮球",
-    "巨人",
-    "小鬼",
-    "僵王",
-    "豌豆僵尸",
-    "坚果僵尸",
-    "辣椒僵尸",
-    "机枪僵尸",
-    "冰窝瓜僵尸",
-    "高冰果僵尸",
-    "红眼",
-    "迪斯科",
-    "舞者",
-    "骷髅",
-    "死灵法师",
-    "火焰迪斯科",
-    "火焰舞者",
-    "小黄鸭僵尸",
-    "床车僵尸",
-    "小摔哥僵尸",
-    "橄榄巨人",
-    "橄榄小鬼",
-    "雪人矿工",
-    "狂野机枪僵尸",
-    "火炬坚果僵尸",
-    "机枪撑杆僵尸",
-    "机枪海豚僵尸",
-    "僵尸坚果巨人",
-    "僵尸豌豆小鬼",
-    "鲨鱼僵尸",
-    "寒冰射手僵尸",
-    "海妖僵尸",
-    "缠绕潜水僵尸",
-    "钻石僵尸",
-    "防爆门僵尸",
-    "骑鸭僵尸",
-    "小推车小鬼僵尸",
-    "罐子僵尸",  # 59
-    "催眠师僵尸",  # 60
-    "园丁僵尸",  # 61
-    "红眼舞王",  # 62
-    "巨人伴舞",  # 63
-    "影子僵尸",  # 64
-    "矿工地刺小鬼",  # 65
-    "冲锋黑橄榄红眼巨人僵尸",  # 66
-    "冲锋黑橄榄红眼小鬼僵尸",  # 67
-    "红眼冰车僵尸",  # 68
-    "双发仙人掌僵尸",  # 69
-    "套盒坚果僵尸",  # 70
-    "至尊VIP坚果僵尸",  # 71
-    "三线玉米投手僵尸",  # 72
-    "冰霜巨人僵尸",  # 73
-    "埃德加二世",  # 74
-    "机枪冰车僵尸",  # 75
-    "干扰车僵尸",  # 76
-    "向日葵僵尸",  # 77
-    "农夫僵尸",  # 78
-    "财主僵尸",  # 79
-    "跳跳舞王僵尸",  # 80
-    "跳跳舞伴僵尸",  # 81
-    "投冰车僵尸",  # 82
-    "幽灵僵尸",  # 83
-    "模仿者僵尸",  # 84
-    "树人僵尸",  # 85
-    "僵尸虫子",  # 86
-    "橄榄撑杆僵尸",  # 87
-    "矿工巨人僵尸",  # 88
-    "矿工小鬼僵尸",  # 89
-    "海盗船长僵尸",  # 90
-    "海盗船员僵尸",  # 91
-    "磁场僵尸",  # 92
-    "蜗牛小鬼僵尸",  # 93
-    "猫战士僵尸",  # 94
-    "气球车僵尸",  # 95
-    "橄榄球雪人僵尸",  # 96
-    "重生法师僵尸",  # 97
-    "雪人雪橇僵尸小队",  # 98
-    "武装雪橇僵尸队员",  # 99
-    "吸血鬼僵尸",  # 100
-    "跳棋僵尸",  # 101
-    "猴子僵尸",  # 102
-    "市场僵尸",  # 103
-    "天使僵尸",  # 104
-    "读报迪斯科僵尸",  # 105
-    "愤怒的舞者僵尸",  # 106
-    "潜水海豚僵尸",  # 107
-    "舞王海豚僵尸",  # 108
-    "伴舞海豚僵尸",  # 109
-    "玩偶匣撑杆僵尸",  # 110
-    "烟雾机僵尸",  # 111
-    "小鬼投石车僵尸",  # 112
-    "圣诞礼盒僵尸",  # 113
-    "气球扶梯僵尸",  # 114
-    "礼盒伽刚特尔",  # 115
-    "礼盒小鬼僵尸",  # 116
-    "抽奖盒子僵尸",  # 117
-    "骷髅伽刚特尔",  # 118
-    "骷髅小鬼僵尸",  # 119
-    "园艺车僵尸",  # 120
-    "巨人号飞艇",  # 121
-    "气球小鬼僵尸",  # 122
-    "狂野冰车巨人僵尸",  # 123
-    "狂野伽刚特尔",  # 124
-    "高冰果小鬼僵尸",  # 125
-    "圣诞树人僵尸",  # 126
-    "钻石伽刚特尔",  # 127
-    "钻石小鬼僵尸",  # 128
-    "白天鹅僵尸",  # 129
-    "礼盒机僵尸",  # 130
-    "超级机枪射手僵尸",  # 131
-    "至尊VIP坚果伽刚特尔",  # 132
-    "至尊VIP坚果小鬼僵尸",  # 133
-    "磁场干扰车僵尸",  # 134
-    "幽灵玩偶匣僵尸",  # 135
-    "天使伽刚特尔",  # 136
-    "向日葵女王僵尸",  # 137
-    "火焰向日葵舞者僵尸",  # 138
+    "Normal Zombie",
+    "Flag Zombie",
+    "Conehead Zombie",
+    "Pole Vaulting Zombie",
+    "Buckethead Zombie",
+    "Ice Cart Bro",
+    "Screen Door Zombie",
+    "Black Olive Zombie",
+    "Armed Disco Zombie",
+    "Backup Dancer",
+    "Inner Tube Normal Zombie",
+    "Snorkel Zombie",
+    "Ice Cart Gargantuar",
+    "Zomboni",
+    "Dolphin Gatling Zombie",
+    "Jack in the Box Zombie",
+    "Balloon Disco Zombie",
+    "Digger Zombie",
+    "Pogo Zombie",
+    "Ice Cart Yeti",
+    "Bungee Zombie",
+    "Ladder Zombie",
+    "Catapult Zombie",
+    "Gargantuar",
+    "Imp",
+    "Dr. Zomboss",
+    "Pea Zombie",
+    "Wall-nut Zombie",
+    "Jalapeno Zombie",
+    "Gatling Zombie",
+    "Ice Squash Zombie",
+    "High Ice Fruit Zombie",
+    "Gargantuar (Red Eye)",
+    "Disco Zombie",
+    "Dancer Zombie",
+    "Skeleton Zombie",
+    "Necromancer",
+    "Fire Disco Zombie",
+    "Fire Dancer",
+    "Rubber Ducky Zombie",
+    "Bed Cart Zombie",
+    "Small Fall Guy Zombie",
+    "Olive Giant",
+    "Olive Imp",
+    "Yeti Digger Zombie",
+    "Wild Gatling Zombie",
+    "Torch Nut Zombie",
+    "Gatling Pole Vaulting Zombie",
+    "Gatling Dolphin Zombie",
+    "Zombie Nut Giant",
+    "Zombie Pea Imp",
+    "Shark Zombie",
+    "Ice Shooter Zombie",
+    "Siren Zombie",
+    "Tangle Snorkel Zombie",
+    "Diamond Zombie",
+    "Blast Door Zombie",
+    "Duck Rider Zombie",
+    "Cart Imp Zombie",
+    "Jar Zombie",  # 59
+    "Hypnotist Zombie",  # 60
+    "Gardener Zombie",  # 61
+    "Red Eye Disco Zombie",  # 62
+    "Giant Backup Dancer",  # 63
+    "Shadow Zombie",  # 64
+    "Digger Spikeweed Imp",  # 65
+    "Charge Black Olive Red Eye Giant Zombie",  # 66
+    "Charge Black Olive Red Eye Imp",  # 67
+    "Red Eye Ice Cart Zombie",  # 68
+    "Double Cactus Zombie",  # 69
+    "Box Nut Zombie",  # 70
+    "VIP Nut Zombie",  # 71
+    "Threepeater Corn Zombie",  # 72
+    "Frost Giant Zombie",  # 73
+    "Edgar Jr.",  # 74
+    "Gatling Ice Cart Zombie",  # 75
+    "Jammer Car Zombie",  # 76
+    "Sunflower Zombie",  # 77
+    "Farmer Zombie",  # 78
+    "Rich Man Zombie",  # 79
+    "Disco Dance Zombie",  # 80
+    "Dance Backup Dancer Zombie",  # 81
+    "Ice Catapult Zombie",  # 82
+    "Ghost Zombie",  # 83
+    "Imitater Zombie",  # 84
+    "Treant Zombie",  # 85
+    "Zombie Bug",  # 86
+    "Olive Pole Vaulting Zombie",  # 87
+    "Digger Giant Zombie",  # 88
+    "Digger Imp Zombie",  # 89
+    "Pirate Captain Zombie",  # 90
+    "Pirate Crew Zombie",  # 91
+    "Magnetic Field Zombie",  # 92
+    "Snail Imp Zombie",  # 93
+    "Cat Warrior Zombie",  # 94
+    "Balloon Cart Zombie",  # 95
+    "Football Yeti Zombie",  # 96
+    "Rebirth Mage Zombie",  # 97
+    "Yeti Sled Zombie Squad",  # 98
+    "Armed Sled Zombie Member",  # 99
+    "Vampire Zombie",  # 100
+    "Checkers Zombie",  # 101
+    "Monkey Zombie",  # 102
+    "Market Zombie",  # 103
+    "Angel Zombie",  # 104
+    "Newspaper Disco Zombie",  # 105
+    "Angry Dancer Zombie",  # 106
+    "Snorkel Dolphin Zombie",  # 107
+    "Disco Dolphin Zombie",  # 108
+    "Backup Dolphin Zombie",  # 109
+    "Jack-in-the-Box Pole Vaulting Zombie",  # 110
+    "Smoke Machine Zombie",  # 111
+    "Imp Catapult Zombie",  # 112
+    "Christmas Gift Box Zombie",  # 113
+    "Balloon Ladder Zombie",  # 114
+    "Gift Box Gargantuar",  # 115
+    "Gift Box Imp Zombie",  # 116
+    "Lottery Box Zombie",  # 117
+    "Skeleton Gargantuar",  # 118
+    "Skeleton Imp Zombie",  # 119
+    "Gardening Cart Zombie",  # 120
+    "Giant Airship",  # 121
+    "Balloon Imp Zombie",  # 122
+    "Wild Ice Cart Giant Zombie",  # 123
+    "Wild Gargantuar",  # 124
+    "High Ice Fruit Imp Zombie",  # 125
+    "Christmas Treant Zombie",  # 126
+    "Diamond Gargantuar",  # 127
+    "Diamond Imp Zombie",  # 128
+    "White Swan Zombie",  # 129
+    "Gift Box Machine Zombie",  # 130
+    "Super Gatling Shooter Zombie",  # 131
+    "VIP Nut Gargantuar",  # 132
+    "VIP Nut Imp Zombie",  # 133
+    "Magnetic Jammer Car Zombie",  # 134
+    "Ghost Jack-in-the-Box Zombie",  # 135
+    "Angel Gargantuar",  # 136
+    "Sunflower Queen Zombie",  # 137
+    "Fire Sunflower Dancer Zombie",  # 138
 ]
 zombieSpaw = zombiesType + [
-    "绿帽概率",
-    "橄榄废稿头概率",
-    "舞王废稿头概率",
-    "巨人废稿头概率",
+    "Green Cone Probability",
+    "Olive Draft Helmet Probability",
+    "Disco Draft Helmet Probability",
+    "Giant Draft Helmet Probability",
 ]
 itemType = [
-    "未知0",
-    "墓碑",
-    "坑洞",
-    "梯子",
-    "蓝色传送门",
-    "白色传送门",
-    "未知6",
-    "罐子",
-    "未知8",
-    "未知9",
-    "蜗牛",
-    "钉耙",
-    "脑子",
-    "未知13",
-    "未知14",
-    "小黄鸭",
+    "Unknown 0",
+    "Tombstone",
+    "Crater",
+    "Ladder",
+    "Blue Portal",
+    "White Portal",
+    "Unknown 6",
+    "Vase",
+    "Unknown 8",
+    "Unknown 9",
+    "Snail",
+    "Rake",
+    "Brain",
+    "Unknown 13",
+    "Unknown 14",
+    "Rubber Ducky",
 ]
 shovelType = [
-    "普通铲子",  # 0
-    "银铲子",  # 1
-    "金铲子",  # 2
-    "钻石铲子",  # 3
-    "星星铲子",  # 4
-    "寒冰铲子",  # 5
-    "辣椒铲子",  # 6
-    "骷髅铲子",  # 7
-    "旋风铲子",  # 8
-    "南瓜铲子",  # 9
-    "礼盒铲子",  # 10
-    "魅惑铲子",  # 11
-    "汉堡铲子",  # 12
-    "豪华铲子",  # 13
-    "卡牌铲",  # 14
-    "智慧铲",  # 15
+    "Normal Shovel",  # 0
+    "Silver Shovel",  # 1
+    "Gold Shovel",  # 2
+    "Diamond Shovel",  # 3
+    "Star Shovel",  # 4
+    "Ice Shovel",  # 5
+    "Jalapeno Shovel",  # 6
+    "Skeleton Shovel",  # 7
+    "Cyclone Shovel",  # 8
+    "Pumpkin Shovel",  # 9
+    "Gift Box Shovel",  # 10
+    "Charm Shovel",  # 11
+    "Burger Shovel",  # 12
+    "Luxury Shovel",  # 13
+    "Card Shovel",  # 14
+    "Wisdom Shovel",  # 15
 ]
 plantsType = [
-    "豌豆向日葵",  # 0
-    "阳光豆",  # 1
-    "阳光炸弹",  # 2
-    "火炬坚果",  # 3
-    "阳光土豆雷",  # 4
-    "寒冰香蒲",  # 5
-    "大蒜花",  # 6
-    "双发仙人掌",  # 7
-    "小盆菇",  # 8
-    "阳光向日葵",  # 9
-    "冰瓜大喷菇",  # 10
-    "墓碑埋雷者",  # 11
-    "红眼菇",  # 12
-    "阳光胆小菇",  # 13
-    "雪花寒冰菇",  # 14
-    "魅惑毁灭菇",  # 15
-    "豌豆睡莲",  # 16
-    "冰菇窝瓜",  # 17
-    "豌豆许愿池",  # 18
-    "毁灭海草",  # 19
-    "樱桃辣椒",  # 20
-    "黄油地刺",  # 21
-    "冰炬树桩",  # 22
-    "高冰果",  # 23
-    "海坚果",  # 24
-    "6号路灯花",  # 25
-    "豌豆大炮",  # 26
-    "仙人三叶草",  # 27
-    "玉米卷香蒲",  # 28
-    "地刺杨桃",  # 29
-    "忧郁南瓜头",  # 30
-    "磁力坚果",  # 31
-    "机枪卷心菜投手",  # 32
-    "阳光花盆",  # 33
-    "三线玉米投手",
-    "随机植物盒子",
-    "魅惑大蒜",
-    "咖啡伞",
-    "仙人三叶花",
-    "西瓜坚果",
-    "汉堡射手",
-    "阳光南瓜掌",
-    "黄油忧郁菇",
-    "西瓜香蒲",
-    "阳光菇投手",
-    "金盏吸金磁",
-    "钢刺坚果王",
-    "毁灭加农炮",
-    "模仿者",
-    "爆炸坚果",
-    "巨大坚果",
-    "芽",
-    "(反向)双发仙人掌",
+    "PeaSunflower",  # 0
+    "Sun Bean",  # 1
+    "Sun Bomb",  # 2
+    "Torch Nut",  # 3
+    "Sun Potato Mine",  # 4
+    "Ice Cattail",  # 5
+    "Garlic Flower",  # 6
+    "Double Cactus",  # 7
+    "Small Pot Mushroom",  # 8
+    "Sun Sunflower",  # 9
+    "Ice Melon Fume-shroom",  # 10
+    "Tomb Mine Layer",  # 11
+    "Red Eye Mushroom",  # 12
+    "Sun Scaredy-shroom",  # 13
+    "Snow Ice-shroom",  # 14
+    "Charm Doom-shroom",  # 15
+    "Pea Lily Pad",  # 16
+    "Ice Squash",  # 17
+    "Pea Wishing Well",  # 18
+    "Doom Seaweed",  # 19
+    "Chermander",  # 20
+    "Butter Spikeweed",  # 21
+    "Ice Torchwood",  # 22
+    "High Ice Fruit",  # 23
+    "Sea Nut",  # 24
+    "No. 6 Lamp Flower",  # 25
+    "Pea Cannon",  # 26
+    "Cactus Clover",  # 27
+    "Taco Cattail",  # 28
+    "Spikeweed Starfruit",  # 29
+    "Gloom Pumpkin",  # 30
+    "Magnet Nut",  # 31
+    "Gatling Cabbage-pult",  # 32
+    "Sun Flower Pot",  # 33
+    "Threepeater Corn",
+    "Random Plant Box",
+    "Charm Garlic",
+    "Coffee Umbrella",
+    "Cactus Clover Flower",
+    "Watermelon Nut",
+    "Burger Shooter",
+    "Sun Pumpkin Palm",
+    "Butter Gloom-shroom",
+    "Watermelon Cattail",
+    "Sun-shroom Pult",
+    "Marigold Magnet",
+    "Steel Thorn Nut King",
+    "Doom Cannon",
+    "Imitater",
+    "Explosion Nut",
+    "Giant Nut",
+    "Sprout",
+    "(Reverse) Double Cactus",
     "<null>",
-    "火焰",  # 54
-    "伟伟迷",  # 55
-    "呼叫网管",  # 56
-    "我方铁门僵尸",  # 57
-    "忧郁菇投手子弹",  # 58
-    "6号路灯花亡语",  # 59
-    "终极射手",  # 60
-    "向日葵公主",  # 61
-    "汉堡王",  # 62
-    "可乐(攻速翻倍)",  # 63
-    "薯条(血量翻倍)",  # 64
-    "南瓜炮子弹",  # 65
-    "花盆",  # 66
-    "荷叶",  # 67
-    "七色花",  # 68
-    "腾腾游记四叶草",  # 69
-    "地刺子弹",  # 70
-    "瓜子",  # 71
-    "防爆门僵尸(我方)",  # 72
-    "杨桃",  # 73
-    "红包",  # 74
-    "火爆地雷",
-    "火爆坚果墙",
-    "豌豆香蒲",
-    "冰瓜香蒲",
-    "烈火南瓜头",
-    "僵尸豌豆射手",
-    "寒冰三叶草",
-    "热狗射手",
-    "寒冰仙人掌",
-    "影流窝瓜王",
-    "黄油JOKER",
-    "向日葵女王",
-    "大蒜辣椒",
-    "至尊VIP坚果",
-    "僵尸坚果墙",
-    "魅惑菇射手",
-    "财神金盏花",
-    "猫砂盆",
-    "坑洞坚果",
-    "QQ弹弹大喷菇",
-    "寒冰地刺",
-    "土杨桃",
-    "精灵菇",
-    "川菜投手",
-    "坚果模仿者",
-    "窝瓜坚果",
-    "冰冻坚果",
-    "头脑风暴",
-    "宝藏吞噬者",
-    "全息卡牌投影",
-    "成长咖啡豆",
-    "寒光菇",
-    "骄阳豌豆射手",
-    "荧光木槌",
-    "狂野机枪射手",
-    "生命重塑者",
-    "双生樱桃",
-    "幸运四叶草",
-    "黄金向日葵",
-    "土豆加农炮",
-    "惩戒牢笼",
-    "备用物资",
-    "地刺大嘴花",
-    "僵尸豆",
-    "禁忌毁灭菇",
-    "消消乐糖果",
-    "海冰菇",
-    "莲叶壳",
-    "小猫向日葵",
-    "礼盒机",
-    "招财猫",
-    "水晶蜗牛",
-    "坚果存钱罐",
-    "吸金磁射手",
-    "钻石种子",
-    "抽奖盒子豪华版",
-    "炫彩杨桃",
-    "坚果保龄球",
-    "进化豆",
-    "流星",
-    "苹果闹钟",
-    "海豌豆",
-    "豌豆海草",
-    "海洋星",
-    "套盒坚果",
-    "鱼饵菇",
-    "花盆睡莲",
-    "忧郁菇投手",
-    "受伤的向日葵",
-    "医用咖啡豆",
-    "受伤的大喷菇",
-    "寒冰加农炮",
-    "黄金西瓜投手",
-    "寒冰菇王",
-    "自费盒子",
-    "内卷投手",
-    "制冰豆",
-    "伪装的向日葵",
-    "骄阳玉米投手",
-    "辣椒重塑者",
-    "棱镜向日葵",
-    "大王钢齿花",
-    "促销豆",
-    "促销坚果",
-    "促销花盆",
-    "天使向日葵",
-    "回收高坚果",  # 161
-    "彩虹糖果",  # 162
-    "百变高坚果",  # 163
-    "逆时闹钟",  # 164
-    "阳光加农炮",  # 165
-    "禁忌寒冰菇",  # 166
-    "冰火裂荚射手",  # 167
-    "豌豆炸弹",  # 168
-    "辣椒阳光菇",  # 169
-    "豆荚壳",  # 170
-    "忧郁咖啡豆",  # 171
-    "荷包蛋",  # 172
-    "冰冰凉凉大喷菇",  # 173
-    "冰焰南瓜头",  # 174
-    "至尊VIP树桩",  # 175
-    "灵魂豆",  # 176
-    "星星盒子",  # 177
-    "猫窝",  # 178
-    "黄金锤子",  # 179
-    "车轮重塑者",  # 180
-    "迷幻投手",  # 181
-    "玉米旋转机",  # 182
-    "雷果子",  # 183
-    "保龄球彩蛋",  # 184
-    "叶子高坚果",  # 185
-    "西瓜大喷菇",  # 186
-    "南瓜加农炮",  # 187
-    "小喷菇投手",  # 188
-    "玉米卷迫击炮",  # 189
-    "火炬辣椒",  # 190
-    "僵尸向日葵 ",  # 191
-    "大嘴阳光菇",  # 192
-    "花盆睡莲",  # 193
-    "机枪花盆",  # 194
-    "大海菇",  # 195
-    "咖啡三叶草",  # 196
-    "僵尸加农炮",  # 197
-    "阳光魅惑菇",  # 198
-    "墓碑爆破者",  # 199
-    "火炬保护伞",  # 200
-    "地刺伞",  # 201
-    "磁力土豆雷",  # 202
-    "地刺西瓜投手",  # 203
-    "磁力地刺王",  # 204
-    "南瓜灯",  # 205
-    "卡牌模仿者",  # 206
-    "烈焰毁灭菇",  # 207
-    "丛林散装豌豆",  # 208
-    "火炬辣椒豆",  # 209
-    "禁忌咖啡豆",  # 210
-    "南瓜投手",  # 211
-    "南瓜盒子",  # 212
-    "坚果向日葵",  # 213
-    "寒冰炸弹",  # 214
-    "杨桃三线射手",  # 215
-    "缠绕灯草",  # 216
-    "冰炬魅惑菇",  # 217
-    "土豆窝瓜雷",  # 218
-    "樱桃豆",  # 219
-    "杨桃树桩",  # 220
-    "鬼影魅惑菇",  # 221
-    "迷你汉堡射手",  # 222
-    "浴火三线射手",  # 223
-    "猫猫星机枪",  # 224
-    "潜艇烟花",  # 225
-    "升值豆",  # 226
-    "向日葵",  # 227
-    "豌豆射手",  # 228
-    "坚果墙",  # 229
-    "樱桃炸弹",  # 230
-    "咖啡猫",  # 231
-    "大嘴机枪射手",  # 232
-    "钻石坚果",  # 233
-    "金盏花",  # 234
-    "僵尸火炬树桩",  # 235
-    "魅灯花",  # 236
-    "杨桃磁力菇",  # 237
-    "樱桃玉米投手",  # 238
-    "魅惑海草",  # 239
-    "僵尸地刺",  # 240
-    "刺球子弹",  # 241
-    "大蒜三线射手",  # 242
-    "樱桃大喷菇",  # 243
-    "肥料高坚果",  # 244
-    "蜗牛大嘴花",  # 245
-    "巧克力坚果",  # 246
-    "搬运车花盆",  # 247
-    "巧克力",  # 248
-    "卷心菜重炮连",  # 249
-    "财运树桩",  # 250
-    "杀虫剂大喷菇",  # 251
-    "金色向日葵",  # 252
-    "手套豆",  # 253
-    "聚宝盆",  # 254
-    "唱片机胆小菇",  # 255
-    "水壶投手",  # 256
-    "樱桃土豆雷",  # 257
-    "大蒜高坚果",  # 258
-    "辣椒杀虫剂",  # 259
-    "重塑牌肥料",  # 260
-    "钥匙咖啡豆",  # 261
-    "窝瓜忧郁菇",  # 262
-    "杨桃保护伞",  # 263
-    "治愈花盆",  # 264
-    "樱桃吸金磁",  # 265
-    "受伤的高坚果",  # 266
-    "绷带坚果炮",  # 267
-    "三叶大嘴花",  # 268
-    "魔术盒子",  # 269
-    "火爆双发射手",  # 270
-    "迷你寒冰菇",  # 271
-    "缠绕水雷",  # 272
-    "南瓜垃圾桶",  # 273
-    "扫把咖啡豆",  # 274
-    "坚果南瓜头",  # 275
-    "刚刺南瓜头",  # 276
-    "旗帜僵尸豆",  # 277
-    "大蒜炸弹",  # 278
-    "大蒜毒气",  # 279
-    "骄阳仙人掌",  # 280
-    "天秤咖啡豆",  # 281
-    "银河星星果",  # 282
-    "僵尸机枪射手",  # 283
-    "寒冰磁力菇",  # 284
-    "寒冰豆",  # 285
-    "极寒冰瓜投手",  # 286
-    "地刺花盆",  # 287
-    "南瓜保护伞",  # 288
-    "忧郁魅惑菇",  # 289
-    "磁力玉米投手",  # 290
-    "充能磁铁",  # 291
-    "坚果保护伞",  # 292
-    "魅惑盒子",  # 293
-    "友望云霄洗地机",  # 294
-    "极寒冰菇",  # 295
-    "大蒜花盆",  # 296
-    "胆小阳光菇",  # 297
-    "缠绕睡莲",  # 298
-    "三叶大喷菇",  # 299
-    "雪莲",  # 300
-    "猫尾伞",  # 301
-    "三叶土豆雷",  # 302
-    "玩偶匣磁力菇",  # 303
-    "玩偶匣",  # 304
-    "随机模仿者",  # 305
-    "猫尾三叶草",  # 306
-    "玩偶匣南瓜头",  # 307
-    "土豆胆小菇",  # 308
-    "磁力樱桃炸弹",  # 309
-    "缠绕海草坚果",  # 310
-    "缠绕海草球",  # 311
-    "吸星磁",  # 312
-    "磁力三叶草",  # 313
-    "裂荚树桩",  # 314
-    "巨大坚果保龄球",  # 315
-    "爆炸坚果",  # 316
-    "拿铁游戏",  # 317
-    "大嘴玉米蟹",  # 318
-    "寒冰大嘴花",  # 319
-    "寒冰菇射手",  # 320
-    "钉耙",  # 321
-    "赛博狂潮皮肤",  # 322
-    "偶像歌手皮肤",  # 323
-    "西部警长皮肤",  # 324
-    "盛夏特饮皮肤",  # 325
-    "假日清凉皮肤",  # 326
-    "阳光路灯花",  # 327
-    "寒冰向日葵",  # 328
-    "胆小毁灭菇",  # 329
-    "禁忌花盆",  # 330
-    "毁灭地雷",  # 331
-    "魅惑地刺",  # 332
-    "土豆三线射手",  # 333
-    "三叶向日葵",  # 334
-    "西瓜棚",  # 335
-    "爱心守护皮肤",  # 336
-    "糖果拼盘皮肤",  # 337
-    "水盆",  # 338
-    "阳光火炬树桩",  # 339
-    "窝瓜壳",  # 340
-    "路灯毁灭菇",  # 341
-    "路灯毁灭菇照明",  # 342
-    "路灯毁灭菇光环",  # 343
-    "阳光毁灭菇",  # 344
-    "狂野小喷菇",  # 345
-    "促销汉堡射手",  # 346
-    "泡泡树桩",  # 347
-    "毁灭向日葵",  # 348
-    "超级机枪射手",  # 349
-    "超级汉堡机枪射手",  # 350
-    "超级僵尸机枪射手",  # 351
-    "超级狂野机枪射手",  # 352
-    "仙人掌近防炮",  # 353
-    "超级寒冰仙人掌机枪射手",  # 354
-    "狂野狙击射手",  # 355
-    "超级向日葵机枪射手",  # 356
-    "坚果仙人",  # 357
+    "Fire",  # 54
+    "Weiweimi",  # 55
+    "Call Net Admin",  # 56
+    "Friendly Screen Door Zombie",  # 57
+    "Gloom-shroom Pult Bullet",  # 58
+    "No. 6 Lamp Flower Deathrattle",  # 59
+    "Ultimate Shooter",  # 60
+    "Sunflower Princess",  # 61
+    "Burger King",  # 62
+    "Cola (Attack Speed x2)",  # 63
+    "Fries (HP x2)",  # 64
+    "Pumpkin Cannon Bullet",  # 65
+    "Flower Pot",  # 66
+    "Lily Pad",  # 67
+    "Seven Color Flower",  # 68
+    "Tengteng Travel Clover",  # 69
+    "Spikeweed Bullet",  # 70
+    "Melon Seed",  # 71
+    "Blast Door Zombie (Friendly)",  # 72
+    "Starfruit",  # 73
+    "Red Envelope",  # 74
+    "Firecracker Mine",
+    "Firecracker Nut Wall",
+    "Pea Cattail",
+    "Ice Melon Cattail",
+    "Blazing Pumpkin",
+    "Zombie Peashooter",
+    "Ice Clover",
+    "Hot Dog Shooter",
+    "Ice Cactus",
+    "Shadow Squash King",
+    "Butter JOKER",
+    "Sunflower Queen",
+    "Garlic Jalapeno",
+    "VIP Nut",
+    "Zombie Nut Wall",
+    "Charm-shroom Shooter",
+    "Fortune Marigold",
+    "Cat Litter Box",
+    "Crater Nut",
+    "Bouncy Fume-shroom",
+    "Ice Spikeweed",
+    "Earth Starfruit",
+    "Elf Mushroom",
+    "Sichuan Cuisine Pult",
+    "Nut Imitater",
+    "Squash Nut",
+    "Frozen Nut",
+    "Brainstorm",
+    "Treasure Devourer",
+    "Hologram Card Projector",
+    "Growth Coffee Bean",
+    "Cold Light Mushroom",
+    "Scorching Peashooter",
+    "Fluorescent Mallet",
+    "Wild Gatling Shooter",
+    "Life Reshaper",
+    "Twin Cherries",
+    "Lucky Clover",
+    "Gold Sunflower",
+    "Potato Cannon",
+    "Punishment Cage",
+    "Reserve Supplies",
+    "Spikeweed Chomper",
+    "Zombie Bean",
+    "Forbidden Doom-shroom",
+    "Match-3 Candy",
+    "Sea Ice-shroom",
+    "Lotus Shell",
+    "Kitty Sunflower",
+    "Gift Box Machine",
+    "Fortune Cat",
+    "Crystal Snail",
+    "Nut Piggy Bank",
+    "Gold Magnet Shooter",
+    "Diamond Seed",
+    "Lottery Box Deluxe",
+    "Prismatic Starfruit",
+    "Nut Bowling",
+    "Evolution Bean",
+    "Meteor",
+    "Apple Alarm Clock",
+    "Sea Pea",
+    "Pea Seaweed",
+    "Ocean Star",
+    "Box Nut",
+    "Bait Mushroom",
+    "Flower Pot Lily Pad",
+    "Gloom-shroom Pult",
+    "Injured Sunflower",
+    "Medical Coffee Bean",
+    "Injured Fume-shroom",
+    "Ice Cannon",
+    "Gold Watermelon Pult",
+    "Ice-shroom King",
+    "Self-Funded Box",
+    "Involution Pult",
+    "Ice Maker Bean",
+    "Disguised Sunflower",
+    "Scorching Corn Pult",
+    "Jalapeno Reshaper",
+    "Prism Sunflower",
+    "King Steel Tooth Flower",
+    "Promotion Bean",
+    "Promotion Nut",
+    "Promotion Flower Pot",
+    "Angel Sunflower",
+    "Recycle Tall-nut",  # 161
+    "Rainbow Candy",  # 162
+    "Transform Tall-nut",  # 163
+    "Reverse Alarm Clock",  # 164
+    "Sun Cannon",  # 165
+    "Forbidden Ice-shroom",  # 166
+    "Ice Fire Splitter",  # 167
+    "Pea Bomb",  # 168
+    "Jalapeno Sun-shroom",  # 169
+    "Pea Pod Shell",  # 170
+    "Gloom Coffee Bean",  # 171
+    "Fried Egg",  # 172
+    "Chilly Fume-shroom",  # 173
+    "Ice Flame Pumpkin",  # 174
+    "VIP Stump",  # 175
+    "Soul Bean",  # 176
+    "Star Box",  # 177
+    "Cat Bed",  # 178
+    "Gold Hammer",  # 179
+    "Wheel Reshaper",  # 180
+    "Psychedelic Pult",  # 181
+    "Corn Spinner",  # 182
+    "Thunder Fruit",  # 183
+    "Bowling Egg",  # 184
+    "Leaf Tall-nut",  # 185
+    "Watermelon Fume-shroom",  # 186
+    "Pumpkin Cannon",  # 187
+    "Small Puff-shroom Pult",  # 188
+    "Taco Mortar",  # 189
+    "Torch Jalapeno",  # 190
+    "Zombie Sunflower ",  # 191
+    "Big Mouth Sun-shroom",  # 192
+    "Flower Pot Lily Pad",  # 193
+    "Gatling Flower Pot",  # 194
+    "Sea Mushroom",  # 195
+    "Coffee Clover",  # 196
+    "Zombie Cannon",  # 197
+    "Sun Charm-shroom",  # 198
+    "Tomb Breaker",  # 199
+    "Torch Umbrella",  # 200
+    "Spikeweed Umbrella",  # 201
+    "Magnet Potato Mine",  # 202
+    "Spikeweed Watermelon Pult",  # 203
+    "Magnet Spikeweed King",  # 204
+    "Jack-o'-Lantern",  # 205
+    "Card Imitater",  # 206
+    "Blazing Doom-shroom",  # 207
+    "Jungle Bulk Pea",  # 208
+    "Torch Jalapeno Bean",  # 209
+    "Forbidden Coffee Bean",  # 210
+    "Pumpkin Pult",  # 211
+    "Pumpkin Box",  # 212
+    "Nut Sunflower",  # 213
+    "Ice Bomb",  # 214
+    "Starfruit Threepeater",  # 215
+    "Tangle Rush",  # 216
+    "Ice Torch Charm-shroom",  # 217
+    "Potato Squash Mine",  # 218
+    "Cherry Bean",  # 219
+    "Starfruit Stump",  # 220
+    "Ghost Charm-shroom",  # 221
+    "Mini Burger Shooter",  # 222
+    "Baptized Threepeater",  # 223
+    "Cat Star Gatling",  # 224
+    "Submarine Fireworks",  # 225
+    "Appreciation Bean",  # 226
+    "Sunflower",  # 227
+    "Peashooter",  # 228
+    "Wall-nut",  # 229
+    "Cherry Bomb",  # 230
+    "Coffee Cat",  # 231
+    "Big Mouth Gatling Shooter",  # 232
+    "Diamond Nut",  # 233
+    "Marigold",  # 234
+    "Zombie Torchwood",  # 235
+    "Charm Lamp Flower",  # 236
+    "Starfruit Magnet-shroom",  # 237
+    "Cherry Corn Pult",  # 238
+    "Charm Seaweed",  # 239
+    "Zombie Spikeweed",  # 240
+    "Spike Ball Bullet",  # 241
+    "Garlic Threepeater",  # 242
+    "Cherry Fume-shroom",  # 243
+    "Fertilizer Tall-nut",  # 244
+    "Snail Chomper",  # 245
+    "Chocolate Nut",  # 246
+    "Trolley Flower Pot",  # 247
+    "Chocolate",  # 248
+    "Cabbage Artillery",  # 249
+    "Fortune Stump",  # 250
+    "Pesticide Fume-shroom",  # 251
+    "Golden Sunflower",  # 252
+    "Glove Bean",  # 253
+    "Cornucopia",  # 254
+    "Record Player Scaredy-shroom",  # 255
+    "Watering Can Pult",  # 256
+    "Cherry Potato Mine",  # 257
+    "Garlic Tall-nut",  # 258
+    "Jalapeno Pesticide",  # 259
+    "Reshape Fertilizer",  # 260
+    "Key Coffee Bean",  # 261
+    "Squash Gloom-shroom",  # 262
+    "Starfruit Umbrella",  # 263
+    "Healing Flower Pot",  # 264
+    "Cherry Gold Magnet",  # 265
+    "Injured Tall-nut",  # 266
+    "Bandage Nut Cannon",  # 267
+    "Clover Chomper",  # 268
+    "Magic Box",  # 269
+    "Firecracker Double Shooter",  # 270
+    "Mini Ice-shroom",  # 271
+    "Tangle Mine",  # 272
+    "Pumpkin Trash Can",  # 273
+    "Broom Coffee Bean",  # 274
+    "Nut Pumpkin Head",  # 275
+    "Spike Pumpkin Head",  # 276
+    "Flag Zombie Bean",  # 277
+    "Garlic Bomb",  # 278
+    "Garlic Gas",  # 279
+    "Scorching Cactus",  # 280
+    "Scale Coffee Bean",  # 281
+    "Galaxy Starfruit",  # 282
+    "Zombie Gatling Shooter",  # 283
+    "Ice Magnet-shroom",  # 284
+    "Ice Bean",  # 285
+    "Arctic Ice Melon Pult",  # 286
+    "Spikeweed Flower Pot",  # 287
+    "Pumpkin Umbrella",  # 288
+    "Gloom Charm-shroom",  # 289
+    "Magnet Corn Pult",  # 290
+    "Charge Magnet",  # 291
+    "Nut Umbrella",  # 292
+    "Charm Box",  # 293
+    "Youwang Cloud Ground Cleaner",  # 294
+    "Arctic Ice-shroom",  # 295
+    "Garlic Flower Pot",  # 296
+    "Scaredy Sun-shroom",  # 297
+    "Tangle Lily Pad",  # 298
+    "Clover Fume-shroom",  # 299
+    "Snow Lotus",  # 300
+    "Cat Tail Umbrella",  # 301
+    "Clover Potato Mine",  # 302
+    "Jack-in-the-Box Magnet-shroom",  # 303
+    "Jack-in-the-Box",  # 304
+    "Random Imitater",  # 305
+    "Cat Tail Clover",  # 306
+    "Jack-in-the-Box Pumpkin Head",  # 307
+    "Potato Scaredy-shroom",  # 308
+    "Magnet Cherry Bomb",  # 309
+    "Tangle Seaweed Nut",  # 310
+    "Tangle Seaweed Ball",  # 311
+    "Star Magnet",  # 312
+    "Magnet Clover",  # 313
+    "Splitter Stump",  # 314
+    "Giant Nut Bowling",  # 315
+    "Explosive Nut",  # 316
+    "Latte Game",  # 317
+    "Big Mouth Corn Crab",  # 318
+    "Ice Chomper",  # 319
+    "Ice-shroom Shooter",  # 320
+    "Rake",  # 321
+    "Cyber Surge Skin",  # 322
+    "Idol Singer Skin",  # 323
+    "Western Sheriff Skin",  # 324
+    "Summer Drink Skin",  # 325
+    "Holiday Cool Skin",  # 326
+    "Sun Lamp Flower",  # 327
+    "Ice Sunflower",  # 328
+    "Scaredy Doom-shroom",  # 329
+    "Forbidden Flower Pot",  # 330
+    "Doom Mine",  # 331
+    "Charm Spikeweed",  # 332
+    "Potato Threepeater",  # 333
+    "Clover Sunflower",  # 334
+    "Watermelon Shed",  # 335
+    "Love Guardian Skin",  # 336
+    "Candy Platter Skin",  # 337
+    "Water Basin",  # 338
+    "Sun Torchwood",  # 339
+    "Squash Shell",  # 340
+    "Lamp Doom-shroom",  # 341
+    "Lamp Doom-shroom Lighting",  # 342
+    "Lamp Doom-shroom Aura",  # 343
+    "Sun Doom-shroom",  # 344
+    "Wild Puff-shroom",  # 345
+    "Promotion Burger Shooter",  # 346
+    "Bubble Stump",  # 347
+    "Doom Sunflower",  # 348
+    "Super Gatling Shooter",  # 349
+    "Super Burger Gatling Shooter",  # 350
+    "Super Zombie Gatling Shooter",  # 351
+    "Super Wild Gatling Shooter",  # 352
+    "Cactus Point Defense Cannon",  # 353
+    "Super Ice Cactus Gatling Shooter",  # 354
+    "Wild Sniper Shooter",  # 355
+    "Super Sunflower Gatling Shooter",  # 356
+    "Nut Cactus",  # 357
 ]
 if isinstance(PVZ_version, (int, float)) and PVZ_version < 3.4:
     for _ in range(len(plantsType), 256):
-        plantsType.append("占位")
+        plantsType.append("Placeholder")
 else:
     for _ in range(len(plantsType), 512):
-        plantsType.append("占位")
+        plantsType.append("Placeholder")
 plantsType = plantsType + [
-    "普僵",
-    "旗帜",
-    "路障",
-    "撑杆",
-    "铁桶",
-    "冰车二爷",
-    "铁门",
-    "黑橄榄",
-    "武装舞王",
-    "舞伴",
-    "泳圈普僵",
-    "潜水",
-    "冰车巨人",
-    "雪橇",
-    "海豚豌豆骑士",
-    "小丑",
-    "气球舞王",
-    "矿工",
-    "跳跳",
-    "冰车雪人",
-    "飞贼",
-    "扶梯",
-    "篮球",
-    "巨人",
-    "小鬼",
-    "僵王",
-    "豌豆僵尸",
-    "坚果僵尸",
-    "辣椒僵尸",
-    "机枪僵尸",
-    "冰窝瓜僵尸",
-    "高冰果僵尸",
-    "红眼",
-    "迪斯科",
-    "舞者",
-    "骷髅",
-    "死灵法师",
-    "火焰迪斯科",
-    "火焰舞者",
-    "小黄鸭僵尸",
-    "床车僵尸",
-    "小摔哥僵尸",
-    "橄榄巨人",
-    "橄榄小鬼",
-    "雪人矿工",
-    "狂野机枪僵尸",
-    "火炬坚果僵尸",
-    "机枪撑杆僵尸",
-    "机枪海豚僵尸",
-    "僵尸坚果巨人",
-    "僵尸豌豆小鬼",
-    "鲨鱼僵尸",
-    "寒冰射手僵尸",
-    "海妖僵尸",
-    "缠绕潜水僵尸",
-    "钻石僵尸",
-    "防爆门僵尸",
-    "骑鸭僵尸",
-    "小推车小鬼僵尸",
-    "罐子僵尸",  # 315
-    "催眠师僵尸",  # 316
-    "园丁僵尸",  # 317
-    "红眼舞王",  # 318
-    "巨人伴舞",  # 319
-    "影子僵尸",  # 320
-    "矿工地刺小鬼",  # 321
-    "冲锋黑橄榄红眼巨人僵尸",  # 322
-    "冲锋黑橄榄红眼小鬼僵尸",  # 323
-    "红眼冰车僵尸",  # 324
-    "双发仙人掌僵尸",  # 325
-    "套盒坚果僵尸",  # 326
-    "至尊VIP坚果僵尸",  # 327
-    "三线玉米投手僵尸",  # 328
-    "冰霜巨人僵尸",  # 329
-    "埃德加二世",  # 330
-    "机枪冰车僵尸",  # 331
-    "干扰车僵尸",  # 332
-    "向日葵僵尸",  # 333
-    "农夫僵尸",  # 334
-    "财主僵尸",  # 335
-    "跳跳舞王僵尸",  # 336
-    "跳跳舞伴僵尸",  # 337
-    "投冰车僵尸",  # 338
-    "幽灵僵尸",  # 339
-    "模仿者僵尸",  # 340
-    "树人僵尸",  # 341
-    "僵尸虫子",  # 342
-    "橄榄撑杆僵尸",  # 343
-    "矿工巨人僵尸",  # 344
-    "矿工小鬼僵尸",  # 345
-    "海盗船长僵尸",  # 346
-    "海盗船员僵尸",  # 347
-    "磁场僵尸",  # 348
-    "蜗牛小鬼僵尸",  # 349
-    "猫战士僵尸",  # 350
-    "气球车僵尸",  # 351
-    "橄榄球雪人僵尸",  # 608
-    "重生法师僵尸",  # 609
-    "雪人雪橇僵尸小队",  # 610
-    "武装雪橇僵尸队员",  # 611
-    "吸血鬼僵尸",  # 612
-    "跳棋僵尸",  # 613
-    "猴子僵尸",  # 614
-    "市场僵尸",  # 615
-    "天使僵尸",  # 616
-    "读报迪斯科僵尸",  # 617
-    "愤怒的舞者僵尸",  # 618
-    "潜水海豚僵尸",  # 619
-    "舞王海豚僵尸",  # 620
-    "伴舞海豚僵尸",  # 621
-    "玩偶匣撑杆僵尸",  # 622
-    "烟雾机僵尸",  # 623
-    "小鬼投石车僵尸",  # 624
-    "圣诞礼盒僵尸",  # 625
-    "气球扶梯僵尸",  # 626
-    "礼盒伽刚特尔",  # 627
-    "礼盒小鬼僵尸",  # 628
-    "抽奖盒子僵尸",  # 629
-    "骷髅伽刚特尔",  # 630
-    "骷髅小鬼僵尸",  # 631
-    "园艺车僵尸",  # 632
-    "巨人号飞艇",  # 633
-    "气球小鬼僵尸",  # 634
-    "狂野冰车巨人僵尸",  # 635
-    "狂野伽刚特尔",  # 636
-    "高冰果小鬼僵尸",  # 637
-    "圣诞树人僵尸",  # 638
-    "钻石伽刚特尔",  # 639
-    "钻石小鬼僵尸",  # 640
-    "白天鹅僵尸",  # 641
-    "礼盒机僵尸",  # 642
-    "超级机枪射手僵尸",  # 643
-    "至尊VIP坚果伽刚特尔",  # 644
-    "至尊VIP坚果小鬼僵尸",  # 645
-    "磁场干扰车僵尸",  # 646
-    "幽灵玩偶匣僵尸",  # 647
-    "天使伽刚特尔",  # 648
-    "向日葵女王僵尸",  # 649
-    "火焰向日葵舞者僵尸",  # 650
+    "Normal Zombie",
+    "Flag Zombie",
+    "Conehead Zombie",
+    "Pole Vaulting Zombie",
+    "Buckethead Zombie",
+    "Ice Cart Bro",
+    "Screen Door Zombie",
+    "Black Olive Zombie",
+    "Armed Disco Zombie",
+    "Backup Dancer",
+    "Inner Tube Normal Zombie",
+    "Snorkel Zombie",
+    "Ice Cart Giant",
+    "Zomboni",
+    "Dolphin Pea Knight",
+    "Jack in the Box Zombie",
+    "Balloon Disco Zombie",
+    "Digger Zombie",
+    "Pogo Zombie",
+    "Ice Cart Yeti",
+    "Bungee Zombie",
+    "Ladder Zombie",
+    "Catapult Zombie",
+    "Gargantuar",
+    "Imp",
+    "Dr. Zomboss",
+    "Pea Zombie",
+    "Wall-nut Zombie",
+    "Jalapeno Zombie",
+    "Gatling Zombie",
+    "Ice Squash Zombie",
+    "High Ice Fruit Zombie",
+    "Gargantuar (Red Eye)",
+    "Disco Zombie",
+    "Dancer Zombie",
+    "Skeleton Zombie",
+    "Necromancer",
+    "Fire Disco Zombie",
+    "Fire Dancer",
+    "Rubber Ducky Zombie",
+    "Bed Cart Zombie",
+    "Small Fall Guy Zombie",
+    "Olive Giant",
+    "Olive Imp",
+    "Yeti Digger Zombie",
+    "Wild Gatling Zombie",
+    "Torch Nut Zombie",
+    "Gatling Pole Vaulting Zombie",
+    "Gatling Dolphin Zombie",
+    "Zombie Nut Giant",
+    "Zombie Pea Imp",
+    "Shark Zombie",
+    "Ice Shooter Zombie",
+    "Siren Zombie",
+    "Tangle Snorkel Zombie",
+    "Diamond Zombie",
+    "Blast Door Zombie",
+    "Duck Rider Zombie",
+    "Cart Imp Zombie",
+    "Jar Zombie",  # 315
+    "Hypnotist Zombie",  # 316
+    "Gardener Zombie",  # 317
+    "Red Eye Disco Zombie",  # 318
+    "Giant Backup Dancer",  # 319
+    "Shadow Zombie",  # 320
+    "Digger Spikeweed Imp",  # 321
+    "Charge Black Olive Red Eye Giant Zombie",  # 322
+    "Charge Black Olive Red Eye Imp",  # 323
+    "Red Eye Ice Cart Zombie",  # 324
+    "Double Cactus Zombie",  # 325
+    "Box Nut Zombie",  # 326
+    "VIP Nut Zombie",  # 327
+    "Threepeater Corn Zombie",  # 328
+    "Frost Giant Zombie",  # 329
+    "Edgar Jr.",  # 330
+    "Gatling Ice Cart Zombie",  # 331
+    "Jammer Car Zombie",  # 332
+    "Sunflower Zombie",  # 333
+    "Farmer Zombie",  # 334
+    "Rich Man Zombie",  # 335
+    "Disco Dance Zombie",  # 336
+    "Dance Backup Dancer Zombie",  # 337
+    "Ice Catapult Zombie",  # 338
+    "Ghost Zombie",  # 339
+    "Imitater Zombie",  # 340
+    "Treant Zombie",  # 341
+    "Zombie Bug",  # 342
+    "Olive Pole Vaulting Zombie",  # 343
+    "Digger Giant Zombie",  # 344
+    "Digger Imp Zombie",  # 345
+    "Pirate Captain Zombie",  # 346
+    "Pirate Crew Zombie",  # 347
+    "Magnetic Field Zombie",  # 348
+    "Snail Imp Zombie",  # 349
+    "Cat Warrior Zombie",  # 350
+    "Balloon Cart Zombie",  # 351
+    "Football Yeti Zombie",  # 608
+    "Rebirth Mage Zombie",  # 609
+    "Yeti Sled Zombie Squad",  # 610
+    "Armed Sled Zombie Member",  # 611
+    "Vampire Zombie",  # 612
+    "Checkers Zombie",  # 613
+    "Monkey Zombie",  # 614
+    "Market Zombie",  # 615
+    "Angel Zombie",  # 616
+    "Newspaper Disco Zombie",  # 617
+    "Angry Dancer Zombie",  # 618
+    "Snorkel Dolphin Zombie",  # 619
+    "Disco Dolphin Zombie",  # 620
+    "Backup Dolphin Zombie",  # 621
+    "Jack-in-the-Box Pole Vaulting Zombie",  # 622
+    "Smoke Machine Zombie",  # 623
+    "Imp Catapult Zombie",  # 624
+    "Christmas Gift Box Zombie",  # 625
+    "Balloon Ladder Zombie",  # 626
+    "Gift Box Gargantuar",  # 627
+    "Gift Box Imp Zombie",  # 628
+    "Lottery Box Zombie",  # 629
+    "Skeleton Gargantuar",  # 630
+    "Skeleton Imp Zombie",  # 631
+    "Gardening Cart Zombie",  # 632
+    "Giant Airship",  # 633
+    "Balloon Imp Zombie",  # 634
+    "Wild Ice Cart Giant Zombie",  # 635
+    "Wild Gargantuar",  # 636
+    "High Ice Fruit Imp Zombie",  # 637
+    "Christmas Treant Zombie",  # 638
+    "Diamond Gargantuar",  # 639
+    "Diamond Imp Zombie",  # 640
+    "White Swan Zombie",  # 641
+    "Gift Box Machine Zombie",  # 642
+    "Super Gatling Shooter Zombie",  # 643
+    "VIP Nut Gargantuar",  # 644
+    "VIP Nut Imp Zombie",  # 645
+    "Magnetic Jammer Car Zombie",  # 646
+    "Ghost Jack-in-the-Box Zombie",  # 647
+    "Angel Gargantuar",  # 648
+    "Sunflower Queen Zombie",  # 649
+    "Fire Sunflower Dancer Zombie",  # 650
 ]
 
 ExcludedPutCards = [
-    "阳光豆",
-    "墓碑埋雷者",
-    "豌豆睡莲",
-    "毁灭海草",
-    "随机植物盒子",
-    "毁灭加农炮",
-    "宝藏吞噬者",
-    "全息卡牌投影",
-    "成长咖啡豆",
-    "荧光木槌",
-    "生命重塑者",
-    "幸运四叶草",
-    "黄金向日葵",
-    "土豆加农炮",
-    "备用物资",
-    "僵尸豆",
-    "莲叶壳",
-    "抽奖盒子豪华版",
-    "坚果保龄球",
-    "进化豆",
-    "医用咖啡豆",
-    "寒冰加农炮",
-    "黄金西瓜投手",
-    "自费盒子",
-    "制冰豆",
-    "促销豆",
-    "阳光豆",
-    "咖啡伞",
-    "豌豆许愿池",
-    "天使向日葵",
-    "阳光加农炮",
-    "生命重塑者",
-    "黄金锤子",  # 179
-    "火炬辣椒豆",  # 209
-    "禁忌咖啡豆",  # 210
-    "升值豆",  # 226
+    "Sun Bean",
+    "Tomb Mine Layer",
+    "Pea Lily Pad",
+    "Doom Seaweed",
+    "Random Plant Box",
+    "Doom Cannon",
+    "Treasure Devourer",
+    "Hologram Card Projector",
+    "Growth Coffee Bean",
+    "Fluorescent Mallet",
+    "Life Reshaper",
+    "Lucky Clover",
+    "Gold Sunflower",
+    "Potato Cannon",
+    "Reserve Supplies",
+    "Zombie Bean",
+    "Lotus Shell",
+    "Lottery Box Deluxe",
+    "Nut Bowling",
+    "Evolution Bean",
+    "Medical Coffee Bean",
+    "Ice Cannon",
+    "Gold Watermelon Pult",
+    "Self-Funded Box",
+    "Ice Maker Bean",
+    "Promotion Bean",
+    "Sun Bean",
+    "Coffee Umbrella",
+    "Pea Wishing Well",
+    "Angel Sunflower",
+    "Sun Cannon",
+    "Life Reshaper",
+    "Gold Hammer",  # 179
+    "Torch Jalapeno Bean",  # 209
+    "Forbidden Coffee Bean",  # 210
+    "Appreciation Bean",  # 226
 ]
 DownPlantCards = [
-    "小盆菇",
-    "阳光花盆",
-    "猫砂盆",
-    "花盆睡莲",
-    "促销花盆",
-    "荷包蛋",  # 172
-    "忧郁咖啡豆",  # 171
-    "猫窝",  # 178
-    "花盆睡莲",  # 193
-    "机枪花盆",  # 194
+    "Small Pot Mushroom",
+    "Sun Flower Pot",
+    "Cat Litter Box",
+    "Flower Pot Lily Pad",
+    "Promotion Flower Pot",
+    "Fried Egg",  # 172
+    "Gloom Coffee Bean",  # 171
+    "Cat Bed",  # 178
+    "Flower Pot Lily Pad",  # 193
+    "Gatling Flower Pot",  # 194
 ]
 PumpkinPlantCards = [
-    "忧郁南瓜头",
-    "阳光南瓜掌",
-    "烈火南瓜头",
-    "冰焰南瓜头",  # 174
-    "南瓜灯",  # 205
+    "Gloom Pumpkin",
+    "Sun Pumpkin Palm",
+    "Blazing Pumpkin",
+    "Ice Flame Pumpkin",  # 174
+    "Jack-o'-Lantern",  # 205
 ]
 AshPlantCards = [
-    "阳光炸弹",
-    "雪花寒冰菇",
-    "魅惑毁灭菇",
-    "樱桃辣椒",
-    "仙人三叶草",
-    "寒冰三叶草",
-    "黄油JOKER",
-    "大蒜辣椒",
-    "魅惑菇射手",
-    "头脑风暴",
-    "寒光菇",
-    "双生樱桃",
-    "惩戒牢笼",
-    "禁忌毁灭菇",
-    "消消乐糖果",
-    "流星",
-    "苹果闹钟",
-    "寒冰菇王",
-    "辣椒重塑者",
-    "彩虹糖果",
-    "逆时闹钟",
-    "禁忌寒冰菇",
-    "豌豆炸弹",  # 168
-    "灵魂豆",  # 176
-    "车轮重塑者",  # 180
-    "火炬辣椒",  # 190
-    "咖啡三叶草",  # 196
-    "墓碑爆破者",  # 199
-    "寒冰炸弹",  # 214
-    "樱桃豆",  # 219
+    "Sun Bomb",
+    "Snow Ice-shroom",
+    "Charm Doom-shroom",
+    "Chermander",
+    "Cactus Clover",
+    "Ice Clover",
+    "Butter JOKER",
+    "Garlic Jalapeno",
+    "Charm-shroom Shooter",
+    "Brainstorm",
+    "Cold Light Mushroom",
+    "Twin Cherries",
+    "Punishment Cage",
+    "Forbidden Doom-shroom",
+    "Match-3 Candy",
+    "Meteor",
+    "Apple Alarm Clock",
+    "Ice-shroom King",
+    "Jalapeno Reshaper",
+    "Rainbow Candy",
+    "Reverse Alarm Clock",
+    "Forbidden Ice-shroom",
+    "Pea Bomb",  # 168
+    "Soul Bean",  # 176
+    "Wheel Reshaper",  # 180
+    "Torch Jalapeno",  # 190
+    "Coffee Clover",  # 196
+    "Tomb Breaker",  # 199
+    "Ice Bomb",  # 214
+    "Cherry Bean",  # 219
 ]
 
 
@@ -820,442 +820,442 @@ def get_zombies_HP_addresses(PVZ_version):
     print("PVZ_version", PVZ_version)
     if PVZ_version == 2.0:
         return {
-            "普僵": 0x005227BB,
-            "路障的路障": 0x522892,
-            "路障的绿帽": 0x0085A8AF,
-            "撑杆": 0x522CBF,
-            "撑杆的坚果": 0x0085AA02,
-            "铁桶的铁桶": 0x52292B,
-            "报纸": 0x52337D,
-            "冰车二爷": 0x0085ADCD,
-            "铁门的铁门": 0x522949,
-            "铁门的路障": 0x0085A0CD,
-            "铁门的铁桶": 0x0085A080,
-            "橄榄的黑橄榄帽": 0x522BB0,
-            "橄榄的废稿头盔": 0x85A794,
-            "舞王": 0x523530,
-            "舞王的黑橄榄帽": 0x0085A501,
-            "舞王的废稿头盔": 0x0085A56D,
-            "潜水和投篮的黑橄榄帽": 0x0085A025,
-            "大型冰车": 0x522DE1,
-            "雪橇车": 0x523139,
-            "雪橇小队": 0x0085AB94,
-            "海豚": 0x522D64,
-            "海豚的路障": 0x0085A6FD,
-            "小丑": 0x522FC7,
-            "小丑的路障": 0x0085A0EA,
-            "气球": 0x005234BF,
-            "矿工的橄榄帽": 0x522BEF,
-            "矿工本体": 0x0085A6C3,
-            "跳跳": 0x523300,
-            "跳跳的铁桶": 0x0085A1EC,
-            "跳跳的坚果": 0x0085A326,
-            "冰车雪人": 0x52296E,
-            "蹦极": 0x522A1B,
-            "扶梯本体和扶梯": 0x52299C,
-            "扶梯的路障": 0x0085A347,
-            "扶梯的铁桶": 0x0085A39E,
-            "扶梯的坚果": 0x0085A4E0,
-            "投石车": 0x522E8D,
-            "白眼": 0x523D26,
-            "红眼": 0x523E4A,
-            "巨人的铁门": 0x0085A5CE,
-            "巨人的铁桶": 0x0085A5BA,
-            "巨人的黑橄榄帽": 0x0085A6B0,
-            "巨人的废稿头盔": 0x0085A656,
-            "植物僵尸的铁门": 0x0085A1C6,
-            "植物僵尸的路障": 0x0085A1A4,
-            "植物僵尸的铁桶": 0x0085A156,
-            "坚果僵尸的坚果": 0x52382B,
-            "辣椒僵尸的辣椒": 0x523A87,
-            "高冰果僵尸的高冰果": 0x52395D,
-            "迪斯科僵尸": 0x0085A82D,
-            "骷髅": 0x0085AB76,
-            "死灵法师": 0x0085ADB2,
-            "火焰迪斯科": 0x0085AC14,
-            "火焰舞者": 0x0085AD96,
-            "床车": 0x0085AE77,
-            "小摔哥的睡帽": 0x0085AEC7,
-            "小黄鸭的路障": 0x0085AE63,
-            "小黄鸭的铁桶": 0x0085AE30,
-            "僵王": 0x0085AEE5,
+            "Normal Zombie": 0x005227BB,
+            "Conehead's Cone": 0x522892,
+            "Conehead's Green Cone": 0x0085A8AF,
+            "Pole Vaulting Zombie": 0x522CBF,
+            "Pole Vaulting Zombie's Nut": 0x0085AA02,
+            "Buckethead's Bucket": 0x52292B,
+            "Newspaper": 0x52337D,
+            "Ice Cart Bro": 0x0085ADCD,
+            "Screen Door's Door": 0x522949,
+            "Screen Door's Cone": 0x0085A0CD,
+            "Screen Door's Bucket": 0x0085A080,
+            "Black Olive's Black Olive Hat": 0x522BB0,
+            "Black Olive's Draft Helmet": 0x85A794,
+            "Disco Zombie": 0x523530,
+            "Disco Zombie's Black Olive Hat": 0x0085A501,
+            "Disco Zombie's Draft Helmet": 0x0085A56D,
+            "Snorkel & Catapult's Black Olive Hat": 0x0085A025,
+            "Large Ice Cart": 0x522DE1,
+            "Zomboni": 0x523139,
+            "Zombo Squad": 0x0085AB94,
+            "Dolphin Zombie": 0x522D64,
+            "Dolphin's Cone": 0x0085A6FD,
+            "Jack in the Box Zombie": 0x522FC7,
+            "Jack in the Box's Cone": 0x0085A0EA,
+            "Balloon Zombie": 0x005234BF,
+            "Digger's Olive Hat": 0x522BEF,
+            "Digger Body": 0x0085A6C3,
+            "Pogo Zombie": 0x523300,
+            "Pogo's Bucket": 0x0085A1EC,
+            "Pogo's Nut": 0x0085A326,
+            "Ice Cart Yeti": 0x52296E,
+            "Bungee Zombie": 0x522A1B,
+            "Ladder Body and Ladder": 0x52299C,
+            "Ladder's Cone": 0x0085A347,
+            "Ladder's Bucket": 0x0085A39E,
+            "Ladder's Nut": 0x0085A4E0,
+            "Catapult Zombie": 0x522E8D,
+            "Gargantuar (White Eye)": 0x523D26,
+            "Gargantuar (Red Eye)": 0x523E4A,
+            "Gargantuar's Door": 0x0085A5CE,
+            "Gargantuar's Bucket": 0x0085A5BA,
+            "Gargantuar's Black Olive Hat": 0x0085A6B0,
+            "Gargantuar's Draft Helmet": 0x0085A656,
+            "Plant Zombie's Door": 0x0085A1C6,
+            "Plant Zombie's Cone": 0x0085A1A4,
+            "Plant Zombie's Bucket": 0x0085A156,
+            "Wall-nut Zombie's Nut": 0x52382B,
+            "Jalapeno Zombie's Jalapeno": 0x523A87,
+            "High Ice Fruit Zombie's High Ice Fruit": 0x52395D,
+            "Disco Zombie": 0x0085A82D,
+            "Skeleton": 0x0085AB76,
+            "Necromancer": 0x0085ADB2,
+            "Fire Disco Zombie": 0x0085AC14,
+            "Fire Dancer": 0x0085AD96,
+            "Bed Cart": 0x0085AE77,
+            "Small Fall Guy's Sleep Cap": 0x0085AEC7,
+            "Rubber Ducky's Cone": 0x0085AE63,
+            "Rubber Ducky's Bucket": 0x0085AE30,
+            "Dr. Zomboss": 0x0085AEE5,
         }
     elif PVZ_version == 2.1 or PVZ_version == 2.2:
         return {
-            "普僵": 0x005227BB,
-            "路障的路障": 0x00522892,
-            "路障的绿帽": 0x008D08AF,
-            "路尸的绿帽上限": 0x008D08B9,
-            "撑杆": 0x00522CBF,
-            "撑杆的坚果": 0x008D0A02,
-            "铁桶的铁桶": 0x0052292B,
-            "报纸": 0x0052337D,
-            "冰车二爷": 0x008D0DCD,
-            "铁门的铁门": 0x00522949,
-            "铁门的路障": 0x008D00CD,
-            "铁门的铁桶": 0x008D0080,
-            "橄榄的黑橄榄帽": 0x00522BB0,
-            "橄榄的废稿头盔": 0x008D0794,
-            "橄榄的废稿头盔上限": 0x008D079E,
-            "舞王": 0x00523530,
-            "舞王的黑橄榄帽": 0x008D0501,
-            "舞王的废稿头盔": 0x008D056D,
-            "舞王的废稿头盔上限": 0x008D0577,
-            "潜水和投篮的黑橄榄帽": 0x008D0025,
-            "大型冰车": 0x00522DE1,
-            "雪橇车": 0x00523139,
-            "雪橇小队": 0x008D0B94,
-            "雪橇小队上限": 0x008D0B9E,
-            "小丑": 0x00522FC7,
-            "小丑的路障": 0x008D00EA,
-            "气球": 0x005234BF,
-            "矿工本体": 0x008D06C3,
-            "跳跳": 0x00523300,
-            "跳跳的铁桶": 0x008D01EC,
-            "跳跳的坚果": 0x008D0326,
-            "冰车雪人": 0x0052296E,
-            "蹦极": 0x00522A1B,
-            "扶梯本体和扶梯": 0x0052299C,
-            "扶梯僵尸的路障饰品": 0x008D0347,
-            "扶梯的路障": 0x008D039E,
-            "扶梯的坚果": 0x008D04E0,
-            "投石车": 0x00522E8D,
-            "白眼": 0x00523D26,
-            "红眼": 0x00523E4A,
-            "巨人的铁门": 0x008D05CE,
-            "巨人的铁桶": 0x008D05BA,
-            "巨人的黑橄榄帽": 0x008D06B0,
-            "巨人的废稿头盔": 0x008D0656,
-            "巨人的废稿头盔上限": 0x008D0660,
-            "植物僵尸的铁门": 0x008D01C6,
-            "植物僵尸的路障": 0x008D01A4,
-            "植物僵尸的铁桶": 0x008D0156,
-            "坚果僵尸的坚果": 0x0052382B,
-            "辣椒僵尸的辣椒": 0x00523A87,
-            "高冰果僵尸的高冰果": 0x0052395D,
-            "迪斯科僵尸": 0x008D082D,
-            "骷髅": 0x008D0B76,
-            "骷髅上限": 0x008D0B80,
-            "死灵法师": 0x008D0DB2,
-            "火焰迪斯科": 0x008D0C14,
-            "火焰舞者": 0x008D0D96,
-            "床车": 0x008D0E77,
-            "小摔哥的睡帽": 0x008D0EC7,
-            "小摔哥的睡帽上限": 0x008D0ED1,
-            "小黄鸭的路障": 0x008D0E63,
-            "小黄鸭的铁桶": 0x008D0E30,
-            "僵王": 0x008D0EE5,
-            "橄榄巨人": 0x008D0F04,
-            "橄榄巨人头盔": 0x008D0F18,
-            "橄榄小鬼头盔": 0x008D0F8F,
-            "雪人矿工": 0x008D0FA3,
-            "雪人矿工帽": 0x008D0FC9,
+            "Normal Zombie": 0x005227BB,
+            "Conehead's Cone": 0x00522892,
+            "Conehead's Green Cone": 0x008D08AF,
+            "Conehead's Green Cone Max": 0x008D08B9,
+            "Pole Vaulting Zombie": 0x00522CBF,
+            "Pole Vaulting Zombie's Nut": 0x008D0A02,
+            "Buckethead's Bucket": 0x0052292B,
+            "Newspaper": 0x0052337D,
+            "Ice Cart Bro": 0x008D0DCD,
+            "Screen Door's Door": 0x00522949,
+            "Screen Door's Cone": 0x008D00CD,
+            "Screen Door's Bucket": 0x008D0080,
+            "Black Olive's Black Olive Hat": 0x00522BB0,
+            "Black Olive's Draft Helmet": 0x008D0794,
+            "Black Olive's Draft Helmet Max": 0x008D079E,
+            "Disco Zombie": 0x00523530,
+            "Disco Zombie's Black Olive Hat": 0x008D0501,
+            "Disco Zombie's Draft Helmet": 0x008D056D,
+            "Disco Zombie's Draft Helmet Max": 0x008D0577,
+            "Snorkel & Catapult's Black Olive Hat": 0x008D0025,
+            "Large Ice Cart": 0x00522DE1,
+            "Zomboni": 0x00523139,
+            "Zombo Squad": 0x008D0B94,
+            "Zombo Squad Max": 0x008D0B9E,
+            "Jack in the Box Zombie": 0x00522FC7,
+            "Jack in the Box's Cone": 0x008D00EA,
+            "Balloon Zombie": 0x005234BF,
+            "Digger Body": 0x008D06C3,
+            "Pogo Zombie": 0x00523300,
+            "Pogo's Bucket": 0x008D01EC,
+            "Pogo's Nut": 0x008D0326,
+            "Ice Cart Yeti": 0x0052296E,
+            "Bungee Zombie": 0x00522A1B,
+            "Ladder Body and Ladder": 0x0052299C,
+            "Ladder Zombie's Cone Accessory": 0x008D0347,
+            "Ladder's Cone": 0x008D039E,
+            "Ladder's Nut": 0x008D04E0,
+            "Catapult Zombie": 0x00522E8D,
+            "Gargantuar (White Eye)": 0x00523D26,
+            "Gargantuar (Red Eye)": 0x00523E4A,
+            "Gargantuar's Door": 0x008D05CE,
+            "Gargantuar's Bucket": 0x008D05BA,
+            "Gargantuar's Black Olive Hat": 0x008D06B0,
+            "Gargantuar's Draft Helmet": 0x008D0656,
+            "Gargantuar's Draft Helmet Max": 0x008D0660,
+            "Plant Zombie's Door": 0x008D01C6,
+            "Plant Zombie's Cone": 0x008D01A4,
+            "Plant Zombie's Bucket": 0x008D0156,
+            "Wall-nut Zombie's Nut": 0x0052382B,
+            "Jalapeno Zombie's Jalapeno": 0x00523A87,
+            "High Ice Fruit Zombie's High Ice Fruit": 0x0052395D,
+            "Disco Zombie": 0x008D082D,
+            "Skeleton": 0x008D0B76,
+            "Skeleton Max": 0x008D0B80,
+            "Necromancer": 0x008D0DB2,
+            "Fire Disco Zombie": 0x008D0C14,
+            "Fire Dancer": 0x008D0D96,
+            "Bed Cart": 0x008D0E77,
+            "Small Fall Guy's Sleep Cap": 0x008D0EC7,
+            "Small Fall Guy's Sleep Cap Max": 0x008D0ED1,
+            "Rubber Ducky's Cone": 0x008D0E63,
+            "Rubber Ducky's Bucket": 0x008D0E30,
+            "Dr. Zomboss": 0x008D0EE5,
+            "Olive Giant": 0x008D0F04,
+            "Olive Giant Helmet": 0x008D0F18,
+            "Olive Imp Helmet": 0x008D0F8F,
+            "Yeti Digger Zombie": 0x008D0FA3,
+            "Yeti Digger Hat": 0x008D0FC9,
         }
     elif PVZ_version == 2.3:
         return {
-            "普僵": 0x005227BB,
-            "路障的路障": 0x00522892,
-            "路障的绿帽": 0x008D08AA,
-            "撑杆": 0x00522CBF,
-            "撑杆的坚果": 0x008D09FD,
-            "铁桶的铁桶": 0x0052292B,
-            "报纸": 0x0052337D,
-            "冰车二爷": 0x008D0DAE,
-            "铁门的铁门": 0x00522949,
-            "铁门的路障": 0x008D00CD,
-            "铁门的铁桶": 0x008D0080,
-            "橄榄的黑橄榄帽": 0x00522BB0,
-            "橄榄的废稿头盔": 0x008D078F,
-            "舞王": 0x00523530,
-            "舞王的黑橄榄帽": 0x008D04E5,
-            "舞王的废稿头盔": 0x008D0551,
-            "潜水和投篮的黑橄榄帽": 0x008D0025,
-            "大型冰车": 0x00522DE1,
-            "雪橇车": 0x00523139,
-            "雪橇小队": 0x008D0B75,
-            "海豚": 0x00522D64,
-            "海豚的路障": 0x008D06E1,
-            "小丑": 0x00522FC7,
-            "小丑的路障": 0x008D00EA,
-            "气球": 0x005234BF,
-            "矿工本体": 0x008D06A7,
-            "跳跳": 0x00523300,
-            "跳跳的铁桶": 0x008D01EC,
-            "跳跳的坚果": 0x008D0318,
-            "冰车雪人": 0x0052296E,
-            "蹦极": 0x00522A1B,
-            "扶梯本体和扶梯": 0x0052299C,
-            "扶梯僵尸的铁桶": 0x008D0390,
-            "扶梯的路障": 0x008D0339,
-            "扶梯的坚果": 0x008D04C4,
-            "投石车": 0x00522E8D,
-            "投石车橄榄帽": 0x008D0025,
-            "白眼": 0x00523D26,
-            "红眼": 0x00523E4A,
-            "巨人的铁门": 0x008D05B2,
-            "巨人的铁桶": 0x008D059E,
-            "巨人的黑橄榄帽": 0x008D0694,
-            "巨人的废稿头盔": 0x008D063A,
-            "小鬼": 0x005227BB,
-            "植物僵尸本体": 0x005227BB,
-            "植物僵尸的铁门": 0x008D01C6,
-            "植物僵尸的路障": 0x008D01A4,
-            "植物僵尸的铁桶": 0x0052292B,
-            "坚果僵尸的坚果": 0x0052382B,
-            "辣椒僵尸的辣椒": 0x00523A87,
-            "高冰果僵尸的高冰果": 0x008D11D1,
-            "机枪射手僵尸": 0x008D11A2,
-            "火炬坚果僵尸的坚果头": 0x008D12EC,
-            "机枪撑杆僵尸": 0x008D1415,
-            "机枪海豚僵尸的路障": 0x008D164F,
-            "迪斯科僵尸": 0x008D0828,
-            "骷髅": 0x008D0B57,
-            "死灵法师": 0x008D0D93,
-            "火焰迪斯科": 0x008D0BF5,
-            "火焰舞者": 0x008D0D77,
-            "床车": 0x008D0E58,
-            "小摔哥的睡帽": 0x008D0EA8,
-            "小黄鸭的路障": 0x008D0E44,
-            "小黄鸭的铁桶": 0x008D0E11,
-            "僵王": 0x008D0EC6,
-            "橄榄巨人": 0x008D0F01,
-            "橄榄巨人头盔": 0x008D0F15,
-            "橄榄小鬼": 0x005227BB,
-            "橄榄小鬼头盔": 0x008D0F8C,
-            "雪人矿工": 0x008D0FC6,
-            "雪人矿工帽": 0x008D0FA0,
-            "钻石僵尸帽": 0x008D1DF7,
-            "鲨鱼僵尸": 0x008D1A97,
-            "海妖僵尸": 0x008D1C4D,
-            "缠绕潜水僵尸": 0x008D1CDA,
+            "Normal Zombie": 0x005227BB,
+            "Conehead's Cone": 0x00522892,
+            "Conehead's Green Cone": 0x008D08AA,
+            "Pole Vaulting Zombie": 0x00522CBF,
+            "Pole Vaulting Zombie's Nut": 0x008D09FD,
+            "Buckethead's Bucket": 0x0052292B,
+            "Newspaper": 0x0052337D,
+            "Ice Cart Bro": 0x008D0DAE,
+            "Screen Door's Door": 0x00522949,
+            "Screen Door's Cone": 0x008D00CD,
+            "Screen Door's Bucket": 0x008D0080,
+            "Black Olive's Black Olive Hat": 0x00522BB0,
+            "Black Olive's Draft Helmet": 0x008D078F,
+            "Disco Zombie": 0x00523530,
+            "Disco Zombie's Black Olive Hat": 0x008D04E5,
+            "Disco Zombie's Draft Helmet": 0x008D0551,
+            "Snorkel & Catapult's Black Olive Hat": 0x008D0025,
+            "Large Ice Cart": 0x00522DE1,
+            "Zomboni": 0x00523139,
+            "Zombo Squad": 0x008D0B75,
+            "Dolphin Zombie": 0x00522D64,
+            "Dolphin's Cone": 0x008D06E1,
+            "Jack in the Box Zombie": 0x00522FC7,
+            "Jack in the Box's Cone": 0x008D00EA,
+            "Balloon Zombie": 0x005234BF,
+            "Digger Body": 0x008D06A7,
+            "Pogo Zombie": 0x00523300,
+            "Pogo's Bucket": 0x008D01EC,
+            "Pogo's Nut": 0x008D0318,
+            "Ice Cart Yeti": 0x0052296E,
+            "Bungee Zombie": 0x00522A1B,
+            "Ladder Body and Ladder": 0x0052299C,
+            "Ladder Zombie's Bucket": 0x008D0390,
+            "Ladder's Cone": 0x008D0339,
+            "Ladder's Nut": 0x008D04C4,
+            "Catapult Zombie": 0x00522E8D,
+            "Catapult Olive Hat": 0x008D0025,
+            "Gargantuar (White Eye)": 0x00523D26,
+            "Gargantuar (Red Eye)": 0x00523E4A,
+            "Gargantuar's Door": 0x008D05B2,
+            "Gargantuar's Bucket": 0x008D059E,
+            "Gargantuar's Black Olive Hat": 0x008D0694,
+            "Gargantuar's Draft Helmet": 0x008D063A,
+            "Imp": 0x005227BB,
+            "Plant Zombie Body": 0x005227BB,
+            "Plant Zombie's Door": 0x008D01C6,
+            "Plant Zombie's Cone": 0x008D01A4,
+            "Plant Zombie's Bucket": 0x0052292B,
+            "Wall-nut Zombie's Nut": 0x0052382B,
+            "Jalapeno Zombie's Jalapeno": 0x00523A87,
+            "High Ice Fruit Zombie's High Ice Fruit": 0x008D11D1,
+            "Gatling Shooter Zombie": 0x008D11A2,
+            "Torch Nut Zombie's Nut Head": 0x008D12EC,
+            "Gatling Pole Vaulting Zombie": 0x008D1415,
+            "Gatling Dolphin Zombie's Cone": 0x008D164F,
+            "Disco Zombie": 0x008D0828,
+            "Skeleton": 0x008D0B57,
+            "Necromancer": 0x008D0D93,
+            "Fire Disco Zombie": 0x008D0BF5,
+            "Fire Dancer": 0x008D0D77,
+            "Bed Cart": 0x008D0E58,
+            "Small Fall Guy's Sleep Cap": 0x008D0EA8,
+            "Rubber Ducky's Cone": 0x008D0E44,
+            "Rubber Ducky's Bucket": 0x008D0E11,
+            "Dr. Zomboss": 0x008D0EC6,
+            "Olive Giant": 0x008D0F01,
+            "Olive Giant Helmet": 0x008D0F15,
+            "Olive Imp": 0x005227BB,
+            "Olive Imp Helmet": 0x008D0F8C,
+            "Yeti Digger Zombie": 0x008D0FC6,
+            "Yeti Digger Hat": 0x008D0FA0,
+            "Diamond Zombie Hat": 0x008D1DF7,
+            "Shark Zombie": 0x008D1A97,
+            "Siren Zombie": 0x008D1C4D,
+            "Tangle Snorkel Zombie": 0x008D1CDA,
         }
     elif PVZ_version == 2.35 or PVZ_version >= 2.36:
         return {
-            "普僵": 0x005227BB,
-            "路障的路障": 0x00522892,
-            "路障的绿帽": 0x008D08AA,
-            "撑杆": 0x00522CBF,
-            "撑杆的坚果": 0x008D09FD,
-            "铁桶的铁桶": 0x0052292B,
-            "报纸": 0x0052337D,
-            "冰车二爷": 0x008D0DAE,
-            "铁门的铁门": 0x00522949,
-            "铁门的路障": 0x008D00CD,
-            "铁门的铁桶": 0x008D0080,
-            "橄榄的黑橄榄帽": 0x00522BB0,
-            "橄榄的废稿头盔": 0x008D078F,
-            "舞王": 0x00523530,
-            "舞王的黑橄榄帽": 0x008D04E5,
-            "舞王的废稿头盔": 0x008D0551,
-            "潜水和投篮的黑橄榄帽": 0x008D0025,
-            "大型冰车": 0x00522DE1,
-            "雪橇车": 0x00523139,
-            "雪橇小队": 0x008D0B75,
-            "海豚": 0x00522D64,
-            "海豚的路障": 0x008D06E1,
-            "小丑": 0x00522FC7,
-            "小丑的路障": 0x008D00EA,
-            "气球": 0x005234BF,
-            "矿工本体": 0x008D06A7,
-            "跳跳": 0x00523300,
-            "跳跳的铁桶": 0x008D01EC,
-            "跳跳的坚果": 0x008D0318,
-            "冰车雪人": 0x0052296E,
-            "蹦极": 0x00522A1B,
-            "扶梯本体和扶梯": 0x0052299C,
-            "扶梯僵尸的铁桶": 0x008D0390,
-            "扶梯的路障": 0x008D0339,
-            "扶梯的坚果": 0x008D04C4,
-            "投石车": 0x00522E8D,
-            "投石车橄榄帽": 0x008D0025,
-            "白眼": 0x00523D26,
-            "红眼": 0x00523E4A,
-            "巨人的铁门": 0x008D05B2,
-            "巨人的铁桶": 0x008D059E,
-            "巨人的黑橄榄帽": 0x008D0694,
-            "巨人的废稿头盔": 0x008D063A,
-            "小鬼": 0x005227BB,
-            "植物僵尸本体": 0x005227BB,
-            "植物僵尸的铁门": 0x008D01C6,
-            "植物僵尸的路障": 0x008D01A4,
-            "植物僵尸的铁桶": 0x0052292B,
-            "坚果僵尸的坚果": 0x0052382B,
-            "辣椒僵尸的辣椒": 0x00523A87,
-            "高冰果僵尸的高冰果": 0x008D11D1,
-            "机枪射手僵尸": 0x008D11A2,
-            "火炬坚果僵尸的坚果头": 0x008D12EC,
-            "机枪撑杆僵尸": 0x008D1415,
-            "机枪海豚僵尸的路障": 0x008D164F,
-            "迪斯科僵尸": 0x008D0828,
-            "骷髅": 0x008D0B57,
-            "死灵法师": 0x008D0D93,
-            "火焰迪斯科": 0x008D0BF5,
-            "火焰舞者": 0x008D0D77,
-            "床车": 0x008D0E58,
-            "小摔哥的睡帽": 0x008D0EA8,
-            "小黄鸭的路障": 0x008D0E44,
-            "小黄鸭的铁桶": 0x008D0E11,
-            "僵王": 0x008D0F0B,
-            "橄榄巨人": 0x008D0F01,
-            "橄榄巨人头盔": 0x008D0F15,
-            "橄榄小鬼": 0x005227BB,
-            "橄榄小鬼头盔": 0x008D0F8C,
-            "雪人矿工": 0x008D0FC6,
-            "雪人矿工帽": 0x008D0FA0,
-            "钻石僵尸帽": 0x008D1DF7,
-            "鲨鱼僵尸": 0x008D1A97,
-            "海妖僵尸": 0x008D1C4D,
-            "缠绕潜水僵尸": 0x008D1CDA,
+            "Normal Zombie": 0x005227BB,
+            "Conehead's Cone": 0x00522892,
+            "Conehead's Green Cone": 0x008D08AA,
+            "Pole Vaulting Zombie": 0x00522CBF,
+            "Pole Vaulting Zombie's Nut": 0x008D09FD,
+            "Buckethead's Bucket": 0x0052292B,
+            "Newspaper": 0x0052337D,
+            "Ice Cart Bro": 0x008D0DAE,
+            "Screen Door's Door": 0x00522949,
+            "Screen Door's Cone": 0x008D00CD,
+            "Screen Door's Bucket": 0x008D0080,
+            "Black Olive's Black Olive Hat": 0x00522BB0,
+            "Black Olive's Draft Helmet": 0x008D078F,
+            "Disco Zombie": 0x00523530,
+            "Disco Zombie's Black Olive Hat": 0x008D04E5,
+            "Disco Zombie's Draft Helmet": 0x008D0551,
+            "Snorkel & Catapult's Black Olive Hat": 0x008D0025,
+            "Large Ice Cart": 0x00522DE1,
+            "Zomboni": 0x00523139,
+            "Zombo Squad": 0x008D0B75,
+            "Dolphin Zombie": 0x00522D64,
+            "Dolphin's Cone": 0x008D06E1,
+            "Jack in the Box Zombie": 0x00522FC7,
+            "Jack in the Box's Cone": 0x008D00EA,
+            "Balloon Zombie": 0x005234BF,
+            "Digger Body": 0x008D06A7,
+            "Pogo Zombie": 0x00523300,
+            "Pogo's Bucket": 0x008D01EC,
+            "Pogo's Nut": 0x008D0318,
+            "Ice Cart Yeti": 0x0052296E,
+            "Bungee Zombie": 0x00522A1B,
+            "Ladder Body and Ladder": 0x0052299C,
+            "Ladder Zombie's Bucket": 0x008D0390,
+            "Ladder's Cone": 0x008D0339,
+            "Ladder's Nut": 0x008D04C4,
+            "Catapult Zombie": 0x00522E8D,
+            "Catapult Olive Hat": 0x008D0025,
+            "Gargantuar (White Eye)": 0x00523D26,
+            "Gargantuar (Red Eye)": 0x00523E4A,
+            "Gargantuar's Door": 0x008D05B2,
+            "Gargantuar's Bucket": 0x008D059E,
+            "Gargantuar's Black Olive Hat": 0x008D0694,
+            "Gargantuar's Draft Helmet": 0x008D063A,
+            "Imp": 0x005227BB,
+            "Plant Zombie Body": 0x005227BB,
+            "Plant Zombie's Door": 0x008D01C6,
+            "Plant Zombie's Cone": 0x008D01A4,
+            "Plant Zombie's Bucket": 0x0052292B,
+            "Wall-nut Zombie's Nut": 0x0052382B,
+            "Jalapeno Zombie's Jalapeno": 0x00523A87,
+            "High Ice Fruit Zombie's High Ice Fruit": 0x008D11D1,
+            "Gatling Shooter Zombie": 0x008D11A2,
+            "Torch Nut Zombie's Nut Head": 0x008D12EC,
+            "Gatling Pole Vaulting Zombie": 0x008D1415,
+            "Gatling Dolphin Zombie's Cone": 0x008D164F,
+            "Disco Zombie": 0x008D0828,
+            "Skeleton": 0x008D0B57,
+            "Necromancer": 0x008D0D93,
+            "Fire Disco Zombie": 0x008D0BF5,
+            "Fire Dancer": 0x008D0D77,
+            "Bed Cart": 0x008D0E58,
+            "Small Fall Guy's Sleep Cap": 0x008D0EA8,
+            "Rubber Ducky's Cone": 0x008D0E44,
+            "Rubber Ducky's Bucket": 0x008D0E11,
+            "Dr. Zomboss": 0x008D0F0B,
+            "Olive Giant": 0x008D0F01,
+            "Olive Giant Helmet": 0x008D0F15,
+            "Olive Imp": 0x005227BB,
+            "Olive Imp Helmet": 0x008D0F8C,
+            "Yeti Digger Zombie": 0x008D0FC6,
+            "Yeti Digger Hat": 0x008D0FA0,
+            "Diamond Zombie Hat": 0x008D1DF7,
+            "Shark Zombie": 0x008D1A97,
+            "Siren Zombie": 0x008D1C4D,
+            "Tangle Snorkel Zombie": 0x008D1CDA,
         }
 
 
 plants_HP_addresses = {
-    "一般植物": 0x00844DBF,
-    "火炬坚果/磁力坚果/西瓜坚果": 0x0045E1A7,
-    "雪花寒冰菇/汉堡射手/影流窝瓜王/黄油JOKER/大蒜辣椒": 0x00844DCB,
-    "豌豆许愿池": 0x00844DD7,
-    "高冰果": 0x0045E215,
-    "海坚果": 0x00850008,
-    "豌豆大炮": 0x008502A6,
-    "忧郁南瓜头/阳光南瓜掌/烈火南瓜头/生命重塑者/莲叶壳": 0x0045E445,
-    "魅惑大蒜": 0x0045E242,
-    "钢刺坚果王": 0x0045E5C3,
-    "毁灭加农炮": 0x00850296,
-    "爆炸坚果": 0x0045E1BA,
-    "巨大坚果": 0x0045E207,
-    "火爆坚果墙": 0x00850357,
-    "热狗射手": 0x00850057,
-    "向日葵女王": 0x008500BA,
-    "至尊VIP坚果": 0x008500E6,
-    "至尊VIP坚果长大增加的血量": 0x00867E73,
-    "僵尸坚果墙": 0x00850112,
-    "Cupid魅惑菇射手": 0x00850130,
-    "财神金盏花": 0x00850155,
-    "坑洞坚果": 0x00850165,
-    "窝瓜坚果": 0x008501AC,
-    "窝瓜坚果临界血量": 0x008491AB + 3,  # 注意这里的地址需要加上偏移量
-    "冰冻坚果": 0x008501BC,
+    "General Plant": 0x00844DBF,
+    "Torch Nut/Magnet Nut/Watermelon Nut": 0x0045E1A7,
+    "Snow Ice-shroom/Burger Shooter/Shadow Squash King/Butter JOKER/Garlic Jalapeno": 0x00844DCB,
+    "Pea Wishing Well": 0x00844DD7,
+    "High Ice Fruit": 0x0045E215,
+    "Sea Nut": 0x00850008,
+    "Pea Cannon": 0x008502A6,
+    "Gloom Pumpkin/Sun Pumpkin Palm/Blazing Pumpkin/Life Reshaper/Lotus Shell": 0x0045E445,
+    "Charm Garlic": 0x0045E242,
+    "Steel Thorn Nut King": 0x0045E5C3,
+    "Doom Cannon": 0x00850296,
+    "Explosion Nut": 0x0045E1BA,
+    "Giant Nut": 0x0045E207,
+    "Firecracker Nut Wall": 0x00850357,
+    "Hot Dog Shooter": 0x00850057,
+    "Sunflower Queen": 0x008500BA,
+    "VIP Nut": 0x008500E6,
+    "VIP Nut Grown Added HP": 0x00867E73,
+    "Zombie Nut Wall": 0x00850112,
+    "Cupid Charm-shroom Shooter": 0x00850130,
+    "Fortune Marigold": 0x00850155,
+    "Crater Nut": 0x00850165,
+    "Squash Nut": 0x008501AC,
+    "Squash Nut Critical HP": 0x008491AB + 3,  # Note: address needs offset added
+    "Frozen Nut": 0x008501BC,
 }
 
 # plantPutType = [
-#     "豌豆向日葵",
-#     "阳光豆",
-#     "阳光炸弹",
-#     "火炬坚果",
-#     "阳光土豆雷",
-#     "寒冰香蒲",
-#     "大蒜花",
-#     "双发仙人掌",
-#     "小盆菇",
-#     "阳光向日葵",
-#     "冰瓜大喷菇",
-#     "墓碑埋雷者",
-#     "红眼菇",
-#     "阳光胆小菇",
-#     "雪花寒冰菇",
-#     "魅惑毁灭菇",
-#     "豌豆睡莲",
-#     "冰菇窝瓜",
-#     "豌豆许愿池",
-#     "毁灭海草",
-#     "樱桃辣椒",
-#     "黄油地刺",
-#     "冰炬树桩",
-#     "高冰果",
-#     "海坚果",
-#     "6号路灯花",
-#     "豌豆大炮",
-#     "仙人三叶草",
-#     "玉米卷香蒲",
-#     "地刺杨桃",
-#     "忧郁南瓜头",
-#     "磁力坚果",
-#     "机枪卷心菜投手",
-#     "阳光花盆",
-#     "三线玉米投手",
-#     "随机植物盒子",
-#     "魅惑大蒜",
-#     "咖啡伞",
-#     "仙人三叶花",
-#     "西瓜坚果",
-#     "汉堡射手",
-#     "阳光南瓜掌",
-#     "黄油忧郁菇",
-#     "西瓜香蒲",
-#     "阳光菇投手",
-#     "金盏吸金磁",
-#     "钢刺坚果王",
-#     "毁灭加农炮",
-#     "模仿者",
-#     "爆炸坚果",
-#     "巨大坚果",
-#     "芽",
-#     "火爆地雷",
-#     "火爆坚果墙",
-#     "豌豆香蒲",
-#     "冰瓜香蒲",
-#     "烈火南瓜头",
-#     "僵尸豌豆射手",
-#     "寒冰三叶草",
-#     "热狗射手",
-#     "寒冰仙人掌",
-#     "影流窝瓜王",
-#     "黄油JOKER",
-#     "向日葵女王",
-#     "大蒜辣椒",
-#     "至尊VIP坚果",
-#     "僵尸坚果墙",
-#     "魅惑菇射手",
-#     "财神金盏花",
-#     "猫砂盆",
-#     "坑洞坚果",
-#     "QQ弹弹大喷菇",
-#     "寒冰地刺",
-#     "土杨桃",
-#     "精灵菇",
-#     "川菜投手",
-#     "坚果模仿者",
-#     "窝瓜坚果",
-#     "冰冻坚果",
-#     "头脑风暴",
-#     "宝藏吞噬者",
-#     "全息卡牌投影",
-#     "成长咖啡豆",
-#     "寒光菇",
-#     "骄阳豌豆射手",
-#     "荧光木槌",
-#     "狂野机枪射手",
-#     "生命重塑者",
-#     "双生樱桃",
-#     "幸运四叶草",
-#     "黄金向日葵",
-#     "土豆加农炮",
-#     "惩戒牢笼",
-#     "备用物资",
-#     "地刺大嘴花",
-#     "僵尸豆",
-#     "禁忌毁灭菇",
-#     "消消乐糖果",
-#     "海冰菇",
-#     "莲叶壳",
-#     "小猫向日葵",
+#     "PeaSunflower",
+#     "Sun Bean",
+#     "Sun Bomb",
+#     "Torch Nut",
+#     "Sun Potato Mine",
+#     "Ice Cattail",
+#     "Garlic Flower",
+#     "Double Cactus",
+#     "Small Pot Mushroom",
+#     "Sun Sunflower",
+#     "Ice Melon Fume-shroom",
+#     "Tomb Mine Layer",
+#     "Red Eye Mushroom",
+#     "Sun Scaredy-shroom",
+#     "Snow Ice-shroom",
+#     "Charm Doom-shroom",
+#     "Pea Lily Pad",
+#     "Ice Squash",
+#     "Pea Wishing Well",
+#     "Doom Seaweed",
+#     "Chermander",
+#     "Butter Spikeweed",
+#     "Ice Torchwood",
+#     "High Ice Fruit",
+#     "Sea Nut",
+#     "No. 6 Lamp Flower",
+#     "Pea Cannon",
+#     "Cactus Clover",
+#     "Taco Cattail",
+#     "Spikeweed Starfruit",
+#     "Gloom Pumpkin",
+#     "Magnet Nut",
+#     "Gatling Cabbage-pult",
+#     "Sun Flower Pot",
+#     "Threepeater Corn",
+#     "Random Plant Box",
+#     "Charm Garlic",
+#     "Coffee Umbrella",
+#     "Cactus Clover Flower",
+#     "Watermelon Nut",
+#     "Burger Shooter",
+#     "Sun Pumpkin Palm",
+#     "Butter Gloom-shroom",
+#     "Watermelon Cattail",
+#     "Sun-shroom Pult",
+#     "Marigold Magnet",
+#     "Steel Thorn Nut King",
+#     "Doom Cannon",
+#     "Imitater",
+#     "Explosion Nut",
+#     "Giant Nut",
+#     "Sprout",
+#     "Firecracker Mine",
+#     "Firecracker Nut Wall",
+#     "Pea Cattail",
+#     "Ice Melon Cattail",
+#     "Blazing Pumpkin",
+#     "Zombie Peashooter",
+#     "Ice Clover",
+#     "Hot Dog Shooter",
+#     "Ice Cactus",
+#     "Shadow Squash King",
+#     "Butter JOKER",
+#     "Sunflower Queen",
+#     "Garlic Jalapeno",
+#     "VIP Nut",
+#     "Zombie Nut Wall",
+#     "Charm-shroom Shooter",
+#     "Fortune Marigold",
+#     "Cat Litter Box",
+#     "Crater Nut",
+#     "Bouncy Fume-shroom",
+#     "Ice Spikeweed",
+#     "Earth Starfruit",
+#     "Elf Mushroom",
+#     "Sichuan Cuisine Pult",
+#     "Nut Imitater",
+#     "Squash Nut",
+#     "Frozen Nut",
+#     "Brainstorm",
+#     "Treasure Devourer",
+#     "Hologram Card Projector",
+#     "Growth Coffee Bean",
+#     "Cold Light Mushroom",
+#     "Scorching Peashooter",
+#     "Fluorescent Mallet",
+#     "Wild Gatling Shooter",
+#     "Life Reshaper",
+#     "Twin Cherries",
+#     "Lucky Clover",
+#     "Gold Sunflower",
+#     "Potato Cannon",
+#     "Punishment Cage",
+#     "Reserve Supplies",
+#     "Spikeweed Chomper",
+#     "Zombie Bean",
+#     "Forbidden Doom-shroom",
+#     "Match-3 Candy",
+#     "Sea Ice-shroom",
+#     "Lotus Shell",
+#     "Kitty Sunflower",
 # ]
 goldPlant = [
-    "高冰果",
-    "豌豆大炮",
-    "忧郁南瓜头",
-    "汉堡射手",
-    "黄油忧郁菇",
-    "西瓜香蒲",
-    "钢刺坚果王",
-    "毁灭加农炮",
-    "冰瓜香蒲",
-    "热狗射手",
-    "向日葵女王",
-    "至尊VIP坚果",
-    "狂野机枪射手",
-    "寒冰加农炮",
-    "黄金西瓜投手",
+    "High Ice Fruit",
+    "Pea Cannon",
+    "Gloom Pumpkin",
+    "Burger Shooter",
+    "Butter Gloom-shroom",
+    "Watermelon Cattail",
+    "Steel Thorn Nut King",
+    "Doom Cannon",
+    "Ice Melon Cattail",
+    "Hot Dog Shooter",
+    "Sunflower Queen",
+    "VIP Nut",
+    "Wild Gatling Shooter",
+    "Ice Cannon",
+    "Gold Watermelon Pult",
 ]
 goldPlantIndex = [23, 26, 30, 40, 42, 43, 46, 47, 78, 82, 86, 88, 109]
 mushroomPlant = [
@@ -1287,137 +1287,137 @@ peaPlant = [0, 16, 18, 26, 32, 40, 77, 80, 82, 107, 109]
 melonPlant = [10, 39, 43, 78]
 flowerPlant = [0, 2, 9, 86, 123]
 bulletType = [
-    "豌豆",
-    "冰豌豆",
-    "卷心菜",
-    "西瓜",
-    "孢子",
-    "冰西瓜",
-    "火球(隐形)",
-    "星星",
-    "仙人掌刺",
-    "篮球",
-    "玉米粒",
-    "毁灭菇",
-    "黄油",
-    "僵尸豌豆",
-    "小阳光菇",
-    "大阳光菇",
-    "黑色豌豆",
-    "寒冰刺",
-    "魅惑箭",
-    "银币",
-    "金币",
-    "钻石",
-    "土豆雷",
-    "川菜",
-    "辣椒",
-    "白火球",
-    "土豆加农炮(无伤害)",
-    "冰孢子",
-    "小阳光",
-    "豌豆僵尸的火豌豆1",
-    "豌豆僵尸的火豌豆2",
-    "黄金豌豆",
-    "大型豌豆",
-    "大型火焰豌豆",
-    "大型冰焰豌豆",
-    "冰焰豌豆",
-    "星星",
-    "大星星",
-    "黄金豌豆2",
-    "冰星星",
-    "忧郁菇投手",
-    "冰大炮",
-    "黄金瓜",
-    "火玉米",
-    "阳光玉米炮",  # 44
-    "赤焰豌豆",  # 45
-    "紫焰豌豆",  # 46
-    "烈焰豌豆",  # 47
-    "大型赤焰豌豆",  # 48
-    "大型紫焰豌豆",  # 49
-    "大型烈焰豌豆",  # 50
-    "魅惑菇(伤害)",  # 51
-    "魅惑菇(短暂魅惑)",  # 52
-    "魅惑菇(自残)",  # 53
-    "油炸玉米粒",  # 54
-    "爆米花",  # 55
-    "南瓜炮",  # 56
-    "炸游戏(卷心菜迫击炮)",  # 57
-    "炸游戏(玉米迫击炮)",  # 58
-    "罐子",  # 59
-    "地刺",  # 60
-    "雪球",  # 61
-    "炸游戏(火焰卷心菜迫击炮)",  # 62
-    "炸游戏(火焰玉米迫击炮)",  # 63
-    "炸游戏(火焰玉米迫击炮)",  # 64
-    "玉米粒",  # 65
-    "蛋糕",  # 66
-    "分裂星星",  # 67
-    "火焰星星",  # 68
-    "火焰分裂星星",  # 69
-    "红温豌豆",  # 70
-    "烈火红温豌豆",  # 71
-    "金豌豆",  # 72
-    "火焰爆炸星星",  # 73
-    "爆炸星星",  # 74
-    "大嘴花",  # 75
-    "大大嘴花",  # 76
-    "绿火豌豆",  # 77
-    "钢星星",  # 78
-    "粉星星",  # 79
-    "玉米粒",  # 80
-    "樱桃子弹",  # 81
-    "大蒜子弹",  # 82
-    "黑蒜子弹",  # 83
-    "炸游戏(卷心菜重炮)",  # 84
-    "炸游戏(火焰卷心菜重炮)",  # 85
-    "金钱阳光",  # 86
-    "音符",  # 87
-    "重音符",  # 88
-    "水弹",  # 89
-    "大水弹",  # 90
-    "星星(无伤害)",  # 91
-    "彩星星(无伤害)",  # 92
-    "铁樱桃子弹",  # 93
-    "金樱桃子弹",  # 94
-    "钻樱桃子弹",  # 95
-    "绷带坚果(无伤害)",  # 96
-    "火焰辣椒豌豆",  # 97
-    "香蕉皮(无伤害)",  # 98
-    "骄阳仙人刺",  # 99
-    "银河星星",  # 100
-    "大银河星星",  # 101
-    "冰爆弹",  # 102
-    "极寒冰瓜",  # 103
-    "投掷磁铁",  # 104
-    "充能磁铁",  # 105
-    "刺伞",  # 106
-    "尖刺",  # 107
-    "土豆孢子",  # 108
-    "冰锥",  # 109
-    "水泡",  # 110
-    "赛博豌豆",  # 111
-    "赛博火豌豆",  # 112
-    "赛博蓝火豌豆",  # 113
-    "赛博烈火豌豆",  # 114
-    "赛博紫火豌豆",  # 115
-    "赛博烈焰豌豆",  # 116
-    "偶像音符",  # 117
-    "冰偶像音符",  # 118
-    "烈火偶像音符",  # 119
-    "紫火偶像音符",  # 120
-    "烈焰偶像音符",  # 121
-    "黄金豌豆3",  # 122
-    "火焰黄金豌豆",  # 123
-    "冰焰黄金豌豆",  # 124
-    "阳光火球",  # 125
-    "仙人刺近防炮",  # 126
-    "阳光射手子弹",  # 127
+    "Pea",
+    "Ice Pea",
+    "Cabbage",
+    "Watermelon",
+    "Spore",
+    "Ice Watermelon",
+    "Fireball (Invisible)",
+    "Star",
+    "Cactus Needle",
+    "Basketball",
+    "Corn Kernel",
+    "Doom-shroom",
+    "Butter",
+    "Zombie Pea",
+    "Small Sun-shroom",
+    "Large Sun-shroom",
+    "Black Pea",
+    "Ice Spike",
+    "Charm Arrow",
+    "Silver Coin",
+    "Gold Coin",
+    "Diamond",
+    "Potato Mine",
+    "Sichuan Cuisine",
+    "Jalapeno",
+    "White Fireball",
+    "Potato Cannon (No Damage)",
+    "Ice Spore",
+    "Small Sun",
+    "Pea Zombie's Fire Pea 1",
+    "Pea Zombie's Fire Pea 2",
+    "Gold Pea",
+    "Large Pea",
+    "Large Fire Pea",
+    "Large Ice Fire Pea",
+    "Ice Fire Pea",
+    "Star",
+    "Large Star",
+    "Gold Pea 2",
+    "Ice Star",
+    "Gloom-shroom Pult",
+    "Ice Cannon",
+    "Gold Melon",
+    "Fire Corn",
+    "Sun Corn Cannon",  # 44
+    "Red Flame Pea",  # 45
+    "Purple Flame Pea",  # 46
+    "Blazing Pea",  # 47
+    "Large Red Flame Pea",  # 48
+    "Large Purple Flame Pea",  # 49
+    "Large Blazing Pea",  # 50
+    "Charm-shroom (Damage)",  # 51
+    "Charm-shroom (Brief Charm)",  # 52
+    "Charm-shroom (Self Harm)",  # 53
+    "Fried Corn Kernel",  # 54
+    "Popcorn",  # 55
+    "Pumpkin Cannon",  # 56
+    "Explosion (Cabbage Mortar)",  # 57
+    "Explosion (Corn Mortar)",  # 58
+    "Vase",  # 59
+    "Spikeweed",  # 60
+    "Snowball",  # 61
+    "Explosion (Fire Cabbage Mortar)",  # 62
+    "Explosion (Fire Corn Mortar)",  # 63
+    "Explosion (Fire Corn Mortar)",  # 64
+    "Corn Kernel",  # 65
+    "Cake",  # 66
+    "Split Star",  # 67
+    "Fire Star",  # 68
+    "Fire Split Star",  # 69
+    "Red Hot Pea",  # 70
+    "Blazing Red Hot Pea",  # 71
+    "Gold Pea",  # 72
+    "Fire Explosion Star",  # 73
+    "Explosion Star",  # 74
+    "Chomper",  # 75
+    "Big Chomper",  # 76
+    "Green Fire Pea",  # 77
+    "Steel Star",  # 78
+    "Pink Star",  # 79
+    "Corn Kernel",  # 80
+    "Cherry Bullet",  # 81
+    "Garlic Bullet",  # 82
+    "Black Garlic Bullet",  # 83
+    "Explosion (Cabbage Artillery)",  # 84
+    "Explosion (Fire Cabbage Artillery)",  # 85
+    "Money Sun",  # 86
+    "Note",  # 87
+    "Heavy Note",  # 88
+    "Water Bullet",  # 89
+    "Large Water Bullet",  # 90
+    "Star (No Damage)",  # 91
+    "Color Star (No Damage)",  # 92
+    "Iron Cherry Bullet",  # 93
+    "Gold Cherry Bullet",  # 94
+    "Diamond Cherry Bullet",  # 95
+    "Bandage Nut (No Damage)",  # 96
+    "Fire Jalapeno Pea",  # 97
+    "Banana Peel (No Damage)",  # 98
+    "Scorching Cactus Needle",  # 99
+    "Galaxy Star",  # 100
+    "Large Galaxy Star",  # 101
+    "Ice Bomb Shell",  # 102
+    "Arctic Ice Melon",  # 103
+    "Throwing Magnet",  # 104
+    "Charge Magnet",  # 105
+    "Spike Umbrella",  # 106
+    "Spike",  # 107
+    "Potato Spore",  # 108
+    "Ice Cone",  # 109
+    "Bubble",  # 110
+    "Cyber Pea",  # 111
+    "Cyber Fire Pea",  # 112
+    "Cyber Blue Fire Pea",  # 113
+    "Cyber Blazing Pea",  # 114
+    "Cyber Purple Fire Pea",  # 115
+    "Cyber Inferno Pea",  # 116
+    "Idol Note",  # 117
+    "Ice Idol Note",  # 118
+    "Blazing Idol Note",  # 119
+    "Purple Fire Idol Note",  # 120
+    "Inferno Idol Note",  # 121
+    "Gold Pea 3",  # 122
+    "Fire Gold Pea",  # 123
+    "Ice Fire Gold Pea",  # 124
+    "Sun Fireball",  # 125
+    "Cactus Point Defense Cannon",  # 126
+    "Sun Shooter Bullet",  # 127
 ]
 keyTpye = [
-    "无",
+    "None",
     "0",
     "1",
     "2",
@@ -1454,21 +1454,21 @@ keyTpye = [
     "X",
     "Y",
     "Z",
-    "小0",
-    "小1",
-    "小2",
-    "小3",
-    "小4",
-    "小5",
-    "小6",
-    "小7",
-    "小8",
-    "小9",
-    "小*",
-    "小+",
-    "小-",
-    "小.",
-    "小\\",
+    "Numpad 0",
+    "Numpad 1",
+    "Numpad 2",
+    "Numpad 3",
+    "Numpad 4",
+    "Numpad 5",
+    "Numpad 6",
+    "Numpad 7",
+    "Numpad 8",
+    "Numpad 9",
+    "Numpad *",
+    "Numpad +",
+    "Numpad -",
+    "Numpad .",
+    "Numpad /",
     "F1",
     "F2",
     "F3",
@@ -1553,274 +1553,274 @@ keyCode = [
 ]
 
 TREE_OF_WISDOM_REWARD = [
-    (10, "智慧树为你赠送10包花肥"),
-    (20, "智慧树为你赠送20块巧克力"),
-    (30, "智慧树为你赠送花洒泳池清洁车"),
-    (50, "智慧树为你赠送肥料小推车"),
-    (100, "智慧树为你赠送卡片铲"),
-    (150, "智慧树为你赠送黄金花洒泳池清洁车"),
-    (200, "智慧树为你赠送音乐屋顶清理车"),
-    (300, "智慧树为你赠送【梦幻彩卡】手套豆"),
-    (400, "智慧树为你赠送花园新场景【温馨花园】"),
-    (500, "智慧树为你赠送【梦幻彩卡】聚宝盆"),
-    (600, "智慧树为你赠送花园新场景【魅惑蘑菇园】"),
-    (700, "智慧树为你赠送【梦幻彩卡】水壶投手"),
-    (800, "智慧树为你赠送花园新场景【竞技花园】"),
-    (900, "智慧树为你开启手套功能，按”GGG“使用手套，一次扣除10金币"),
-    (1000, "智慧树为你赠送智慧铲"),
-    (1100, "智慧树为你赠送100包花肥"),
-    (1200, "智慧树为你赠送200块巧克力"),
-    (1300, "智慧树为你赠送300个杀虫剂"),
-    (1500, "智慧树为你赠送金牌蜗牛【能为植物施肥+浇水+捡货币】"),
-    (2025, "智慧树为你赠送2025留声机【满足全部植物的音乐需求】"),
+    (10, "Tree of Wisdom gives you 10 packs of fertilizer"),
+    (20, "Tree of Wisdom gives you 20 chocolates"),
+    (30, "Tree of Wisdom gives you a Sprinkler Pool Cleaner"),
+    (50, "Tree of Wisdom gives you a Fertilizer Wheelbarrow"),
+    (100, "Tree of Wisdom gives you a Card Shovel"),
+    (150, "Tree of Wisdom gives you a Gold Sprinkler Pool Cleaner"),
+    (200, "Tree of Wisdom gives you a Music Roof Cleaner"),
+    (300, "Tree of Wisdom gives you [Dream Color Card] Glove Bean"),
+    (400, "Tree of Wisdom gives you a new garden scene [Cozy Garden]"),
+    (500, "Tree of Wisdom gives you [Dream Color Card] Cornucopia"),
+    (600, "Tree of Wisdom gives you a new garden scene [Charm Mushroom Garden]"),
+    (700, "Tree of Wisdom gives you [Dream Color Card] Watering Can Pult"),
+    (800, "Tree of Wisdom gives you a new garden scene [Arena Garden]"),
+    (900, "Tree of Wisdom unlocks the glove function. Press 'GGG' to use the glove, costing 10 gold each time"),
+    (1000, "Tree of Wisdom gives you a Wisdom Shovel"),
+    (1100, "Tree of Wisdom gives you 100 packs of fertilizer"),
+    (1200, "Tree of Wisdom gives you 200 chocolates"),
+    (1300, "Tree of Wisdom gives you 300 pesticides"),
+    (1500, "Tree of Wisdom gives you a Gold Medal Snail [can fertilize + water + collect money for plants]"),
+    (2025, "Tree of Wisdom gives you a 2025 Gramophone [satisfies the musical needs of all plants]"),
 ]
 TREE_OF_WISDOM = [
-    (1, "感谢你培育我！只要不断给我肥料，我就会给你有价值的信息和道具！"),
+    (1, "Thank you for nurturing me! As long as you keep giving me fertilizer, I will give you valuable information and items!"),
     (
         2,
-        "当你的坚果受伤了，你可以选择直接在它们身上覆盖同种类的坚果，这叫“坚果包扎术”。",
+        "When your nuts are injured, you can directly cover them with the same type of nut. This is called 'Nut Bandaging Technique'.",
     ),
-    (3, "如果你需要换掉植物下方的花盆只要直接把新的花盆种上去就好了。"),
-    (4, "就像莲叶壳是南瓜壳，花盆睡莲本质上是睡莲——所以它不响应花盆替换术。"),
+    (3, "If you need to replace the flower pot under a plant, just plant a new pot directly on top of it."),
+    (4, "Just like Lotus Shell is a pumpkin shell, Flower Pot Lily Pad is essentially a Lily Pad — so it doesn't respond to pot replacement."),
     (
         5,
-        "园丁僵尸的搬运车很神奇，它有时候会把那些爆炸的植物重新变回卡片。什么bug？这是特性！",
+        "The Gardener Zombie's trolley is amazing. Sometimes it turns exploding plants back into cards. What bug? This is a feature!",
     ),
-    (6, "你也许注意到了，僵尸有时会掉落一本画册。它们都被收藏在第一章画册的左边哦。"),
+    (6, "You may have noticed that zombies sometimes drop a picture album. They are all collected to the left of the first chapter album."),
     (
         7,
-        "花园里的臭臭蜗牛能帮你浇水，但他的眼神似乎不太好…又或许是他还不太适应这份工作吧，我猜。",
+        "The stinky snail in the garden can help you water, but his eyesight doesn't seem too good... or maybe he's just not used to this job yet, I guess.",
     ),
     (
         8,
-        "有些蘑菇类杂交植物在白天仍然会睡觉，我想这可能是蘑菇基因更多的缘故。在图鉴可以查询谁是这种懒虫。",
+        "Some mushroom hybrid plants still sleep during the day. I think it's because they have more mushroom genes. You can check the Almanac to find out who these sleepyheads are.",
     ),
-    (9, "嘿，我10米高了！请收下这10包肥料吧，就当是我表示感谢的一点薄礼！"),
-    (10, "据说成就界面的深坑直通地球另一端。想要快速返回顶部？试试按下Esc吧。"),
-    (11, "睁大眼，仔细看你的选卡界面旁边…那本小小的“简介”可以让你随时查看植物的特点。"),
-    (12, "我听说在关卡中按“6”能够跳转到商店。但“6”是什么？你有头绪吗？"),
-    (13, "财主僵尸有扔不完的钱币，但金钱属性的植物可不怕它，特别是坚果存钱罐。"),
+    (9, "Hey, I'm 10 meters tall! Please accept these 10 packs of fertilizer as a small gift of my gratitude!"),
+    (10, "It's said that the deep pit on the achievement screen goes straight to the other side of the earth. Want to quickly return to the top? Try pressing Esc."),
+    (11, "Open your eyes wide and look carefully next to your seed selection interface... that small 'Introduction' lets you check plant characteristics anytime."),
+    (12, "I heard that pressing '6' during a level can jump to the shop. But what is '6'? Do you have any idea?"),
+    (13, "Rich Man Zombie has endless coins to throw, but money-type plants aren't afraid of it, especially Nut Piggy Bank."),
     (
         14,
-        "高冰果僵尸的脑袋血量有8000，非常耐揍。但它不会告诉你，那其实是个头套，它的身体没那么强壮。",
+        "High Ice Fruit Zombie's head has 8000 HP, very durable. But it won't tell you that's actually a mask — its body isn't that strong.",
     ),
     (
         15,
-        "冰冻和减速效果很“酷”，但落在植物身上就不酷了…好在冰属性和火属性的植物都不会被影响。",
+        "Freeze and slow effects are 'cool', but not so cool when they land on plants... fortunately, ice and fire type plants aren't affected.",
     ),
     (
         16,
-        "苹果闹钟是时间暂停器，但它也有普通闹钟的功能。你可以用它唤醒睡觉的家伙，包括植物…和某些僵尸？",
+        "Apple Alarm Clock is a time stopper, but it also has a regular alarm function. You can use it to wake up sleeping things, including plants... and certain zombies?",
     ),
-    (17, "冰霜巨人的冰球没那么坚固。足够的火力，或者一个炸弹，都能将它击碎。"),
+    (17, "Frost Giant's ice ball isn't that tough. Enough firepower, or a bomb, can shatter it."),
     (
         18,
-        "火炬辣椒的烈焰，能够保护范围内的植物免受寒冰影响。也许用在下周六的烤棉花糖派对也不错？",
+        "Torch Jalapeno's flames can protect nearby plants from ice effects. Maybe it could also be used for next Saturday's marshmallow roast?",
     ),
-    (19, "喔！我20米高了！拿着这些巧克力吧，一起吃点甜食庆祝一下！"),
+    (19, "Wow! I'm 20 meters tall! Take these chocolates, let's celebrate with some sweets!"),
     (
         20,
-        "舞王僵尸很强，但当他试图靠气球飞过防线时，会被三叶草或炸弹轻松解决…这世上哪有那么多捷径呢。",
+        "Disco Zombie is strong, but when he tries to fly over the defense line with balloons, he gets easily taken down by clover or bombs... there are no shortcuts in this world.",
     ),
     (
         21,
-        "防爆门僵尸的盾牌有难以想象的防爆能力。但正如再完美的事物也有它的不足，这扇门是拦不住气泡的。",
+        "Blast Door Zombie's shield has unimaginable blast resistance. But just as even the most perfect things have their flaws, this door can't stop bubbles.",
     ),
     (
         22,
-        "埃德加二世的火焰弹看上去势不可挡，但别担心！大部分健康的坚果能够挡下一颗火焰弹，它们很可靠。",
+        "Edgar Jr.'s fireballs look unstoppable, but don't worry! Most healthy nuts can block one fireball — they're reliable.",
     ),
     (
         23,
-        "听说地底的僵尸虫子身上隐藏着什么秘密。你要去捉一只试试看吗？有新发现的话回来分享给我吧。",
+        "I heard the zombie bugs underground are hiding some secret. Want to catch one and see? Come share your discoveries with me.",
     ),
     (
         24,
-        "仙人三叶花的风没有其他三叶草那么强劲，但他还是能一下吹跑迷雾。毕竟雾比僵尸轻多了，不是吗？",
+        "Cactus Clover Flower's wind isn't as strong as other clovers, but it can still blow away fog. After all, fog is lighter than zombies, isn't it?",
     ),
     (
         25,
-        "坑洞坚果号称他头顶有一块四维碎片，一不小心没站稳就可能变成一个黑洞…你相信这种说法吗？",
+        "Crater Nut claims there's a 4D fragment on top of his head, and if he's not careful, he might turn into a black hole... do you believe that?",
     ),
     (
         26,
-        "当你打败一名BOSS僵尸后，它可能会掉落一块很大的钻石晶簇，那是个价值100钻石的宝贝哦！",
+        "When you defeat a boss zombie, it might drop a large diamond cluster worth 100 diamonds!",
     ),
     (
         27,
-        "雷果子似乎是由两株这个世界以外的植物杂交而成的，他说他的诞生离不开一些年代久远的奇思妙想。",
+        "Thunder Fruit seems to be hybridized from two plants from outside this world. He says his birth depends on some long-standing whimsical ideas.",
     ),
     (
         28,
-        "冰瓜大喷菇告诉我，他最近很郁闷：时至今日还有人以为西瓜大喷菇把他替代了，他要怎么解释自己还在呢…",
+        "Melon Fume-shroom told me he's been feeling down lately: people still think Watermelon Fume-shroom replaced him. How does he prove he's still here...",
     ),
-    (29, "哇，我已经30米高了！这辆花洒泳池清洁车是我的谢礼，希望它能帮上你的忙！"),
+    (29, "Wow, I'm already 30 meters tall! This sprinkler pool cleaner is my thank-you gift, hope it can help you!"),
     (
         30,
-        "磁场僵尸的磁力源其实是它背后那颗发光的核心，这就是为什么它无需头盔也能吸引火力。",
+        "Magnetic Field Zombie's magnetic source is actually the glowing core on its back. That's why it doesn't need a helmet to attract fire.",
     ),
     (
         31,
-        "魅惑菇射手和迷幻投手看起来像孪生姐妹，但她们其实只是远房亲戚……喔，不过她们曾经是室友。",
+        "Charm-shroom Shooter and Psychedelic Pult look like twin sisters, but they're actually distant relatives... though they were once roommates.",
     ),
-    (32, "卡牌模仿者和模仿者不是同一株植物哦。至于模仿者在哪？你在老地方能找到他的。"),
+    (32, "Card Imitater and Imitater are not the same plant. As for where Imitater is? You can find him in the usual place."),
     (
         33,
-        "你听说了吗？浴火三线射手来自另一个世界，汉堡射手说他曾到那里旅行了一阵子，见到了不少新奇的东西。",
+        "Have you heard? Baptized Threepeater comes from another world. Burger Shooter said he once traveled there and saw many novel things.",
     ),
     (
         34,
-        "最近是不是有一首歌很流行？卡牌模仿者经常戴着耳机循环，我只能隐约听见一句什么“木屋买买买”…",
+        "Is there a popular song recently? Card Imitater often wears headphones and loops it. I can vaguely hear something like 'Wood hut buy buy buy'...",
     ),
     (
         35,
-        "据说杂交植物的历史远比戴夫的实验悠久，某些植物早在豌豆向日葵之前便诞生了…这是一段秘闻。",
+        "It's said that the history of hybrid plants is much older than Dave's experiments. Some plants were born long before PeaSunflower... this is a secret story.",
     ),
     (
         36,
-        "棱镜向日葵跟我说，她小时候分不清玻璃和钻石…所以她那时候一直以为自己是钻石向日葵呢。",
+        "Prism Sunflower told me she couldn't tell glass from diamonds when she was little... so she always thought she was Diamond Sunflower back then.",
     ),
     (
         37,
-        "传说这个世界，在英雄降临之后进行了一次翻天覆地的变化……关于这个传说的真实性，或许你比我更清楚？",
+        "Legend has it that this world underwent an earth-shattering change after the hero descended... As for the truth of this legend, maybe you know better than I do?",
     ),
-    (38, "猫猫星机枪前阵子来这找我聊天，向我打听这里的一些机枪为什么都喜欢披个斗篷……"),
+    (38, "Cat Star Gatling came to chat with me recently, asking why some Gatlings here like to wear capes..."),
     (
         39,
-        "那些蓝色的冰火球，我记得它们以前的颜色似乎更深一些。后来可能是冰炬树桩补充了什么微量元素吧。",
+        "Those blue ice fireballs, I remember their color used to be deeper. Maybe Ice Torchwood supplemented some trace elements later.",
     ),
     (
         40,
-        "你觉得气球车僵尸车头的装饰眼熟吗？那家伙真的很喜欢自己玩偶匣里的小丑装饰，所以定制了一个大号的。",
+        "Does the decoration on the front of Balloon Cart Zombie look familiar? That guy really likes the clown decoration from his Jack-in-the-Box, so he customized a larger one.",
     ),
     (
         41,
-        "据说高冰果在一场随机植物战役中一战成名，所有看过那条视频的人都开始称他为“战神”了。",
+        "It's said that High Ice Fruit became famous in a random plant battle. Everyone who watched that video started calling him 'God of War'.",
     ),
-    (42, "你问QQ弹弹大喷菇的“总有一天”是什么意思？…相信我，你不会想知道的。"),
+    (42, "You ask what Bouncy Fume-shroom's 'one day' means?... Trust me, you don't want to know."),
     (
         43,
-        "你知道吗？看起来懒散的猫窝其实每天都会锻炼减脂哦，它以前的样子比现在肥多了。",
+        "Did you know? The seemingly lazy Cat Bed actually exercises every day to lose fat. It used to be much fatter than now.",
     ),
     (
         44,
-        "回收高坚果说他每天都要花时间改变头顶的铲子装饰布局，但最后觉得还是猫耳样式最合适。",
+        "Recycle Tall-nut says he spends time every day changing the shovel decoration layout on his head, but in the end, he feels cat ears suit him best.",
     ),
     (
         45,
-        "据说向日葵公主经历过整容，但我知道那是绯闻。其实她那段时间只是机票不小心订到非洲…然后晒黑了。",
+        "It's said Sunflower Princess has had plastic surgery, but I know that's just gossip. Actually, she just accidentally booked a ticket to Africa... and got tanned.",
     ),
     (
         46,
-        "黄金西瓜投手、黄金向日葵、进化豆、金色向日葵，这四株植物是远房亲戚…他们的原型都是奖杯来着。",
+        "Gold Watermelon Pult, Gold Sunflower, Evolution Bean, Golden Sunflower — these four plants are distant relatives... their prototypes were all trophies.",
     ),
     (
         47,
-        "有传言称香蒲类的植物拥有“魔法”……我不知道这种说法从哪来的，但它们的追踪能力确实像魔法一样呢。",
+        "There are rumors that cattail-type plants have 'magic'... I don't know where that came from, but their tracking ability really is like magic.",
     ),
     (
         48,
-        "偷偷告诉你：汉堡射手有时会跟我抱怨自己头发太浓密遮住了眼睛。但我从来没见他真正理过发",
+        "I'll tell you secretly: Burger Shooter sometimes complains to me that his hair is too thick and covers his eyes. But I've never seen him actually get a haircut.",
     ),
     (
         49,
-        "哇，我已经长到50米了！你需要更多的功能道具吗？这辆肥料小推车或许会合你心意！",
+        "Wow, I've grown to 50 meters! Do you need more functional tools? This fertilizer wheelbarrow might suit you!",
     ),
-    (100, "呀，我都100米高了！感谢你的培养，请收下这把卡片铲子吧！"),
-    (150, "啊哈！我已经有150米了！是时候将你的花洒泳池清洁车升级成镀金版本了！"),
+    (100, "Wow, I'm 100 meters tall! Thank you for nurturing me, please accept this Card Shovel!"),
+    (150, "Aha! I'm already 150 meters! It's time to upgrade your sprinkler pool cleaner to a gold-plated version!"),
     (
         200,
-        "喔，我居然长到200米了！这辆音乐屋顶清理车是我的谢礼，你可以用它防御屋顶哦！",
+        "Oh, I've actually grown to 200 meters! This music roof cleaner is my thank-you gift, you can use it to defend the roof!",
     ),
     (
         300,
-        "感谢你将我培养到300米！这株手套豆以后就跟你混了，我相信它能对你起到帮助的！",
+        "Thank you for raising me to 300 meters! This Glove Bean will stick with you from now on. I believe it can help you!",
     ),
-    (400, "天，我居然都400米高了！作为回报，这座温馨花园以后将会为你开放了！"),
-    (500, "难以置信，我已经达到500米了！这个聚宝盆可以为你生产钱币我想你会需要它的！"),
+    (400, "Gosh, I'm 400 meters tall! In return, this Cozy Garden will be open to you from now on!"),
+    (500, "Unbelievable, I've reached 500 meters! This Cornucopia can produce coins for you. I think you'll need it!"),
     (
         600,
-        "太棒了，我已经600米高了！这是魅惑蘑菇园的钥匙，你现在有更多位置培养蘑菇了！",
+        "Awesome, I'm 600 meters tall! Here's the key to the Charm Mushroom Garden. Now you have more space to grow mushrooms!",
     ),
     (
         700,
-        "我从没想过我能长到700米！我为你带来了新植物，希望这株水壶投手能成为你的助力！",
+        "I never thought I could grow to 700 meters! I brought you a new plant. Hope this Watering Can Pult becomes your ally!",
     ),
     (
         800,
-        "哟，我已经有800米高了！这座竞技花园是我为你准备的，你的更多盆栽有位置放了！",
+        "Yo, I'm 800 meters tall! This Arena Garden is prepared for you. Now you have more space for your potted plants!",
     ),
     (
         900,
-        "哇噢，我已经900米高了！在关卡中连按三次“G”键，可以花10金币购买一次手套的使用权限！",
+        "Wow, I'm 900 meters tall! Press the 'G' key three times in a row during a level to spend 10 gold coins to use the glove!",
     ),
-    (1000, "终于！我达到了1000米的里程碑！就让这把智慧铲子代表我对你的感谢吧！"),
+    (1000, "Finally! I've reached the 1000 meter milestone! Let this Wisdom Shovel represent my gratitude to you!"),
     (
         1100,
-        "哈，我现在长到了1100米！是时候请客了！用这100包肥料好好喂养你花园里的植物吧！",
+        "Ha, I've grown to 1100 meters! Time to treat! Use these 100 packs of fertilizer to feed the plants in your garden!",
     ),
     (
         1200,
-        "我已经长到了1200米！或许200块巧克力还不足以完全表达我的感谢，之后我会带来更好的礼物！",
+        "I've grown to 1200 meters! Maybe 200 chocolates aren't enough to fully express my gratitude. I'll bring better gifts later!",
     ),
-    (1300, "1300米的高空风景真棒！这300瓶杀虫剂是我近期的库存，请随意取用吧！"),
+    (1300, "The view at 1300 meters is awesome! These 300 pesticides are my recent stock, feel free to take them!"),
     (
         1400,
-        "不可思议！我居然都有1500米高了！这只金牌蜗牛是花园管理的专家，它可以帮助你给植物施肥哦！",
+        "Unbelievable! I'm 1500 meters tall! This gold medal snail is a garden management expert, it can help you fertilize plants!",
     ),
     (
         2025,
-        "呀吼！2025米，这是一个有纪念意义的高度！用这个响彻全场的2025留声机，让你的花园一起随音乐嗨起来吧！",
+        "Yahoo! 2025 meters, a commemorative height! Use this 2025 gramophone that echoes through the venue to make your garden rock out with music!",
     ),
-    (2026, "谢谢你的照料！我已经把全部智慧都给你了，但是你仍然可以让我长的更高！"),
+    (2026, "Thank you for your care! I've given you all my wisdom, but you can still make me grow taller!"),
     (
         40000,
-        "谢谢你给我施肥！我现在有点缺乏新的智慧了。但是如果你把我种的更高，我会为你准备更多礼物的！",
+        "Thank you for fertilizing me! I'm a bit short on new wisdom now. But if you plant me higher, I'll prepare more gifts for you!",
     ),
-    (40001, "当你活得和我一样长时，你会睡得更少而更易产生幻觉。"),
+    (40001, "When you live as long as I have, you'll sleep less and hallucinate more easily."),
     (
         40002,
-        "如果你弄不明白，什么是森林什么是树，只要记住：森林是树木个体的集合，反过来则不是。",
+        "If you can't figure out what is a forest and what is a tree, just remember: a forest is a collection of individual trees, but not the other way around.",
     ),
-    (40003, "历史不停重复着自己，但是某些细节总有所不同。"),
+    (40003, "History keeps repeating itself, but certain details are always different."),
     (
         40004,
-        "如果说过去，现在和未来同时存在，它们三位一体，成为一个“轮回”那么经验上的“现在”，也许不过是一个精致的幻觉？",
+        "If the past, present, and future exist simultaneously as a trinity forming a 'cycle', then the experiential 'present' might be nothing more than an elaborate illusion?",
     ),
-    (40005, "勇气易得，奉献难求。"),
-    (40006, "我有一些久经考验的智慧……"),
-    (40007, "请给我点肥料吧！"),
-    (40008, "对于你为我在肥料上的花销，我真的真的很感激！"),
-    (40009, "那朵云看起来好像一个大水滴哦！"),
-    (40010, "你见过我的堂兄宇宙树了吗？很大！住在瑞典，有好多粉丝呢。"),
-    (40011, "我正在一所网上大学学习社会学，我真的学到了很多。"),
+    (40005, "Courage is easy to come by, dedication is hard to find."),
+    (40006, "I have some time-tested wisdom..."),
+    (40007, "Please give me some fertilizer!"),
+    (40008, "I'm really, really grateful for your spending on fertilizer for me!"),
+    (40009, "That cloud looks just like a big water droplet!"),
+    (40010, "Have you seen my cousin Yggdrasil? Very big! Lives in Sweden, has lots of fans."),
+    (40011, "I'm studying sociology at an online university. I've really learned a lot."),
     (
         40012,
-        "经过我仔细的观察后，我推断出是地球围着太阳转，而不是我们看到的那样：太阳绕着地球转。",
+        "After careful observation, I've deduced that the Earth revolves around the Sun, not the other way around as we see.",
     ),
-    (40013, "嗯嗯…… 阳光真是美味啊！"),
-    (40014, "哦，不好意思……我刚刚释放了点氧气。"),
-    (40015, "天啊，我长叶子了！"),
-    (40016, "我感觉我要爆发了！"),
-    (40017, "眼下我缺少一些关于世界观的知识！"),
-    (40018, "嗯，我确信我享用了些美味的肥料！"),
-    (40019, "我觉得我以前看到过云。"),
-    (40020, "我会在这里慢慢长高。"),
-    (40021, "我正在新陈代谢！"),
-    (40022, "我不太明白，你们这些动物怎么整天都在到处走来走去呢……"),
-    (40023, "时间对我来说是非常缓慢的！"),
-    (40024, "我想我是多年生的！"),
-    (40025, "我的木质部发麻了！"),
-    (40026, "你只要站在我身边，就能得到很多很多的智慧。"),
-    (40027, "我听说过“冬天”。但我可不会期待那种日子。"),
+    (40013, "Mmm... sunlight is delicious!"),
+    (40014, "Oh, sorry... I just released some oxygen."),
+    (40015, "Oh my, I'm growing leaves!"),
+    (40016, "I feel like I'm going to burst!"),
+    (40017, "I'm currently lacking some knowledge about worldviews!"),
+    (40018, "Mmm, I'm sure I enjoyed some delicious fertilizer!"),
+    (40019, "I think I've seen clouds before."),
+    (40020, "I'll just keep growing tall here."),
+    (40021, "I'm metabolizing!"),
+    (40022, "I don't really understand how you animals can walk around all day long..."),
+    (40023, "Time is very slow for me!"),
+    (40024, "I think I'm perennial!"),
+    (40025, "My xylem is tingling!"),
+    (40026, "Just standing by my side, you can gain lots and lots of wisdom."),
+    (40027, "I've heard of 'winter'. But I'm not looking forward to that kind of day."),
     (
         40028,
-        "嘿，我都100英尺高了！庆祝一下吧！输入“daisies”，让僵尸们死的时候留下一朵小菊花。",
+        "Hey, I'm 100 feet tall! Celebrate! Type 'daisies' to make zombies leave a little daisy when they die.",
     ),
-    (40029, "啊哈！我500英尺高了！来点舞蹈吧！输入“dance”，让僵尸们都摇摆起来吧！"),
+    (40029, "Aha! I'm 500 feet tall! Let's dance! Type 'dance' to make all the zombies boogie!"),
     (
         40030,
-        "喔！我已经1000英尺高了！和我一起输入“pinata”，让僵尸们死的时候吐出糖果，来庆祝吧！",
+        "Whoa! I'm 1000 feet tall! Type 'pinata' with me to make zombies spit out candy when they die. Let's celebrate!",
     ),
 ]
 
@@ -1835,19 +1835,19 @@ class plant:
         self.row = PVZ_memory.read_uint(self.addr + 0x1C)
         self.col = PVZ_memory.read_uint(self.addr + 0x28)
         self.type = PVZ_memory.read_uint(self.addr + 0x24)
-        # 2c 抖动倒计时
-        # 30 抖动动画索引
+        # 2c shake countdown
+        # 30 shake animation index
         self.state = PVZ_memory.read_uint(self.addr + 0x3C)
-        self.hp = PVZ_memory.read_uint(self.addr + 0x40)  # 血量
+        self.hp = PVZ_memory.read_uint(self.addr + 0x40)  # HP
         self.maxhp = PVZ_memory.read_uint(self.addr + 0x44)
         self.dieTime = PVZ_memory.read_uint(self.addr + 0x4C)
         self.cinderTime = PVZ_memory.read_uint(self.addr + 0x50)
-        self.effectTime = PVZ_memory.read_uint(self.addr + 0x54)  # 阳光豆长大
-        self.productTime = PVZ_memory.read_uint(self.addr + 0x58)  # 常规攻击
-        self.productInterval = PVZ_memory.read_uint(self.addr + 0x5C)  # 常规攻击间隔
+        self.effectTime = PVZ_memory.read_uint(self.addr + 0x54)  # Sun Bean growth
+        self.productTime = PVZ_memory.read_uint(self.addr + 0x58)  # Normal attack
+        self.productInterval = PVZ_memory.read_uint(self.addr + 0x5C)  # Normal attack interval
         self.attackTime = PVZ_memory.read_uint(self.addr + 0x90)
         self.sunTime = PVZ_memory.read_uint(self.addr + 0xDC)
-        self.humTime = PVZ_memory.read_uint(self.addr + 0x128)  # 阳光生产
+        self.humTime = PVZ_memory.read_uint(self.addr + 0x128)  # Sun production
         self.mushroomTime = PVZ_memory.read_uint(self.addr + 0x130)
         self.isVisible = PVZ_memory.read_bool(self.addr + 0x18)
         self.isSquash = PVZ_memory.read_bool(self.addr + 0x142)

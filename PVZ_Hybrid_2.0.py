@@ -52,7 +52,7 @@ newmem_bungeePutFix = None
 
 def calculate_call_address(ctypes_obj):
     """S
-    计算函数调用地址
+    Calculate function call address
     """
     c_uint_obj = ctypes.c_uint(ctypes_obj)
     return ctypes.string_at(ctypes.addressof(c_uint_obj), ctypes.sizeof(c_uint_obj))
@@ -132,7 +132,7 @@ def getState():
         game_state = PVZ_data.PVZ_memory.read_uint(
             PVZ_data.PVZ_memory.read_uint(PVZ_data.baseAddress) + 0x7FC
         )
-        return game_state  # 1主菜单 2选局内  5帮助  7关卡选择
+        return game_state  # 1 Main menu 2 Level selection 5 Help 7 Stage selection
     except:
         return False
 
@@ -649,9 +649,9 @@ def randomSlots(f, haszombie):
             )
             randomSlots_thread.start()
     else:
-        # 设置事件标志，通知线程停止
+        # Set event flag, notify thread to stop
         randomSlots_event.set()
-        randomSlots_thread.join()  # 等待线程结束
+        randomSlots_thread.join()  # Wait for thread to finish
 
 
 def ignoreZombies(f):
@@ -1004,7 +1004,7 @@ def getEndlessRound():
         )
         return PVZ_data.PVZ_memory.read_uint(endlessRoundAddr)
     except:
-        return "未知"
+        return "Unknown"
 
 
 def setEndlessRound(endlessRound):
@@ -1111,17 +1111,17 @@ def putcard(row, col, type):
         b"\x68"
         + (0x50 + 0x64 * row).to_bytes(
             length=4, byteorder="little", signed=False
-        )  # 行坐标
+        )  # Row coordinate
         + b"\x68"
         + (0x28 + 0x50 * col).to_bytes(
             length=4, byteorder="little", signed=False
-        )  # 列坐标
+        )  # Column coordinate
         + b"\xba\x10\xcb\x40\x00\xff\xd2"
         b"\xc7\x40\x68"
-        + type.to_bytes(length=4, byteorder="little", signed=False)  # 类型
+        + type.to_bytes(length=4, byteorder="little", signed=False)  # Type
         + b"\x61\xc3"
     )
-    print("卡片", row, col, type)
+    print("Card", row, col, type)
     PVZ_data.PVZ_memory.write_bytes(address, shellcode, 44)
     PVZ_data.PVZ_memory.write_bytes(0x00552014, b"\xfe", 1)
     thread_h = pymem.ressources.kernel32.CreateRemoteThread(
@@ -1178,7 +1178,7 @@ def creatCaption(str, time, type):
             captionCreat_asm.mov_ptr_exx_add_dword_dword(asm.ESI, 0x88, self.time)
             captionCreat_asm.mov_ptr_exx_add_dword_dword(
                 asm.ESI, 0x8C, self.type
-            )  # 1 下端 较宽 3 最下端 较窄  6  最下端 窄 9 最下端 宽  12 中端  宽  14 下端 白色字体 15 红色中间字体 16 黄色顶端字体
+            )  # 1 Bottom wider 3 Bottommost narrower 6 Bottommost narrow 9 Bottommost wide 12 Middle wide 14 Bottom white font 15 Red middle font 16 Yellow top font
             return captionCreat_asm
 
     asm.runThread(captionCreat(time, type))
@@ -1291,9 +1291,9 @@ def noSolt(f):
             noSlot_thread = Thread(target=noSlot_operstion, args=(noSlot_event,))
             noSlot_thread.start()
     else:
-        # 设置事件标志，通知线程停止
+        # Set event flag, notify thread to stop
         noSlot_event.set()
-        noSlot_thread.join()  # 等待线程结束
+        noSlot_thread.join()  # Wait for thread to finish
 
 
 def save():
@@ -1349,8 +1349,8 @@ def spoils(spoils_config):
             shellcode.random(100)
             shellcode.cmp_exx_byte(asm.EDX, spoils_config[0]["percent"])
             shellcode.add_byte(0x72)  # jb
-            shellcode.add_byte(0x05)  # 小于则后移5位
-            shellcode.add_byte(0xE9)  # 大于则jmp
+            shellcode.add_byte(0x05)  # If below, skip forward 5 bytes
+            shellcode.add_byte(0xE9)  # If above or equal, jmp
             shellcode.add_dword(0x1F)
             shellcode.mov_exx_dword_ptr_eyy_add_byte(asm.ESI, asm.ESP, 0x0C)
             shellcode.mov_exx_dword_ptr_eyy_add_byte(asm.ECX, asm.EBX, 0x04)
@@ -1377,8 +1377,8 @@ def spoils(spoils_config):
                 shellcode.random(100)
                 shellcode.cmp_exx_byte(asm.EDX, spoils_config[1]["percent"])
                 shellcode.add_byte(0x72)  # jb
-                shellcode.add_byte(0x05)  # 小于则后移5位
-                shellcode.add_byte(0xE9)  # 大于则jmp
+                shellcode.add_byte(0x05)  # If below, skip forward 5 bytes
+                shellcode.add_byte(0xE9)  # If above or equal, jmp
                 shellcode.add_dword(0x1B)
                 shellcode.push_byte(0x03)
                 if spoils_config[1]["type"] <= 6:
@@ -1404,8 +1404,8 @@ def spoils(spoils_config):
                     shellcode.random(100)
                     shellcode.cmp_exx_byte(asm.EDX, spoils_config[2]["percent"])
                     shellcode.add_byte(0x72)  # jb
-                    shellcode.add_byte(0x05)  # 小于则后移5位
-                    shellcode.add_byte(0xE9)  # 大于则jmp
+                    shellcode.add_byte(0x05)  # If below, skip forward 5 bytes
+                    shellcode.add_byte(0xE9)  # If above or equal, jmp
                     shellcode.add_dword(0x1B)
                     shellcode.mov_exx_dword_ptr_eyy_add_byte(asm.ECX, asm.EBX, 0x04)
                     shellcode.push_byte(0x03)
@@ -1433,8 +1433,8 @@ def spoils(spoils_config):
                         shellcode.random(100)
                         shellcode.cmp_exx_byte(asm.EDX, spoils_config[3]["percent"])
                         shellcode.add_byte(0x72)  # jb
-                        shellcode.add_byte(0x05)  # 小于则后移5位
-                        shellcode.add_byte(0xE9)  # 大于则jmp
+                        shellcode.add_byte(0x05)  # If below, skip forward 5 bytes
+                        shellcode.add_byte(0xE9)  # If above or equal, jmp
                         shellcode.add_dword(0x1B)
                         shellcode.mov_exx_dword_ptr_eyy_add_byte(asm.ECX, asm.EBX, 0x04)
                         shellcode.push_byte(0x03)
@@ -2319,13 +2319,13 @@ def initCar(f):
 
 
 def autoCar(f):
-    global newmem_autoCar  # 声明 newmem 为全局变量
+    global newmem_autoCar  # Declare newmem as global variable
     if f:
         # if enable_LawnMowers==1:
         newmem_autoCar = pymem.memory.allocate_memory(
             PVZ_data.PVZ_memory.process_handle, 128
         )
-        # print(f"无限小车 by 妥妥的 2024-4-9 08:30:45, allocated memory: {hex(newmem)},patch addr: {hex(0x458d99)}")
+        # print(f"Infinite Lawn Mowers by Tuotuo 2024-4-9 08:30:45, allocated memory: {hex(newmem)},patch addr: {hex(0x458d99)}")
         PVZ_data.PVZ_memory.write_bytes(
             0x458D99, b"\xe9" + calculate_call_address(newmem_autoCar - 0x0458D9E), 5
         )
@@ -3132,11 +3132,11 @@ def zombieDeadZombie(f, deadZombieType, bossWeight):
     # cmp [ebp+24],#24
     # jne originalcode
     # pushad
-    # push 47//特效ID
+    # push 47// Effect ID
     # push 00061A80
     # sub esp,10
-    # mov [esp],#40//y偏移
-    # mov [esp+4],#40//x偏移
+    # mov [esp],#40// y offset
+    # mov [esp+4],#40// x offset
     # fild dword ptr [ebp+c]//y
     # fiadd dword ptr [esp]
     # fstp dword ptr [esp+c]
@@ -3359,7 +3359,7 @@ def creatBullet(bullets_list):
         def creat_asm(self, startAddress):
             bulletCreat_asm = asm.Asm(startAddress)
             for bullet_params in bullets_list:
-                # 提取子弹的参数
+                # Extract bullet parameters
                 bullet_type, x, y, v_x, v_y = bullet_params
                 bulletCreat_asm.pushad()
                 bulletCreat_asm.push_byte(bullet_type)
@@ -4226,20 +4226,20 @@ def unpack(src_file, dst_dir):
     except FileNotFoundError:
         return "UNPACK_SRC_NOT_EXIST"
 
-    # 整个文件与 0xF7 异或
+    # XOR entire file with 0xF7
     data = bytes([b ^ 0xF7 for b in data])
 
-    # 文件偏移量
+    # File offset
     offset = 0
 
-    # 检查文件头
+    # Check file header
     file_header_magic, file_header_version = struct.unpack_from("<II", data, offset)
     offset += 8
 
     if file_header_magic != 0xBAC04AC0 or file_header_version > 0x00000000:
         return "UNPACK_SRC_HEADER_ERROR"
 
-    # 索引区域数据结构
+    # Index area data structure
     files_count = 0
     files_name = []
     files_size = []
@@ -4266,7 +4266,7 @@ def unpack(src_file, dst_dir):
         files_size.append(file_size)
         files_count += 1
 
-    # 提取数据区所有文件
+    # Extract all files from data area
     for i in range(files_count):
         output_path = os.path.join(dst_dir, files_name[i])
         output_size = files_size[i]
@@ -4282,49 +4282,49 @@ def unpack(src_file, dst_dir):
 
 
 def pack(src_dir, dst_file):
-    # 获取源目录下的所有文件
+    # Get all files under source directory
     files = [
         os.path.join(root, file)
         for root, dirs, files in os.walk(src_dir)
         for file in files
     ]
 
-    # 创建一个临时的二进制数据列表
+    # Create a temporary binary data list
     data = bytearray()
 
-    # 写入文件头
+    # Write file header
     data.extend(struct.pack("<II", 0xBAC04AC0, 0x00000000))
 
-    # 写入索引区域
+    # Write index area
     for file in files:
-        # 获取文件名和大小
+        # Get file name and size
         name = os.path.relpath(file, src_dir)
         size = os.path.getsize(file)
 
-        # 写入文件名长度和文件名
+        # Write file name length and file name
         name_utf8 = name.encode("utf-8")
         data.extend(struct.pack("<B", len(name_utf8)))
         data.extend(name_utf8)
 
-        # 写入文件大小
+        # Write file size
         data.extend(struct.pack("<I", size))
 
-        # 写入文件时间（这里简化为0）
+        # Write file time (simplified to 0 here)
         data.extend(struct.pack("<Q", 0))
 
-    # 写入结束标志
+    # Write end marker
     data.extend(struct.pack("<B", 0x80))
 
-    # 写入数据区域
+    # Write data area
     for file in files:
-        # 读取并写入文件内容
+        # Read and write file content
         with open(file, "rb") as src_f:
             data.extend(src_f.read())
 
-    # 对整个文件进行异或操作
+    # XOR the entire file
     data = bytearray([b ^ 0xF7 for b in data])
 
-    # 写入目标文件
+    # Write target file
     with open(dst_file, "wb") as f:
         f.write(data)
 
@@ -4347,7 +4347,7 @@ def zombieHitDeadSun(f, large_sun_weight, middle_sun_weight, small_sun_weight):
     # mov ebx,eax
     # mov eax,99
     # call 5AF400
-    # cmp eax,1//大阳光概率
+    # cmp eax,1// Large sun probability
     # jg nolargesun
     # mov ecx,[6a9ec0]
     # mov ecx,[ecx+768]
@@ -4366,7 +4366,7 @@ def zombieHitDeadSun(f, large_sun_weight, middle_sun_weight, small_sun_weight):
     # nolargesun:
     # mov eax,99
     # call 5AF400
-    # cmp eax,1//中阳光概率
+    # cmp eax,1// Medium sun probability
     # jg nomiddlesun
     # mov ecx,[6a9ec0]
     # mov ecx,[ecx+768]
@@ -4385,7 +4385,7 @@ def zombieHitDeadSun(f, large_sun_weight, middle_sun_weight, small_sun_weight):
     # nomiddlesun:
     # mov eax,99
     # call 5AF400
-    # cmp eax,80//小阳光概率
+    # cmp eax,80// Small sun probability
     # jg nosun
     # mov ecx,[6a9ec0]
     # mov ecx,[ecx+768]
@@ -4519,7 +4519,7 @@ def zombieBombDeadSun(f, large_sun_weight, middle_sun_weight, small_sun_weight):
     # mov ebx,eax
     # mov eax,99
     # call 5AF400
-    # cmp eax,1//大阳光概率
+    # cmp eax,1// Large sun probability
     # jg nolargesun
     # mov ecx,[6a9ec0]
     # mov ecx,[ecx+768]
@@ -4538,7 +4538,7 @@ def zombieBombDeadSun(f, large_sun_weight, middle_sun_weight, small_sun_weight):
     # nolargesun:
     # mov eax,99
     # call 5AF400
-    # cmp eax,10//中阳光概率
+    # cmp eax,10// Medium sun probability
     # jg nomiddlesun
     # mov ecx,[6a9ec0]
     # mov ecx,[ecx+768]
@@ -4557,7 +4557,7 @@ def zombieBombDeadSun(f, large_sun_weight, middle_sun_weight, small_sun_weight):
     # nomiddlesun:
     # mov eax,99
     # call 5AF400
-    # cmp eax,99//小阳光概率
+    # cmp eax,99// Small sun probability
     # jg nosun
     # mov ecx,[6a9ec0]
     # mov ecx,[ecx+768]

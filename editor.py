@@ -275,273 +275,273 @@ def chooseGame():
             elif "v2.4" in window_name:
                 PVZ_data.update_PVZ_version(2.4)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.1" in window_name:
                 PVZ_data.update_PVZ_version(2.1)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.2" in window_name:
                 PVZ_data.update_PVZ_version(2.2)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.3.5" in window_name:
                 PVZ_data.update_PVZ_version(2.35)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.3.6" in window_name:
                 PVZ_data.update_PVZ_version(2.36)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.3.7" in window_name:
                 PVZ_data.update_PVZ_version(2.37)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.3" in window_name:
                 PVZ_data.update_PVZ_version(2.3)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.4" in window_name:
                 PVZ_data.update_PVZ_version(2.4)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.5" in window_name:
                 PVZ_data.update_PVZ_version(2.5)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.6.1" in window_name:
                 PVZ_data.update_PVZ_version(2.61)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.6" in window_name:
                 PVZ_data.update_PVZ_version(2.6)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.0" in window_name:
                 PVZ_data.update_PVZ_version(3.0)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.17" in window_name:
                 PVZ_data.update_PVZ_version(3.17)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.16" in window_name:
                 PVZ_data.update_PVZ_version(3.16)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.15" in window_name:
                 PVZ_data.update_PVZ_version(3.151)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.14" in window_name:
                 PVZ_data.update_PVZ_version(3.14)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.13.2" in window_name:
                 PVZ_data.update_PVZ_version(3.132)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.12" in window_name:
                 PVZ_data.update_PVZ_version(3.12)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.11" in window_name:
                 PVZ_data.update_PVZ_version(3.11)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.1.5" in window_name:
                 PVZ_data.update_PVZ_version(3.15)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.1" in window_name:
                 PVZ_data.update_PVZ_version(3.1)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.2.1" in window_name:
                 PVZ_data.update_PVZ_version(3.21)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.2" in window_name:
                 PVZ_data.update_PVZ_version(3.2)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.3" in window_name:
                 PVZ_data.update_PVZ_version(3.3)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.4" in window_name:
                 PVZ_data.update_PVZ_version(3.4)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.5" in window_name:
                 PVZ_data.update_PVZ_version(3.5)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.6.5" in window_name:
                 PVZ_data.update_PVZ_version(3.65)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.6" in window_name:
                 PVZ_data.update_PVZ_version(3.6)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.7.5" in window_name:
                 PVZ_data.update_PVZ_version(3.75)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.7.6" in window_name:
                 PVZ_data.update_PVZ_version(3.76)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.7" in window_name:
                 PVZ_data.update_PVZ_version(3.7)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.8" in window_name:
                 PVZ_data.update_PVZ_version(3.8)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.9.9" in window_name:
                 PVZ_data.update_PVZ_version(3.99)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.9" in window_name:
                 PVZ_data.update_PVZ_version(3.9)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             PVZ_data.update_PVZ_memory(
@@ -624,273 +624,273 @@ def chooseGame():
             elif "v2.4" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(2.4)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.1" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(2.1)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.2" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(2.2)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.3.5" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(2.35)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.3.6" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(2.36)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.3.7" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(2.37)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.3" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(2.3)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.4" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(2.4)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.5" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(2.5)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.6.1" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(2.61)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.6" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(2.6)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.17" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.17)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.16" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.16)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.15" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.151)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.14" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.14)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.13.2" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.132)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.12" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.12)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.11" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.11)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.0" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.0)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.1.5" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.15)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.1" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.1)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.2.1" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.21)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.2" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.2)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.3" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.3)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.4" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.4)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.5" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.5)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.6.5" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.65)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.6" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.6)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.7.5" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.75)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.7.6" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.76)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.7" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.7)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.8" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.8)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.9.9" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.99)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.9" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.9)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             PVZ_data.update_PVZ_memory(Pymem(pid[1]))
@@ -953,7 +953,7 @@ def chooseGame():
         choose_process_window,
         text="If the game is not turned on, please click to find the game button after opening the game",
         bootstyle=WARNING,
-        font=("Black body", 16),
+        font=("Microsoft YaHei", 16),
     )
     label.pack(pady=20)
     frame1 = ttk.Frame(choose_process_window)
@@ -968,7 +968,7 @@ def chooseGame():
         choose_process_window,
         text="If necessary, you can manually select the game window below\nWindow name is generally plants vs. zombie hybrid version\nThe process name is generally plantsvszombies.exe\nThe display format is the PID window name process name",
         bootstyle=INFO,
-        font=("Black body", 16),
+        font=("Microsoft YaHei", 16),
     )
     label.pack(pady=(50, 10))
     frame2 = ttk.Frame(choose_process_window)
@@ -1004,8 +1004,8 @@ def chooseGame():
 def support():
     global main_window
     support_window = ttk.Toplevel(topmost=True)
-    support_window.title("关于")
-    support_window.geometry("300x560")
+    support_window.title("About")
+    support_window.geometry("400x580")
     support_window.iconphoto(
         False, ttk.PhotoImage(file=resource_path((r"res\icon\info.png")))
     )
@@ -1014,12 +1014,12 @@ def support():
     main_window_y = main_window.winfo_y()
     support_window.geometry(f"+{main_window_x + 100}+{main_window_y + 100}")
     ttk.Label(
-        support_window, text="本软件完全免费", font=("黑体", 18), bootstyle=SUCCESS
+        support_window, text="This Software Is Completely Free", font=("Microsoft YaHei", 18), bootstyle=SUCCESS
     ).pack(pady=(10, 2))
     ttk.Label(
         support_window,
-        text="如果你是通过付费或付出点赞、关注\n或其他任何有可能使分享者获得利益\n的途径获取的本修改器\n则说明你已经上当受骗\n",
-        font=("黑体", 12),
+        text="If you obtained this modifier through payment, likes, follows\nor any other means that may bring profit to the sharer,\nthen you have been deceived\n",
+        font=("Microsoft YaHei", 12),
         bootstyle=DANGER,
     ).pack(pady=(0, 10))
 
@@ -1028,7 +1028,7 @@ def support():
 
     qq0_frame = ttk.Frame(support_window)
     qq0_frame.pack()
-    ttk.Label(qq0_frame, text="Communication group:", font=("Black body", 8), bootstyle=INFO).pack(
+    ttk.Label(qq0_frame, text="Communication group:", font=("Microsoft YaHei", 8), bootstyle=INFO).pack(
         side=LEFT
     )
     ttk.Button(
@@ -1040,11 +1040,11 @@ def support():
         command=open_qq0,
     ).pack(side=LEFT)
     ttk.Label(
-        support_window, text="If you have any questions, you can add group feedback", font=("Black body", 8), bootstyle=INFO
+        support_window, text="If you have any questions, you can add group feedback", font=("Microsoft YaHei", 8), bootstyle=INFO
     ).pack()
     text = ttk.Text(support_window, width=50, height=8)
     scroll = ttk.Scrollbar(support_window)
-    # 放到窗口的右侧, 填充Y竖直方向
+    # Place on the right side of the window, fill Y vertically
     scroll.place(x=0, y=240, relx=1, anchor=E, height=150)
 
     # Two control correlation
@@ -1054,93 +1054,93 @@ def support():
     text.pack()
     str1 = (
         "b2.73\n"
-        "适配杂交版3.17\n"
-        "修复了游戏内存地址超过0x7FFFFFFF导致的无法使用问题"
+        "Adapted for Hybrid Edition v3.17\n"
+        "Fixed unavailability issue caused by game memory address exceeding 0x7FFFFFFF\n"
         "b0.72\n"
-        "适配杂交版3.16\n"
-        "新增3.16版本植物索敌修复功能\n"
+        "Adapted for Hybrid Edition v3.16\n"
+        "Added v3.16 plant targeting fix\n"
         "b0.71\n"
-        "适配杂交版3.15\n"
+        "Adapted for Hybrid Edition v3.15\n"
         "b0.70\n"
-        "适配杂交版3.14\n"
+        "Adapted for Hybrid Edition v3.14\n"
         "b0.69\n"
-        "适配杂交版3.13.2\n"
-        "修复了3.11和3.12中自由放置闪退的问题\n"
+        "Adapted for Hybrid Edition v3.13.2\n"
+        "Fixed free placement crash in v3.11 and v3.12\n"
         "b0.68\n"
-        "适配杂交版3.12\n"
+        "Adapted for Hybrid Edition v3.12\n"
         "b0.67\n"
-        "适配杂交版v3.11\n"
+        "Adapted for Hybrid Edition v3.11\n"
         "b0.66\n"
-        "适配杂交版3.99\n"
+        "Adapted for Hybrid Edition v3.99\n"
         "b0.63\n"
-        "适配杂交版3.75、3.76\n"
+        "Adapted for Hybrid Edition v3.75, v3.76\n"
         "b0.62\n"
-        "适配杂交版3.7\n"
+        "Adapted for Hybrid Edition v3.7\n"
         "b0.60\n"
-        "适配杂交版3.6.5\n"
-        "僵尸掉落新增随机卡片\n"
+        "Adapted for Hybrid Edition v3.6.5\n"
+        "Added random card drops from zombies\n"
         "b0.59\n"
-        "适配杂交版3.6\n"
+        "Adapted for Hybrid Edition v3.6\n"
         "b0.58\n"
-        "适配杂交版3.5\n"
-        "修复了简易添加盆栽植物类型错误的问题，增加了养成总数的修改\n"
-        "优化了植物选择和僵尸选择的界面，使其符合响应式设计要求\n"
+        "Adapted for Hybrid Edition v3.5\n"
+        "Fixed simple add potted plant type error, added growth total modification\n"
+        "Optimized plant and zombie selection UI for responsive design\n"
         "b0.57\n"
-        "增加大量花园相关修改、包括修改花盆属性、增加花盆、一键完成需求等\n"
-        "新增植物不睡觉功能，取代了超级铲子功能\n"
+        "Added many garden modifications, including pot properties, adding pots, one-click needs\n"
+        "Added plants never sleep function, replaced super shovel function\n"
         "b0.56\n"
-        "适配杂交版3.4\n"
-        "完成更多模式会完成商店关卡\n"
-        "新增智慧树高度修改\n"
+        "Adapted for Hybrid Edition v3.4\n"
+        "Completing more modes will complete shop levels\n"
+        "Added wisdom tree height modification\n"
         "b0.55\n"
-        "适配杂交版3.3\n"
+        "Adapted for Hybrid Edition v3.3\n"
         "b0.54\n"
-        "适配杂交版3.2、3.21\n"
+        "Adapted for Hybrid Edition v3.2, v3.21\n"
         "b0.53\n"
-        "适配杂交版3.15\n"
-        "修复了番外关卡无法一键完成的问题\n"
-        "新增解锁全部成就功能\n"
+        "Adapted for Hybrid Edition v3.15\n"
+        "Fixed bonus levels not completing with one-click\n"
+        "Added unlock all achievements function\n"
         "b0.52\n"
-        "适配杂交版3.1\n"
-        "新增修改铲子功能\n"
+        "Adapted for Hybrid Edition v3.1\n"
+        "Added shovel modification function\n"
         "b0.50\n"
-        "新增七色花等部分隐藏植物\n新增英雄植物可多种功能，位于暂未分类标签页"
+        "Added hidden plants like seven-color flower\nAdded hero plant multi-plant function in Uncategorized tab\n"
         "b0.47\n"
-        "修复植物和僵尸图片顺序错误的问题\n"
+        "Fixed plant and zombie image order error\n"
         "b0.46\n"
-        "适配杂交3.0\n"
+        "Adapted for Hybrid v3.0\n"
         "b0.45\n"
-        "适配杂交2.61\n"
-        "僵尸血量修改废弃，新增BOSS血量修改功能\n"
+        "Adapted for Hybrid v2.61\n"
+        "Zombie HP modification deprecated, added BOSS HP modification\n"
         "b0.441\n"
-        "修复薯条之后卡槽错位的问题\n"
+        "Fixed slot misalignment after fries\n"
         "b0.44\n"
-        "卡槽修改和放置植物新增英雄植物和薯条、可乐\n"
-        "攻速修改重做，现在可以修改攻速为任意倍率\n"
+        "Slot modification and plant placement added hero plants, fries, cola\n"
+        "Attack speed reworked, now can modify to any multiplier\n"
         "b0.43\n"
-        "适配杂交2.6\n"
-        "血量修改仅修复僵王血量地址\n"
+        "Adapted for Hybrid v2.6\n"
+        "HP fix only fixes Zomboss HP address\n"
         "b0.42\n"
-        "适配杂交2.5\n"
+        "Adapted for Hybrid v2.5\n"
         "b0.41\n"
-        "新增益智游戏选项卡，包含罐子监视及放罐子功能\n"
-        "新增益智游戏选项卡，包含我是僵尸相关功能\n"
-        "常用功能新增罐子透视\n"
+        "Added puzzle mode tab with vase monitoring and placement\n"
+        "Added puzzle mode tab with I, Zombie related functions\n"
+        "Added vase X-ray to common functions\n"
         "b0.40\n"
-        "新增益智游戏选项卡，包含罐子监视及放罐子功能\n"
+        "Added puzzle mode tab with vase monitoring and placement\n"
         "b0.39\n"
-        "适配杂交2.4\n"
-        "仅修复僵王血量地址\n"
+        "Adapted for Hybrid v2.4\n"
+        "Only fix Zomboss HP address\n"
         "b0.38\n"
-        "Adaptation hybrid 2.3.7 16 card slot\n"
-        "Only repair the stiff king's blood volume address\n"
+        "Adapted for Hybrid v2.3.7 16 card slot\n"
+        "Only fix Zomboss HP address\n"
         "b0.37\n"
-        "Adaptation hybrid 2.3.6 16 card slot\n"
-        "Only repair the stiff king's blood volume address\n"
-        "Optimized the display effect of the plant selection interface\n"
+        "Adapted for Hybrid v2.3.6 16 card slot\n"
+        "Only fix Zomboss HP address\n"
+        "Optimized plant selection interface display\n"
         "b0.36\n"
-        "Adaptation of hybrids 2.3.5 new plants, new zombies, new maps, new bullets\n"
-        "Only repair the stiff king's blood volume address"
+        "Adapted for Hybrid v2.3.5 new plants, new zombies, new maps, new bullets\n"
+        "Only fix Zomboss HP address\n"
         "b0.35\n"
         'Adaptation to hybrid 2.3 new zombie blood volume, thank you for the group friends "." The hard -collected blood address address\n'
         "Fix the problem that there is no new card version of the win7 version, try to repair the problem of the WIN7 version that is not effective"
@@ -1215,7 +1215,7 @@ def support():
     github_frame = ttk.Frame(support_window)
     github_frame.pack()
     ttk.Label(
-        github_frame, text="All code opens from", font=("Black body", 12), bootstyle=SUCCESS
+        github_frame, text="All code opens from", font=("Microsoft YaHei", 12), bootstyle=SUCCESS
     ).pack(side=LEFT)
 
     def open_code():
@@ -1232,7 +1232,7 @@ def support():
     ttk.Label(
         support_window,
         text="If you think this software is helpful, welcome to sponsor support developers",
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=WARNING,
     ).pack()
 
@@ -1245,14 +1245,14 @@ def support():
     ttk.Label(
         support_window,
         text="After sponsorship any amount, you can add the sponsorship group:",
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=WARNING,
     ).pack()
     qq_frame.pack()
     ttk.Label(
         qq_frame,
         text="Add QQ",
-        font=("Black body", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=WARNING,
     ).pack(side=LEFT)
     ttk.Button(
@@ -1266,13 +1266,13 @@ def support():
     ttk.Label(
         qq_frame,
         text="Pull into the group after sending the sponsorship screenshot",
-        font=("Black body", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=WARNING,
     ).pack(side=LEFT)
     ttk.Label(
         support_window,
         text="Entry groups can enjoy functions, priority adaptation, 1 to 1 problem solving and other services",
-        font=("Black body", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=WARNING,
     ).pack()
     image_frame = ttk.Frame(support_window)
@@ -1283,10 +1283,10 @@ def support():
     AliPay_image.grid(row=0, column=0, padx=10)
     WeChatPay_image = ttk.Label(image_frame, image=WeChatPay)
     WeChatPay_image.grid(row=0, column=1, padx=10)
-    ttk.Label(image_frame, text="Alipay", bootstyle=PRIMARY, font=("Black body", 12)).grid(
+    ttk.Label(image_frame, text="Alipay", bootstyle=PRIMARY, font=("Microsoft YaHei", 12)).grid(
         row=1, column=0, pady=5
     )
-    ttk.Label(image_frame, text="WeChat payment", bootstyle=SUCCESS, font=("Black body", 12)).grid(
+    ttk.Label(image_frame, text="WeChat payment", bootstyle=SUCCESS, font=("Microsoft YaHei", 12)).grid(
         row=1, column=1, pady=5
     )
     support_window.mainloop()
@@ -1304,7 +1304,7 @@ def delete_config():
     ttk.Label(
         deete_config_window,
         text="Error occurs when reading the configuration file\nDelete the configuration file and close the program\nPlease restart the program",
-        font=("Black body", 18),
+        font=("Microsoft YaHei", 18),
         bootstyle=DANGER,
     ).pack(pady=20)
     ttk.Button(
@@ -1331,45 +1331,45 @@ def open_card_select_window(combobox):
     card_select_window.title("Choice card")
     main_window_x = main_window.winfo_x()
     main_window_y = main_window.winfo_y()
-    # 设置初始窗口大小和位置
+    # Set initial window size and position
     card_select_window.geometry(f"800x600+{main_window_x + 50}+{main_window_y + 50}")
-    # 允许窗口调整大小
+    # Allow window resizing
     card_select_window.resizable(True, True)
 
-    # 配置行和列的权重，使其能够随窗口大小调整
+    # Configure row and column weights to allow resizing
     card_select_window.columnconfigure(0, weight=1)
     card_select_window.rowconfigure(0, weight=1)
 
     notebook = ttk.Notebook(card_select_window)
-    notebook.grid(row=0, column=0, sticky="nsew")  # 使用grid而不是pack，并设置sticky
+    notebook.grid(row=0, column=0, sticky="nsew")  # Use grid instead of pack, and set sticky
 
-    # --------------------- 植物标签页 ---------------------
+    # --------------------- Plant Tab ---------------------
     plant_tab = ttk.Frame(notebook)
     notebook.add(plant_tab, text="plant")
 
-    # 配置plant_tab的响应式布局
+    # Configure plant_tab responsive layout
     plant_tab.columnconfigure(0, weight=1)
     plant_tab.rowconfigure(0, weight=1)
 
-    # 创建滚动区域
+    # Create scroll area
     plant_canvas = tk.Canvas(plant_tab)
     plant_scrollbar = ttk.Scrollbar(
         plant_tab, orient="vertical", command=plant_canvas.yview
     )
     plant_canvas.configure(yscrollcommand=plant_scrollbar.set)
-    plant_canvas.grid(row=0, column=0, sticky="nsew")  # 使用grid而不是pack
-    plant_scrollbar.grid(row=0, column=1, sticky="ns")  # 使用grid而不是pack
+    plant_canvas.grid(row=0, column=0, sticky="nsew")  # Use grid instead of pack
+    plant_scrollbar.grid(row=0, column=1, sticky="ns")  # Use grid instead of pack
 
     plant_container = ttk.Frame(plant_canvas)
     plant_canvas.create_window((0, 0), window=plant_container, anchor="nw")
 
-    # 配置滚动区域
+    # Configure scroll area
     def on_plant_configure(event):
         plant_canvas.configure(scrollregion=plant_canvas.bbox("all"))
 
     plant_container.bind("<Configure>", on_plant_configure)
 
-    # 绑定鼠标滚轮事件，仅在鼠标进入时绑定，离开时解绑
+    # Bind mouse wheel events, only bind on enter, unbind on leave
     def _on_plant_mousewheel(event):
         plant_canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
 
@@ -1378,13 +1378,13 @@ def open_card_select_window(combobox):
     )
     plant_canvas.bind("<Leave>", lambda e: plant_canvas.unbind_all("<MouseWheel>"))
 
-    # 创建用于延迟执行的变量
+    # Create variable for delayed execution
     resize_timer_id = None
 
-    # 动态调整canvas大小和每行卡片数量
+    # Dynamically adjust canvas size and cards per row
     def on_plant_tab_configure(event):
         plant_canvas.config(width=event.width, height=event.height)
-        # 使用延迟方式重新排列卡片
+        # Rearrange cards with delay
         nonlocal resize_timer_id
         if resize_timer_id:
             plant_tab.after_cancel(resize_timer_id)
@@ -1394,53 +1394,53 @@ def open_card_select_window(combobox):
 
     plant_tab.bind("<Configure>", on_plant_tab_configure)
 
-    # 加载植物图片
+    # Load plant images
     plant_images = os.listdir(resource_path("res/cards/pvzhe_plants"))
-    plant_cards = []  # 存储所有卡片及其对应的标签
+    plant_cards = []  # Store all cards and their corresponding labels
 
-    # 先创建所有卡片但不布局
+    # Create all cards first without layout
     for i, image_file in enumerate(plant_images):
         image = Image.open(resource_path(f"res/cards/pvzhe_plants/{image_file}"))
         photo = ImageTk.PhotoImage(image)
         label = tk.Label(plant_container, image=photo, text=str(i))
-        label.image = photo  # 保持对图片的引用
+        label.image = photo  # Keep a reference to the image
         label.bind(
             "<Button-1>",
             lambda event: on_card_image_click(event, card_select_window, combobox),
         )
         plant_cards.append(label)
 
-    # 记住上一次的列数，避免不必要的重新布局
+    # Remember last column count to avoid unnecessary re-layout
     last_cols = 0
 
-    # 动态计算每行显示的卡片数量并重新排列卡片
+    # Dynamically calculate cards per row and rearrange
     def rearrange_plant_cards(width):
         nonlocal last_cols
-        # 假设每张卡片宽度为60像素(包括间距)
+        # Assume each card is 60px wide (including spacing)
         card_width = 60
         cols = max(1, (width - 40) // card_width) + 1
 
-        # 如果列数没变，不需要重新布局
+        # If column count hasn't changed, no need to rearrange
         if cols == last_cols:
             return
 
         last_cols = cols
 
-        # 隐藏所有卡片
+        # Hide all cards
         for label in plant_cards:
             label.grid_forget()
 
-        # 重新布局卡片
+        # Rearrange cards
         for i, label in enumerate(plant_cards):
             row = i // cols
             col = i % cols
             label.grid(row=row, column=col, padx=2, pady=2)
 
-    # --------------------- 僵尸标签页 ---------------------
+    # --------------------- Zombie Tab ---------------------
     zombie_tab = ttk.Frame(notebook)
-    notebook.add(zombie_tab, text="僵尸")
+    notebook.add(zombie_tab, text="Zombie")
 
-    # 配置zombie_tab的响应式布局
+    # Configure zombie_tab responsive layout
     zombie_tab.columnconfigure(0, weight=1)
     zombie_tab.rowconfigure(0, weight=1)
 
@@ -1449,8 +1449,8 @@ def open_card_select_window(combobox):
         zombie_tab, orient="vertical", command=zombie_canvas.yview
     )
     zombie_canvas.configure(yscrollcommand=zombie_scrollbar.set)
-    zombie_canvas.grid(row=0, column=0, sticky="nsew")  # 使用grid而不是pack
-    zombie_scrollbar.grid(row=0, column=1, sticky="ns")  # 使用grid而不是pack
+    zombie_canvas.grid(row=0, column=0, sticky="nsew")  # Use grid instead of pack
+    zombie_scrollbar.grid(row=0, column=1, sticky="ns")  # Use grid instead of pack
 
     zombie_container = ttk.Frame(zombie_canvas)
     zombie_canvas.create_window((0, 0), window=zombie_container, anchor="nw")
@@ -1460,14 +1460,14 @@ def open_card_select_window(combobox):
 
     zombie_container.bind("<Configure>", on_zombie_configure)
 
-    # 僵尸的延迟变量
+    # Zombie resize timer variable
     zombie_resize_timer_id = None
 
-    # 动态调整canvas大小和每行卡片数量
+    # Dynamically adjust canvas size and zombie cards per row
     def on_zombie_tab_configure(event):
         zombie_canvas.config(width=event.width, height=event.height)
 
-        # 使用延迟方式重新排列僵尸卡片
+        # Rearrange zombie cards with delay
         nonlocal zombie_resize_timer_id
         if zombie_resize_timer_id:
             zombie_tab.after_cancel(zombie_resize_timer_id)
@@ -1487,9 +1487,9 @@ def open_card_select_window(combobox):
     zombie_canvas.bind("<Leave>", lambda e: zombie_canvas.unbind_all("<MouseWheel>"))
 
     zombie_images = os.listdir(resource_path("res/cards/pvzhe_zombies"))
-    zombie_cards = []  # 存储所有僵尸卡片及其对应的标签
+    zombie_cards = []  # Store all zombie cards and their corresponding labels
 
-    # 先创建所有僵尸卡片但不布局
+    # Create all zombie cards first without layout
     for i, image_file in enumerate(zombie_images):
         image = Image.open(resource_path(f"res/cards/pvzhe_zombies/{image_file}"))
         photo = ImageTk.PhotoImage(image)
@@ -1497,55 +1497,55 @@ def open_card_select_window(combobox):
             label = tk.Label(zombie_container, image=photo, text=str(i + 256))
         else:
             label = tk.Label(zombie_container, image=photo, text=str(i + 512))
-        label.image = photo  # 保持对图片的引用
+        label.image = photo  # Keep a reference to the image
         label.bind(
             "<Button-1>",
             lambda event: on_card_image_click(event, card_select_window, combobox),
         )
         zombie_cards.append(label)
 
-    # 记住上一次僵尸的列数
+    # Remember last zombie column count
     last_zombie_cols = 0
 
-    # 动态计算每行显示的僵尸卡片数量并重新排列卡片
+    # Dynamically calculate cards per row and rearrange
     def rearrange_zombie_cards(width):
         nonlocal last_zombie_cols
-        # 假设每张卡片宽度为60像素(包括间距)
+        # Assume each card is 60px wide (including spacing)
         card_width = 60
         cols = max(1, (width - 40) // card_width) + 1
 
-        # 如果列数没变，不需要重新布局
+        # If column count hasn't changed, no need to rearrange
         if cols == last_zombie_cols:
             return
 
         last_zombie_cols = cols
 
-        # 隐藏所有卡片
+        # Hide all cards
         for label in zombie_cards:
             label.grid_forget()
 
-        # 重新布局卡片
+        # Rearrange cards
         for i, label in enumerate(zombie_cards):
             row = i // cols
             col = i % cols
             label.grid(row=row, column=col, padx=2, pady=2)
 
-    # 初始布局 - 使用单次调用并延迟以确保窗口完全加载
+    # Initial layout - use single call with delay to ensure window fully loads
     def initialize_layout():
         width_plant = plant_tab.winfo_width()
         width_zombie = zombie_tab.winfo_width()
 
-        if width_plant > 10:  # 确保有一个有效的宽度
+        if width_plant > 10:  # Ensure there is a valid width
             rearrange_plant_cards(width_plant)
         else:
-            # 如果宽度还不可用，再等一会
+            # If width is still not available, wait longer
             card_select_window.after(50, initialize_layout)
             return
 
         if width_zombie > 10:
             rearrange_zombie_cards(width_zombie)
 
-    # 延迟调用初始布局，让窗口有时间进行初始绘制
+    # Delayed initial layout to let the window render first
     card_select_window.after(100, initialize_layout)
 
     def closeCombobox(combobox):
@@ -1566,51 +1566,51 @@ def open_zombie_select_window(combobox):
     zombie_select_window.title("Choose a zombie")
     main_window_x = main_window.winfo_x()
     main_window_y = main_window.winfo_y()
-    # 设置初始窗口大小和位置
+    # Set initial window size and position
     zombie_select_window.geometry(f"800x600+{main_window_x + 50}+{main_window_y + 50}")
-    # 允许窗口调整大小
+    # Allow window resizing
     zombie_select_window.resizable(True, True)
 
-    # 配置行和列的权重，使其能够随窗口大小调整
+    # Configure row and column weights for resizing
     zombie_select_window.columnconfigure(0, weight=1)
     zombie_select_window.rowconfigure(0, weight=1)
 
     notebook = ttk.Notebook(zombie_select_window)
-    notebook.grid(row=0, column=0, sticky="nsew")  # 使用grid而不是pack，并设置sticky
+    notebook.grid(row=0, column=0, sticky="nsew")  # Use grid instead of pack, and set sticky
 
     zombie_tab = ttk.Frame(notebook)
-    notebook.add(zombie_tab, text="僵尸")
+    notebook.add(zombie_tab, text="Zombie")
 
-    # 配置zombie_tab的响应式布局
+    # Configure zombie_tab responsive layout
     zombie_tab.columnconfigure(0, weight=1)
     zombie_tab.rowconfigure(0, weight=1)
 
-    # 创建滚动区域
+    # Create scroll area
     zombie_canvas = tk.Canvas(zombie_tab)
     zombie_scrollbar = ttk.Scrollbar(
         zombie_tab, orient="vertical", command=zombie_canvas.yview
     )
     zombie_canvas.configure(yscrollcommand=zombie_scrollbar.set)
-    zombie_canvas.grid(row=0, column=0, sticky="nsew")  # 使用grid而不是pack
-    zombie_scrollbar.grid(row=0, column=1, sticky="ns")  # 使用grid而不是pack
+    zombie_canvas.grid(row=0, column=0, sticky="nsew")  # Use grid instead of pack
+    zombie_scrollbar.grid(row=0, column=1, sticky="ns")  # Use grid instead of pack
 
     zombie_container = ttk.Frame(zombie_canvas)
     zombie_canvas.create_window((0, 0), window=zombie_container, anchor="nw")
 
-    # 配置滚动区域
+    # Configure scroll area
     def on_zombie_configure(event):
         zombie_canvas.configure(scrollregion=zombie_canvas.bbox("all"))
 
     zombie_container.bind("<Configure>", on_zombie_configure)
 
-    # 僵尸的延迟变量
+    # Zombie resize timer variable
     zombie_resize_timer_id = None
 
-    # 动态调整canvas大小和每行卡片数量
+    # Dynamically adjust canvas size and zombie cards per row
     def on_zombie_tab_configure(event):
         zombie_canvas.config(width=event.width, height=event.height)
 
-        # 使用延迟方式重新排列僵尸卡片
+        # Rearrange zombie cards with delay
         nonlocal zombie_resize_timer_id
         if zombie_resize_timer_id:
             zombie_tab.after_cancel(zombie_resize_timer_id)
@@ -1630,58 +1630,58 @@ def open_zombie_select_window(combobox):
     zombie_canvas.bind("<Leave>", lambda e: zombie_canvas.unbind_all("<MouseWheel>"))
 
     zombie_images = os.listdir(resource_path("res/cards/pvzhe_zombies"))
-    zombie_cards = []  # 存储所有僵尸卡片及其对应的标签
+    zombie_cards = []  # Store all zombie cards and their corresponding labels
 
-    # 先创建所有僵尸卡片但不布局
+    # Create all zombie cards first without layout
     for i, image_file in enumerate(zombie_images):
         image = Image.open(resource_path(f"res/cards/pvzhe_zombies/{image_file}"))
         photo = ImageTk.PhotoImage(image)
         label = tk.Label(zombie_container, image=photo, text=str(i))
-        label.image = photo  # 保持对图片的引用
+        label.image = photo  # Keep a reference to the image
         label.bind(
             "<Button-1>",
             lambda event: on_zombie_image_click(event, zombie_select_window, combobox),
         )
         zombie_cards.append(label)
 
-    # 记住上一次僵尸的列数
+    # Remember last zombie column count
     last_zombie_cols = 0
 
-    # 动态计算每行显示的僵尸卡片数量并重新排列卡片
+    # Dynamically calculate cards per row and rearrange
     def rearrange_zombie_cards(width):
         nonlocal last_zombie_cols
-        # 假设每张卡片宽度为60像素(包括间距)
+        # Assume each card is 60px wide (including spacing)
         card_width = 60
         cols = max(1, (width - 40) // card_width) + 1
 
-        # 如果列数没变，不需要重新布局
+        # If column count hasn't changed, no need to rearrange
         if cols == last_zombie_cols:
             return
 
         last_zombie_cols = cols
 
-        # 隐藏所有卡片
+        # Hide all cards
         for label in zombie_cards:
             label.grid_forget()
 
-        # 重新布局卡片
+        # Rearrange cards
         for i, label in enumerate(zombie_cards):
             row = i // cols
             col = i % cols
             label.grid(row=row, column=col, padx=2, pady=2)
 
-    # 初始布局 - 使用单次调用并延迟以确保窗口完全加载
+    # Initial layout - use single call with delay to ensure window fully loads
     def initialize_layout():
         width_zombie = zombie_tab.winfo_width()
 
-        if width_zombie > 10:  # 确保有一个有效的宽度
+        if width_zombie > 10:  # Ensure there is a valid width
             rearrange_zombie_cards(width_zombie)
         else:
-            # 如果宽度还不可用，再等一会
+            # If width is still not available, wait longer
             zombie_select_window.after(50, initialize_layout)
             return
 
-    # 延迟调用初始布局，让窗口有时间进行初始绘制
+    # Delayed initial layout to let the window render first
     zombie_select_window.after(100, initialize_layout)
 
     def closeCombobox(combobox):
@@ -1699,7 +1699,7 @@ def mainWindow():
         + "      Game version:"
         + str(PVZ_data.PVZ_version)
     )
-    main_window.geometry("800x850")
+    main_window.geometry("960x850")
     main_window.iconphoto(
         False, ttk.PhotoImage(file=resource_path(r"res\icon\editor.png"))
     )
@@ -1726,8 +1726,8 @@ def mainWindow():
             update_window.destroy()
 
         update_window = ttk.Toplevel(topmost=True)
-        update_window.title("有新版本")
-        update_window.geometry("320x440")
+        update_window.title("New Version Available")
+        update_window.geometry("380x460")
         update_window.iconphoto(
             False, ttk.PhotoImage(file=resource_path((r"res\icon\info.png")))
         )
@@ -1738,16 +1738,16 @@ def mainWindow():
         ttk.Label(
             update_window,
             text="Detecting a new version{}".format(latest_version),
-            font=("Black body", 18),
+            font=("Microsoft YaHei", 18),
             bootstyle=INFO,
         ).pack()
         ttk.Label(
-            update_window, text="本软件完全免费", font=("黑体", 18), bootstyle=SUCCESS
+            update_window, text="This Software Is Completely Free", font=("Microsoft YaHei", 18), bootstyle=SUCCESS
         ).pack(pady=(10, 2))
         ttk.Label(
             update_window,
-            text="如果你是通过付费或付出点赞、关注\n或其他任何有可能使分享者获得利益\n的途径获取的本修改器\n则说明你已经上当受骗\n",
-            font=("黑体", 12),
+        text="If you obtained this modifier through payment, likes, follows\nor any other means that may bring profit to the sharer,\nthen you have been deceived\n",
+            font=("Microsoft YaHei", 12),
             bootstyle=DANGER,
         ).pack(pady=(0, 10))
 
@@ -1756,7 +1756,7 @@ def mainWindow():
 
         qq0_frame = ttk.Frame(update_window)
         qq0_frame.pack()
-        ttk.Label(qq0_frame, text="Communication group:", font=("Black body", 8), bootstyle=INFO).pack(
+        ttk.Label(qq0_frame, text="Communication group:", font=("Microsoft YaHei", 8), bootstyle=INFO).pack(
             side=LEFT
         )
         ttk.Button(
@@ -1768,12 +1768,12 @@ def mainWindow():
             command=open_qq0,
         ).pack(side=LEFT)
         ttk.Label(
-            update_window, text="If you have any questions, you can add group feedback", font=("Black body", 8), bootstyle=INFO
+            update_window, text="If you have any questions, you can add group feedback", font=("Microsoft YaHei", 8), bootstyle=INFO
         ).pack()
         github_frame = ttk.Frame(update_window)
         github_frame.pack()
         ttk.Label(
-            github_frame, text="Go to download the latest version", font=("Black body", 12), bootstyle=SUCCESS
+            github_frame, text="Go to download the latest version", font=("Microsoft YaHei", 12), bootstyle=SUCCESS
         ).pack(side=LEFT)
 
         def open_code():
@@ -1792,7 +1792,7 @@ def mainWindow():
         ttk.Label(
             update_window,
             text="If you think this software is helpful, welcome to sponsor support developers",
-            font=("Black body", 8),
+            font=("Microsoft YaHei", 8),
             bootstyle=WARNING,
         ).pack()
 
@@ -1805,14 +1805,14 @@ def mainWindow():
         ttk.Label(
             update_window,
             text="After sponsorship any amount, you can add the sponsorship group:",
-            font=("Black body", 8),
+            font=("Microsoft YaHei", 8),
             bootstyle=WARNING,
         ).pack()
         qq_frame.pack()
         ttk.Label(
             qq_frame,
             text="Add QQ",
-            font=("Black body", 8),
+            font=("Microsoft YaHei", 8),
             bootstyle=WARNING,
         ).pack(side=LEFT)
         ttk.Button(
@@ -1826,13 +1826,13 @@ def mainWindow():
         ttk.Label(
             qq_frame,
             text="Pull into the group after sending the sponsorship screenshot",
-            font=("Black body", 8),
+            font=("Microsoft YaHei", 8),
             bootstyle=WARNING,
         ).pack(side=LEFT)
         ttk.Label(
             update_window,
             text="Entry groups can enjoy functions, priority adaptation, 1 to 1 problem solving and other services",
-            font=("Black body", 8),
+            font=("Microsoft YaHei", 8),
             bootstyle=WARNING,
         ).pack()
         image_frame = ttk.Frame(update_window)
@@ -1844,10 +1844,10 @@ def mainWindow():
         WeChatPay_image = ttk.Label(image_frame, image=WeChatPay)
         WeChatPay_image.grid(row=0, column=1, padx=10)
         ttk.Label(
-            image_frame, text="Alipay", bootstyle=PRIMARY, font=("黑体", 12)
+            image_frame, text="Alipay", bootstyle=PRIMARY, font=("Microsoft YaHei", 12)
         ).grid(row=1, column=0, pady=5)
         ttk.Label(
-            image_frame, text="WeChat payment", bootstyle=SUCCESS, font=("黑体", 12)
+            image_frame, text="WeChat payment", bootstyle=SUCCESS, font=("Microsoft YaHei", 12)
         ).grid(row=1, column=1, pady=5)
         update_window.protocol("WM_DELETE_WINDOW", lambda: close())
         update_window.mainloop()
@@ -1862,9 +1862,9 @@ def mainWindow():
                 "The version number is blocked",
                 title="Update test failure",
             )
-        # 比较版本号
+        # Compare version numbers
         elif latest_version > current_version or latest_version == "0.74":
-            # 如果发现新版本，提示用户
+            # If a new version is found, notify the user
             open_update_window(latest_version)
     except Exception:
         Messagebox.show_error(
@@ -1873,10 +1873,10 @@ def mainWindow():
         )
 
     # style=ttk.Style()
-    # style.configure('small.TButton',font=("黑体",8),padding=(0,0,0,0))
+    # style.configure('small.TButton',font=("Microsoft YaHei",8),padding=(0,0,0,0))
     process_frame = ttk.Frame(main_window)
     process_frame.place(x=0, y=0, relx=1, rely=1, anchor=SE)
-    process_label = ttk.Label(process_frame, text="", font=("黑体", 8))
+    process_label = ttk.Label(process_frame, text="", font=("Microsoft YaHei", 8))
     process_label.pack(side=LEFT)
 
     def updateGame():
@@ -1955,265 +1955,265 @@ def mainWindow():
             elif "v2.4" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(2.4)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.1" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(2.1)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.2" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(2.2)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.3.5" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(2.35)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.3.6" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(2.36)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.3.7" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(2.37)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.3" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(2.3)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.4" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(2.4)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.6.1" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(2.61)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v2.6" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(2.6)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.0" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.0)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.17" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.17)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.16" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.16)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.15" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.151)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.14" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.14)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.13.2" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.132)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.12" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.12)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.11" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.11)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.1.5" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.15)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.1" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.1)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.2.1" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.21)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.2" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.2)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.3" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.3)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.4" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.4)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.5" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.5)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.6.5" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.65)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.6" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.6)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.7.5" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.75)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.7.6" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.76)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.7" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.7)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.8" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.8)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.9.9" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.99)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             elif "v3.9" in win32gui.GetWindowText(hwnd):
                 PVZ_data.update_PVZ_version(3.9)
                 main_window.title(
-                    "杂交版多功能修改器  "
+                    "Hybrid Edition Multi-Function Modifier  "
                     + str(current_version)
-                    + "      游戏版本："
+                    + "      Game Version: "
                     + str(PVZ_data.PVZ_version)
                 )
             PVZ_data.update_PVZ_memory(Pymem(pid[1]))
@@ -2416,7 +2416,7 @@ def mainWindow():
     diamond_add_entry.bind("<Return>", addDiamond)
     diamond_add_entry.bind("<FocusOut>", addDiamond)
 
-    quick_start_frame = ttk.Labelframe(common_page, text="快速使用", bootstyle=SUCCESS)
+    quick_start_frame = ttk.Labelframe(common_page, text="Quick Use", bootstyle=SUCCESS)
     quick_start_frame.place(x=0, y=0, relx=1, rely=0, anchor=NE)
     over_plant_status = ttk.BooleanVar(quick_start_frame)
     over_plant_check = ttk.Checkbutton(
@@ -2475,13 +2475,13 @@ def mainWindow():
     column_like_check.grid(row=4, column=0, sticky=W)
     ToolTip(
         column_like_check,
-        text="After planting a plant, plant the same plants in other rows of the same column(可与自由放置配合使用)",
+        text="After planting a plant, plant the same plants in other rows of the same column (Can be used with free placement)",
         bootstyle=(INFO, INVERSE),
     )
     # shovel_pro_status = ttk.BooleanVar(quick_start_frame)
     # shovel_pro_check = ttk.Checkbutton(
     #     quick_start_frame,
-    #     text="超级铲子",
+    #     text="Super Shovel",
     #     variable=shovel_pro_status,
     #     bootstyle="success-round-toggle",
     #     command=lambda: pvz.shovelpro(shovel_pro_status.get()),
@@ -2490,7 +2490,7 @@ def mainWindow():
     plant_waek_status = ttk.BooleanVar(quick_start_frame)
     plant_waek_check = ttk.Checkbutton(
         quick_start_frame,
-        text="植物不睡",
+        text="Plants Never Sleep",
         variable=plant_waek_status,
         bootstyle="success-round-toggle",
         command=lambda: pvz.plantNoSleep(plant_waek_status.get()),
@@ -2498,7 +2498,7 @@ def mainWindow():
     plant_waek_check.grid(row=5, column=0, sticky=W)
     ToolTip(
         plant_waek_check,
-        text="植物在任何情况下都不会睡觉",
+        text="Plants will not sleep under any circumstances",
         bootstyle=(INFO, INVERSE),
     )
     never_fail_status = ttk.BooleanVar(quick_start_frame)
@@ -2522,13 +2522,13 @@ def mainWindow():
     Infinite_Items_check.grid(row=7, column=0, sticky=W)
     ToolTip(
         Infinite_Items_check,
-        text="银币、金币、钻石和商店物品锁定为9999",
+        text="Silver coins, gold coins, diamonds and shop items locked to 9999",
         bootstyle=(INFO, INVERSE),
     )
     vase_perspect_status = ttk.BooleanVar(quick_start_frame)
     vase_perspect_check = ttk.Checkbutton(
         quick_start_frame,
-        text="罐子透视",
+        text="Vase X-Ray",
         variable=vase_perspect_status,
         bootstyle="success-round-toggle",
         command=lambda: pvz.vase_perspect(vase_perspect_status.get()),
@@ -2536,14 +2536,14 @@ def mainWindow():
     vase_perspect_check.grid(row=8, column=0, sticky=W)
     ToolTip(
         vase_perspect_check,
-        text="可以看到罐子的内容",
+        text="Can see the contents of vase",
         bootstyle=(INFO, INVERSE),
     )
     # pause_pro_status = ttk.BooleanVar(quick_start_frame)
-    # pause_pro_check = ttk.Checkbutton(quick_start_frame, text="高级暂停", variable=pause_pro_status,
+    # pause_pro_check = ttk.Checkbutton(quick_start_frame, text="Advanced Pause", variable=pause_pro_status,
     #                                   bootstyle="success-round-toggle", command=lambda: pvz.pausePro(pause_pro_status.get()))
     # pause_pro_check.grid(row=7, column=0, sticky=W)
-    # ToolTip(pause_pro_check, text="可以暂停种植植物", bootstyle=(INFO, INVERSE))
+    # ToolTip(pause_pro_check, text="Can pause planting", bootstyle=(INFO, INVERSE))
     win_button = ttk.Button(
         quick_start_frame,
         text="Current level victory",
@@ -2553,28 +2553,28 @@ def mainWindow():
     )
     win_button.grid(row=9, column=0, sticky=W, pady=(2, 2))
     ToolTip(
-        win_button, text="当前的游戏关卡直接进行胜利结算", bootstyle=(INFO, INVERSE)
+        win_button, text="Direct victory settlement for the current game level", bootstyle=(INFO, INVERSE)
     )
     # defeat_button = ttk.Button(
     #     quick_start_frame,
-    #     text="当前关卡失败",
+    #             text="Current Level Defeat",
     #     padding=0,
     #     bootstyle=(SUCCESS, OUTLINE),
     #     command=lambda: pvz.defeat(),
     # )
     # defeat_button.grid(row=10, column=0, sticky=W, pady=(2, 2))
     # ToolTip(
-    #     defeat_button, text="当前的游戏关卡直接进行失败结算", bootstyle=(INFO, INVERSE)
+    #     defeat_button, text="Current level directly fails", bootstyle=(INFO, INVERSE)
     # )
     achevement_button = ttk.Button(
         quick_start_frame,
-        text="完成所有成就",
+        text="Complete All Achievements",
         padding=0,
         bootstyle=(SUCCESS, OUTLINE),
         command=lambda: pvz.achevement(),
     )
     achevement_button.grid(row=10, column=0, sticky=W, pady=(2, 2))
-    ToolTip(achevement_button, text="完成所有游戏成就", bootstyle=(INFO, INVERSE))
+    ToolTip(achevement_button, text="Complete All Game Achievements", bootstyle=(INFO, INVERSE))
     kill_all_button = ttk.Button(
         quick_start_frame,
         text="Kill all zombies",
@@ -2583,7 +2583,7 @@ def mainWindow():
         command=lambda: pvz.killAllZombies(),
     )
     kill_all_button.grid(row=11, column=0, sticky=W, pady=(2, 2))
-    ToolTip(kill_all_button, text="秒杀当前场上的所有僵尸", bootstyle=(INFO, INVERSE))
+    ToolTip(kill_all_button, text="Instantly kill all zombies on the field", bootstyle=(INFO, INVERSE))
     unlock_button = ttk.Button(
         quick_start_frame,
         text="Unlock all plants",
@@ -2616,7 +2616,7 @@ def mainWindow():
     )
     load_button.grid(row=0, column=1, sticky=W, padx=(10, 0), pady=(2, 2))
 
-    pause_pro_frame = ttk.Labelframe(common_page, text="高级暂停", bootstyle=SUCCESS)
+    pause_pro_frame = ttk.Labelframe(common_page, text="Advanced Pause", bootstyle=SUCCESS)
     pause_pro_frame.place(x=0, y=300, relx=1, rely=0, anchor=NE)
     pause_pro_status = ttk.BooleanVar(pause_pro_frame)
     pause_pro_check = ttk.Checkbutton(
@@ -2631,39 +2631,39 @@ def mainWindow():
         pause_pro_frame,
         width=5,
         values=PVZ_data.keyTpye,
-        font=("Black body", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_pause_key.grid(row=1, column=0)
     slot_pause_key.current(0)
     pause_color_frame = ttk.Frame(pause_pro_frame)
     pause_color_frame.grid(row=2, column=0)
-    ttk.Label(pause_color_frame, text="R:", font=("Black body", 12), bootstyle=DANGER).grid(
+    ttk.Label(pause_color_frame, text="R:", font=("Microsoft YaHei", 12), bootstyle=DANGER).grid(
         row=0, column=0
     )
     pause_r_entry = ttk.Entry(
-        pause_color_frame, width=3, font=("黑体", 12), bootstyle=SECONDARY
+        pause_color_frame, width=3, font=("Microsoft YaHei", 12), bootstyle=SECONDARY
     )
     pause_r_entry.grid(row=0, column=1, sticky=W)
-    ttk.Label(pause_color_frame, text="G:", font=("黑体", 12), bootstyle=SUCCESS).grid(
+    ttk.Label(pause_color_frame, text="G:", font=("Microsoft YaHei", 12), bootstyle=SUCCESS).grid(
         row=0, column=2
     )
     pause_g_entry = ttk.Entry(
-        pause_color_frame, width=3, font=("黑体", 12), bootstyle=SECONDARY
+        pause_color_frame, width=3, font=("Microsoft YaHei", 12), bootstyle=SECONDARY
     )
     pause_g_entry.grid(row=0, column=3, sticky=W)
-    ttk.Label(pause_color_frame, text="B:", font=("黑体", 12), bootstyle=PRIMARY).grid(
+    ttk.Label(pause_color_frame, text="B:", font=("Microsoft YaHei", 12), bootstyle=PRIMARY).grid(
         row=1, column=0
     )
     pause_b_entry = ttk.Entry(
-        pause_color_frame, width=3, font=("黑体", 12), bootstyle=SECONDARY
+        pause_color_frame, width=3, font=("Microsoft YaHei", 12), bootstyle=SECONDARY
     )
     pause_b_entry.grid(row=1, column=1, sticky=W)
     ttk.Label(
-        pause_color_frame, text="A:", font=("黑体", 12), bootstyle=SECONDARY
+        pause_color_frame, text="A:", font=("Microsoft YaHei", 12), bootstyle=SECONDARY
     ).grid(row=1, column=2)
     pause_a_entry = ttk.Entry(
-        pause_color_frame, width=3, font=("黑体", 12), bootstyle=SECONDARY
+        pause_color_frame, width=3, font=("Microsoft YaHei", 12), bootstyle=SECONDARY
     )
     pause_a_entry.grid(row=1, column=3, sticky=W)
 
@@ -2732,11 +2732,11 @@ def mainWindow():
     shovel_frame = ttk.Frame(common_page)
     shovel_frame.place(x=0, y=285, anchor=NW)
     shovel_label = ttk.Label(
-        shovel_frame, text="铲子修改", font=("黑体", 12), bootstyle=DARK
+        shovel_frame, text="Shovel Modification", font=("Microsoft YaHei", 12), bootstyle=DARK
     )
     shovel_label.grid(row=0, column=0)
     shovel_combobox = ttk.Combobox(
-        shovel_frame, values=PVZ_data.shovelType, state=READONLY, width=10
+        shovel_frame, values=PVZ_data.shovelType, state=READONLY, width=14
     )
     shovel_combobox.grid(row=0, column=1)
 
@@ -2744,7 +2744,7 @@ def mainWindow():
         "<<ComboboxSelected>>", lambda event: pvz.setShovel(shovel_combobox.current())
     )
 
-    game_speed_frame = ttk.Labelframe(common_page, text="游戏速度", bootstyle=DARK)
+    game_speed_frame = ttk.Labelframe(common_page, text="Game Speed", bootstyle=DARK)
     game_speed_frame.place(x=0, y=315, anchor=NW)
     game_speed_label = ttk.Label(game_speed_frame, text="1", bootstyle=DARK)
     game_speed_label.grid(row=0, column=0)
@@ -2809,12 +2809,12 @@ def mainWindow():
 
     game_speed_scale.bind("<MouseWheel>", on_mousewheel)
 
-    # game_difficult_frame = ttk.Labelframe(common_page, text="游戏难度", bootstyle=DARK)
+    # game_difficult_frame = ttk.Labelframe(common_page, text="Game Difficulty", bootstyle=DARK)
     # game_difficult_frame.place(x=0, y=320, anchor=NW)
     # gameDifficult = ttk.IntVar(game_difficult_frame)
     # ttk.Radiobutton(
     #     game_difficult_frame,
-    #     text="简单",
+    #     text="Easy",
     #     value=1,
     #     variable=gameDifficult,
     #     bootstyle=SUCCESS,
@@ -2822,7 +2822,7 @@ def mainWindow():
     # ).grid(row=0, column=0, padx=5)
     # ttk.Radiobutton(
     #     game_difficult_frame,
-    #     text="普通",
+    #     text="Normal",
     #     value=2,
     #     variable=gameDifficult,
     #     bootstyle=DARK,
@@ -2830,42 +2830,42 @@ def mainWindow():
     # ).grid(row=0, column=1, padx=5)
     # ttk.Radiobutton(
     #     game_difficult_frame,
-    #     text="困难",
+    #     text="Hard",
     #     value=3,
     #     variable=gameDifficult,
     #     bootstyle=DANGER,
     #     command=lambda: pvz.setDifficult(gameDifficult.get()),
     # ).grid(row=0, column=2, padx=5)
 
-    game_save_frame = ttk.Labelframe(common_page, text="存档修改", bootstyle=DARK)
+    game_save_frame = ttk.Labelframe(common_page, text="Save Modification", bootstyle=DARK)
     game_save_frame.place(x=0, y=355, anchor=NW)
-    # ttk.Label(game_save_frame, text="冒险第").grid(row=0, column=0)
+    # ttk.Label(game_save_frame, text="Adventure Level ").grid(row=0, column=0)
     # adventure_start_level_value = ttk.IntVar(game_save_frame)
     # adventure_start_level_combobox = ttk.Combobox(
     #     game_save_frame,
     #     textvariable=adventure_start_level_value,
     #     width=2,
     #     values=list(range(1, 67 + 1)),
-    #     font=("黑体", 8),
+    #     font=("Microsoft YaHei", 8),
     #     bootstyle=SECONDARY,
     #     state=READONLY,
     # )
     # adventure_start_level_combobox.grid(row=0, column=1)
     # adventure_start_level_value.set(1)
-    # ttk.Label(game_save_frame, text="关至第").grid(row=0, column=2)
+    # ttk.Label(game_save_frame, text=" To ").grid(row=0, column=2)
     # adventure_end_level_value = ttk.IntVar(game_save_frame)
     # adventure_end_level_combobox = ttk.Combobox(
     #     game_save_frame,
     #     textvariable=adventure_end_level_value,
     #     width=2,
     #     values=list(range(1, 67 + 1)),
-    #     font=("黑体", 8),
+    #     font=("Microsoft YaHei", 8),
     #     bootstyle=SECONDARY,
     #     state=READONLY,
     # )
     # adventure_end_level_combobox.grid(row=0, column=3)
     # adventure_end_level_value.set(67)
-    # ttk.Label(game_save_frame, text="关").grid(row=0, column=4)
+    # ttk.Label(game_save_frame, text="Level").grid(row=0, column=4)
 
     def complete_advantures():
         # for i in range(
@@ -2898,33 +2898,33 @@ def mainWindow():
         command=lambda: lock_advantures(),
     )
     adventure_lock_button.grid(row=1, column=2, columnspan=2, padx=2)
-    # ttk.Label(game_save_frame, text="挑战第").grid(row=2, column=0)
+    # ttk.Label(game_save_frame, text="Challenge Level ").grid(row=2, column=0)
     # challenge_start_level_value = ttk.IntVar(game_save_frame)
     # challenge_start_level_combobox = ttk.Combobox(
     #     game_save_frame,
     #     textvariable=challenge_start_level_value,
     #     width=2,
     #     values=list(range(1, 99 + 1)),
-    #     font=("黑体", 8),
+    #     font=("Microsoft YaHei", 8),
     #     bootstyle=SECONDARY,
     #     state=READONLY,
     # )
     # challenge_start_level_combobox.grid(row=2, column=1)
     # challenge_start_level_value.set(1)
-    # ttk.Label(game_save_frame, text="关至第").grid(row=2, column=2)
+    # ttk.Label(game_save_frame, text=" To ").grid(row=2, column=2)
     # challenge_end_level_value = ttk.IntVar(game_save_frame)
     # challenge_end_level_combobox = ttk.Combobox(
     #     game_save_frame,
     #     textvariable=challenge_end_level_value,
     #     width=2,
     #     values=list(range(1, 99 + 1)),
-    #     font=("黑体", 8),
+    #     font=("Microsoft YaHei", 8),
     #     bootstyle=SECONDARY,
     #     state=READONLY,
     # )
     # challenge_end_level_combobox.grid(row=2, column=3)
     # challenge_end_level_value.set(99)
-    # ttk.Label(game_save_frame, text="关").grid(row=2, column=4)
+    # ttk.Label(game_save_frame, text="Level").grid(row=2, column=4)
 
     def complete_challenges():
         # for i in range(
@@ -2979,7 +2979,7 @@ def mainWindow():
 
     miniGame_complete_button = ttk.Button(
         game_save_frame,
-        text="完成更多模式",
+        text="Complete More Modes",
         bootstyle=(SUCCESS, OUTLINE),
         padding=0,
         command=lambda: complete_miniGame(),
@@ -3007,7 +3007,7 @@ def mainWindow():
 
     miniGame_lock_button = ttk.Button(
         game_save_frame,
-        text="锁定更多模式",
+        text="Lock More Modes",
         bootstyle=(DANGER, OUTLINE),
         padding=0,
         command=lambda: lock_miniGame(),
@@ -3172,7 +3172,7 @@ def mainWindow():
 
         change_shortcut_window = ttk.Toplevel(topmost=True)
         change_shortcut_window.title("Modify shortcut keys")
-        change_shortcut_window.geometry("200x100")
+        change_shortcut_window.geometry("280x120")
         change_shortcut_window.iconphoto(
             False, ttk.PhotoImage(file=resource_path(r"res\icon\change.png"))
         )
@@ -3219,13 +3219,13 @@ def mainWindow():
                 )
             )
 
-    shortcut_frame = ttk.Labelframe(common_page, text="快捷按键")
-    shortcut_frame.place(x=180, y=0)
-    # 创建快捷键显示文本框和修改按钮
+    shortcut_frame = ttk.Labelframe(common_page, text="Shortcut Keys")
+    shortcut_frame.place(x=345, y=0)
+    # Create shortcut key display text box and modify button
     shortcuts = get_shortcuts()
     for i, (shortcut_id, shortcut_info) in enumerate(shortcuts.items()):
         # Show the text box of shortcut keys
-        entry = ttk.Entry(shortcut_frame, width=24, font=("黑体", 8))
+        entry = ttk.Entry(shortcut_frame, width=24, font=("Microsoft YaHei", 8))
         entry.insert(0, shortcut_info["key"])
         entry.grid(row=i, column=0, padx=2)
         shortcut_entries.append(entry)
@@ -3244,7 +3244,7 @@ def mainWindow():
         shortcut_buttons.append(button)
 
         combobox = ttk.Combobox(
-            shortcut_frame, values=action_list, width=13, state=READONLY
+            shortcut_frame, values=action_list, width=25, state=READONLY
         )
         combobox.grid(row=i, column=2, padx=2)
         combobox.current(shortcut_info["action"])
@@ -3276,9 +3276,9 @@ def mainWindow():
     global zombie_select
     zombie_page = ttk.Frame(page_tab)
     zombie_page.pack()
-    page_tab.add(zombie_page, text="僵尸修改")
-    zombie_list_frame = ttk.Labelframe(zombie_page, text="僵尸列表", bootstyle=DANGER)
-    zombie_list_frame.place(x=0, y=0, anchor=NW, height=260, width=275)
+    page_tab.add(zombie_page, text="Zombie Modification")
+    zombie_list_frame = ttk.Labelframe(zombie_page, text="Zombie List", bootstyle=DANGER)
+    zombie_list_frame.place(x=0, y=0, anchor=NW, height=275, width=300)
     zombie_list_box_scrollbar = ttk.Scrollbar(zombie_list_frame, bootstyle=DANGER)
     zombie_list_box = ttk.Treeview(
         zombie_list_frame,
@@ -3334,7 +3334,7 @@ def mainWindow():
 
     refresh_zombie_list()
     zombie_attribute_frame = ttk.Frame(zombie_list_frame)
-    zombie_attribute_frame.place(x=80, y=0, height=240, width=190)
+    zombie_attribute_frame.place(x=80, y=0, height=240, width=260)
     zombie_state_frame = ttk.Frame(zombie_attribute_frame)
     zombie_state_frame.grid(row=0, column=0, columnspan=12, sticky=W)
     ttk.Label(zombie_state_frame, text="Zombie type:").grid(
@@ -3344,8 +3344,8 @@ def mainWindow():
     zombie_type_entry = ttk.Entry(
         zombie_state_frame,
         textvariable=zombie_type_value,
-        width=18,
-        font=("Black body", 8),
+        width=22,
+        font=("Microsoft YaHei", 8),
         state=READONLY,
         bootstyle=SECONDARY,
     )
@@ -3356,7 +3356,7 @@ def mainWindow():
         zombie_state_frame,
         textvariable=zombie_state_value,
         width=3,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     zombie_state_entry.grid(row=1, column=1, sticky=W)
@@ -3367,13 +3367,13 @@ def mainWindow():
 
     zombie_state_entry.bind("<Return>", setZombieState)
     zombie_state_entry.bind("<FocusOut>", setZombieState)
-    ttk.Label(zombie_state_frame, text="大小:").grid(row=1, column=3, sticky=W)
+    ttk.Label(zombie_state_frame, text="Size:").grid(row=1, column=3, sticky=W)
     zombie_size_value = ttk.DoubleVar(zombie_state_frame)
     zombie_size_entry = ttk.Entry(
         zombie_state_frame,
         textvariable=zombie_size_value,
         width=6,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     zombie_size_entry.grid(row=1, column=4, sticky=W)
@@ -3385,7 +3385,7 @@ def mainWindow():
     zombie_size_entry.bind("<Return>", setZombieSize)
     zombie_size_entry.bind("<FocusOut>", setZombieSize)
     zombie_position_frame = ttk.Labelframe(
-        zombie_attribute_frame, text="位置", bootstyle=DANGER
+        zombie_attribute_frame, text="Position", bootstyle=DANGER
     )
     zombie_position_frame.grid(row=2, column=0, columnspan=4, sticky=W)
     ttk.Label(zombie_position_frame, text="X coordinate:").grid(
@@ -3396,7 +3396,7 @@ def mainWindow():
         zombie_position_frame,
         textvariable=zombie_x_value,
         width=6,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     zombie_x_entry.grid(row=0, column=3, columnspan=3, sticky=W)
@@ -3408,7 +3408,7 @@ def mainWindow():
 
     zombie_x_entry.bind("<Return>", setZombieX)
     zombie_x_entry.bind("<FocusOut>", setZombieX)
-    ttk.Label(zombie_position_frame, text="y坐标:").grid(
+    ttk.Label(zombie_position_frame, text="Y Coord:").grid(
         row=1, column=0, columnspan=3, sticky=W
     )
     zombie_y_value = ttk.DoubleVar(zombie_position_frame)
@@ -3416,7 +3416,7 @@ def mainWindow():
         zombie_position_frame,
         textvariable=zombie_y_value,
         width=6,
-        font=("Black body", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     zombie_y_entry.grid(row=1, column=3, columnspan=3, sticky=W)
@@ -3427,14 +3427,14 @@ def mainWindow():
 
     zombie_y_entry.bind("<Return>", setZombieY)
     zombie_y_entry.bind("<FocusOut>", setZombieY)
-    ttk.Label(zombie_position_frame, text="第").grid(row=2, column=0, sticky=W)
+    ttk.Label(zombie_position_frame, text="Row ").grid(row=2, column=0, sticky=W)
     zombie_row_value = ttk.IntVar(zombie_position_frame)
     zombie_row_combobox = ttk.Combobox(
         zombie_position_frame,
         textvariable=zombie_row_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -3447,7 +3447,7 @@ def mainWindow():
 
     zombie_row_combobox.bind("<<ComboboxSelected>>", setZombieRow)
     zombie_hp_frame = ttk.Labelframe(
-        zombie_attribute_frame, text="血量", bootstyle=DANGER
+        zombie_attribute_frame, text="HP", bootstyle=DANGER
     )
     zombie_hp_frame.grid(row=2, column=4, columnspan=8, sticky=W)
     zombie_hp_frame.grid_columnconfigure(0, minsize=50)
@@ -3457,7 +3457,7 @@ def mainWindow():
         zombie_hp_frame,
         textvariable=zombie_hp_value,
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     zombie_hp_entry.grid(row=0, column=1, ipady=0)
@@ -3468,14 +3468,14 @@ def mainWindow():
 
     zombie_hp_entry.bind("<Return>", setZombieHP)
     zombie_hp_entry.bind("<FocusOut>", setZombieHP)
-    zombie_hatHP_label = ttk.Label(zombie_hp_frame, text="帽子:")
+    zombie_hatHP_label = ttk.Label(zombie_hp_frame, text="Hat:")
     zombie_hatHP_label.grid(row=1, column=0)
     zombie_hatHP_value = ttk.IntVar(zombie_hp_frame)
     zombie_hatHP_entry = ttk.Entry(
         zombie_hp_frame,
         textvariable=zombie_hatHP_value,
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     zombie_hatHP_entry.grid(row=1, column=1, ipady=0)
@@ -3486,13 +3486,13 @@ def mainWindow():
 
     zombie_hatHP_entry.bind("<Return>", setZombieHatHP)
     zombie_hatHP_entry.bind("<FocusOut>", setZombieHatHP)
-    ttk.Label(zombie_hp_frame, text="铁门:").grid(row=2, column=0, padx=(2, 0))
+    ttk.Label(zombie_hp_frame, text="Iron Door:").grid(row=2, column=0, padx=(2, 0))
     zombie_doorHP_value = ttk.IntVar(zombie_hp_frame)
     zombie_doorHP_entry = ttk.Entry(
         zombie_hp_frame,
         textvariable=zombie_doorHP_value,
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     zombie_doorHP_entry.grid(row=2, column=1, ipady=0)
@@ -3504,16 +3504,16 @@ def mainWindow():
     zombie_doorHP_entry.bind("<Return>", setZombieDoorHP)
     zombie_doorHP_entry.bind("<FocusOut>", setZombieDoorHP)
     zombie_control_frame = ttk.Labelframe(
-        zombie_attribute_frame, text="控制时间", bootstyle=DANGER
+        zombie_attribute_frame, text="Control Time", bootstyle=DANGER
     )
     zombie_control_frame.grid(row=3, column=0, columnspan=3, sticky=W)
-    ttk.Label(zombie_control_frame, text="减速:").grid(row=0, column=0)
+    ttk.Label(zombie_control_frame, text="Slow:").grid(row=0, column=0)
     zombie_slow_value = ttk.IntVar(zombie_control_frame)
     zombie_slow_entry = ttk.Entry(
         zombie_control_frame,
         textvariable=zombie_slow_value,
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     zombie_slow_entry.grid(row=0, column=1, ipady=0)
@@ -3524,14 +3524,14 @@ def mainWindow():
 
     zombie_slow_entry.bind("<Return>", setZombieSlow)
     zombie_slow_entry.bind("<FocusOut>", setZombieSlow)
-    zombie_butter_label = ttk.Label(zombie_control_frame, text="黄油:")
+    zombie_butter_label = ttk.Label(zombie_control_frame, text="Butter:")
     zombie_butter_label.grid(row=1, column=0)
     zombie_butter_value = ttk.IntVar(zombie_control_frame)
     zombie_butter_entry = ttk.Entry(
         zombie_control_frame,
         textvariable=zombie_butter_value,
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     zombie_butter_entry.grid(row=1, column=1, ipady=0)
@@ -3542,13 +3542,13 @@ def mainWindow():
 
     zombie_butter_entry.bind("<Return>", setZombieButter)
     zombie_butter_entry.bind("<FocusOut>", setZombieButter)
-    ttk.Label(zombie_control_frame, text="冻结:").grid(row=2, column=0, padx=(2, 0))
+    ttk.Label(zombie_control_frame, text="Freeze:").grid(row=2, column=0, padx=(2, 0))
     zombie_frozen_value = ttk.IntVar(zombie_control_frame)
     zombie_frozen_entry = ttk.Entry(
         zombie_control_frame,
         textvariable=zombie_frozen_value,
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     zombie_frozen_entry.grid(row=2, column=1, ipady=0)
@@ -3560,7 +3560,7 @@ def mainWindow():
     zombie_frozen_entry.bind("<Return>", setZombieFrozen)
     zombie_frozen_entry.bind("<FocusOut>", setZombieFrozen)
     zombie_flag_frame = ttk.Labelframe(
-        zombie_attribute_frame, text="状态标志", bootstyle=DANGER
+        zombie_attribute_frame, text="Status Flags", bootstyle=DANGER
     )
     zombie_flag_frame.grid(row=3, column=3, columnspan=8, sticky=W)
     zombie_exist_flag = ttk.BooleanVar(zombie_flag_frame)
@@ -3571,7 +3571,7 @@ def mainWindow():
 
     ttk.Checkbutton(
         zombie_flag_frame,
-        text="存在",
+        text="Exists",
         bootstyle="danger-round-toggle",
         variable=zombie_exist_flag,
         command=lambda: change_zombie_exist(),
@@ -3637,16 +3637,16 @@ def mainWindow():
         command=lambda: change_zombie_isDying(),
     ).grid(row=2, column=1)
 
-    zombie_put_frame = ttk.Labelframe(zombie_page, text="放置僵尸", bootstyle=DANGER)
-    zombie_put_frame.place(x=280, y=0, anchor=NW, height=120, width=130)
-    ttk.Label(zombie_put_frame, text="第").grid(row=0, column=0)
+    zombie_put_frame = ttk.Labelframe(zombie_page, text="Place Zombie", bootstyle=DANGER)
+    zombie_put_frame.place(x=330, y=0, anchor=NW, height=145, width=220)
+    ttk.Label(zombie_put_frame, text="Row ").grid(row=0, column=0)
     zombiePut_start_row_value = ttk.IntVar(zombie_put_frame)
     zombiePut_start_row_combobox = ttk.Combobox(
         zombie_put_frame,
         textvariable=zombiePut_start_row_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -3659,7 +3659,7 @@ def mainWindow():
         textvariable=zombiePut_start_col_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -3673,7 +3673,7 @@ def mainWindow():
         textvariable=zombiePut_end_row_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -3686,7 +3686,7 @@ def mainWindow():
         textvariable=zombiePut_end_col_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -3695,9 +3695,9 @@ def mainWindow():
     ttk.Label(zombie_put_frame, text="List").grid(row=1, column=4)
     zombiePut_type_combobox = ttk.Combobox(
         zombie_put_frame,
-        width=15,
+        width=18,
         values=PVZ_data.zombiesType,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -3708,7 +3708,7 @@ def mainWindow():
     )
     zombiePut_num = ttk.IntVar(zombie_put_frame)
     zombiePut_num_entry = ttk.Entry(
-        zombie_put_frame, textvariable=zombiePut_num, font=("黑体", 8), width=7
+        zombie_put_frame, textvariable=zombiePut_num, font=("Microsoft YaHei", 8), width=7
     )
     zombiePut_num_entry.grid(row=3, column=0, columnspan=2, sticky=W)
     ttk.Label(zombie_put_frame, text="Only").grid(row=3, column=2)
@@ -3748,8 +3748,8 @@ def mainWindow():
         ),
     ).grid(row=3, column=0, columnspan=5, sticky=E)
 
-    zombie_seed_frame = ttk.Labelframe(zombie_page, text="修改出怪", bootstyle=DANGER)
-    zombie_seed_frame.place(x=280, y=130, anchor=NW, height=100, width=130)
+    zombie_seed_frame = ttk.Labelframe(zombie_page, text="Modify Spawns", bootstyle=DANGER)
+    zombie_seed_frame.place(x=330, y=130, anchor=NW, height=100, width=180)
     pausee_spawn_status = ttk.BooleanVar(zombie_seed_frame)
     pausee_spawn_check = ttk.Checkbutton(
         zombie_seed_frame,
@@ -3761,16 +3761,16 @@ def mainWindow():
     pausee_spawn_check.grid(row=0, column=0, sticky=W)
 
     zombie_characteristic_frame = ttk.Labelframe(
-        zombie_page, text="BOSS血量", bootstyle=DANGER
+        zombie_page, text="BOSS HP", bootstyle=DANGER
     )
-    zombie_characteristic_frame.place(x=280, y=230, anchor=NW, height=150, width=150)
-    ttk.Label(zombie_characteristic_frame, text="僵王博士:").grid(row=0, column=0)
+    zombie_characteristic_frame.place(x=560, y=0, anchor=NW, height=150, width=180)
+    ttk.Label(zombie_characteristic_frame, text="Dr. Zomboss:").grid(row=0, column=0)
     boss1_hp_value = ttk.IntVar(zombie_characteristic_frame)
     boss1_hp_entry = ttk.Entry(
         zombie_characteristic_frame,
         textvariable=boss1_hp_value,
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     boss1_hp_entry.grid(row=0, column=1, ipady=0)
@@ -3782,13 +3782,13 @@ def mainWindow():
     boss1_hp_entry.bind("<Return>", setboss1HP)
     boss1_hp_entry.bind("<FocusOut>", setboss1HP)
 
-    ttk.Label(zombie_characteristic_frame, text="冰霜巨人:").grid(row=1, column=0)
+    ttk.Label(zombie_characteristic_frame, text="Frost Giant:").grid(row=1, column=0)
     boss2_hp_value = ttk.IntVar(zombie_characteristic_frame)
     boss2_hp_entry = ttk.Entry(
         zombie_characteristic_frame,
         textvariable=boss2_hp_value,
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     boss2_hp_entry.grid(row=1, column=1, ipady=0)
@@ -3800,13 +3800,13 @@ def mainWindow():
     boss2_hp_entry.bind("<Return>", setboss2HP)
     boss2_hp_entry.bind("<FocusOut>", setboss2HP)
 
-    ttk.Label(zombie_characteristic_frame, text="埃德加二世:").grid(row=2, column=0)
+    ttk.Label(zombie_characteristic_frame, text="Edgar II:").grid(row=2, column=0)
     boss3_hp_value = ttk.IntVar(zombie_characteristic_frame)
     boss3_hp_entry = ttk.Entry(
         zombie_characteristic_frame,
         textvariable=boss3_hp_value,
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     boss3_hp_entry.grid(row=2, column=1, ipady=0)
@@ -3825,13 +3825,13 @@ def mainWindow():
 
     boss_hp_button = ttk.Button(
         zombie_characteristic_frame,
-        text="修改",
+        text="Modify",
         command=lambda: setBossHP(),
     )
     boss_hp_button.grid(row=3, column=0, columnspan=2, sticky=E)
 
-    zombie_spoils_frame = ttk.Labelframe(zombie_page, text="击杀掉落", bootstyle=DANGER)
-    zombie_spoils_frame.place(x=0, y=260, anchor=NW, height=200, width=275)
+    zombie_spoils_frame = ttk.Labelframe(zombie_page, text="Kill Drops", bootstyle=DANGER)
+    zombie_spoils_frame.place(x=0, y=235, anchor=NW, height=200, width=320)
     spoil_1_percent = ttk.IntVar(zombie_spoils_frame)
     spoil_1_percent_spinbox = ttk.Spinbox(
         zombie_spoils_frame, from_=0, to=100, width=3, textvariable=spoil_1_percent
@@ -3840,21 +3840,21 @@ def mainWindow():
     ttk.Label(zombie_spoils_frame, text="%").grid(row=1, column=1)
     spoil_1_combobox = ttk.Combobox(
         zombie_spoils_frame,
-        width=8,
+        width=14,
         values=[
-            "无",
-            "银币",
-            "金币",
-            "钻石",
-            "中阳光",
-            "小阳光",
-            "大阳光",
-            "奖杯",
-            "纸条",
-            "植物卡片",
-            "潜艇伟伟迷",
-            "花园盆栽",
-            "随机植物卡片",
+            "None",
+            "Silver Coin",
+            "Gold Coin",
+            "Diamond",
+            "Medium Sun",
+            "Small Sun",
+            "Large Sun",
+            "Trophy",
+            "Note",
+            "Plant Card",
+            "Submarine Weiwei Mi",
+            "Garden Potted Plant",
+            "Random Plant Card",
         ],
         state=READONLY,
     )
@@ -3885,19 +3885,19 @@ def mainWindow():
         zombie_spoils_frame,
         width=8,
         values=[
-            "无",
-            "银币",
-            "金币",
-            "钻石",
-            "中阳光",
-            "小阳光",
-            "大阳光",
-            "奖杯",
-            "纸条",
-            "植物卡片",
-            "潜艇伟伟迷",
-            "花园盆栽",
-            "随机植物卡片",
+            "None",
+            "Silver Coin",
+            "Gold Coin",
+            "Diamond",
+            "Medium Sun",
+            "Small Sun",
+            "Large Sun",
+            "Trophy",
+            "Note",
+            "Plant Card",
+            "Submarine Weiwei Mi",
+            "Garden Potted Plant",
+            "Random Plant Card",
         ],
         state=READONLY,
     )
@@ -3928,19 +3928,19 @@ def mainWindow():
         zombie_spoils_frame,
         width=8,
         values=[
-            "无",
-            "银币",
-            "金币",
-            "钻石",
-            "中阳光",
-            "小阳光",
-            "大阳光",
-            "奖杯",
-            "纸条",
-            "植物卡片",
-            "潜艇伟伟迷",
-            "花园盆栽",
-            "随机植物卡片",
+            "None",
+            "Silver Coin",
+            "Gold Coin",
+            "Diamond",
+            "Medium Sun",
+            "Small Sun",
+            "Large Sun",
+            "Trophy",
+            "Note",
+            "Plant Card",
+            "Submarine Weiwei Mi",
+            "Garden Potted Plant",
+            "Random Plant Card",
         ],
         state=READONLY,
     )
@@ -3949,7 +3949,7 @@ def mainWindow():
     spoil_3_card = ttk.Combobox(
         zombie_spoils_frame, width=12, values=PVZ_data.plantsType
     )
-    spoil_3_card.insert(0, "选择植物")
+    spoil_3_card.insert(0, "Select Plant")
     spoil_3_card.configure(state=DISABLED)
     spoil_3_card.grid(row=3, column=3)
     spoil_3_card.bind("<Button-1>", lambda event: open_card_select_window(spoil_3_card))
@@ -3971,19 +3971,19 @@ def mainWindow():
         zombie_spoils_frame,
         width=8,
         values=[
-            "无",
-            "银币",
-            "金币",
-            "钻石",
-            "中阳光",
-            "小阳光",
-            "大阳光",
-            "奖杯",
-            "纸条",
-            "植物卡片",
-            "潜艇伟伟迷",
-            "花园盆栽",
-            "随机植物卡片",
+            "None",
+            "Silver Coin",
+            "Gold Coin",
+            "Diamond",
+            "Medium Sun",
+            "Small Sun",
+            "Large Sun",
+            "Trophy",
+            "Note",
+            "Plant Card",
+            "Submarine Weiwei Mi",
+            "Garden Potted Plant",
+            "Random Plant Card",
         ],
         state=READONLY,
     )
@@ -4108,7 +4108,7 @@ def mainWindow():
         command=lambda: setSpoils(),
     )
     zombie_spoils_check.grid(row=5, column=0, columnspan=4, sticky=W)
-    # ttk.Label(zombie_spoils_frame,text="卡片").grid(row=5,column=0)
+    # ttk.Label(zombie_spoils_frame,text="Card").grid(row=5,column=0)
     # spoil_card_combobox=ttk.Combobox(zombie_spoils_frame,width=8,values=data.plantsType,state=READONLY)
     # spoil_card_combobox.grid(row=5,column=1)
     # def setSpoilCard(event):
@@ -4132,7 +4132,7 @@ def mainWindow():
             label = ttk.Label(row, text=zombie_name, width=15, anchor=E)
             value = ttk.IntVar(row)
             entry = ttk.Entry(row, textvariable=value, width=8)
-            value.set(PVZ_data.PVZ_memory.read_uint(address))  # 假设的读取血量函数
+            value.set(PVZ_data.PVZ_memory.read_uint(address))  # Hypothetical HP reading function
             label.pack(side=LEFT, anchor=E)
             entry.pack(side=LEFT, expand=YES, fill=X)
             zombie_hp_values[zombie_name] = value
@@ -4151,7 +4151,7 @@ def mainWindow():
 
     zombie_HP_button = ttk.Button(
         zombie_page,
-        text="血量修改(已废弃)",
+        text="HP Modification (Deprecated)",
         bootstyle=DANGER,
         command=lambda: open_zombie_hp_window(),
     )
@@ -4169,11 +4169,11 @@ def mainWindow():
         global zombie_select
         if zombie_select is not None:
             try:
-                # 检查type是否在zombiesType范围内
+                # Check if type is within zombiesType range
                 if zombie_select.type < len(PVZ_data.zombiesType):
                     zombie_name = PVZ_data.zombiesType[zombie_select.type]
                 else:
-                    zombie_name = "未知"
+                    zombie_name = "Unknown"
 
                 zombie_type_value.set(str(zombie_select.type) + ":" + zombie_name)
                 if zombie_attribute_frame.focus_get() != zombie_state_entry:
@@ -4245,9 +4245,9 @@ def mainWindow():
 
     plant_page = ttk.Frame(page_tab)
     plant_page.pack()
-    page_tab.add(plant_page, text="植物修改")
-    plant_list_frame = ttk.Labelframe(plant_page, text="植物列表", bootstyle=SUCCESS)
-    plant_list_frame.place(x=0, y=0, anchor=NW, height=390, width=235)
+    page_tab.add(plant_page, text="Plant Modification")
+    plant_list_frame = ttk.Labelframe(plant_page, text="Plant List", bootstyle=SUCCESS)
+    plant_list_frame.place(x=0, y=0, anchor=NW, height=415, width=260)
     plant_list_box_scrollbar = ttk.Scrollbar(plant_list_frame, bootstyle=SUCCESS)
     plant_list_box = ttk.Treeview(
         plant_list_frame,
@@ -4303,7 +4303,7 @@ def mainWindow():
 
     refresh_plant_list()
     plant_attribute_frame = ttk.Frame(plant_list_frame)
-    plant_attribute_frame.place(x=80, y=0, height=370, width=150)
+    plant_attribute_frame.place(x=80, y=0, height=370, width=220)
     plant_state_frame = ttk.Frame(plant_attribute_frame)
     plant_state_frame.grid(row=0, column=0, columnspan=12, sticky=W)
     ttk.Label(plant_state_frame, text="Plant:").grid(
@@ -4313,8 +4313,8 @@ def mainWindow():
     plant_type_entry = ttk.Entry(
         plant_state_frame,
         textvariable=plant_type_value,
-        width=12,
-        font=("黑体", 8),
+        width=18,
+        font=("Microsoft YaHei", 8),
         state=READONLY,
         bootstyle=SECONDARY,
     )
@@ -4325,7 +4325,7 @@ def mainWindow():
         plant_state_frame,
         textvariable=plant_state_value,
         width=3,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     plant_state_entry.grid(row=1, column=1, sticky=W)
@@ -4337,7 +4337,7 @@ def mainWindow():
     plant_state_entry.bind("<Return>", setPlantState)
     plant_state_entry.bind("<FocusOut>", setPlantState)
     plant_position_frame = ttk.Labelframe(
-        plant_attribute_frame, text="位置", bootstyle=SUCCESS
+        plant_attribute_frame, text="Position", bootstyle=SUCCESS
     )
     plant_position_frame.grid(row=2, column=0, columnspan=4, sticky=W)
     ttk.Label(plant_position_frame, text="X coordinate:").grid(
@@ -4348,7 +4348,7 @@ def mainWindow():
         plant_position_frame,
         textvariable=plant_x_value,
         width=6,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     plant_x_entry.grid(row=0, column=3, columnspan=3, sticky=W)
@@ -4360,7 +4360,7 @@ def mainWindow():
 
     plant_x_entry.bind("<Return>", setPlantX)
     plant_x_entry.bind("<FocusOut>", setPlantX)
-    ttk.Label(plant_position_frame, text="y坐标:").grid(
+    ttk.Label(plant_position_frame, text="Y Coord:").grid(
         row=1, column=0, columnspan=3, sticky=W
     )
     plant_y_value = ttk.IntVar(plant_position_frame)
@@ -4368,7 +4368,7 @@ def mainWindow():
         plant_position_frame,
         textvariable=plant_y_value,
         width=6,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     plant_y_entry.grid(row=1, column=3, columnspan=3, sticky=W)
@@ -4385,7 +4385,7 @@ def mainWindow():
         textvariable=plant_row_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -4403,7 +4403,7 @@ def mainWindow():
         textvariable=plant_col_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6, 7, 8, 9],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -4415,13 +4415,13 @@ def mainWindow():
         plant_position_frame.focus_set()
 
     plant_col_combobox.bind("<<ComboboxSelected>>", setPlantCol)
-    ttk.Label(plant_state_frame, text="血量:").grid(row=1, column=3)
+    ttk.Label(plant_state_frame, text="HP:").grid(row=1, column=3)
     plant_hp_value = ttk.IntVar(plant_state_frame)
     plant_hp_entry = ttk.Entry(
         plant_state_frame,
         textvariable=plant_hp_value,
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     plant_hp_entry.grid(row=1, column=4, ipady=0)
@@ -4433,7 +4433,7 @@ def mainWindow():
     plant_hp_entry.bind("<Return>", setPlantHP)
     plant_hp_entry.bind("<FocusOut>", setPlantHP)
     plant_time_frame = ttk.Labelframe(
-        plant_attribute_frame, text="倒计时", bootstyle=SUCCESS
+        plant_attribute_frame, text="Countdown", bootstyle=SUCCESS
     )
     plant_time_frame.grid(row=3, column=0, columnspan=3, sticky=W)
     plant_dietime_label = ttk.Label(plant_time_frame, text="die:")
@@ -4448,7 +4448,7 @@ def mainWindow():
         plant_time_frame,
         textvariable=plant_dietime_value,
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     plant_dietime_entry.grid(row=0, column=1, ipady=0)
@@ -4459,7 +4459,7 @@ def mainWindow():
 
     plant_dietime_entry.bind("<Return>", setPlantDieTime)
     plant_dietime_entry.bind("<FocusOut>", setPlantDieTime)
-    plant_cindertime_label = ttk.Label(plant_time_frame, text="灰烬:")
+    plant_cindertime_label = ttk.Label(plant_time_frame, text="Ash:")
     plant_cindertime_label.grid(row=1, column=0)
     ToolTip(
         plant_cindertime_label,
@@ -4471,7 +4471,7 @@ def mainWindow():
         plant_time_frame,
         textvariable=plant_cindertime_value,
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     plant_cindertime_entry.grid(row=1, column=1, ipady=0)
@@ -4482,7 +4482,7 @@ def mainWindow():
 
     plant_cindertime_entry.bind("<Return>", setPlantCinderTime)
     plant_cindertime_entry.bind("<FocusOut>", setPlantCinderTime)
-    plant_effecttime_label = ttk.Label(plant_time_frame, text="效果:")
+    plant_effecttime_label = ttk.Label(plant_time_frame, text="Effect:")
     plant_effecttime_label.grid(row=2, column=0, padx=(2, 0))
     ToolTip(
         plant_effecttime_label,
@@ -4494,7 +4494,7 @@ def mainWindow():
         plant_time_frame,
         textvariable=plant_effecttime_value,
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     plant_effecttime_entry.grid(row=2, column=1, ipady=0)
@@ -4505,7 +4505,7 @@ def mainWindow():
 
     plant_effecttime_entry.bind("<Return>", setPlantEffectTime)
     plant_effecttime_entry.bind("<FocusOut>", setPlantEffectTime)
-    plant_producttime_label = ttk.Label(plant_time_frame, text="攻击:")
+    plant_producttime_label = ttk.Label(plant_time_frame, text="Attack:")
     plant_producttime_label.grid(row=3, column=0, padx=(2, 0))
     ToolTip(
         plant_producttime_label, text="Some plants attack countdown", bootstyle=(INFO, INVERSE)
@@ -4515,7 +4515,7 @@ def mainWindow():
         plant_time_frame,
         textvariable=plant_producttime_value,
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     plant_producttime_entry.grid(row=3, column=1, ipady=0)
@@ -4526,7 +4526,7 @@ def mainWindow():
 
     plant_producttime_entry.bind("<Return>", setPlantProductTime)
     plant_producttime_entry.bind("<FocusOut>", setPlantProductTime)
-    plant_productinterval_label = ttk.Label(plant_time_frame, text="间隔:")
+    plant_productinterval_label = ttk.Label(plant_time_frame, text="Interval:")
     plant_productinterval_label.grid(row=4, column=0, padx=(2, 0))
     ToolTip(
         plant_productinterval_label, text="The above plant attack interval", bootstyle=(INFO, INVERSE)
@@ -4536,7 +4536,7 @@ def mainWindow():
         plant_time_frame,
         textvariable=plant_productinterval_value,
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     plant_productinterval_entry.grid(row=4, column=1, ipady=0)
@@ -4547,7 +4547,7 @@ def mainWindow():
 
     plant_productinterval_entry.bind("<Return>", setPlantProductInterval)
     plant_productinterval_entry.bind("<FocusOut>", setPlantProductInterval)
-    plant_attacktime_label = ttk.Label(plant_time_frame, text="射击:")
+    plant_attacktime_label = ttk.Label(plant_time_frame, text="Shoot:")
     plant_attacktime_label.grid(row=5, column=0, padx=(2, 0))
     ToolTip(
         plant_attacktime_label, text="Some plants attack countdown", bootstyle=(INFO, INVERSE)
@@ -4557,7 +4557,7 @@ def mainWindow():
         plant_time_frame,
         textvariable=plant_attacktime_value,
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     plant_attacktime_entry.grid(row=5, column=1, ipady=0)
@@ -4568,7 +4568,7 @@ def mainWindow():
 
     plant_attacktime_entry.bind("<Return>", setPlantAttackTime)
     plant_attacktime_entry.bind("<FocusOut>", setPlantAttackTime)
-    plant_suntime_label = ttk.Label(plant_time_frame, text="阳光:")
+    plant_suntime_label = ttk.Label(plant_time_frame, text="Sun:")
     plant_suntime_label.grid(row=6, column=0, padx=(2, 0))
     ToolTip(plant_suntime_label, text="Queen produces sunlight countdown", bootstyle=(INFO, INVERSE))
     plant_suntime_value = ttk.IntVar(plant_time_frame)
@@ -4576,7 +4576,7 @@ def mainWindow():
         plant_time_frame,
         textvariable=plant_suntime_value,
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     plant_suntime_entry.grid(row=6, column=1, ipady=0)
@@ -4587,7 +4587,7 @@ def mainWindow():
 
     plant_suntime_entry.bind("<Return>", setPlantSunTime)
     plant_suntime_entry.bind("<FocusOut>", setPlantSunTime)
-    plant_humtime_label = ttk.Label(plant_time_frame, text="阳光:")
+    plant_humtime_label = ttk.Label(plant_time_frame, text="Sun:")
     plant_humtime_label.grid(row=7, column=0, padx=(2, 0))
     ToolTip(plant_humtime_label, text="Burger King produces sunlight countdown", bootstyle=(INFO, INVERSE))
     plant_humtime_value = ttk.IntVar(plant_time_frame)
@@ -4595,7 +4595,7 @@ def mainWindow():
         plant_time_frame,
         textvariable=plant_humtime_value,
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     plant_humtime_entry.grid(row=7, column=1, ipady=0)
@@ -4607,7 +4607,7 @@ def mainWindow():
     plant_humtime_entry.bind("<Return>", setPlantHumTime)
     plant_humtime_entry.bind("<FocusOut>", setPlantHumTime)
     plant_flag_frame = ttk.Labelframe(
-        plant_attribute_frame, text="状态标志", bootstyle=SUCCESS
+        plant_attribute_frame, text="Status Flags", bootstyle=SUCCESS
     )
     plant_flag_frame.grid(row=3, column=3, columnspan=8, sticky=W)
     plant_exist_flag = ttk.BooleanVar(plant_flag_frame)
@@ -4671,16 +4671,16 @@ def mainWindow():
         command=lambda: change_plant_isSleep(),
     ).grid(row=4, column=0)
 
-    plant_put_frame = ttk.Labelframe(plant_page, text="种植", bootstyle=SUCCESS)
-    plant_put_frame.place(x=240, y=0, anchor=NW, height=120, width=130)
-    ttk.Label(plant_put_frame, text="第").grid(row=0, column=0)
+    plant_put_frame = ttk.Labelframe(plant_page, text="Planting", bootstyle=SUCCESS)
+    plant_put_frame.place(x=290, y=0, anchor=NW, height=135, width=220)
+    ttk.Label(plant_put_frame, text="Row ").grid(row=0, column=0)
     plantPut_start_row_value = ttk.IntVar(plant_put_frame)
     plantPut_start_row_combobox = ttk.Combobox(
         plant_put_frame,
         textvariable=plantPut_start_row_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -4693,7 +4693,7 @@ def mainWindow():
         textvariable=plantPut_start_col_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6, 7, 8, 9],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -4707,7 +4707,7 @@ def mainWindow():
         textvariable=plantPut_end_row_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -4720,7 +4720,7 @@ def mainWindow():
         textvariable=plantPut_end_col_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6, 7, 8, 9],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -4729,9 +4729,9 @@ def mainWindow():
     ttk.Label(plant_put_frame, text="List").grid(row=1, column=4)
     plantPut_type_combobox = ttk.Combobox(
         plant_put_frame,
-        width=10,
+        width=14,
         values=PVZ_data.plantsType,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -4807,12 +4807,12 @@ def mainWindow():
     plant_characteristic_frame = ttk.Labelframe(
         plant_page, text="Basic attribute", bootstyle=SUCCESS
     )
-    plant_characteristic_frame.place(x=240, y=130, anchor=NW, height=140, width=130)
+    plant_characteristic_frame.place(x=290, y=130, anchor=NW, height=155, width=220)
     plant_type_combobox = ttk.Combobox(
         plant_characteristic_frame,
-        width=10,
+        width=14,
         values=PVZ_data.plantsType,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -4838,7 +4838,7 @@ def mainWindow():
         plant_characteristic_frame,
         textvariable=plant_characteristic_sun_value,
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     plant_characteristic_sun_entry.grid(row=1, column=1, ipady=0)
@@ -4849,14 +4849,14 @@ def mainWindow():
 
     plant_characteristic_sun_entry.bind("<Return>", setPlantCharacteristicSun)
     plant_characteristic_sun_entry.bind("<FocusOut>", setPlantCharacteristicSun)
-    plant_characteristic_cd_label = ttk.Label(plant_characteristic_frame, text="冷却:")
+    plant_characteristic_cd_label = ttk.Label(plant_characteristic_frame, text="Cooldown:")
     plant_characteristic_cd_label.grid(row=2, column=0)
     plant_characteristic_cd_value = ttk.IntVar(plant_characteristic_frame)
     plant_characteristic_cd_entry = ttk.Entry(
         plant_characteristic_frame,
         textvariable=plant_characteristic_cd_value,
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     plant_characteristic_cd_entry.grid(row=2, column=1, ipady=0)
@@ -4887,7 +4887,7 @@ def mainWindow():
         plant_characteristic_frame,
         textvariable=plant_characteristic_attackinterval_value,
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     plant_characteristic_attackinterval_entry.grid(row=4, column=1, ipady=0)
@@ -4916,15 +4916,15 @@ def mainWindow():
         plant_characteristic_frame.focus_set()
 
     bullet_frame = ttk.Labelframe(plant_page, text="Bullet modification", bootstyle=SUCCESS)
-    bullet_frame.place(x=0, y=390, anchor=NW, height=120, width=300)
+    bullet_frame.place(x=50, y=340, anchor=NW, height=120, width=360)
     all_bullet_frame = ttk.Frame(bullet_frame)
     all_bullet_frame.pack(anchor=W)
     all_bullet_status = ttk.BooleanVar(all_bullet_frame)
     bullet_type_modify_combobox = ttk.Combobox(
         all_bullet_frame,
-        width=10,
+        width=12,
         values=PVZ_data.bulletType,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -4975,7 +4975,7 @@ def mainWindow():
     attack_speed_checkbutton = ttk.Checkbutton(
         attack_speed_frame,
         variable=attack_speed_status,
-        text="植物攻速倍率:",
+        text="Plant Attack Speed Multiplier:",
         bootstyle="success-round-toggle",
         command=lambda: pvz.setAttackSpeed(
             attack_speed_status.get(), attack_speed_multiple.get()
@@ -4984,11 +4984,11 @@ def mainWindow():
 
     attack_speed_checkbutton.pack(side=LEFT)
     # ToolTip(
-    #     attack_speed_label, text="过高会导致植物无法攻击", bootstyle=(INFO, INVERSE)
+    #     attack_speed_label, text="Too high will cause plants to be unable to attack", bootstyle=(INFO, INVERSE)
     # )
     attack_speed_entry = ttk.Entry(
         attack_speed_frame,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         width=5,
         textvariable=attack_speed_multiple,
     )
@@ -4997,14 +4997,14 @@ def mainWindow():
     # attack_animation_check = ttk.Checkbutton(
     #     attack_speed_frame,
     #     variable=attack_animation_status,
-    #     text="攻击无视动画",
+    #     text="Attack Ignores Animation",
     #     bootstyle="success-round-toggle",
     #     command=lambda: pvz.cancelAttackAnimation(attack_animation_status.get()),
     # )
     # attack_animation_check.pack(side=LEFT)
     # ToolTip(
     #     attack_animation_check,
-    #     text="部分植物有效，可无视动画进行攻击，提高攻速上限",
+    #     text="Effective for some plants, ignores animation, increases attack speed cap",
     #     bootstyle=(INFO, INVERSE),
     # )
     bullet_size_frame = ttk.Frame(bullet_frame)
@@ -5014,7 +5014,7 @@ def mainWindow():
         bullet_size_frame,
         width=3,
         textvariable=bullet_size,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     bullet_size_entry.pack(side=RIGHT)
@@ -5038,12 +5038,12 @@ def mainWindow():
     plant_bullet_frame = ttk.Labelframe(
         plant_page, text="Plant bullet modification", bootstyle=SUCCESS
     )
-    plant_bullet_frame.place(x=370, y=0, anchor=NW, height=130, width=100)
+    plant_bullet_frame.place(x=520, y=0, anchor=NW, height=130, width=200)
     plant_type_bullet_combobox = ttk.Combobox(
         plant_bullet_frame,
-        width=10,
+        width=14,
         values=PVZ_data.plantsType,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     plant_type_bullet_combobox.pack()
@@ -5068,9 +5068,9 @@ def mainWindow():
     ).pack()
     plant_bullet_type_combobox = ttk.Combobox(
         plant_bullet_frame,
-        width=10,
+        width=12,
         values=PVZ_data.bulletType,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -5109,25 +5109,25 @@ def mainWindow():
     plantBulletMode.set(0)
 
     # bullet_damage_frame = ttk.Labelframe(
-    #     plant_page, text="简易子弹伤害修改", bootstyle=SUCCESS
+    #     plant_page, text="Simple Bullet Damage Modification", bootstyle=SUCCESS
     # )
     # bullet_damage_frame.place(x=370, y=140, anchor=NW, height=100, width=100)
     # bullet_type_damage_combobox = ttk.Combobox(
     #     bullet_damage_frame,
     #     width=10,
     #     values=data.bulletType,
-    #     font=("黑体", 8),
+    #     font=("Microsoft YaHei", 8),
     #     bootstyle=SECONDARY,
     # )
     # bullet_type_damage_combobox.pack()
-    # bullet_type_damage_combobox.insert(0, "选择子弹")
+    # bullet_type_damage_combobox.insert(0, "Select Bullet")
     # bullet_type_damage_combobox.config(state=READONLY)
     # bullet_damage_status = ttk.BooleanVar(bullet_damage_frame)
     # bullet_type_damage_value = ttk.IntVar(bullet_damage_frame)
     # ttk.Checkbutton(
     #     bullet_damage_frame,
     #     variable=bullet_damage_status,
-    #     text="修改伤害为",
+    #     text="Modify Damage To",
     #     bootstyle="success-round-toggle",
     #     command=lambda: pvz.setBulletDamage(
     #         bullet_damage_status.get(),
@@ -5152,11 +5152,11 @@ def mainWindow():
         global plant_select
         if plant_select is not None:
             try:
-                # 检查type是否在plantsType范围内
+                # Check if type is within plantsType range
                 if plant_select.type < len(PVZ_data.plantsType):
                     plant_name = PVZ_data.plantsType[plant_select.type]
                 else:
-                    plant_name = "未知"
+                    plant_name = "Unknown"
 
                 plant_type_value.set(str(plant_select.type) + ":" + plant_name)
                 if plant_attribute_frame.focus_get() != plant_state_entry:
@@ -5197,8 +5197,8 @@ def mainWindow():
 
     grid_page = ttk.Frame(page_tab)
     grid_page.pack()
-    page_tab.add(grid_page, text="场地修改")
-    item_list_frame = ttk.Labelframe(grid_page, text="物品列表", bootstyle=DARK)
+    page_tab.add(grid_page, text="Field Modification")
+    item_list_frame = ttk.Labelframe(grid_page, text="Item List", bootstyle=DARK)
     item_list_frame.place(x=0, y=0, anchor=NW, height=140, width=200)
     item_list_box_scrollbar = ttk.Scrollbar(item_list_frame, bootstyle=DARK)
     item_list_box = ttk.Treeview(
@@ -5246,11 +5246,11 @@ def mainWindow():
             j = j + 1
         n = 0
         for k in range(item_num):
-            # 检查type是否在itemType范围内
+            # Check if type is within itemType range
             if item_list[k].type < len(PVZ_data.itemType):
                 type_name = PVZ_data.itemType[item_list[k].type]
             else:
-                type_name = "未知"
+                type_name = "Unknown"
 
             item_list_box.insert(
                 "",
@@ -5266,7 +5266,7 @@ def mainWindow():
 
     refresh_item_list()
     item_attribute_frame = ttk.Frame(item_list_frame)
-    item_attribute_frame.place(x=80, y=0, height=120, width=115)
+    item_attribute_frame.place(x=80, y=0, height=120, width=140)
     item_exist_flag = ttk.BooleanVar(item_attribute_frame)
 
     def change_item_exist():
@@ -5285,7 +5285,7 @@ def mainWindow():
         textvariable=item_row_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     item_row_combobox.grid(row=1, column=0)
@@ -5302,7 +5302,7 @@ def mainWindow():
         textvariable=item_col_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6, 7, 8, 9],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     item_col_combobox.grid(row=1, column=2)
@@ -5367,29 +5367,29 @@ def mainWindow():
                 i = i + 1
             j = j + 1
 
-    ladder_put_frame = ttk.Labelframe(grid_page, text="搭梯", bootstyle=DARK)
-    ladder_put_frame.place(x=200, y=0, anchor=NW, height=90, width=130)
-    ttk.Label(ladder_put_frame, text="第").grid(row=0, column=0)
+    ladder_put_frame = ttk.Labelframe(grid_page, text="Ladder", bootstyle=DARK)
+    ladder_put_frame.place(x=250, y=0, anchor=NW, height=90, width=180)
+    ttk.Label(ladder_put_frame, text="Row ").grid(row=0, column=0)
     ladder_start_row_value = ttk.IntVar(ladder_put_frame)
     item_start_row_combobox = ttk.Combobox(
         ladder_put_frame,
         textvariable=ladder_start_row_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
     item_start_row_combobox.grid(row=0, column=1)
     ladder_start_row_value.set(1)
-    ttk.Label(ladder_put_frame, text="行").grid(row=0, column=2)
+    ttk.Label(ladder_put_frame, text="Row").grid(row=0, column=2)
     ladder_start_col_value = ttk.IntVar(ladder_put_frame)
     item_start_col_combobox = ttk.Combobox(
         ladder_put_frame,
         textvariable=ladder_start_col_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6, 7, 8, 9],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -5403,7 +5403,7 @@ def mainWindow():
         textvariable=ladder_end_row_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -5416,7 +5416,7 @@ def mainWindow():
         textvariable=ladder_end_col_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6, 7, 8, 9],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -5451,15 +5451,15 @@ def mainWindow():
         command=lambda: putLadders(),
     ).grid(row=2, column=0, columnspan=5, sticky=E)
 
-    car_frame = ttk.Labelframe(grid_page, text="小车", bootstyle=DANGER)
-    car_frame.place(x=330, y=0, anchor=NW, height=120, width=160)
+    car_frame = ttk.Labelframe(grid_page, text="Lawnmower", bootstyle=DANGER)
+    car_frame.place(x=380, y=0, anchor=NW, height=120, width=200)
     start_car_value = ttk.IntVar(ladder_put_frame)
     start_car_combobox = ttk.Combobox(
         car_frame,
         textvariable=start_car_value,
         width=5,
         values=[1, 2, 3, 4, 5, 6, "all"],
-        font=("Black body", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -5554,7 +5554,7 @@ def mainWindow():
         textvariable=recover_car_value,
         width=5,
         values=[1, 2, 3, 4, 5, 6, "all"],
-        font=("Black body", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -5676,10 +5676,10 @@ def mainWindow():
 
     item_list_box.bind("<<TreeviewSelect>>", get_item_select)
 
-    formation_frame = ttk.Labelframe(grid_page, text="布阵", bootstyle=SUCCESS)
+    formation_frame = ttk.Labelframe(grid_page, text="Formation", bootstyle=SUCCESS)
     formation_frame.place(x=0, y=140)
     # Set font
-    small_font = ("黑体", 8)
+    small_font = ("Microsoft YaHei", 8)
 
     # Venue data and ladder attributes
     plants_data = [[[] for _ in range(9)] for _ in range(6)]
@@ -5704,12 +5704,12 @@ def mainWindow():
     def manage_plants(i, j):
         formation_plant_window = ttk.Toplevel(formation_frame)
         formation_plant_window.title("Managed plant")
-        formation_plant_window.geometry("200x300")
+        formation_plant_window.geometry("280x320")
 
         main_window_x = main_window.winfo_x()
         main_window_y = main_window.winfo_y()
         formation_plant_window.geometry(f"+{main_window_x + 150}+{main_window_y + 150}")
-        # 列表框
+        # Listbox
         listbox = Listbox(formation_plant_window, height=10, font=small_font)
         listbox.pack()
 
@@ -5840,7 +5840,7 @@ def mainWindow():
     formation_config_frame = ttk.Frame(formation_frame)
     formation_config_frame.grid(row=6, column=0, columnspan=9, pady=(10, 0))
     new_formation_config_entry = ttk.Entry(
-        formation_config_frame, width=10, font=("宋体", 8)
+        formation_config_frame, width=10, font=("Microsoft YaHei", 8)
     )
     new_formation_config_entry.pack(side=LEFT, padx=2)
     new_formation_config_button = ttk.Button(
@@ -5852,7 +5852,7 @@ def mainWindow():
     )
     new_formation_config_button.pack(side=LEFT, padx=2)
     formation_config_combobox = ttk.Combobox(
-        formation_config_frame, width=12, bootstyle="secondary", font=("宋体", 8)
+        formation_config_frame, width=12, bootstyle="secondary", font=("Microsoft YaHei", 8)
     )
     formation_config_combobox.pack(side=LEFT, padx=2)
     formation_config_combobox.insert(0, "Choice formation")
@@ -6024,8 +6024,8 @@ def mainWindow():
     global vase_select
     puzzle_page = ttk.Frame(page_tab)
     puzzle_page.pack()
-    page_tab.add(puzzle_page, text="益智模式")
-    vase_list_frame = ttk.Labelframe(puzzle_page, text="罐子列表", bootstyle=WARNING)
+    page_tab.add(puzzle_page, text="Puzzle Mode")
+    vase_list_frame = ttk.Labelframe(puzzle_page, text="Vase List", bootstyle=WARNING)
     vase_list_frame.place(x=0, y=0, anchor=NW, height=260, width=240)
     vase_list_box_scrollbar = ttk.Scrollbar(vase_list_frame, bootstyle=WARNING)
     vase_list_box = ttk.Treeview(
@@ -6084,15 +6084,15 @@ def mainWindow():
 
     refresh_vase_list()
     vase_attribute_frame = ttk.Frame(vase_list_frame)
-    vase_attribute_frame.place(x=80, y=0, height=240, width=155)
+    vase_attribute_frame.place(x=80, y=0, height=240, width=200)
     vase_state_frame = ttk.Frame(vase_attribute_frame)
     vase_state_frame.grid(row=0, column=0, columnspan=12, sticky=W)
-    ttk.Label(vase_state_frame, text="内容:").grid(row=0, column=0, sticky=W)
+    ttk.Label(vase_state_frame, text="Content:").grid(row=0, column=0, sticky=W)
     vase_type_combobox = ttk.Combobox(
         vase_state_frame,
         width=10,
-        values=["空", "植物", "僵尸", "阳光"],
-        font=("黑体", 8),
+        values=["Empty", "Plant", "Zombie", "Sun"],
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -6104,12 +6104,12 @@ def mainWindow():
 
     vase_type_combobox.bind("<<ComboboxSelected>>", setvaseType)
 
-    ttk.Label(vase_state_frame, text="皮肤:").grid(row=1, column=0, sticky=W)
+    ttk.Label(vase_state_frame, text="Skin:").grid(row=1, column=0, sticky=W)
     vase_skin_combobox = ttk.Combobox(
         vase_state_frame,
         width=10,
-        values=["问号", "植物", "僵尸", "隐形"],
-        font=("黑体", 8),
+        values=["Question Mark", "Plant", "Zombie", "Invisible"],
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -6121,19 +6121,19 @@ def mainWindow():
 
     vase_skin_combobox.bind("<<ComboboxSelected>>", setvaseState)
     vase_position_frame = ttk.Labelframe(
-        vase_attribute_frame, text="位置", bootstyle=WARNING
+        vase_attribute_frame, text="Position", bootstyle=WARNING
     )
     vase_position_frame.grid(row=2, column=0, columnspan=4, sticky=W)
     vase_row_combobox = ttk.Combobox(
         vase_position_frame,
         width=2,
         values=[1, 2, 3, 4, 5, 6],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
     vase_row_combobox.grid(row=2, column=1, columnspan=3, sticky=W)
-    ttk.Label(vase_position_frame, text="行").grid(row=2, column=4, sticky=W)
+    ttk.Label(vase_position_frame, text="Row").grid(row=2, column=4, sticky=W)
 
     def setvaseRow(event):
         vase_select.setRow(vase_row_combobox.current() + 1)
@@ -6144,12 +6144,12 @@ def mainWindow():
         vase_position_frame,
         width=2,
         values=[1, 2, 3, 4, 5, 6, 7, 8, 9],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
     vase_col_combobox.grid(row=2, column=5, columnspan=3, sticky=W)
-    ttk.Label(vase_position_frame, text="列").grid(row=2, column=8, sticky=W)
+    ttk.Label(vase_position_frame, text="Column").grid(row=2, column=8, sticky=W)
 
     def setvaseCol(event):
         vase_select.setCol(vase_col_combobox.current() + 1)
@@ -6157,12 +6157,12 @@ def mainWindow():
 
     vase_col_combobox.bind("<<ComboboxSelected>>", setvaseCol)
 
-    ttk.Label(vase_attribute_frame, text="植物:").grid(row=3, column=0, sticky=W)
+    ttk.Label(vase_attribute_frame, text="Plant:").grid(row=3, column=0, sticky=W)
     vase_plant_combobox = ttk.Combobox(
         vase_attribute_frame,
         width=12,
         values=PVZ_data.plantsType,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -6187,12 +6187,12 @@ def mainWindow():
 
     vase_plant_combobox.bind("<<ComboboxSelected>>", set_vase_plant)
 
-    ttk.Label(vase_attribute_frame, text="僵尸:").grid(row=4, column=0, sticky=W)
+    ttk.Label(vase_attribute_frame, text="Zombie:").grid(row=4, column=0, sticky=W)
     vase_zombie_combobox = ttk.Combobox(
         vase_attribute_frame,
         width=12,
         values=PVZ_data.zombiesType,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -6218,17 +6218,17 @@ def mainWindow():
 
     vase_zombie_combobox.bind("<<ComboboxSelected>>", set_vase_zombie)
 
-    ttk.Label(vase_attribute_frame, text="阳光:").grid(row=5, column=0, sticky=W)
+    ttk.Label(vase_attribute_frame, text="Sun:").grid(row=5, column=0, sticky=W)
     vase_sun_combobox = ttk.Combobox(
         vase_attribute_frame,
         width=12,
         values=[1, 2, 3, 4, 5],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
     vase_sun_combobox.grid(row=5, column=1, columnspan=3, sticky=W)
-    ttk.Label(vase_attribute_frame, text="个").grid(row=5, column=4, sticky=W)
+    ttk.Label(vase_attribute_frame, text="Count").grid(row=5, column=4, sticky=W)
 
     def set_vase_sun(index=0):
         vase_select.setVaseSun(vase_sun_combobox.current() + 1)
@@ -6266,16 +6266,16 @@ def mainWindow():
 
     vase_list_box.bind("<<TreeviewSelect>>", get_vase_select)
 
-    vase_put_frame = ttk.Labelframe(puzzle_page, text="放置罐子", bootstyle=SECONDARY)
-    vase_put_frame.place(x=245, y=0, anchor=NW, height=260, width=340)
-    ttk.Label(vase_put_frame, text="皮肤", font=("黑体", 8)).grid(
+    vase_put_frame = ttk.Labelframe(puzzle_page, text="Place Vase", bootstyle=SECONDARY)
+    vase_put_frame.place(x=295, y=0, anchor=NW, height=260, width=380)
+    ttk.Label(vase_put_frame, text="Skin", font=("Microsoft YaHei", 8)).grid(
         padx=2, pady=2, row=0, column=0
     )
     vase_put_skin_combobox = ttk.Combobox(
         vase_put_frame,
         width=10,
-        values=["问号", "植物", "僵尸", "隐形"],
-        font=("黑体", 8),
+        values=["Question Mark", "Plant", "Zombie", "Invisible"],
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -6284,7 +6284,7 @@ def mainWindow():
     random_skin_status = ttk.BooleanVar(vase_put_frame)
     random_skin_check = ttk.Checkbutton(
         vase_put_frame,
-        text="随机皮肤",
+        text="Random Skin",
         variable=random_skin_status,
         bootstyle="secondary-round-toggle",
     )
@@ -6292,19 +6292,19 @@ def mainWindow():
     include_skin_status = ttk.BooleanVar(vase_put_frame)
     include_skin_check = ttk.Checkbutton(
         vase_put_frame,
-        text="包含隐形",
+        text="Include Invisible",
         variable=include_skin_status,
         bootstyle="secondary",
     )
     include_skin_check.grid(padx=2, pady=2, row=0, column=5, columnspan=2, sticky=W)
-    ttk.Label(vase_put_frame, text="内容", font=("黑体", 8)).grid(
+    ttk.Label(vase_put_frame, text="Content", font=("Microsoft YaHei", 8)).grid(
         padx=2, pady=2, row=1, column=0
     )
     vase_put_type_combobox = ttk.Combobox(
         vase_put_frame,
         width=10,
-        values=["空", "植物", "僵尸", "阳光"],
-        font=("黑体", 8),
+        values=["Empty", "Plant", "Zombie", "Sun"],
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -6313,7 +6313,7 @@ def mainWindow():
     random_type_status = ttk.BooleanVar(vase_put_frame)
     random_type_check = ttk.Checkbutton(
         vase_put_frame,
-        text="随机内容",
+        text="Random Content",
         variable=random_type_status,
         bootstyle="secondary-round-toggle",
     )
@@ -6321,7 +6321,7 @@ def mainWindow():
     include_type_status = ttk.BooleanVar(vase_put_frame)
     include_type_check = ttk.Checkbutton(
         vase_put_frame,
-        text="空",
+        text="Empty",
         variable=include_type_status,
         bootstyle="secondary",
     )
@@ -6329,19 +6329,19 @@ def mainWindow():
     include_type2_status = ttk.BooleanVar(vase_put_frame)
     include_type2_check = ttk.Checkbutton(
         vase_put_frame,
-        text="阳光",
+        text="Sun",
         variable=include_type2_status,
         bootstyle="secondary",
     )
     include_type2_check.grid(padx=2, pady=2, row=1, column=6)
-    ttk.Label(vase_put_frame, text="植物", font=("黑体", 8)).grid(
+    ttk.Label(vase_put_frame, text="Plant", font=("Microsoft YaHei", 8)).grid(
         padx=2, pady=2, row=2, column=0
     )
     vase_put_plantType_combobox = ttk.Combobox(
         vase_put_frame,
-        width=10,
+        width=14,
         values=PVZ_data.plantsType,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -6352,7 +6352,7 @@ def mainWindow():
     random_plantType_status = ttk.BooleanVar(vase_put_frame)
     random_plantType_check = ttk.Checkbutton(
         vase_put_frame,
-        text="随机植物",
+        text="Random Plant",
         variable=random_plantType_status,
         bootstyle="secondary-round-toggle",
     )
@@ -6381,14 +6381,14 @@ def mainWindow():
         vase_put_frame.focus_set()
 
     vase_put_plantType_combobox.bind("<<ComboboxSelected>>", set_vase_plantType)
-    ttk.Label(vase_put_frame, text="僵尸", font=("黑体", 8)).grid(
+    ttk.Label(vase_put_frame, text="Zombie", font=("Microsoft YaHei", 8)).grid(
         padx=2, pady=2, row=3, column=0
     )
     vase_put_zombieType_combobox = ttk.Combobox(
         vase_put_frame,
-        width=10,
+        width=14,
         values=PVZ_data.zombiesType,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -6423,7 +6423,7 @@ def mainWindow():
     random_zombieType_status = ttk.BooleanVar(vase_put_frame)
     random_zombieType_check = ttk.Checkbutton(
         vase_put_frame,
-        text="随机僵尸",
+        text="Random Zombie",
         variable=random_zombieType_status,
         bootstyle="secondary-round-toggle",
     )
@@ -6431,30 +6431,30 @@ def mainWindow():
     include_boss_status = ttk.BooleanVar(vase_put_frame)
     include_boss_check = ttk.Checkbutton(
         vase_put_frame,
-        text="僵王",
+        text="Zomboss",
         variable=include_boss_status,
         bootstyle="secondary",
     )
     include_boss_check.grid(padx=2, pady=2, row=3, column=5)
     vase_put_sun_frame = ttk.Frame(vase_put_frame)
     vase_put_sun_frame.grid(pady=2, row=4, column=0, columnspan=4, sticky=W)
-    ttk.Label(vase_put_sun_frame, text="阳光", font=("黑体", 8)).grid(
+    ttk.Label(vase_put_sun_frame, text="Sun", font=("Microsoft YaHei", 8)).grid(
         padx=2, pady=2, row=4, column=0
     )
     vase_put_sun_combobox = ttk.Combobox(
         vase_put_sun_frame,
         width=10,
         values=[1, 2, 3, 4, 5],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
     vase_put_sun_combobox.grid(padx=2, pady=2, row=4, column=1, columnspan=4, sticky=W)
     vase_put_sun_combobox.current(0)
-    ttk.Label(vase_put_sun_frame, text="个", font=("黑体", 8)).grid(
+    ttk.Label(vase_put_sun_frame, text="Count", font=("Microsoft YaHei", 8)).grid(
         padx=2, pady=2, row=4, column=5
     )
-    ttk.Label(vase_put_frame, text="第", font=("黑体", 8)).grid(
+    ttk.Label(vase_put_frame, text="Row ", font=("Microsoft YaHei", 8)).grid(
         padx=2, pady=2, row=5, column=0
     )
     vasePut_start_row_value = ttk.IntVar(vase_put_frame)
@@ -6463,13 +6463,13 @@ def mainWindow():
         textvariable=vasePut_start_row_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
     vasePut_start_row_combobox.grid(padx=2, pady=2, row=5, column=1)
     vasePut_start_row_value.set(1)
-    ttk.Label(vase_put_frame, text="行", font=("黑体", 8)).grid(
+    ttk.Label(vase_put_frame, text="Row", font=("Microsoft YaHei", 8)).grid(
         padx=2, pady=2, row=5, column=2
     )
     vasePut_start_col_value = ttk.IntVar(vase_put_frame)
@@ -6478,16 +6478,16 @@ def mainWindow():
         textvariable=vasePut_start_col_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6, 7, 8, 9],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
     vasePut_start_col_combobox.grid(padx=2, pady=2, row=5, column=3)
     vasePut_start_col_value.set(1)
-    ttk.Label(vase_put_frame, text="列", font=("黑体", 8)).grid(
+    ttk.Label(vase_put_frame, text="Column", font=("Microsoft YaHei", 8)).grid(
         padx=2, pady=2, row=5, column=4, sticky=W
     )
-    ttk.Label(vase_put_frame, text="至", font=("黑体", 8)).grid(
+    ttk.Label(vase_put_frame, text="To", font=("Microsoft YaHei", 8)).grid(
         padx=2, pady=2, row=6, column=0
     )
     vasePut_end_row_value = ttk.IntVar(vase_put_frame)
@@ -6496,13 +6496,13 @@ def mainWindow():
         textvariable=vasePut_end_row_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
     vasePut_end_row_combobox.grid(padx=2, pady=2, row=6, column=1)
     vasePut_end_row_value.set(1)
-    ttk.Label(vase_put_frame, text="行", font=("黑体", 8)).grid(
+    ttk.Label(vase_put_frame, text="Row", font=("Microsoft YaHei", 8)).grid(
         padx=2, pady=2, row=6, column=2
     )
     vasePut_end_col_value = ttk.IntVar(vase_put_frame)
@@ -6511,13 +6511,13 @@ def mainWindow():
         textvariable=vasePut_end_col_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6, 7, 8, 9],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
     vasePut_end_col_combobox.grid(padx=2, pady=2, row=6, column=3)
     vasePut_end_col_value.set(1)
-    ttk.Label(vase_put_frame, text="列", font=("黑体", 8)).grid(
+    ttk.Label(vase_put_frame, text="Column", font=("Microsoft YaHei", 8)).grid(
         padx=2, pady=2, row=6, column=4, sticky=W
     )
 
@@ -6655,7 +6655,7 @@ def mainWindow():
         if endRow > rows:
             endRow = rows
         if startRow > endRow or startCol > endCol:
-            Messagebox.show_error("起始行列大于终止行列", title="输入错误")
+            Messagebox.show_error("Start row/column is greater than end row/column", title="Input Error")
         else:
             for i in range(startRow, endRow + 1):
                 for j in range(startCol, endCol + 1):
@@ -6697,22 +6697,22 @@ def mainWindow():
     vase_button_frame = ttk.Frame(vase_put_frame)
     vase_button_frame.grid(row=7, column=0, columnspan=10)
     ttk.Button(
-        vase_button_frame, text="放置", bootstyle=SECONDARY, command=lambda: putVases(0)
+        vase_button_frame, text="Place", bootstyle=SECONDARY, command=lambda: putVases(0)
     ).pack(side=LEFT, padx=2)
     ttk.Button(
         vase_button_frame,
-        text="随机放置一个",
+        text="Random Place One",
         bootstyle=SECONDARY,
         command=lambda: putVases(1),
     ).pack(side=LEFT, padx=2)
     ttk.Button(
         vase_button_frame,
-        text="随机放置一列",
+        text="Random Place One Column",
         bootstyle=SECONDARY,
         command=lambda: putVases(2),
     ).pack(side=LEFT, padx=2)
 
-    iz_frame = ttk.Labelframe(puzzle_page, text="我是僵尸", bootstyle=DANGER)
+    iz_frame = ttk.Labelframe(puzzle_page, text="I, Zombie", bootstyle=DANGER)
     iz_frame.place(x=0, y=265, anchor=NW, height=300, width=320)
 
     iz_first_row = ttk.Frame(iz_frame)
@@ -6724,7 +6724,7 @@ def mainWindow():
     no_sun_status = ttk.BooleanVar(nosun_frame)
     no_sun_check = ttk.Checkbutton(
         nosun_frame,
-        text="不产阳光",
+        text="No Sun Production",
         variable=no_sun_status,
         bootstyle="success-round-toggle",
         command=lambda: pvz.noSun(no_sun_status.get()),
@@ -6733,7 +6733,7 @@ def mainWindow():
     red_line_frame = ttk.Frame(iz_first_row)
     red_line_frame.pack(pady=5, padx=5, side=LEFT)
     red_line_value = ttk.IntVar(red_line_frame)
-    ttk.Label(red_line_frame, text="红线位置").pack(side=LEFT)
+    ttk.Label(red_line_frame, text="Red Line Position").pack(side=LEFT)
 
     def set_red_line():
         global config
@@ -6768,10 +6768,10 @@ def mainWindow():
     random_button_row_frame = ttk.Frame(iz_first_row)
     random_button_row_frame.pack(pady=5, side=LEFT)
     ttk.Button(
-        random_button_row_frame, text="随机布阵", command=lambda: put_random_plant()
+        random_button_row_frame, text="Random Formation", command=lambda: put_random_plant()
     ).pack(side=LEFT, padx=10)
 
-    change_head_frame = ttk.Labelframe(iz_frame, text="礼盒僵尸", bootstyle=DANGER)
+    change_head_frame = ttk.Labelframe(iz_frame, text="Gift Box Zombie", bootstyle=DANGER)
     change_head_frame.pack()
     change_head_status = ttk.BooleanVar(change_head_frame)
     global change_head_zombie_type
@@ -6780,7 +6780,7 @@ def mainWindow():
         change_head_frame,
         width=8,
         values=PVZ_data.zombiesType,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -6829,13 +6829,13 @@ def mainWindow():
 
     ttk.Checkbutton(
         change_head_frame,
-        text="启用礼盒僵尸",
+        text="Enable Gift Box Zombie",
         bootstyle="round-toggle-success",
         variable=change_head_status,
         command=lambda: gift_zombie(),
     ).pack(side=LEFT)
     dead_boss_weight = ttk.IntVar(change_head_frame)
-    ttk.Label(change_head_frame, text="僵王概率").pack(side=LEFT)
+    ttk.Label(change_head_frame, text="Zomboss Probability").pack(side=LEFT)
     ttk.Spinbox(
         change_head_frame,
         textvariable=dead_boss_weight,
@@ -6869,7 +6869,7 @@ def mainWindow():
         config["plungins"]["iamzombie"]["start_zombie_slot"] = start_zombie_slot
         save_config(config, config_file_path)
 
-    ttk.Label(random_zombie_slots_frame, text="第").pack(side=LEFT)
+    ttk.Label(random_zombie_slots_frame, text="Row ").pack(side=LEFT)
     start_zombie_slot_spinbox = ttk.Spinbox(
         random_zombie_slots_frame,
         textvariable=start_zombie_slot_value,
@@ -6888,7 +6888,7 @@ def mainWindow():
         config["plungins"]["iamzombie"]["end_zombie_slot"] = end_zombie_slot
         save_config(config, config_file_path)
 
-    ttk.Label(random_zombie_slots_frame, text="槽至第").pack(side=LEFT)
+    ttk.Label(random_zombie_slots_frame, text="Slot To").pack(side=LEFT)
     end_zombie_slot_spinbox = ttk.Spinbox(
         random_zombie_slots_frame,
         textvariable=end_zombie_slot_value,
@@ -6898,7 +6898,7 @@ def mainWindow():
         command=lambda: set_end_zombie_slot(),
     )
     end_zombie_slot_spinbox.pack(side=LEFT)
-    ttk.Label(random_zombie_slots_frame, text="槽").pack(side=LEFT)
+    ttk.Label(random_zombie_slots_frame, text="Slot").pack(side=LEFT)
     if "start_zombie_slot" not in config["plungins"]["iamzombie"]:
         config["plungins"]["iamzombie"]["start_zombie_slot"] = 1
     if "end_zombie_slot" not in config["plungins"]["iamzombie"]:
@@ -6911,7 +6911,7 @@ def mainWindow():
     random_zombie_slots_status = ttk.BooleanVar(random_zombie_slots_frame)
     random_zombie_slots_check = ttk.Checkbutton(
         random_zombie_slots_frame,
-        text="随机僵尸卡槽",
+        text="Random Zombie Slot",
         variable=random_zombie_slots_status,
         bootstyle="success-round-toggle",
         command=lambda: pvz.randomZombieSlots(
@@ -6922,7 +6922,7 @@ def mainWindow():
 
     zombie_sun_frame = ttk.Labelframe(
         iz_frame,
-        text="阳光消耗(仅我是僵尸模式)",
+        text="Sun Cost (IZ Mode Only)",
         bootstyle=DANGER,
     )
     zombie_sun_frame.pack(
@@ -6930,9 +6930,9 @@ def mainWindow():
     )
     zombie_type_combobox = ttk.Combobox(
         zombie_sun_frame,
-        width=10,
+        width=14,
         values=PVZ_data.zombiesType,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -6952,13 +6952,13 @@ def mainWindow():
         lambda event: wait_select_zombie_sun_card(event, zombie_type_combobox),
     )
     zombie_type_combobox.grid(row=0, column=0, sticky=W)
-    ttk.Label(zombie_sun_frame, text="阳光:").grid(row=0, column=1)
+    ttk.Label(zombie_sun_frame, text="Sun:").grid(row=0, column=1)
     zombie_sun_sun_value = ttk.IntVar(zombie_sun_frame)
     zombie_sun_sun_entry = ttk.Entry(
         zombie_sun_frame,
         textvariable=zombie_sun_sun_value,
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     zombie_sun_sun_entry.grid(row=0, column=2, ipady=0)
@@ -6989,7 +6989,7 @@ def mainWindow():
     page_tab.add(slot_page, text="Slot modification")
     slots_configuration_mode = ttk.BooleanVar(slot_page)
     slots_configuration_mode.set(False)
-    slots_frame = ttk.Labelframe(slot_page, text="监视模式", bootstyle=SUCCESS)
+    slots_frame = ttk.Labelframe(slot_page, text="Monitor Mode", bootstyle=SUCCESS)
     slots_frame.place(x=0, y=0)
     slot_list = list()
 
@@ -7041,7 +7041,7 @@ def mainWindow():
 
         slot_type_combobox = ttk.Combobox(
             slots_frame,
-            width=12,
+            width=14,
             values=PVZ_data.plantsType,
             state="readonly",
             bootstyle="secondary",
@@ -7075,7 +7075,7 @@ def mainWindow():
             slots_frame,
             textvariable=slot_elapsed_value,
             width=5,
-            font=("黑体", 8),
+            font=("Microsoft YaHei", 8),
             bootstyle="secondary",
         )
         slot_elapsed_entrys.append(slot_elapsed_entry)
@@ -7094,7 +7094,7 @@ def mainWindow():
             slots_frame,
             textvariable=slot_cooldown_value,
             width=5,
-            font=("黑体", 8),
+            font=("Microsoft YaHei", 8),
             bootstyle="secondary",
         )
         slot_cooldown_entrys.append(slot_cooldown_entry)
@@ -7152,13 +7152,13 @@ def mainWindow():
         # slot_canUse_flags.append(slot_canUse_flag)
         # def change_slot_canUse(index=slot_number-1):
         #     slot_list[index].setCanUse(slot_canUse_flag.get())
-        # ttk.Checkbutton(slots_frame,text="可用",bootstyle="danger-round-toggle",variable=slot_canUse_flag,command=lambda:change_slot_canUse()).grid(row=slot_number-1,column=6)
+        # ttk.Checkbutton(slots_frame,text="Available",bootstyle="danger-round-toggle",variable=slot_canUse_flag,command=lambda:change_slot_canUse()).grid(row=slot_number-1,column=6)
 
-    # 为slots 1至14创建UI组件
+    # Create UI components for slots 1 to 14
     for slot_number in range(1, 17):
         create_slot_ui(slot_number)
 
-    slots_config_frame = ttk.Labelframe(slot_page, text="卡槽设置", bootstyle=SUCCESS)
+    slots_config_frame = ttk.Labelframe(slot_page, text="Slot Settings", bootstyle=SUCCESS)
     slots_config_frame.place(x=0, y=0, relx=1, anchor=NE)
     slot_num_frame = ttk.Frame(slots_config_frame)
     slot_num_frame.pack()
@@ -7169,7 +7169,7 @@ def mainWindow():
         textvariable=slots_num_value,
         width=2,
         values=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -7204,7 +7204,7 @@ def mainWindow():
     ttk.Label(change_all_frame, text="Modify all card slots:").pack(anchor=W)
     change_all_combobox = ttk.Combobox(
         change_all_frame,
-        width=12,
+        width=14,
         values=PVZ_data.plantsType,
         state="readonly",
         bootstyle="secondary",
@@ -7245,7 +7245,7 @@ def mainWindow():
     )
     random_slots_haszombie_check.pack()
 
-    card_select_frame = ttk.Labelframe(slot_page, text="选卡配置", bootstyle=DARK)
+    card_select_frame = ttk.Labelframe(slot_page, text="Card Selection Config", bootstyle=DARK)
     card_select_frame.place(x=0, y=180, relx=1, anchor=NE)
 
     def changeSlotsConfiguration():
@@ -7269,12 +7269,12 @@ def mainWindow():
     )
     # card_select_combobox = ttk.Combobox(card_select_frame, width=12, values=data.plantsType, state='readonly', bootstyle='secondary')
     # card_select_combobox.pack()
-    # ttk.Button(card_select_frame,text="选卡",command=lambda:pvz.selectCard(card_select_combobox.current())).pack()
-    # ttk.Button(card_select_frame,text="退卡",command=lambda:pvz.deselectCard(card_select_combobox.current())).pack()
+    # ttk.Button(card_select_frame,text="Select Cards",command=lambda:pvz.selectCard(card_select_combobox.current())).pack()
+    # ttk.Button(card_select_frame,text="Deselect Cards",command=lambda:pvz.deselectCard(card_select_combobox.current())).pack()
     new_solts_config_frame = ttk.Frame(card_select_frame)
     new_solts_config_frame.pack()
     new_solts_config_entry = ttk.Entry(
-        new_solts_config_frame, width=8, font=("宋体", 8)
+        new_solts_config_frame, width=8, font=("Microsoft YaHei", 8)
     )
     new_solts_config_entry.pack(side=LEFT)
 
@@ -7574,14 +7574,14 @@ def mainWindow():
         command=lambda: apply_slots_config(),
     ).grid(row=1, column=2)
 
-    card_select_frame = ttk.Labelframe(common_page, text="快捷种植", bootstyle=PRIMARY)
+    card_select_frame = ttk.Labelframe(common_page, text="Quick Planting", bootstyle=PRIMARY)
     card_select_frame.place(x=0, y=440, relx=0, anchor=NW)
     ttk.Label(card_select_frame, text="1:").grid(row=0, column=0)
     slot_1_key = ttk.Combobox(
         card_select_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_1_key.grid(row=0, column=1)
@@ -7589,9 +7589,9 @@ def mainWindow():
     ttk.Label(card_select_frame, text="2:").grid(row=0, column=2)
     slot_2_key = ttk.Combobox(
         card_select_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_2_key.grid(row=0, column=3)
@@ -7599,9 +7599,9 @@ def mainWindow():
     ttk.Label(card_select_frame, text="3:").grid(row=0, column=4)
     slot_3_key = ttk.Combobox(
         card_select_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_3_key.grid(row=0, column=5)
@@ -7609,9 +7609,9 @@ def mainWindow():
     ttk.Label(card_select_frame, text="4:").grid(row=0, column=6)
     slot_4_key = ttk.Combobox(
         card_select_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_4_key.grid(row=0, column=7)
@@ -7619,9 +7619,9 @@ def mainWindow():
     ttk.Label(card_select_frame, text="5:").grid(row=0, column=8)
     slot_5_key = ttk.Combobox(
         card_select_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_5_key.grid(row=0, column=9)
@@ -7629,9 +7629,9 @@ def mainWindow():
     ttk.Label(card_select_frame, text="6:").grid(row=0, column=10)
     slot_6_key = ttk.Combobox(
         card_select_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_6_key.grid(row=0, column=11)
@@ -7639,9 +7639,9 @@ def mainWindow():
     ttk.Label(card_select_frame, text="7:").grid(row=0, column=12)
     slot_7_key = ttk.Combobox(
         card_select_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_7_key.grid(row=0, column=13)
@@ -7649,9 +7649,9 @@ def mainWindow():
     ttk.Label(card_select_frame, text="8:").grid(row=1, column=0)
     slot_8_key = ttk.Combobox(
         card_select_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_8_key.grid(row=1, column=1)
@@ -7659,9 +7659,9 @@ def mainWindow():
     ttk.Label(card_select_frame, text="9:").grid(row=1, column=2)
     slot_9_key = ttk.Combobox(
         card_select_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_9_key.grid(row=1, column=3)
@@ -7669,9 +7669,9 @@ def mainWindow():
     ttk.Label(card_select_frame, text="10:").grid(row=1, column=4)
     slot_10_key = ttk.Combobox(
         card_select_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_10_key.grid(row=1, column=5)
@@ -7679,9 +7679,9 @@ def mainWindow():
     ttk.Label(card_select_frame, text="11:").grid(row=1, column=6)
     slot_11_key = ttk.Combobox(
         card_select_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_11_key.grid(row=1, column=7)
@@ -7689,9 +7689,9 @@ def mainWindow():
     ttk.Label(card_select_frame, text="12:").grid(row=1, column=8)
     slot_12_key = ttk.Combobox(
         card_select_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_12_key.grid(row=1, column=9)
@@ -7699,9 +7699,9 @@ def mainWindow():
     ttk.Label(card_select_frame, text="13:").grid(row=1, column=10)
     slot_13_key = ttk.Combobox(
         card_select_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_13_key.grid(row=1, column=11)
@@ -7709,9 +7709,9 @@ def mainWindow():
     ttk.Label(card_select_frame, text="14:").grid(row=1, column=12)
     slot_14_key = ttk.Combobox(
         card_select_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_14_key.grid(row=1, column=13)
@@ -7722,9 +7722,9 @@ def mainWindow():
     shovel_key_label.grid(row=0, column=0)
     slot_shovel_key = ttk.Combobox(
         function_key_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_shovel_key.grid(row=0, column=1)
@@ -7734,45 +7734,45 @@ def mainWindow():
     zombie_hp_key_label.grid(row=0, column=2)
     slot_zombie_hp_key = ttk.Combobox(
         function_key_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_zombie_hp_key.grid(row=0, column=3)
     slot_zombie_hp_key.current(34)
-    # ToolTip(zombie_hp_key_label, text="显示僵尸血量", bootstyle=(INFO, INVERSE))
+    # ToolTip(zombie_hp_key_label, text="Show Zombie HP", bootstyle=(INFO, INVERSE))
     plant_hp_key_label = ttk.Label(function_key_frame, text="Bleeding:")
     plant_hp_key_label.grid(row=0, column=4)
     slot_plant_hp_key = ttk.Combobox(
         function_key_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_plant_hp_key.grid(row=0, column=5)
     slot_plant_hp_key.current(13)
-    # ToolTip(plant_hp_key_label, text="显示僵尸血量", bootstyle=(INFO, INVERSE))
+    # ToolTip(plant_hp_key_label, text="Show Zombie HP", bootstyle=(INFO, INVERSE))
     top_key_label = ttk.Label(function_key_frame, text="Stuck:")
     top_key_label.grid(row=0, column=6)
     slot_top_key = ttk.Combobox(
         function_key_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_top_key.grid(row=0, column=7)
     slot_top_key.current(32)
-    # ToolTip(top_key_label, text="卡槽置顶", bootstyle=(INFO, INVERSE))
+    # ToolTip(top_key_label, text="Slot Top", bootstyle=(INFO, INVERSE))
     speed_key_label = ttk.Label(function_key_frame, text="Gaming accelerate:")
     speed_key_label.grid(row=0, column=8)
     slot_speed_key = ttk.Combobox(
         function_key_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_speed_key.grid(row=0, column=9)
@@ -7781,9 +7781,9 @@ def mainWindow():
     bag_key_label.grid(row=1, column=0)
     slot_bag_key = ttk.Combobox(
         function_key_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_bag_key.grid(row=1, column=1)
@@ -7792,9 +7792,9 @@ def mainWindow():
     slot_15_key_label.grid(row=1, column=2)
     slot_15_key = ttk.Combobox(
         function_key_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_15_key.grid(row=1, column=3)
@@ -7803,9 +7803,9 @@ def mainWindow():
     slot_16_key_label.grid(row=1, column=4)
     slot_16_key = ttk.Combobox(
         function_key_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_16_key.grid(row=1, column=5)
@@ -7814,9 +7814,9 @@ def mainWindow():
     reserved3_key_label.grid(row=1, column=6)
     slot_reserved3_key = ttk.Combobox(
         function_key_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_reserved3_key.grid(row=1, column=7)
@@ -7825,9 +7825,9 @@ def mainWindow():
     reserved4_key_label.grid(row=1, column=8)
     slot_reserved4_key = ttk.Combobox(
         function_key_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_reserved4_key.grid(row=1, column=9)
@@ -7836,9 +7836,9 @@ def mainWindow():
     reserved5_key_label.grid(row=2, column=0)
     slot_reserved5_key = ttk.Combobox(
         function_key_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_reserved5_key.grid(row=2, column=1)
@@ -7847,9 +7847,9 @@ def mainWindow():
     reserved6_key_label.grid(row=2, column=2)
     slot_reserved6_key = ttk.Combobox(
         function_key_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_reserved6_key.grid(row=2, column=3)
@@ -7858,9 +7858,9 @@ def mainWindow():
     reserved7_key_label.grid(row=2, column=4)
     slot_reserved7_key = ttk.Combobox(
         function_key_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_reserved7_key.grid(row=2, column=5)
@@ -7869,9 +7869,9 @@ def mainWindow():
     reserved8_key_label.grid(row=2, column=6)
     slot_reserved8_key = ttk.Combobox(
         function_key_frame,
-        width=3,
+        width=8,
         values=PVZ_data.keyTpye,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         state=READONLY,
     )
     slot_reserved8_key.grid(row=2, column=7)
@@ -8241,15 +8241,15 @@ def mainWindow():
     slot_key_status = ttk.BooleanVar(function_key_frame)
     slot_key_check = ttk.Checkbutton(
         function_key_frame,
-        text="开启",
+        text="Enable",
         variable=slot_key_status,
         bootstyle="primary-round-toggle",
         command=lambda: setSlotKey(),
     )
     slot_key_check.grid(row=2, column=8, columnspan=4)
 
-    hp_show_frame = ttk.Labelframe(common_page, text="显血修复", bootstyle=DANGER)
-    hp_show_frame.place(x=505, y=440, relx=0, anchor=NW)
+    hp_show_frame = ttk.Labelframe(common_page, text="HP Display Fix", bootstyle=DANGER)
+    hp_show_frame.place(x=850, y=440, relx=0, anchor=NW)
     fog_hp_status = ttk.BooleanVar(hp_show_frame)
     fog_hp_check = ttk.Checkbutton(
         hp_show_frame,
@@ -8286,9 +8286,9 @@ def mainWindow():
         bootstyle="danger-round-toggle",
         command=lambda: pvz.bossCorrect(boss_correct_status.get()),
     )
-    boss_correct_check.place(x=505, y=515, relx=0, anchor=NW)
+    boss_correct_check.place(x=850, y=515, relx=0, anchor=NW)
 
-    # 定义一个函数来更新slot的属性
+    # Define a function to update slot properties
     def get_slot_attribute():
         for index, slot in enumerate(slot_list):
             try:
@@ -8327,9 +8327,9 @@ def mainWindow():
 
     garden_page = ttk.Frame(page_tab)
     garden_page.pack()
-    page_tab.add(garden_page, text="花园相关")
+    page_tab.add(garden_page, text="Garden Related")
 
-    potted_list_frame = ttk.Labelframe(garden_page, text="盆栽列表", bootstyle=SUCCESS)
+    potted_list_frame = ttk.Labelframe(garden_page, text="Potted Plant List", bootstyle=SUCCESS)
     potted_list_frame.place(x=0, y=0, anchor=NW, height=300, width=335)
     potted_list_box_scrollbar = ttk.Scrollbar(potted_list_frame, bootstyle=SUCCESS)
     potted_list_box = ttk.Treeview(
@@ -8370,17 +8370,17 @@ def mainWindow():
             potted_list.append(PVZ_data.potted(potted_addresss))
             i = i + 1
         n = 0
-        # 使用potted_list的实际长度，而不是potted_num
+        # Use actual potted_list length instead of potted_num
         for k in range(len(potted_list)):
-            # 检查type是否在合理范围内（植物类型应该是非负整数且小于plantsType长度）
+            # Check if type is within valid range (non-negative and less than plantsType length)
             try:
                 plant_type = potted_list[k].type
                 if plant_type >= 0 and plant_type < len(PVZ_data.plantsType):
                     plant_name = PVZ_data.plantsType[plant_type]
                 else:
-                    plant_name = "未知"
+                    plant_name = "Unknown"
             except (IndexError, AttributeError, TypeError):
-                plant_name = "错误"
+                plant_name = "Error"
 
             potted_list_box.insert(
                 "",
@@ -8395,15 +8395,15 @@ def mainWindow():
 
     refresh_potted_list()
     potted_attribute_frame = ttk.Frame(potted_list_frame)
-    potted_attribute_frame.place(x=150, y=0, height=280, width=175)
+    potted_attribute_frame.place(x=150, y=0, height=280, width=260)
     potted_state_frame = ttk.Frame(potted_attribute_frame)
     potted_state_frame.grid(row=0, column=0, columnspan=12, sticky=W)
-    ttk.Label(potted_state_frame, text="盆栽类型:").grid(
+    ttk.Label(potted_state_frame, text="Potted Type:").grid(
         row=0, column=0, columnspan=1, sticky=W, padx=2, pady=2
     )
     potted_type_combobox = ttk.Combobox(
         potted_state_frame,
-        width=12,
+        width=14,
         values=PVZ_data.plantsType,
         state=READONLY,
         bootstyle=SECONDARY,
@@ -8428,14 +8428,14 @@ def mainWindow():
     def set_potted_type():
         potted_select.setType(potted_type_combobox.current())
 
-    ttk.Label(potted_state_frame, text="生长状态:").grid(
+    ttk.Label(potted_state_frame, text="Growth State:").grid(
         row=1, column=0, sticky=W, padx=2, pady=2
     )
     potted_state_combobox = ttk.Combobox(
         potted_state_frame,
-        values=["幼苗", "小", "中", "大"],
+        values=["Seedling", "Small", "Medium", "Large"],
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     potted_state_combobox.grid(row=1, column=1, sticky=W, padx=2, pady=2)
@@ -8446,31 +8446,31 @@ def mainWindow():
 
     potted_state_combobox.bind("<<ComboboxSelected>>", setPottedState)
     potted_position_frame = ttk.Labelframe(
-        potted_attribute_frame, text="位置", bootstyle=SUCCESS
+        potted_attribute_frame, text="Position", bootstyle=SUCCESS
     )
     potted_position_frame.grid(row=2, column=0, columnspan=12, sticky=W, padx=2, pady=2)
 
-    # 添加场景下拉框
-    ttk.Label(potted_position_frame, text="场景:").grid(
+    # Add scene dropdown
+    ttk.Label(potted_position_frame, text="Scene:").grid(
         row=1, column=0, sticky=W, padx=2, pady=2
     )
     potted_garden_combobox = ttk.Combobox(
         potted_position_frame,
-        width=10,
+        width=14,
         values=[
-            "禅境花园",
-            "蘑菇园",
-            "手推车",
-            "水族馆",
-            "实验室花园",
-            "天空花园",
-            "花果山花园",
-            "温馨花园",
-            "魅惑蘑菇园",
-            "竞技花园",
-            "始皇岛花园",
+            "Zen Garden",
+            "Mushroom Garden",
+            "Wheelbarrow",
+            "Aquarium",
+            "Laboratory Garden",
+            "Sky Garden",
+            "Huaguo Mountain Garden",
+            "Warm Garden",
+            "Charming Mushroom Garden",
+            "Arena Garden",
+            "Qin Shi Huang Island Garden",
         ],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -8487,12 +8487,12 @@ def mainWindow():
         textvariable=potted_row_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
     potted_row_combobox.grid(row=2, column=1, columnspan=3, sticky=W, padx=2, pady=2)
-    ttk.Label(potted_position_frame, text="行").grid(
+    ttk.Label(potted_position_frame, text="Row").grid(
         row=2, column=4, sticky=W, padx=2, pady=2
     )
 
@@ -8507,12 +8507,12 @@ def mainWindow():
         textvariable=potted_col_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6, 7, 8, 9],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
     potted_col_combobox.grid(row=2, column=5, columnspan=3, sticky=W, padx=2, pady=2)
-    ttk.Label(potted_position_frame, text="列").grid(
+    ttk.Label(potted_position_frame, text="Column").grid(
         row=2, column=8, sticky=W, padx=2, pady=2
     )
 
@@ -8521,14 +8521,14 @@ def mainWindow():
         potted_position_frame.focus_set()
 
     potted_col_combobox.bind("<<ComboboxSelected>>", setPottedCol)
-    ttk.Label(potted_attribute_frame, text="方向:").grid(
+    ttk.Label(potted_attribute_frame, text="Direction:").grid(
         row=3, column=0, sticky=W, padx=2, pady=2
     )
     potted_direct_combobox = ttk.Combobox(
         potted_attribute_frame,
-        values=["右", "左"],
+        values=["Right", "Left"],
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     potted_direct_combobox.grid(row=3, column=1, ipady=0, sticky=W, padx=2, pady=2)
@@ -8539,29 +8539,29 @@ def mainWindow():
 
     potted_direct_combobox.bind("<<ComboboxSelected>>", setPottedDirection)
 
-    # 添加颜色下拉框
-    ttk.Label(potted_attribute_frame, text="颜色:").grid(
+    # Add color dropdown
+    ttk.Label(potted_attribute_frame, text="Color:").grid(
         row=4, column=0, sticky=W, padx=2, pady=2
     )
     potted_color_combobox = ttk.Combobox(
         potted_attribute_frame,
         width=10,
         values=[
-            "原始",
-            "模仿者",
-            "白色",
-            "品红",
-            "橙色",
-            "粉色",
-            "青色",
-            "红色",
-            "蓝色",
-            "紫色",
-            "薰衣草",
-            "黄色",
-            "淡绿色",
+            "Original",
+            "Imitater",
+            "White",
+            "Magenta",
+            "Orange",
+            "Pink",
+            "Cyan",
+            "Red",
+            "Blue",
+            "Purple",
+            "Lavender",
+            "Yellow",
+            "Light Green",
         ],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -8573,8 +8573,8 @@ def mainWindow():
 
     potted_color_combobox.bind("<<ComboboxSelected>>", setPottedColor)
 
-    # 添加已浇水次数输入框
-    ttk.Label(potted_attribute_frame, text="已浇水:").grid(
+    # Add watered count input
+    ttk.Label(potted_attribute_frame, text="Watered:").grid(
         row=5, column=0, sticky=W, padx=2, pady=2
     )
     potted_water_var = ttk.IntVar(potted_attribute_frame)
@@ -8584,7 +8584,7 @@ def mainWindow():
         width=3,
         from_=0,
         to=999,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     potted_water_spinbox.grid(row=5, column=1, columnspan=3, sticky=W, padx=2, pady=2)
@@ -8596,8 +8596,8 @@ def mainWindow():
     potted_water_spinbox.bind("<Return>", lambda event: setPottedWater())
     potted_water_spinbox.bind("<FocusOut>", lambda event: setPottedWater())
 
-    # 添加需求浇水次数输入框
-    ttk.Label(potted_attribute_frame, text="需求浇水:").grid(
+    # Add water needed count input
+    ttk.Label(potted_attribute_frame, text="Water Needed:").grid(
         row=6, column=0, sticky=W, padx=2, pady=2
     )
     potted_water_max_var = ttk.IntVar(potted_attribute_frame)
@@ -8607,7 +8607,7 @@ def mainWindow():
         width=3,
         from_=0,
         to=999,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     potted_water_max_spinbox.grid(
@@ -8669,15 +8669,15 @@ def mainWindow():
     potted_list_box.bind("<<TreeviewSelect>>", get_potted_select)
 
     easy_add_potted_frame = ttk.Labelframe(
-        garden_page, text="简易添加", bootstyle=PRIMARY
+        garden_page, text="Simple Add", bootstyle=PRIMARY
     )
     easy_add_potted_frame.place(x=0, y=305, anchor=NW)
-    ttk.Label(easy_add_potted_frame, text="盆栽类型:").grid(
+    ttk.Label(easy_add_potted_frame, text="Potted Type:").grid(
         row=0, column=0, columnspan=1, sticky=W, padx=2, pady=2
     )
     easy_add_potted_type_combobox = ttk.Combobox(
         easy_add_potted_frame,
-        width=12,
+        width=14,
         values=PVZ_data.plantsType,
         state=READONLY,
         bootstyle=SECONDARY,
@@ -8704,29 +8704,29 @@ def mainWindow():
         ),
     )
 
-    # 添加颜色下拉框
-    ttk.Label(easy_add_potted_frame, text="颜色:").grid(
+    # Add color dropdown
+    ttk.Label(easy_add_potted_frame, text="Color:").grid(
         row=1, column=0, sticky=W, padx=2, pady=2
     )
     easy_add_potted_color_combobox = ttk.Combobox(
         easy_add_potted_frame,
         width=10,
         values=[
-            "原始",
-            "模仿者",
-            "白色",
-            "品红",
-            "橙色",
-            "粉色",
-            "青色",
-            "红色",
-            "蓝色",
-            "紫色",
-            "薰衣草",
-            "黄色",
-            "淡绿色",
+            "Original",
+            "Imitater",
+            "White",
+            "Magenta",
+            "Orange",
+            "Pink",
+            "Cyan",
+            "Red",
+            "Blue",
+            "Purple",
+            "Lavender",
+            "Yellow",
+            "Light Green",
         ],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -8735,7 +8735,7 @@ def mainWindow():
     )
     easy_add_potted_button = ttk.Button(
         easy_add_potted_frame,
-        text="添加",
+        text="Add",
         command=lambda: easyAddPotted(),
         bootstyle=PRIMARY,
     )
@@ -8764,10 +8764,10 @@ def mainWindow():
             )
             potted_list_check.append(PVZ_data.potted(potted_addresss))
             i = i + 1
-        # 检查花园槽位：花园定义为location==0且row在0~7, col在0~3, 每个槽位中可能有多个盆栽，
-        # 使用集合记录已占用的独立槽位
+        # Check garden slot: garden is defined as location==0, row 0~7, col 0~3, each slot may have multiple pots
+        # Use a set to record occupied independent slots
         occupied_slots = set()
-        total_slots = 8 * 4  # 32个槽位
+        total_slots = 8 * 4  # 32 slots
 
         for p in potted_list_check:
             if p.garden == 0 and 0 <= p.col <= 7 and 0 <= p.row <= 3:
@@ -8780,18 +8780,18 @@ def mainWindow():
             )
         else:
             Messagebox.show_error(
-                "禅境花园已满,请移动一些盆栽到其他花园", title="无法添加盆栽"
+                "Zen Garden is full, please move some potted plants to other gardens", title="Cannot Add Potted Plant"
             )
 
     total_potted_frame = ttk.Frame(garden_page)
     total_potted_frame.place(x=0, y=450, anchor=NW)
-    total_potted_label = ttk.Label(total_potted_frame, text="最高养成数量:")
+    total_potted_label = ttk.Label(total_potted_frame, text="Max Growth Count:")
     total_potted_label.grid(row=0, column=0, sticky=W, padx=5, pady=5)
     total_potted_num_value = ttk.IntVar(total_potted_frame)
     total_potted_num = ttk.Spinbox(
         total_potted_frame,
         textvariable=total_potted_num_value,
-        font=("黑体", 10),
+        font=("Microsoft YaHei", 10),
         width=8,
         bootstyle=SUCCESS,
     )
@@ -8803,16 +8803,16 @@ def mainWindow():
         "<FocusOut>", lambda x: pvz.setTotalPottedNum(total_potted_num_value.get())
     )
 
-    tree_frame = ttk.Labelframe(garden_page, text="智慧树")
-    tree_frame.place(x=340, y=0, anchor=NW)
-    tree_height_label = ttk.Label(tree_frame, text="高度:")
+    tree_frame = ttk.Labelframe(garden_page, text="Wisdom Tree")
+    tree_frame.place(x=390, y=0, anchor=NW)
+    tree_height_label = ttk.Label(tree_frame, text="Height:")
     tree_height_label.grid(row=0, column=0, sticky=W, padx=5, pady=5)
     tree_height = ttk.IntVar(tree_frame)
     tree_height_entry = ttk.Entry(tree_frame, width=8, textvariable=tree_height)
     tree_height_entry.grid(row=0, column=1, sticky=W, padx=5, pady=5)
     tree_height_entry.bind("<Return>", lambda x: pvz.setTreeHeight(tree_height.get()))
     tree_height_entry.bind("<FocusOut>", lambda x: pvz.setTreeHeight(tree_height.get()))
-    tree_fertilizer_label = ttk.Label(tree_frame, text="肥料:")
+    tree_fertilizer_label = ttk.Label(tree_frame, text="Fertilizer:")
     tree_fertilizer_label.grid(row=1, column=0, sticky=W, padx=5, pady=5)
     tree_fertilizer = ttk.IntVar(tree_frame)
     tree_fertilizer_entry = ttk.Entry(tree_frame, width=8, textvariable=tree_fertilizer)
@@ -8821,9 +8821,9 @@ def mainWindow():
         "<Return>", lambda x: pvz.setTreeFertilizer(tree_fertilizer.get())
     )
 
-    garden_item_frame = ttk.Labelframe(garden_page, text="花园物品")
-    garden_item_frame.place(x=340, y=105, anchor=NW)
-    garden_item_fertilizer_label = ttk.Label(garden_item_frame, text="肥料:")
+    garden_item_frame = ttk.Labelframe(garden_page, text="Garden Items")
+    garden_item_frame.place(x=390, y=105, anchor=NW)
+    garden_item_fertilizer_label = ttk.Label(garden_item_frame, text="Fertilizer:")
     garden_item_fertilizer_label.grid(row=0, column=0, sticky=W, padx=5, pady=5)
     garden_item_fertilizer = ttk.IntVar(garden_item_frame)
     garden_item_fertilizer_entry = ttk.Entry(
@@ -8837,8 +8837,8 @@ def mainWindow():
         "<FocusOut>",
         lambda x: pvz.setGardenItemFertilizer(garden_item_fertilizer.get()),
     )
-    # 杀虫剂
-    garden_item_pesticide_label = ttk.Label(garden_item_frame, text="杀虫剂:")
+    # Pesticide
+    garden_item_pesticide_label = ttk.Label(garden_item_frame, text="Pesticide:")
     garden_item_pesticide_label.grid(row=1, column=0, sticky=W, padx=5, pady=5)
     garden_item_pesticide = ttk.IntVar(garden_item_frame)
     garden_item_pesticide_entry = ttk.Entry(
@@ -8852,8 +8852,8 @@ def mainWindow():
         "<FocusOut>",
         lambda x: pvz.setGardenItemPesticide(garden_item_pesticide.get()),
     )
-    # 巧克力
-    garden_item_chocolate_label = ttk.Label(garden_item_frame, text="巧克力:")
+    # Chocolate
+    garden_item_chocolate_label = ttk.Label(garden_item_frame, text="Chocolate:")
     garden_item_chocolate_label.grid(row=2, column=0, sticky=W, padx=5, pady=5)
     garden_item_chocolate = ttk.IntVar(garden_item_frame)
     garden_item_chocolate_entry = ttk.Entry(
@@ -8868,11 +8868,11 @@ def mainWindow():
         lambda x: pvz.setGardenItemChocolate(garden_item_chocolate.get()),
     )
 
-    add_potted_frame = ttk.Labelframe(garden_page, text="添加盆栽", bootstyle=PRIMARY)
-    add_potted_frame.place(x=340, y=250)
+    add_potted_frame = ttk.Labelframe(garden_page, text="Add Potted Plant", bootstyle=PRIMARY)
+    add_potted_frame.place(x=390, y=250)
     add_potted_state_frame = ttk.Frame(add_potted_frame)
     add_potted_state_frame.grid(row=0, column=0, columnspan=12, sticky=W)
-    ttk.Label(add_potted_state_frame, text="盆栽类型:").grid(
+    ttk.Label(add_potted_state_frame, text="Potted Type:").grid(
         row=0, column=0, columnspan=1, sticky=W, padx=2, pady=2
     )
     add_potted_type_combobox = ttk.Combobox(
@@ -8902,46 +8902,46 @@ def mainWindow():
         lambda event: wait_select_add_potted_plant(event, add_potted_type_combobox),
     )
 
-    ttk.Label(add_potted_state_frame, text="生长状态:").grid(
+    ttk.Label(add_potted_state_frame, text="Growth State:").grid(
         row=1, column=0, sticky=W, padx=2, pady=2
     )
     add_potted_state_combobox = ttk.Combobox(
         add_potted_state_frame,
-        values=["幼苗", "小", "中", "大"],
+        values=["Seedling", "Small", "Medium", "Large"],
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     add_potted_state_combobox.grid(row=1, column=1, sticky=W, padx=2, pady=2)
 
     add_potted_position_frame = ttk.Labelframe(
-        add_potted_frame, text="位置", bootstyle=SUCCESS
+        add_potted_frame, text="Position", bootstyle=SUCCESS
     )
     add_potted_position_frame.grid(
         row=2, column=0, columnspan=12, sticky=W, padx=2, pady=2
     )
 
-    # 添加场景下拉框
-    ttk.Label(add_potted_position_frame, text="场景:").grid(
+    # Add scene dropdown
+    ttk.Label(add_potted_position_frame, text="Scene:").grid(
         row=1, column=0, sticky=W, padx=2, pady=2
     )
     add_potted_garden_combobox = ttk.Combobox(
         add_potted_position_frame,
-        width=10,
+        width=14,
         values=[
-            "禅境花园",
-            "蘑菇园",
-            "手推车",
-            "水族馆",
-            "实验室花园",
-            "天空花园",
-            "花果山花园",
-            "温馨花园",
-            "魅惑蘑菇园",
-            "竞技花园",
-            "始皇岛花园",
+            "Zen Garden",
+            "Mushroom Garden",
+            "Wheelbarrow",
+            "Aquarium",
+            "Laboratory Garden",
+            "Sky Garden",
+            "Huaguo Mountain Garden",
+            "Warm Garden",
+            "Charming Mushroom Garden",
+            "Arena Garden",
+            "Qin Shi Huang Island Garden",
         ],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -8955,14 +8955,14 @@ def mainWindow():
         textvariable=add_potted_row_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
     add_potted_row_combobox.grid(
         row=2, column=1, columnspan=3, sticky=W, padx=2, pady=2
     )
-    ttk.Label(add_potted_position_frame, text="行").grid(
+    ttk.Label(add_potted_position_frame, text="Row").grid(
         row=2, column=4, sticky=W, padx=2, pady=2
     )
 
@@ -8972,52 +8972,52 @@ def mainWindow():
         textvariable=add_potted_col_value,
         width=2,
         values=[1, 2, 3, 4, 5, 6, 7, 8, 9],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
     add_potted_col_combobox.grid(
         row=2, column=5, columnspan=3, sticky=W, padx=2, pady=2
     )
-    ttk.Label(add_potted_position_frame, text="列").grid(
+    ttk.Label(add_potted_position_frame, text="Column").grid(
         row=2, column=8, sticky=W, padx=2, pady=2
     )
 
-    ttk.Label(add_potted_frame, text="方向:").grid(
+    ttk.Label(add_potted_frame, text="Direction:").grid(
         row=3, column=0, sticky=W, padx=2, pady=2
     )
     add_potted_direct_combobox = ttk.Combobox(
         add_potted_frame,
-        values=["右", "左"],
+        values=["Right", "Left"],
         width=5,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     add_potted_direct_combobox.grid(row=3, column=1, ipady=0, sticky=W, padx=2, pady=2)
 
-    # 添加颜色下拉框
-    ttk.Label(add_potted_frame, text="颜色:").grid(
+    # Add color dropdown
+    ttk.Label(add_potted_frame, text="Color:").grid(
         row=4, column=0, sticky=W, padx=2, pady=2
     )
     add_potted_color_combobox = ttk.Combobox(
         add_potted_frame,
         width=10,
         values=[
-            "原始",
-            "模仿者",
-            "白色",
-            "品红",
-            "橙色",
-            "粉色",
-            "青色",
-            "红色",
-            "蓝色",
-            "紫色",
-            "薰衣草",
-            "黄色",
-            "淡绿色",
+            "Original",
+            "Imitater",
+            "White",
+            "Magenta",
+            "Orange",
+            "Pink",
+            "Cyan",
+            "Red",
+            "Blue",
+            "Purple",
+            "Lavender",
+            "Yellow",
+            "Light Green",
         ],
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
         state=READONLY,
     )
@@ -9025,8 +9025,8 @@ def mainWindow():
         row=4, column=1, columnspan=8, sticky=W, padx=2, pady=2
     )
 
-    # 添加已浇水次数输入框
-    ttk.Label(add_potted_frame, text="已浇水:").grid(
+    # Add watered count input
+    ttk.Label(add_potted_frame, text="Watered:").grid(
         row=5, column=0, sticky=W, padx=2, pady=2
     )
     add_potted_water_var = ttk.IntVar(add_potted_frame)
@@ -9036,15 +9036,15 @@ def mainWindow():
         width=3,
         from_=0,
         to=999,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     add_potted_water_spinbox.grid(
         row=5, column=1, columnspan=3, sticky=W, padx=2, pady=2
     )
 
-    # 添加需求浇水次数输入框
-    ttk.Label(add_potted_frame, text="需求浇水:").grid(
+    # Add water needed count input
+    ttk.Label(add_potted_frame, text="Water Needed:").grid(
         row=6, column=0, sticky=W, padx=2, pady=2
     )
     add_potted_water_max_var = ttk.IntVar(add_potted_frame)
@@ -9054,7 +9054,7 @@ def mainWindow():
         width=3,
         from_=0,
         to=999,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     add_potted_water_max_spinbox.grid(
@@ -9062,7 +9062,7 @@ def mainWindow():
     )
     add_potted_button = ttk.Button(
         add_potted_frame,
-        text="添加",
+        text="Add",
         padding=2,
         command=lambda: addPotted(),
         bootstyle=SUCCESS,
@@ -9082,11 +9082,11 @@ def mainWindow():
             add_potted_water_max_var.get(),
         )
 
-    garden_all_frame = ttk.Labelframe(garden_page, text="一键满足", bootstyle=SUCCESS)
+    garden_all_frame = ttk.Labelframe(garden_page, text="One-Click Fulfill", bootstyle=SUCCESS)
     garden_all_frame.place(x=0, y=0, relx=1, rely=0, anchor=NE)
     water_all_button = ttk.Button(
         garden_all_frame,
-        text="一键浇水",
+        text="One-Click Water",
         padding=2,
         command=pvz.waterAll,
         bootstyle=SUCCESS,
@@ -9094,7 +9094,7 @@ def mainWindow():
     water_all_button.pack(padx=2, pady=2)
     fertilize_all_button = ttk.Button(
         garden_all_frame,
-        text="一键施肥",
+        text="One-Click Fertilize",
         padding=2,
         command=pvz.fertilizeAll,
         bootstyle=SUCCESS,
@@ -9102,7 +9102,7 @@ def mainWindow():
     fertilize_all_button.pack(padx=2, pady=2)
     pesticide_all_button = ttk.Button(
         garden_all_frame,
-        text="一键虫乐",
+        text="One-Click Bug Joy",
         padding=2,
         command=pvz.pesticideAll,
         bootstyle=SUCCESS,
@@ -9110,7 +9110,7 @@ def mainWindow():
     pesticide_all_button.pack(padx=2, pady=2)
     do_all_all_button = ttk.Button(
         garden_all_frame,
-        text="一键全做",
+        text="One-Click Do All",
         padding=2,
         command=pvz.doAllAll,
         bootstyle=SUCCESS,
@@ -9118,47 +9118,47 @@ def mainWindow():
     do_all_all_button.pack(padx=2, pady=2)
 
     def open_tree_wisdom_dialog():
-        """打开智慧树对话窗口"""
+        """Open wisdom tree dialog window"""
         wisdom_window = ttk.Toplevel()
-        wisdom_window.title("智慧树的话语")
+        wisdom_window.title("Wisdom Tree Dialog")
         wisdom_window.geometry("700x500")
         wisdom_window.resizable(False, False)
 
-        # 创建主框架
+        # Create main frame
         main_frame = ttk.Frame(wisdom_window)
         main_frame.pack(fill=BOTH, expand=TRUE, padx=10, pady=10)
 
-        # 创建顶部标题
+        # Create top title
         title_frame = ttk.Frame(main_frame)
         title_frame.pack(fill=X, pady=10)
 
         ttk.Label(
             title_frame,
-            text="智慧树的珍贵话语",
-            font=("黑体", 16, "bold"),
+            text="Wisdom Tree's Precious Words",
+            font=("Microsoft YaHei", 16, "bold"),
             bootstyle=SUCCESS,
         ).pack(pady=5)
 
         ttk.Label(
             title_frame,
-            text="随着智慧树的成长，它会分享越来越多的秘密",
-            font=("黑体", 10),
+            text="As the wisdom tree grows, it will share more and more secrets",
+            font=("Microsoft YaHei", 10),
             bootstyle=SECONDARY,
         ).pack()
 
-        # 创建选项卡
+        # Create tabs
         notebook = ttk.Notebook(main_frame)
         notebook.pack(fill=BOTH, expand=TRUE, pady=10)
 
-        # 创建对话选项卡
+        # Create dialog tab
         wisdom_frame = ttk.Frame(notebook)
-        notebook.add(wisdom_frame, text="智慧树话语")
+        notebook.add(wisdom_frame, text="Wisdom Tree Dialog")
 
-        # 创建奖励选项卡
+        # Create rewards tab
         reward_frame = ttk.Frame(notebook)
-        notebook.add(reward_frame, text="智慧树奖励")
+        notebook.add(reward_frame, text="Wisdom Tree Rewards")
 
-        # 创建对话列表的滚动视图
+        # Create scroll view for dialog list
         wisdom_scroll = ttk.Scrollbar(wisdom_frame)
         wisdom_scroll.pack(side=RIGHT, fill=Y)
 
@@ -9172,10 +9172,10 @@ def mainWindow():
         wisdom_content = ttk.Frame(wisdom_canvas)
         wisdom_canvas.create_window((0, 0), window=wisdom_content, anchor=NW)
 
-        # 填充对话内容
+        # Populate dialog content
         for i, (height, message) in enumerate(PVZ_data.TREE_OF_WISDOM):
             wisdom_item = ttk.Labelframe(
-                wisdom_content, text=f"高度: {height}米", bootstyle=SUCCESS
+                wisdom_content, text=f"Height: {height}m", bootstyle=SUCCESS
             )
             wisdom_item.pack(fill=X, expand=TRUE, padx=10, pady=5)
 
@@ -9184,12 +9184,12 @@ def mainWindow():
                 text=message,
                 wraplength=600,
                 justify=LEFT,
-                font=("黑体", 10),
+                font=("Microsoft YaHei", 10),
                 padding=(10, 10),
             )
             msg_label.pack(fill=X, padx=5, pady=5)
 
-        # 创建奖励列表的滚动视图
+        # Create scroll view for rewards list
         reward_scroll = ttk.Scrollbar(reward_frame)
         reward_scroll.pack(side=RIGHT, fill=Y)
 
@@ -9203,10 +9203,10 @@ def mainWindow():
         reward_content = ttk.Frame(reward_canvas)
         reward_canvas.create_window((0, 0), window=reward_content, anchor=NW)
 
-        # 填充奖励内容
+        # Populate reward content
         for i, (height, reward) in enumerate(PVZ_data.TREE_OF_WISDOM_REWARD):
             reward_item = ttk.Labelframe(
-                reward_content, text=f"高度: {height}米", bootstyle=WARNING
+                reward_content, text=f"Height: {height}m", bootstyle=WARNING
             )
             reward_item.pack(fill=X, expand=TRUE, padx=10, pady=5)
 
@@ -9215,12 +9215,12 @@ def mainWindow():
                 text=reward,
                 wraplength=600,
                 justify=LEFT,
-                font=("黑体", 10, "bold"),
+                font=("Microsoft YaHei", 10, "bold"),
                 padding=(10, 10),
             )
             reward_label.pack(fill=X, padx=5, pady=5)
 
-        # 更新画布滚动区域
+        # Update canvas scroll region
         def update_scrollregion(event):
             wisdom_canvas.configure(scrollregion=wisdom_canvas.bbox("all"))
 
@@ -9230,39 +9230,39 @@ def mainWindow():
         wisdom_content.bind("<Configure>", update_scrollregion)
         reward_content.bind("<Configure>", update_reward_scrollregion)
 
-        # 添加鼠标滚轮事件绑定
+        # Add mouse wheel event binding
         def _on_wisdom_mousewheel(event):
             wisdom_canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
 
         def _on_reward_mousewheel(event):
             reward_canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
 
-        # 绑定鼠标滚轮事件到当前活动的标签页
+        # Bind mouse wheel event to the currently active tab
         def _bind_mousewheel_to_active_tab(event=None):
-            if notebook.index(notebook.select()) == 0:  # 智慧树话语标签页
-                # 解绑所有MouseWheel事件
+            if notebook.index(notebook.select()) == 0:  # Wisdom Tree Dialog tab
+                # Unbind all MouseWheel events
                 try:
                     wisdom_window.unbind_all("<MouseWheel>")
                 except:
                     pass
-                # 绑定到智慧树话语标签页
+                # Bind to Wisdom Tree Dialog tab
                 wisdom_canvas.bind_all("<MouseWheel>", _on_wisdom_mousewheel)
-            else:  # 智慧树奖励标签页
-                # 解绑所有MouseWheel事件
+            else:  # Wisdom Tree Rewards tab
+                # Unbind all MouseWheel events
                 try:
                     wisdom_window.unbind_all("<MouseWheel>")
                 except:
                     pass
-                # 绑定到智慧树奖励标签页
+                # Bind to Wisdom Tree Rewards tab
                 reward_canvas.bind_all("<MouseWheel>", _on_reward_mousewheel)
 
-        # 绑定标签页切换事件
+        # Bind tab switch event
         notebook.bind("<<NotebookTabChanged>>", _bind_mousewheel_to_active_tab)
 
-        # 初始绑定当前活动标签页的鼠标滚轮事件
+        # Initially bind mouse wheel event for current tab
         _bind_mousewheel_to_active_tab()
 
-        # 窗口关闭前解绑所有MouseWheel事件
+        # Unbind all MouseWheel events before closing window
         def _on_closing():
             try:
                 wisdom_window.unbind_all("<MouseWheel>")
@@ -9272,31 +9272,31 @@ def mainWindow():
 
         wisdom_window.protocol("WM_DELETE_WINDOW", _on_closing)
 
-        # 关闭按钮
+        # Close button
         close_button = ttk.Button(
             main_frame,
-            text="关闭",
+            text="Close",
             command=wisdom_window.destroy,
             width=15,
             bootstyle=SECONDARY,
         )
         close_button.pack(pady=10)
 
-    # 在你的主界面添加一个按钮来调用这个窗口
+    # Add a button in the main interface to call this window
     tree_wisdom_button = ttk.Button(
-        garden_page,  # 请替换为你的主窗口容器名称
-        text="智慧树的话语",
+        garden_page,  # Replace with your main window container name
+        text="Wisdom Tree Dialog",
         command=open_tree_wisdom_dialog,
         bootstyle=(INFO, OUTLINE),
     )
     tree_wisdom_button.place(
         x=-5, y=-5, relx=1, rely=1, anchor=SE
-    )  # 请根据你的界面布局调整位置
+    )  # Adjust position according to your interface layout
 
     other_page = ttk.Frame(page_tab)
     other_page.pack()
-    page_tab.add(other_page, text="暂未分类")
-    other_toggle_frame = ttk.Labelframe(other_page, text="未分类开关")
+    page_tab.add(other_page, text="Uncategorized")
+    other_toggle_frame = ttk.Labelframe(other_page, text="Uncategorized Toggle")
     other_toggle_frame.pack(anchor=W)
 
     doom_no_hole_status = ttk.BooleanVar(other_toggle_frame)
@@ -9377,7 +9377,7 @@ def mainWindow():
     more_hero_status = ttk.BooleanVar(other_toggle_frame)
     more_hero_check = ttk.Checkbutton(
         other_toggle_frame,
-        text="英雄植物可多种",
+        text="Hero Plant Multi-Plant",
         variable=more_hero_status,
         bootstyle="success-round-toggle",
         command=lambda: pvz.more_hero(more_hero_status.get()),
@@ -9386,7 +9386,7 @@ def mainWindow():
     shovel_pro_status = ttk.BooleanVar(quick_start_frame)
     shovel_pro_check = ttk.Checkbutton(
         other_toggle_frame,
-        text="超级铲子",
+        text="Super Shovel",
         variable=shovel_pro_status,
         bootstyle="success-round-toggle",
         command=lambda: pvz.shovelpro(shovel_pro_status.get()),
@@ -9423,7 +9423,7 @@ def mainWindow():
         command=lambda: pvz.lockLevel(jump_level_status.get(), jump_level_value.get()),
     ).pack(side=LEFT)
 
-    effect_frame = ttk.Labelframe(other_page, text="生成特效")
+    effect_frame = ttk.Labelframe(other_page, text="Generate Effect")
     effect_frame.pack(anchor=W)
     ttk.Label(effect_frame, text="x").grid(row=0, column=0)
     effect_x_value = ttk.IntVar(effect_frame)
@@ -9431,7 +9431,7 @@ def mainWindow():
         effect_frame,
         textvariable=effect_x_value,
         width=4,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     effect_x_combobox.grid(row=0, column=1)
@@ -9442,7 +9442,7 @@ def mainWindow():
         effect_frame,
         textvariable=effect_y_value,
         width=4,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         bootstyle=SECONDARY,
     )
     effect_y_combobox.grid(row=0, column=3)
@@ -9452,7 +9452,7 @@ def mainWindow():
     effect_id_entry = ttk.Spinbox(
         effect_frame,
         textvariable=effect_id,
-        font=("黑体", 8),
+        font=("Microsoft YaHei", 8),
         width=7,
         from_=0,
         to=100,
@@ -9470,7 +9470,7 @@ def mainWindow():
         ),
     ).grid(row=1, column=4, sticky=E)
 
-    bullet_creat_frame = ttk.Labelframe(other_page, text="生成子弹")
+    bullet_creat_frame = ttk.Labelframe(other_page, text="Generate Bullet")
     bullet_creat_frame.pack(anchor=W)
 
     # Add bullet to the text box function
@@ -9500,7 +9500,7 @@ def mainWindow():
 
     # Create a drop -down box
     bullet_type_combobox = ttk.Combobox(
-        bullet_creat_frame, values=PVZ_data.bulletType, width=8
+        bullet_creat_frame, values=PVZ_data.bulletType, width=12
     )
     bullet_type_combobox.grid(row=0, column=0, columnspan=2)
 
@@ -9539,7 +9539,7 @@ def mainWindow():
     spaw_multiplier_frame.pack(anchor=W)
     spaw_multiplier_status = ttk.BooleanVar(spaw_multiplier_frame)
     spaw_multiplier_value = ttk.IntVar(spaw_multiplier_frame)
-    ttk.Label(spaw_multiplier_frame, text="Blame", font=("黑体", 12)).pack(side=LEFT)
+    ttk.Label(spaw_multiplier_frame, text="Blame", font=("Microsoft YaHei", 12)).pack(side=LEFT)
     ttk.Spinbox(
         spaw_multiplier_frame,
         from_=0,
@@ -9558,7 +9558,7 @@ def mainWindow():
     ).pack(side=LEFT)
     spaw_num_value = ttk.IntVar(spaw_multiplier_frame)
     spaw_num_status = ttk.BooleanVar(spaw_multiplier_frame)
-    ttk.Label(spaw_multiplier_frame, text="Strange waves", font=("黑体", 12)).pack(side=LEFT)
+    ttk.Label(spaw_multiplier_frame, text="Strange waves", font=("Microsoft YaHei", 12)).pack(side=LEFT)
     ttk.Spinbox(
         spaw_multiplier_frame,
         from_=0,
@@ -9573,7 +9573,7 @@ def mainWindow():
         bootstyle="danger-round-toggle",
         command=lambda: pvz.modifySpawNum(spaw_num_status.get(), spaw_num_value.get()),
     ).pack(side=LEFT)
-    spaw_type_frame = ttk.Labelframe(zombie_spaw_page, text="出怪修改")
+    spaw_type_frame = ttk.Labelframe(zombie_spaw_page, text="Spawn Modification")
     spaw_type_frame.pack(anchor=W)
 
     # Dictionary of storing re -election frame status
@@ -9622,8 +9622,8 @@ def mainWindow():
         print(zombie_name, e)
         traceback.print_exc()
         messagebox.showerror(
-            "错误",
-            f"游戏版本与修改器版本可能不匹配，部分功能可能无法使用，请更新游戏或修改器",
+            "Error",
+            f"Game version may not match the modifier version, some features may not work. Please update the game or modifier.",
         )
 
     # Read the configuration scheme
@@ -9762,11 +9762,11 @@ def mainWindow():
     def load_plugin(main_window):
         plugin_name = filedialog.askopenfilename(
             title="Select plug -in file",
-            filetypes=[("PVZHybrid_Editor插件文件", "*.pyc *.pyd")],
+            filetypes=[("PVZHybrid_Editor Plugin Files", "*.pyc *.pyd")],
         )
         if plugin_name:
             global plugin
-            print(f"选中的文件: {plugin_name}")
+            print(f"Selected file: {plugin_name}")
             # Determine the module loading method according to the expansion name of the file
             if plugin_name.endswith(".pyc"):
                 spec = importlib.util.spec_from_file_location(
@@ -9774,7 +9774,7 @@ def mainWindow():
                 )
                 plugin = importlib.util.module_from_spec(spec)
                 spec.loader.exec_module(plugin)
-                # 假设插件有一个名为open_plugin_window的函数
+                # Assume plugin has a function called open_plugin_window
                 plugin.open_plugin_window(main_window)
             elif plugin_name.endswith(".pyd"):
                 print(plugin_name)
@@ -9783,10 +9783,10 @@ def mainWindow():
                 filename_without_extension = os.path.splitext(filename_with_extension)[
                     0
                 ]
-                # # 生成导入语句
+                # # Generate import statement
                 # import_statement = f"import {ilename_without_extension} as plugin"
                 # print(ilename_without_extension)
-                # 在全局作用域内执行导入语句
+                # Execute import statement in global scope
                 print(directory_path)
                 sys.path.append(directory_path)
                 globals()[filename_without_extension] = __import__(
@@ -9801,7 +9801,7 @@ def mainWindow():
         else:
             print("No choice file")
 
-    # 创建一个按钮，用于加载插件
+    # Create a button to load plugins
     plugin_button = ttk.Button(
         main_window,
         text="Load plug -in",
@@ -9812,36 +9812,36 @@ def mainWindow():
     )
     plugin_button.place(x=100, y=0, relx=0, rely=1, anchor="sw")
 
-    # 在“载入插件”和“选择游戏”按钮之间显示醒目的提示
-    # 将提示放在窗口底部居中，使用红色粗体以提高可见性
+    # Display a prominent prompt between "Load Plugin" and "Select Game" buttons
+    # Place prompt at bottom center, use red bold for visibility
     unsupported_label = ttk.Label(
         main_window,
-        text="重制版修改器点这里",
+        text="Remake Modifier Click Here",
         font=(
-            "黑体",
+            "Microsoft YaHei",
             10,
             "bold",
             "underline",
-        ),  # 建议加上 "underline" 下划线，看起来更像超链接
+        ),  # Suggest adding "underline" to look more like a hyperlink
         bootstyle=("danger",),
-        cursor="hand2",  # 鼠标悬停时变成小手图标，提升交互体验
+        cursor="hand2",  # Change cursor to hand icon on hover for better UX
     )
-    # 放置在底部中间，略微向上偏移与其他底部控件错开
+    # Position at bottom middle, slightly offset up to separate from other bottom controls
     unsupported_label.place(relx=0.5, rely=1, y=-3, anchor="s")
 
-    # ----------------- 添加点击跳转逻辑 -----------------
+    # ----------------- Add click navigation logic -----------------
 
-    # 定义点击事件的触发函数
+    # Define click event trigger function
     def open_bilibili_link(event):
         webbrowser.open("https://www.bilibili.com/video/BV1zGDyBSE1H")
 
-    # 将鼠标左键点击事件绑定到这个 Label 上
+    # Bind left mouse click event to this Label
     unsupported_label.bind("<Button-1>", open_bilibili_link)
 
     # def recruit():
     #     global main_window
     #     recruit_window = ttk.Toplevel(topmost=True)
-    #     recruit_window.title("主播招募")
+    #     recruit_window.title("Streamer Recruitment")
     #     recruit_window.geometry("300x460")
     #     recruit_window.iconphoto(
     #         False, ttk.PhotoImage(file=resource_path((r"res\icon\info.png")))
@@ -9852,8 +9852,8 @@ def mainWindow():
     #     recruit_window.geometry(f"+{main_window_x + 100}+{main_window_y + 100}")
     #     ttk.Label(
     #         recruit_window,
-    #         text="抖音最强植物工会，0抽点\n一对一教学搭建起号\n主播有24小时运营\n在播主播人均月收五位数\n欢迎各位加入",
-    #         font=("黑体", 14),
+    #         text="Douyin's strongest plant guild, 0 commission\nOne-on-one teaching to build your account\n24-hour operation for streamers\nActive streamers average five-figure monthly income\nWelcome to join",
+    #         font=("Microsoft YaHei", 14),
     #         bootstyle=PRIMARY,
     #     ).pack(pady=10)
 
@@ -9864,7 +9864,7 @@ def mainWindow():
 
     # recruit_button = ttk.Button(
     #     main_window,
-    #     text="想做主播点这里",
+    #     text="Want to be a streamer? Click here",
     #     padding=0,
     #     bootstyle="danger",
     #     cursor="hand2",
